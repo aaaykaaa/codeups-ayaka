@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.about-us {
+.about {
   padding-top: rem(40);
   padding-bottom: rem(67);
   @include mq(md) {
@@ -9,20 +9,20 @@
   }
 }
 
-.about-us__inner {
+.about__inner {
   @include mq(md) {
     position: relative;
   }
 }
 
-.about-us__content {
+.about__content {
   margin-top: rem(28);
   @include mq(md) {
     margin-top: rem(40);
   }
 }
 
-.about-us__decoration {
+.about__decoration {
   display: none;
   @include mq(md) {
     display: block;
@@ -33,7 +33,7 @@
   }
 }
 
-.about-us__decoration img {
+.about__decoration img {
   @include mq(md) {
     display: block;
     max-width: 100%;

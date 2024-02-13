@@ -65,6 +65,8 @@
 }
 
 .header__nav {
+  background: $main-bg-color;
+  z-index: 1000;
   display: none;
   position: absolute;
   top: rem(80);

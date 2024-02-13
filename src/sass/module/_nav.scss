@@ -1,19 +1,18 @@
 @use "global" as *;
 
-.nav {
-  background: $main-bg-color;
-  z-index: 1000;
+.global-nav {
+
 }
 
-.nav__inner {
+.global-nav__inner {
   padding-left: rem(22);
 }
 
-.nav.is-active {
+.global-nav.is-active {
   display: block;
 }
 
-.nav__items {
+.global-nav__items {
   display: flex;
   gap: rem(40);
   @include mq(md) {
@@ -21,7 +20,7 @@
   }
 }
 
-.nav__item--sp {
+.global-nav__item--sp {
   display: flex;
   flex-direction: column;
   gap: rem(40);
@@ -31,25 +30,25 @@
   }
 }
 
-.nav__item--pc {
+.global-nav__item--pc {
   display: flex;
   flex-direction: column;
   gap: rem(40);
 }
 
-.nav__parent,
-.nav__child {
+.global-nav__parent,
+.global-nav__child {
   font-size: rem(16);
   line-height: calc(rem(18) / rem(16));
   color: $white;
 }
 
-.nav__parent {
+.global-nav__parent {
   font-weight: $bold;
   position: relative;
 }
 
-.nav__parent::before {
+.global-nav__parent::before {
   content: "";
   display: block;
   width: rem(18);
@@ -62,7 +61,7 @@
     contain;
 }
 
-.nav__child {
+.global-nav__child {
   margin-top: rem(24);
   font-weight: $regular;
   line-height: 1.125;

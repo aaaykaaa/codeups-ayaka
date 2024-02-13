@@ -5,15 +5,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     if ($(".js-hamburger").hasClass("is-active")) {
       $(".js-hamburger").removeClass("is-active");
       $(".header").removeClass("is-active");
-      $(".js-nav").fadeOut();
+      $(".js-global-nav").fadeOut();
     } else {
       $(".js-hamburger").addClass("is-active");
       $(".header").addClass("is-active");
-      $(".js-nav").fadeIn();
+      $(".js-global-nav").fadeIn();
     }
   });
 
-  // mv swiper
+  // mv-swiper
   $(function(){
     var swiper = new Swiper(".js-mv-swiper", {
       loop: true,   // 無限ループさせる
@@ -26,7 +26,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
-  // campaign swiper
+  // campaign-swiper
   $(function(){
     var swiper = new Swiper(".js-campaign-swiper", {
       loop: true,   // クルクル回ってる

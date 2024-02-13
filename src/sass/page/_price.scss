@@ -28,7 +28,7 @@
   }
 }
 
-.price__contents {
+.price__content {
   margin-top: rem(27);
   display: flex;
   flex-direction: column;
@@ -65,11 +65,50 @@
   background-color: $main-bg-color;
 }
 
-.price__priceLists {
+.price__lists {
+  display: flex;
+  flex-direction: column;
+  gap: rem(39);
   @include mq(md) {
     width: 45.6824513%;
     text-align: left;
   }
+}
+
+.price__menu {
+  color: $black;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1.5;
+  text-align: left;
+  padding-bottom: rem(4);
+  border-bottom: 1px solid $main-bg-color;
+}
+
+.price__wrapper {
+  margin-top: rem(8);
+  display: flex;
+  justify-content: space-between;
+}
+
+.price__course,
+.price__price {
+  color: $black;
+  font-size: rem(14);
+  font-weight: $regular;
+  line-height: 1.71429;
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: 1.5;
+  }
+}
+
+.price__course {
+  text-align: left;
+}
+
+.price__price {
+  text-align: right;
 }
 
 .price__btn {
