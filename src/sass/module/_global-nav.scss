@@ -1,11 +1,9 @@
 @use "global" as *;
 
 .global-nav {
-
 }
 
 .global-nav__inner {
-  padding-left: rem(22);
 }
 
 .global-nav.is-active {
@@ -14,7 +12,8 @@
 
 .global-nav__items {
   display: flex;
-  gap: rem(40);
+  justify-content: center;
+  gap: rem(29);
   @include mq(md) {
     gap: rem(142);
   }
@@ -41,6 +40,12 @@
   font-size: rem(16);
   line-height: calc(rem(18) / rem(16));
   color: $white;
+}
+
+.footer__sns a:hover,
+.global-nav__parent a:hover,
+.global-nav__child a:hover {
+  opacity: 0.7;
 }
 
 .global-nav__parent {

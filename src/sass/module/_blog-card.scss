@@ -10,9 +10,13 @@
 }
 
 .blog-card__img {
+  aspect-ratio: 301 / 201;
+}
+
+.blog-card__img img {
   width: 100%;
-  aspect-ratio: 280 / 188;
-  position: relative;
+  height: 100%;
+  object-fit: cover;
 }
 
 .blog-card__date {

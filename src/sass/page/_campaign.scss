@@ -3,11 +3,11 @@
 .campaign {
   padding-top: rem(40);
   padding-bottom: rem(38);
+  overflow: hidden;
   @include mq(md) {
     padding-top: rem(120);
     padding-bottom: rem(70);
   }
-  overflow: hidden;
 }
 
 .campaign__inner {
@@ -23,3 +23,10 @@
     margin-top: rem(69);
   }
 }
+
+// inner {
+//   padding: 0 25px;
+//   max-width: 1100px;
+//   width: 100%;
+//   margin: auto;
+// }

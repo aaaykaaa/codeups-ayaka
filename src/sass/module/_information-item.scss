@@ -13,10 +13,10 @@
 
 .information-item__img {
   text-align: center;
-  width: 100%;
+  aspect-ratio: 345 / 227;
   position: relative;
   @include mq(md) {
-    max-width: rem(538);
+    aspect-ratio: 540 / 356;
   }
 }
 
@@ -32,7 +32,15 @@
 
 .information-item__img img {
   width: 100%;
-  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+.information-item__body {
+  @include mq(md) {
+    width: calc(rem(492) / rem(1080) * 100%);
+    flex-shrink: 0;
+  }
 }
 
 .information-item__title {

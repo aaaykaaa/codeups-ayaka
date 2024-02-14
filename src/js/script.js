@@ -11,6 +11,34 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       $(".header").addClass("is-active");
       $(".js-global-nav").fadeIn();
     }
+    // ドロワーメニューが開いている時に背景をスクロールさせない
+    if ($("body").css("overflow") === "hidden") {
+      $("body").css({ height: "", overflow: "" });              // もしoverflowがhiddenなら、bodyのスタイルを元に戻す
+    } else {                                                    // そうでなければ
+      $("body").css({ height: "100%", overflow: "hidden" });    // bodyにheight: 100%とoverflow: hiddenを設定し、スクロールを無効にする
+    }
+    // ドロワーメニュー内のaタグをクリックした時、ドロワーメニューを閉じる
+    $('.js-global-nav a[href^="#"]').on('click', function() {
+      $(".js-hamburger").removeClass("is-active");
+      $(".header").removeClass("is-active");
+      $(".js-global-nav").fadeOut();
+    });
+
+    // ページ読み込み時にPC幅を検出し、幅が768pxを超えたときはメニューを閉じる
+    $(window).resize(function () {
+      if ($(window).width() > 768) {
+        $(".js-hamburger").removeClass("is-active");
+        $(".header").removeClass("is-active");
+        $(".js-global-nav").fadeOut();
+      }
+    });
+  
+    // ページ読み込み時にもPC幅を超えたらメニューを閉じる
+    if ($(window).width() > 768) {
+      $(".js-hamburger").removeClass("is-active");
+      $(".header").removeClass("is-active");
+      $(".js-global-nav").fadeOut();
+    }
   });
 
   // mv-swiper
@@ -30,7 +58,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $(function(){
     var swiper = new Swiper(".js-campaign-swiper", {
       loop: true,   // クルクル回ってる
-      slidesPerView: 1.22,    // 1画面にいくつ表示させるか
+      slidesPerView: 1.21,    // 1画面にいくつ表示させるか
       breakpoints: {
         400: {
           slidesPerView: 1.4,
@@ -50,19 +78,19 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
         },
         768: {
           slidesPerView: 2.89,
-          spaceBetween: 30    // slider間の余白
+          spaceBetween: 40    // slider間の余白
         },
         1280: {
-          slidesPerView: 3.47,
-          spaceBetween: 35
+          slidesPerView: 3.48,
+          spaceBetween: 40
         }
       },
       spaceBetween: 24,
       speed: 2000,
-      autoplay: {
-        delay: 1000,
-        disableOnInteraction: false
-      },
+      // autoplay: {
+      //   delay: 1000,
+      //   disableOnInteraction: false
+      // },
       // Navigation arrows
       navigation: {
         prevEl: ".campaign-swiper__prev",

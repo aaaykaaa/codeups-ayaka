@@ -17,17 +17,16 @@
     <meta property="og:site_name" content="" />
     <meta property="og:description" content="" />
     <!-- ファビコン -->
-    <!-- <link rel="”icon”" href="" /> -->
+    <!-- <link rel="”icon”" href=""/> -->
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"/>
     <!-- swiper CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- swiper CDN -->
@@ -40,12 +39,14 @@
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
-
     <header class="header">
       <div class="header__inner">
         <h1 class="header__logo">
           <a href="#" class="header__logoLink">
-            <img src="./assets/images/common/logo-white.svg" alt="codeupsのロゴ" />
+            <img
+              src="./assets/images/common/logo-white.svg"
+              alt="codeupsのロゴ"
+            />
           </a>
         </h1>
         <div class="header__drawer hamburger js-hamburger">
@@ -193,26 +194,50 @@
             <!-- Slides -->
             <div class="swiper-slide mv-swiper__slide">
               <picture class="mv-swiper__img">
-                <source media="(min-width: 768px)" srcset="./assets/images/common/mv1.jpeg" />
-                <img src="./assets/images/common/mv-sp1.jpeg" alt="DIVING into the oceanのメイン画像1" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./assets/images/common/mv1.jpeg"
+                />
+                <img
+                  src="./assets/images/common/mv-sp1.jpeg"
+                  alt="DIVING into the oceanのメイン画像1"
+                />
               </picture>
             </div>
             <div class="swiper-slide">
               <picture class="mv-swiper__img">
-                <source media="(min-width: 768px)" srcset="./assets/images/common/mv2.jpeg" />
-                <img src="./assets/images/common/mv-sp2.jpeg" alt="DIVING into the oceanのメイン画像2" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./assets/images/common/mv2.jpeg"
+                />
+                <img
+                  src="./assets/images/common/mv-sp2.jpeg"
+                  alt="DIVING into the oceanのメイン画像2"
+                />
               </picture>
             </div>
             <div class="swiper-slide">
               <picture class="mv-swiper__img">
-                <source media="(min-width: 768px)" srcset="./assets/images/common/mv3.jpeg" />
-                <img src="./assets/images/common/mv-sp3.jpeg" alt="DIVING into the oceanのメイン画像3" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./assets/images/common/mv3.jpeg"
+                />
+                <img
+                  src="./assets/images/common/mv-sp3.jpeg"
+                  alt="DIVING into the oceanのメイン画像3"
+                />
               </picture>
             </div>
             <div class="swiper-slide">
               <picture class="mv-swiper__img">
-                <source media="(min-width: 768px)" srcset="./assets/images/common/mv4.jpeg" />
-                <img src="./assets/images/common/mv-sp4.jpeg" alt="DIVING into the oceanのメイン画像4" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./assets/images/common/mv4.jpeg"
+                />
+                <img
+                  src="./assets/images/common/mv-sp4.jpeg"
+                  alt="DIVING into the oceanのメイン画像4"
+                />
               </picture>
             </div>
           </div>
@@ -227,123 +252,145 @@
           <p class="section-header__japaneseTitle">キャンペーン</p>
         </div>
         <div class="campaign-swiper">
-          <div class="swiper-container campaign-swiper__container js-campaign-swiper" >
+          <div class="swiper-container campaign-swiper__container js-campaign-swiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide campaign-swiper__card campaign-card">
-                <div class="campaign-card__img">
-                  <img src="./assets/images/common/campaign1.jpg" alt="キャンペーン1" />
-                </div>
+              <a class="swiper-slide campaign-swiper__card campaign-card">
+                <figure class="campaign-card__img">
+                  <img src="./assets/images/common/campaign1.jpg" alt="キャンペーン1"/>
+                </figure>
                 <div class="campaign-card__body">
                   <p class="campaign-card__tag">ライセンス講習</p>
                   <h3 class="campaign-card__title">ライセンス取得</h3>
                   <p class="campaign-card__detail">全部コミコミ(お一人様)</p>
                   <div class="campaign-card__prices">
-                    <p class="campaign-card__price1">&yen;56,000</p>
-                    <p class="campaign-card__price2">&yen;46,000</p>
+                    <p class="campaign-card__price-cost">&yen;56,000</p>
+                    <p class="campaign-card__price-low">&yen;46,000</p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide campaign-swiper__card campaign-card">
-                <div class="campaign-card__img">
-                  <img src="./assets/images/common/campaign2.jpg" alt="キャンペーン2" />
-                </div>
+              </a>
+              <a class="swiper-slide campaign-swiper__card campaign-card">
+                <figure class="campaign-card__img">
+                  <img src="./assets/images/common/test.jpeg" alt="キャンペーン2"/>
+                </figure>
                 <div class="campaign-card__body">
                   <p class="campaign-card__tag">体験ダイビング</p>
                   <h3 class="campaign-card__title">貸切体験ダイビング</h3>
                   <p class="campaign-card__detail">全部コミコミ(お一人様)</p>
                   <div class="campaign-card__prices">
-                    <p class="campaign-card__price1">&yen;24,000</p>
-                    <p class="campaign-card__price2">&yen;18,000</p>
+                    <p class="campaign-card__price-cost">&yen;24,000</p>
+                    <p class="campaign-card__price-low">&yen;18,000</p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide campaign-swiper__card campaign-card">
-                <div class="campaign-card__img">
-                  <img src="./assets/images/common/campaign3.jpg" alt="キャンペーン3" />
-                </div>
+              </a>
+              <a class="swiper-slide campaign-swiper__card campaign-card">
+                <figure class="campaign-card__img">
+                  <img
+                    src="./assets/images/common/campaign3.jpg"
+                    alt="キャンペーン3"
+                  />
+                </figure>
                 <div class="campaign-card__body">
                   <p class="campaign-card__tag">体験ダイビング</p>
                   <h3 class="campaign-card__title">ナイトダイビング</h3>
                   <p class="campaign-card__detail">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__prices campaign-card__prices--little">
-                    <p class="campaign-card__price1">&yen;10,000</p>
-                    <p class="campaign-card__price2">&yen;8,000</p>
+                  <div
+                    class="campaign-card__prices campaign-card__prices--little"
+                  >
+                    <p class="campaign-card__price-cost">&yen;10,000</p>
+                    <p class="campaign-card__price-low">&yen;8,000</p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide campaign-swiper__card campaign-card">
-                <div class="campaign-card__img">
-                  <img src="./assets/images/common/campaign4.jpeg" alt="キャンペーン4" />
-                </div>
+              </a>
+              <a class="swiper-slide campaign-swiper__card campaign-card">
+                <figure class="campaign-card__img">
+                  <img
+                    src="./assets/images/common/campaign4.jpeg"
+                    alt="キャンペーン4"
+                  />
+                </figure>
                 <div class="campaign-card__body">
                   <p class="campaign-card__tag">ファンダイビング</p>
                   <h3 class="campaign-card__title">貸切ファンダイビング</h3>
                   <p class="campaign-card__detail">全部コミコミ(お一人様)</p>
                   <div class="campaign-card__prices">
-                    <p class="campaign-card__price1">&yen;20,000</p>
-                    <p class="campaign-card__price2">&yen;16,000</p>
+                    <p class="campaign-card__price-cost">&yen;20,000</p>
+                    <p class="campaign-card__price-low">&yen;16,000</p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide campaign-swiper__card campaign-card">
-                <div class="campaign-card__img">
-                  <img src="./assets/images/common/campaign1.jpg" alt="キャンペーン1" />
-                </div>
+              </a>
+              <a class="swiper-slide campaign-swiper__card campaign-card">
+                <figure class="campaign-card__img">
+                  <img
+                    src="./assets/images/common/campaign1.jpg"
+                    alt="キャンペーン1"
+                  />
+                </figure>
                 <div class="campaign-card__body">
                   <p class="campaign-card__tag">ライセンス講習</p>
                   <h3 class="campaign-card__title">ライセンス取得</h3>
                   <p class="campaign-card__detail">全部コミコミ(お一人様)</p>
                   <div class="campaign-card__prices">
-                    <p class="campaign-card__price1">&yen;56,000</p>
-                    <p class="campaign-card__price2">&yen;46,000</p>
+                    <p class="campaign-card__price-cost">&yen;56,000</p>
+                    <p class="campaign-card__price-low">&yen;46,000</p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide campaign-swiper__card campaign-card">
-                <div class="campaign-card__img">
-                  <img src="./assets/images/common/campaign2.jpg" alt="キャンペーン2" />
-                </div>
+              </a>
+              <a class="swiper-slide campaign-swiper__card campaign-card">
+                <figure class="campaign-card__img">
+                  <img
+                    src="./assets/images/common/campaign2.jpg"
+                    alt="キャンペーン2"
+                  />
+                </figure>
                 <div class="campaign-card__body">
                   <p class="campaign-card__tag">体験ダイビング</p>
                   <h3 class="campaign-card__title">貸切体験ダイビング</h3>
                   <p class="campaign-card__detail">全部コミコミ(お一人様)</p>
                   <div class="campaign-card__prices">
-                    <p class="campaign-card__price1">&yen;24,000</p>
-                    <p class="campaign-card__price2">&yen;18,000</p>
+                    <p class="campaign-card__price-cost">&yen;24,000</p>
+                    <p class="campaign-card__price-low">&yen;18,000</p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide campaign-swiper__card campaign-card">
-                <div class="campaign-card__img">
-                  <img src="./assets/images/common/campaign3.jpg" alt="キャンペーン3" />
-                </div>
+              </a>
+              <a class="swiper-slide campaign-swiper__card campaign-card">
+                <figure class="campaign-card__img">
+                  <img
+                    src="./assets/images/common/campaign3.jpg"
+                    alt="キャンペーン3"
+                  />
+                </figure>
                 <div class="campaign-card__body">
                   <p class="campaign-card__tag">体験ダイビング</p>
                   <h3 class="campaign-card__title">ナイトダイビング</h3>
                   <p class="campaign-card__detail">全部コミコミ(お一人様)</p>
                   <div class="campaign-card__prices">
-                    <p class="campaign-card__price1">&yen;10,000</p>
-                    <p class="campaign-card__price2">&yen;8,000</p>
+                    <p class="campaign-card__price-cost">&yen;10,000</p>
+                    <p class="campaign-card__price-low">&yen;8,000</p>
                   </div>
                 </div>
-              </div>
-              <div class="swiper-slide campaign-swiper__card campaign-card">
-                <div class="campaign-card__img">
-                  <img src="./assets/images/common/campaign4.jpeg" alt="キャンペーン4" />
-                </div>
+              </a>
+              <a class="swiper-slide campaign-swiper__card campaign-card">
+                <figure class="campaign-card__img">
+                  <img
+                    src="./assets/images/common/campaign4.jpeg"
+                    alt="キャンペーン4"
+                  />
+                </figure>
                 <div class="campaign-card__body">
                   <p class="campaign-card__tag">ファンダイビング</p>
                   <h3 class="campaign-card__title">貸切ファンダイビング</h3>
                   <p class="campaign-card__detail">全部コミコミ(お一人様)</p>
                   <div class="campaign-card__prices">
-                    <p class="campaign-card__price1">&yen;20,000</p>
-                    <p class="campaign-card__price2">&yen;16,000</p>
+                    <p class="campaign-card__price-cost">&yen;20,000</p>
+                    <p class="campaign-card__price-low">&yen;16,000</p>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
-          <div class="swiper-pagination campaign-swiper__pagination js-campaign-swiper__pagination"></div>
+          <div
+            class="swiper-pagination campaign-swiper__pagination js-campaign-swiper__pagination"
+          ></div>
           <div class="swiper-button-prev campaign-swiper__prev"></div>
           <div class="swiper-button-next campaign-swiper__next"></div>
         </div>
@@ -363,10 +410,18 @@
           <div class="about-content__inner">
             <div class="about-content__img">
               <div class="about-content__img--small">
-                <img src="./assets/images/common/aboutus-left.jpeg" class="about-content__img2" alt="私たちについて1" />
+                <img
+                  src="./assets/images/common/aboutus-left.jpeg"
+                  class="about-content__img2"
+                  alt="私たちについて1"
+                />
               </div>
               <div class="about-content__img--big">
-                <img src="./assets/images/common/aboutus-right.jpeg" class="about-content__img1" alt="私たちについて2" />
+                <img
+                  src="./assets/images/common/aboutus-right.jpeg"
+                  class="about-content__img1"
+                  alt="私たちについて2"
+                />
               </div>
             </div>
             <div class="about-content__body">
@@ -397,9 +452,9 @@
           <p class="section-header__japaneseTitle">ダイビング情報</p>
         </div>
         <div class="information__item information-item">
-          <div class="information-item__img js-colorbox">
-            <img src="./assets/images/common/information1.jpeg" alt="ダイビング情報" />
-          </div>
+          <figure class="information-item__img js-colorbox">
+            <img src="./assets/images/common/information1.jpeg" alt="ダイビング情報"/>
+          </figure>
           <div class="information-item__body">
             <p class="information-item__title">ライセンス講習</p>
             <p class="information-item__text">
@@ -412,53 +467,80 @@
         </div>
       </div>
     </section>
+    
 
     <section class="blog" id="blog">
       <div class="blog__decoration">
-        <img src="./assets/images/common/fish-left.png" alt="魚" />
+        <img src="./assets/images/common/fish.png" alt="魚" />
       </div>
       <div class="blog__inner inner">
         <div class="blog__header section-header">
-          <h2 class="section-header__englishTitle section-header__englishTitle--white"><span>B</span>log</h2>
-          <p class="section-header__japaneseTitle section-header__japaneseTitle--white">ブログ</p>
+          <h2 class="section-header__englishTitle section-header__englishTitle--white"><span>B</span>log
+          </h2>
+          <p class="section-header__japaneseTitle section-header__japaneseTitle--white">ブログ
+          </p>
         </div>
-        <div class="blog__cards ">
-          <div class="blog__card blog-card">
+        <div class="blog__cards">
+          <a href="#" class="blog__card blog-card">
             <div class="blog-card__inner">
-              <div class="blog-card__img">
-                <img src="./assets/images/common/blog1.jpeg" alt="ブログ1"/>
-              </div>
+              <figure class="blog-card__img">
+                <img src="./assets/images/common/blog1.jpeg" alt="ブログ1" />
+              </figure>
               <time class="blog-card__date" datetime="2023-11-27">2023/11/17</time>
               <h3 class="blog-card__title">ライセンス取得</h3>
               <p class="blog-card__text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
               </p>
             </div>
-          </div>
-          <div class="blog__card blog-card">
+          </a>
+          <a href="#" class="blog__card blog-card">
             <div class="blog-card__inner">
-              <div class="blog-card__img">
-                <img src="./assets/images/common/blog2.jpeg" alt="ブログ2"/>
-              </div>
+              <figure class="blog-card__img">
+                <img src="./assets/images/common/blog2.jpeg" alt="ブログ2" />
+              </figure>
               <time class="blog-card__date" datetime="2023-11-27">2023/11/17</time>
               <h3 class="blog-card__title">ウミガメと泳ぐ</h3>
               <p class="blog-card__text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
               </p>
             </div>
-          </div>
-          <div class="blog__card blog-card">
+          </a>
+          <a href="#" class="blog__card blog-card">
             <div class="blog-card__inner">
-              <div class="blog-card__img">
-                <img src="./assets/images/common/blog3.jpeg" alt="ブログ3"/>
-              </div>
+              <figure class="blog-card__img">
+                <img src="./assets/images/common/blog3.jpeg" alt="ブログ3" />
+              </figure>
               <time class="blog-card__date" datetime="2023-11-27">2023/11/17</time>
               <h3 class="blog-card__title">カクレクマノミ</h3>
               <p class="blog-card__text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
               </p>
             </div>
-          </div>
+          </a>
+          <a href="#" class="blog__card blog-card">
+            <div class="blog-card__inner">
+              <figure class="blog-card__img">
+                <img src="./assets/images/common/blog3.jpeg" alt="ブログ3" />
+              </figure>
+              <time class="blog-card__date" datetime="2023-11-27">2023/11/17</time>
+              <h3 class="blog-card__title">カクレクマノミ</h3>
+              <p class="blog-card__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+              </p>
+            </div>
+          </a>
+          <a href="#" class="blog__card blog-card">
+            <div class="blog-card__inner">
+              <figure class="blog-card__img">
+                <img src="./assets/images/common/blog3.jpeg" alt="ブログ3" />
+              </figure>
+              <time class="blog-card__date" datetime="2023-11-27">2023/11/17</time>
+              <h3 class="blog-card__title">カクレクマノミ</h3>
+              <p class="blog-card__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+              </p>
+            </div>
+          </a>
         </div>
         <div class="blog__btn btn">
           <a href="#" class="button"><span>View more</span></a>
@@ -545,7 +627,10 @@
         </div>
         <div class="price__content">
           <picture class="price__img js-colorbox">
-            <source media="(min-width: 768px)" srcset="./assets/images/common/price.jpeg"/>
+            <source
+              media="(min-width: 768px)"
+              srcset="./assets/images/common/price.jpeg"
+            />
             <img src="./assets/images/common/price-sp.jpeg" alt="料金一覧" />
           </picture>
           <div class="price__lists">
@@ -603,9 +688,7 @@
                   <dd class="price__price">&yen;18,000</dd>
                 </div>
                 <div class="price__wrapper">
-                  <dt class="price__course">
-                    スペシャルダイビング(2ダイブ)
-                  </dt>
+                  <dt class="price__course">スペシャルダイビング(2ダイブ)</dt>
                   <dd class="price__price">&yen;24,000</dd>
                 </div>
                 <div class="price__wrapper">
@@ -644,27 +727,42 @@
           <div class="contact__box contact-box">
             <div class="contact-box__left">
               <a class="contact-box__logo">
-                <img src="./assets/images/common/logo-color.svg" alt="codeupsのロゴ"/>
+                <img
+                  src="./assets/images/common/logo-color.svg"
+                  alt="codeupsのロゴ"
+                />
               </a>
               <div class="contact-box__access">
                 <div class="contact-box__address">
-                  <p>沖縄県那覇市1-<br>TEL:0120-000-0000<br>営業時間:8:30-19:00<br>定休日:毎週火曜日
+                  <p>
+                    沖縄県那覇市1-<br />TEL:0120-000-0000<br />営業時間:8:30-19:00<br />定休日:毎週火曜日
                   </p>
                 </div>
                 <div class="contact-box__map">
-                  <img src="./assets/images/common/map.jpeg" alt="codeupsのマップ"/>
+                  <img
+                    src="./assets/images/common/map.jpeg"
+                    alt="codeupsのマップ"
+                  />
                 </div>
               </div>
             </div>
             <div class="contact-box__right">
               <div class="contact-box__header section-header">
-                <h2 class="section-header__englishTitle section-header__englishTitle--big">
+                <h2
+                  class="section-header__englishTitle section-header__englishTitle--big"
+                >
                   <span>C</span>ontact
                 </h2>
-                <p class="section-header__japaneseTitle section-header__japaneseTitle--contact">
+                <p
+                  class="section-header__japaneseTitle section-header__japaneseTitle--contact"
+                >
                   お問い合わせ
                 </p>
-                <p class="section-header__japaneseTitle section-header__japaneseTitle--big">ご予約・お問い合わせはコチラ</p>
+                <p
+                  class="section-header__japaneseTitle section-header__japaneseTitle--big"
+                >
+                  ご予約・お問い合わせはコチラ
+                </p>
               </div>
               <div class="contact-box__btn btn">
                 <a href="#" class="button"><span>Contact us</span></a>
@@ -679,18 +777,27 @@
       <div class="footer__inner inner">
         <div class="footer__head">
           <div class="footer__logo">
-            <img src="./assets/images/common/logo-white.svg" alt="codeupsのロゴ"/>
+            <img
+              src="./assets/images/common/logo-white.svg"
+              alt="codeupsのロゴ"
+            />
           </div>
           <div class="footer__sns">
             <a href="#" class="footer__sns-icon">
-              <img src="./assets/images/common/sns-facebook_icon.svg" alt="フェイスブック"/>
+              <img
+                src="./assets/images/common/sns-facebook_icon.svg"
+                alt="フェイスブック"
+              />
             </a>
             <a href="#" class="footer__sns-icon">
-              <img src="./assets/images/common/sns-instagram_icon.svg" alt="インスタグラム"/>
+              <img
+                src="./assets/images/common/sns-instagram_icon.svg"
+                alt="インスタグラム"
+              />
             </a>
           </div>
         </div>
-        <nav class="footer__nav nav">
+        <nav class="footer__nav global-nav">
           <div class="global-nav__inner">
             <div class="global-nav__items">
               <div class="global-nav__item--sp">
@@ -773,11 +880,12 @@
         </nav>
       </div>
       <div class="footer__copyright">
-        <small>Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
+        <small
+          >Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small
+        >
       </div>
     </footer>
 
     <a href="#" class="pagetop js-pagetop"></a>
-    
   </body>
 </html>
