@@ -67,7 +67,12 @@
   margin-top: rem(4);
 }
 
-.contact-box__address p {
+address{
+  font-style:normal;
+}
+
+.contact-box__address address,
+.contact-box__address p, {
   color: $black;
   font-size: rem(16);
   font-weight: $regular;

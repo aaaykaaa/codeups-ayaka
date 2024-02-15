@@ -1,11 +1,11 @@
 @use "global" as *;
 
 .voice {
-  padding-top: rem(37);
-  padding-bottom: rem(78);
+  margin-top: rem(80);
+  margin-bottom: rem(80);
   @include mq(md) {
-    padding-top: rem(70);
-    padding-bottom: rem(140);
+    margin-top: rem(140);
+    margin-bottom: rem(140);
     position: relative;
   }
 }
@@ -16,7 +16,7 @@
     display: block;
     transform: scale(-1, 1);
     position: absolute;
-    top: rem(18);
+    top: rem(-120.75);
     left: calc(50% - min(48.4vw, 38.875rem));
     width: rem(301);
   }
@@ -27,7 +27,7 @@
   @include mq(md) {
     display: block;
     position: absolute;
-    bottom: 4.74rem;
+    bottom: rem(-65);
     right: calc(50% - min(48.4vw, 33.8rem));
     width: rem(71);
   }
@@ -41,6 +41,14 @@
   @include mq(md) {
     margin-top: rem(30);
     flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.voice__card {
+  width: 100%;
+  @include mq(md) {
+    max-width: calc(50% - rem(40) / 2);
   }
 }
 

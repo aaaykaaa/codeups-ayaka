@@ -22,7 +22,7 @@
 .global-nav__item--sp {
   display: flex;
   flex-direction: column;
-  gap: rem(40);
+  gap: rem(16);
   @include mq(md) {
     flex-direction: row;
     gap: rem(142);
@@ -32,7 +32,7 @@
 .global-nav__item--pc {
   display: flex;
   flex-direction: column;
-  gap: rem(40);
+  gap: rem(16);
 }
 
 .global-nav__parent,
@@ -59,15 +59,21 @@
   width: rem(18);
   height: rem(18);
   position: absolute;
-  top: rem(9);
-  left: rem(-22);
-  transform: translateY(-50%);
-  background: url(../images/common/nav_icon.svg) no-repeat center center /
-    contain;
+  top: rem(12);
+  left: rem(-24);
+  background: url(../images/common/nav_icon.svg) no-repeat center center / contain;
 }
 
 .global-nav__child {
-  margin-top: rem(24);
   font-weight: $regular;
   line-height: 1.125;
+}
+
+.global-nav__parent a,
+.global-nav__child a {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  padding-top: rem(12);
+  padding-bottom: rem(12);
 }

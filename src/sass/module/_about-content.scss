@@ -34,15 +34,16 @@
 }
 
 .about-content__body {
-  margin-top: rem(24);
+  margin-top: rem(40);
   display: flex;
   flex-direction: column;
-  gap: rem(40);
+  gap: rem(16);
   @include mq(md) {
     margin-top: rem(40);
     flex-direction: row;
+    gap: rem(40);
     position: absolute;
-    top: 27.967033%;
+    top: 23.967033%;
     left: 18.43%;
     z-index: 5;
   }
@@ -82,6 +83,9 @@
   line-height: 1.5;
   @include mq(md) {
     color: $white;
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
   }
 }
 
