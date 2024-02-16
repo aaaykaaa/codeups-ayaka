@@ -42,22 +42,22 @@
 }
 
 .price__img {
+  aspect-ratio: 345 / 227;
   position: relative;
   @include mq(md) {
+    aspect-ratio: 492 / 746;
     width: 45.6824513%;
     flex-shrink: 0;
   }
 }
 
 .price__img source {
-  aspect-ratio: 345 / 227;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .price__img img {
-  aspect-ratio: 345 / 227;
   width: 100%;
   height: 100%;
   object-fit: cover;
