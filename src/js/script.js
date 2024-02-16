@@ -47,10 +47,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       loop: true,   // 無限ループさせる
       speed: 4000,
       effect: 'fade',
-      autoplay: {
-        delay: 1000,                  // 次のスライドに切り替わるまでのミリ秒
-        disableOnInteraction: false   // ユーザーが操作したときに自動再生を止める。falseがオススメ
-      }
+      // autoplay: {
+      //   delay: 1000,                  // 次のスライドに切り替わるまでのミリ秒
+      //   disableOnInteraction: false   // ユーザーが操作したときに自動再生を止める。falseがオススメ
+      // }
     });
   });
 
