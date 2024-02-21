@@ -1,6 +1,7 @@
 ## パーツ
+
 - ボタン
-- section-header
+- section-heading
 - global-nav
 - pc-nav
 - mv-title
@@ -11,16 +12,18 @@
 - information-item
 
 ## 使いまわせるパーツ
+
 - mv-title
-  - 下層ページのmvでtitleのみ使用可能（レタスぺをモジュールで変更する）
+  - 下層ページの mv で title のみ使用可能（レタスぺをモジュールで変更する）
 
 ## 使いまわせるけど使い回す予定のないパーツ
+
 - mv-swiper
 
 ## どこかに依存しているパーツ
 
+## section タイトル一覧
 
-## sectionタイトル一覧
 - header
 - mv
 - campaign
@@ -34,12 +37,14 @@
 - pagetop
 
 ## 確認事項
+
 - ファビコン
-- 
-- 
-- 
+-
+-
+-
 
 ## header-nav
+
 campaign
 about-us
 information
@@ -57,6 +62,7 @@ contact
 #contact
 
 ## サイト内ブロック構成
+
 - header
   - pc-nav
   - nav

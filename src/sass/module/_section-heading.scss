@@ -1,10 +1,10 @@
 @use "global" as *;
 
-.section-header {
+.section-heading {
   text-align: center;
 }
 
-.section-header__englishTitle {
+.section-heading__englishTitle {
   color: $black;
   font-family: $english-main-font-family;
   font-size: rem(32);
@@ -15,11 +15,11 @@
   }
 }
 
-.section-header__englishTitle span {
+.section-heading__englishTitle::first-letter {
   color: $main-bg-color;
 }
 
-.section-header__japaneseTitle {
+.section-heading__japaneseTitle {
   margin-top: rem(4);
   color: $main-bg-color;
   font-size: rem(12);
@@ -29,20 +29,20 @@
   }
 }
 
-.section-header__englishTitle--white,
-.section-header__englishTitle--white span {
+.section-heading__englishTitle--white,
+.section-heading__englishTitle--white::first-letter {
   @include mq(md) {
     color: $white;
   }
 }
 
-.section-header__japaneseTitle--white {
+.section-heading__japaneseTitle--white {
   @include mq(md) {
     color: $white;
   }
 }
 
-.section-header__englishTitle--big {
+.section-heading__englishTitle--big {
   font-size: rem(80);
   line-height: 1;
   @include mq(md) {
@@ -53,14 +53,14 @@
   }
 }
 
-.section-header__japaneseTitle--contact {
+.section-heading__japaneseTitle--contact {
   margin-top: rem(-7);
   @include mq(md) {
     margin-top: 0;
   }
 }
 
-.section-header__japaneseTitle--big {
+.section-heading__japaneseTitle--big {
   margin-top: rem(8);
   font-size: rem(14);
   line-height: 1.28571;
