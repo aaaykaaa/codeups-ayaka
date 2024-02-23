@@ -87,10 +87,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       },
       spaceBetween: 24,
       speed: 2000,
-      // autoplay: {
-      //   delay: 1000,
-      //   disableOnInteraction: false
-      // },
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false
+      },
       // Navigation arrows
       navigation: {
         prevEl: ".campaign-swiper__prev",
