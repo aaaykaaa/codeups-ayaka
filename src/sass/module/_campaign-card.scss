@@ -52,24 +52,35 @@
 
 .campaign-card__title {
   margin-top: rem(4);
+  margin-bottom: rem(72);
   font-size: rem(16);
   font-weight: $normal;
   line-height: 1.5;
   padding-bottom: rem(7.5);
   border-bottom: 1px solid $main-bg-color;
+  @include mq(md) {
+    margin-bottom: rem(88);
+  }
 }
 
 .campaign-card__detail {
+  width: 100%;
   margin-top: rem(8);
   font-size: rem(14);
   line-height: 1.71429;
   text-align: center;
   padding-bottom: rem(40);
+  position: absolute;
+  bottom: rem(24);
+  left: 50%;
+  transform: translateX(-50%);
   @include mq(md) {
     margin-top: rem(16);
     font-size: rem(16);
     line-height: 1.5;
     padding-bottom: rem(48);
+    gap: rem(25);
+    bottom: rem(40);
   }
 }
 

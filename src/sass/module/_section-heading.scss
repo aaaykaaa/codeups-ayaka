@@ -17,6 +17,7 @@
 
 .section-heading__englishTitle::first-letter {
   color: $main-bg-color;
+  text-transform: uppercase;
 }
 
 .section-heading__japaneseTitle {
@@ -46,7 +47,6 @@
   font-size: rem(80);
   line-height: 1;
   @include mq(md) {
-    margin-top: rem(21);
     font-size: rem(80);
     line-height: 1;
     vertical-align: sub;

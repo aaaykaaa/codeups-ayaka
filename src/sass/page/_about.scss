@@ -1,15 +1,21 @@
 @use "global" as *;
 
-.about {
-  margin-top: rem(80);
-  @include mq(md) {
-    margin-top: rem(140);
-  }
-}
-
 .about__inner {
   @include mq(md) {
     position: relative;
+  }
+}
+
+.about__inner::after {
+  @include mq(md) {
+    content: "";
+    background: url(../images/common/sango.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 12.125rem;
+    height: 11.3125rem;
+    bottom: -5.6875rem;
+    right: calc(50% - min(48.4vw, 39.875rem));
   }
 }
 
@@ -17,24 +23,5 @@
   margin-top: rem(28);
   @include mq(md) {
     margin-top: rem(40);
-  }
-}
-
-.about__decoration {
-  display: none;
-  @include mq(md) {
-    display: block;
-    position: absolute;
-    bottom: -5.6875rem;
-    right: calc(50% - min(48.4vw, 39.875rem));
-    width: 12.125rem;
-  }
-}
-
-.about__decoration img {
-  @include mq(md) {
-    display: block;
-    max-width: 100%;
-    width: 100%;
   }
 }

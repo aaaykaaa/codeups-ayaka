@@ -14,11 +14,7 @@
 }
 
 .campaign-swiper__card {
-  margin-top: rem(28);
   height: auto;
-  @include mq(md) {
-    margin-top: rem(40);
-  }
 }
 
 .campaign-swiper__pagination {
@@ -68,7 +64,7 @@
 .campaign-swiper__prev {
   @include mq(md) {
     position: absolute;
-    top: 3.5%;
+    top: 4.5%;
     left: 75.833%;
   }
 }
@@ -76,7 +72,7 @@
 .campaign-swiper__next {
   @include mq(md) {
     position: absolute;
-    top: 3.5%;
+    top: 4.5%;
     right: 3.5%;
   }
 }

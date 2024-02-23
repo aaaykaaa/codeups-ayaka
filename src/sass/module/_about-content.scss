@@ -39,12 +39,13 @@
   flex-direction: column;
   gap: rem(16);
   @include mq(md) {
-    margin-top: rem(40);
+    margin-top: 0;
     flex-direction: row;
     gap: rem(40);
     position: absolute;
-    top: 23.967033%;
+    top: 50%;
     left: 18.43%;
+    transform: translateY(-50%);
     z-index: 5;
   }
 }
@@ -91,6 +92,7 @@
 
 .about-content__btn {
   margin-top: rem(26);
+  text-align: center;
   @include mq(md) {
     margin-top: rem(38);
   }

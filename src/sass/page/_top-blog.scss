@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.top-blog {
+  padding-top: rem(80);
+  @include mq(md) {
+    padding-top: rem(100);
+    position: relative;
+  }
+}
+
+.top-blog:before {
+  @include mq(md) {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: url(../images/common/blog-bg.jpeg);
+    background-size: cover;
+    width: 100%;
+    height: 60.4938957%;
+    max-height: rem(500);
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}

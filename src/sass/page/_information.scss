@@ -1,17 +1,5 @@
 @use "global" as *;
 
-.information {
-  background-color: $sub-bg-color;
-  padding-top: rem(80);
-  padding-bottom: rem(80);
-  margin-top: rem(70);
-  @include mq(md) {
-    padding-top: rem(100);
-    padding-bottom: rem(76);
-    margin-top: rem(164);
-  }
-}
-
 .information__inner {
   width: 100%;
   @include mq(md) {

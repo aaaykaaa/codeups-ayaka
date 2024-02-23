@@ -15,7 +15,7 @@
   text-align: center;
   @include mq(md) {
     flex-direction: row;
-    gap: rem(75);
+    gap: min(3vw, rem(82));
   }
 }
 
@@ -29,6 +29,9 @@
   @include mq(md) {
     width: 48%;
     border-left: 1px solid $main-bg-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -103,6 +106,7 @@ address{
 
 .contact-box__btn {
   margin-top: rem(40);
+  text-align: center;
   @include mq(md) {
     margin-top: rem(31);
   }

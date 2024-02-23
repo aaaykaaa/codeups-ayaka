@@ -1,11 +1,5 @@
 @use "global" as *;
 
-.btn {
-  padding-right: rem(4);
-  padding-bottom: rem(4);
-  text-align: center;
-}
-
 .button {
   display: inline-block;
   color: $white;
@@ -19,6 +13,8 @@
   border: 1px solid $main-bg-color;
   position: relative;
   z-index: 1;
+  margin-right: rem(4);
+  margin-bottom: rem(4);
 }
 
 // はみ出る枠線
