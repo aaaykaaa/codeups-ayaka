@@ -1,25 +1,5 @@
 @use "global" as *;
 
-.price__inner {
-  @include mq(md) {
-    padding-left: rem(38);
-    position: relative;
-  }
-}
-
-.price__inner::after {
-  @include mq(md) {
-    content: "";
-    background: url(../images/common/fish-color.png) no-repeat;
-    background-size: contain;
-    position: absolute;
-    width: rem(437);
-    height: rem(201);
-    bottom: rem(-40);
-    left: calc(50% - min(48.4vw, 38.875rem));
-  }
-}
-
 .price__content {
   margin-top: rem(27);
   display: flex;

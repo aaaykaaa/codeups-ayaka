@@ -4,5 +4,19 @@
   margin-top: rem(80);
   @include mq(md) {
     margin-top: rem(140);
+    position: relative;
+  }
+}
+
+.top-about::after {
+  @include mq(md) {
+    content: "";
+    background: url(../images/common/sango.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 12.125rem;
+    height: 11.3125rem;
+    bottom: -5.6875rem;
+    right: calc(50% - min(48.4vw, 39.875rem));
   }
 }

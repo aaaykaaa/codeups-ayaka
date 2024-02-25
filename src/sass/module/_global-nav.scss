@@ -19,7 +19,7 @@
   }
 }
 
-.global-nav__item--sp {
+.global-nav__item-sp {
   display: flex;
   flex-direction: column;
   gap: rem(16);
@@ -29,7 +29,7 @@
   }
 }
 
-.global-nav__item--pc {
+.global-nav__item-pc {
   display: flex;
   flex-direction: column;
   gap: rem(16);
@@ -61,7 +61,8 @@
   position: absolute;
   top: rem(12);
   left: rem(-24);
-  background: url(../images/common/nav_icon.svg) no-repeat center center / contain;
+  background: url(../images/common/nav_icon.svg) no-repeat center center /
+    contain;
 }
 
 .global-nav__child {

@@ -2,7 +2,25 @@
 
 .top-contact {
   margin-top: rem(80);
+  position: relative;
   @include mq(md) {
     margin-top: rem(140);
+  }
+}
+
+.top-contact::after {
+  content: "";
+  background: url(../images/common/fish-color.png) no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: rem(109);
+  height: rem(50);
+  top: rem(-25);
+  right: calc(50% - max(24.4vw, 9.875rem));
+  @include mq(md) {
+    width: rem(301);
+    height: rem(138);
+    top: rem(-43);
+    right: calc(50% - min(49.4vw, 41.875rem));
   }
 }
