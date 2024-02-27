@@ -65,7 +65,7 @@
   border-bottom: 1px solid $main-bg-color;
 }
 
-.price__wrapper {
+.price__course {
   margin-top: rem(8);
   display: flex;
   gap: rem(14);
@@ -75,8 +75,8 @@
   }
 }
 
-.price__course,
-.price__price {
+.price__course dt,
+.price__course dd {
   color: $black;
   font-size: rem(14);
   font-weight: $regular;
@@ -87,11 +87,11 @@
   }
 }
 
-.price__course {
+.price__course dt {
   text-align: left;
 }
 
-.price__price {
+.price__course dd {
   text-align: right;
 }
 

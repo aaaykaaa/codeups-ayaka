@@ -17,16 +17,18 @@
   }
 }
 
+
 .pagetop::after {
-  color: $main-bg-color;
+  background-color: $main-bg-color;
   content: "";
+  display: inline-block;
+  mask-image: url(../images/common/top.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
   position: absolute;
-  width: 12.5%;
+  width: 14.5%;
   height: 58.3333%;
-  top: 25%;
-  left: 40%;
-  transform: translate(-25%, -40%);
-  border-top: solid 1px;
-  border-right: solid 1px;
-  transform: skew(0, -45deg);
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -46%);
 }

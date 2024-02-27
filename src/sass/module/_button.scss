@@ -45,20 +45,26 @@
 
 .button:hover {
   color: $main-bg-color;
+  transition: 0.2s;
 }
 .button:hover::after {
   transform: scale(1, 1);
 }
 
-// 矢印
 .button span::after {
+  background-color: $white;
   content: "";
+  display: inline-block;
+  mask-image: url(../images/common/right.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
   position: absolute;
   width: rem(40);
-  height: rem(6);
-  top: rem(22);
-  right: rem(42);
-  border-bottom: solid 1px;
-  border-right: solid 1px;
-  transform: skew(45deg);
+  height: rem(7);
+  top: rem(18);
+  right: rem(40);
+}
+
+.button:hover span::after {
+  background-color: $main-bg-color;
 }

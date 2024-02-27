@@ -104,6 +104,15 @@ address{
   }
 }
 
+.contact-box__text {
+  margin-top: rem(8);
+  color: $main-bg-color;
+  text-align: center;
+  font-size: rem(14);
+  font-weight: $regular;
+  line-height: 1.28571;
+}
+
 .contact-box__btn {
   margin-top: rem(40);
   text-align: center;

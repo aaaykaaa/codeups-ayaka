@@ -43,7 +43,7 @@
   }
 }
 
-.section-heading__englishTitle--big {
+.section-heading__englishTitle-big {
   font-size: rem(80);
   line-height: 1;
   @include mq(md) {
@@ -53,20 +53,10 @@
   }
 }
 
-.section-heading__japaneseTitle--contact {
+.section-heading__japaneseTitle-contact {
   margin-top: rem(-6);
+  font-weight: $regular;
   @include mq(md) {
     margin-top: 0;
-  }
-}
-
-.section-heading__japaneseTitle--big {
-  margin-top: rem(8);
-  font-size: rem(14);
-  line-height: 1.28571;
-  @include mq(md) {
-    margin-top: rem(8);
-    font-size: rem(14);
-    line-height: 1.28571;
   }
 }
