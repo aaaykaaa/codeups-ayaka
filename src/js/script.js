@@ -72,10 +72,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
           slidesPerView: 2.0,
           spaceBetween: 30    // slider間の余白
         },
-        700: {
-          slidesPerView: 2.4,
-          spaceBetween: 30    // slider間の余白
-        },
         768: {
           slidesPerView: 2.89,
           spaceBetween: 40    // slider間の余白
