@@ -7,6 +7,7 @@
   z-index: 4000;
   position: fixed; // 最後に戻す
   top: 0; // 最後に戻す
+  transition: background-color, 0.5s;
   @include mq(md) {
     height: rem(90);
   }
