@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.sub-page-mv {
+  width: 100%;
+  height: rem(460);
+  @include mq(md) {
+    height: rem(548);
+  }
+}

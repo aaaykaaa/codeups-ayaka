@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.sub-breadcrumb {
+  margin-top: rem(8);
+  position: relative;
+}
+
+.sub-breadcrumb::before {
+  content: "";
+  background: url(../images/common/fish-color.png) no-repeat;
+  background-size: contain;
+  transform: scale(-1, 1);
+  position: absolute;
+  width: rem(120);
+  height: rem(55);
+  top: rem(48);
+  left: calc(50% - max(37.4vw, 10.875rem));
+  @include mq(md) {
+    width: rem(301);
+    height: rem(138);
+    top: rem(80);
+    left: calc(50% - min(48.4vw, 38.875rem));
+  }
+}
