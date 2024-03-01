@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.tab__button {
+  display: inline-block;
+  width: rem(162);
+  padding: rem(6) rem(18);
+  color: $white;
+  font-family: $japanese-font-family;
+  font-size: rem(14);
+  font-weight: $regular;
+  line-height: calc(22 / 14); /* 157.143% */
+  color: $main-bg-color;
+  border: 1px solid $main-bg-color;
+  background-color: $white;
+}
+.tab__button:hover {
+  background-color: $main-bg-color;
+  color: $white;
+  transition: all 0.3s;
+}
+
+.tab__button:focus {
+  background-color: $main-bg-color;
+  color: $white;
+}

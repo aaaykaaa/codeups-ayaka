@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.page-contact-thanks__text {
+  color: $black;
+  text-align: center;
+  font-family: $japanese-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+}
+
+.page-contact-thanks__text + .page-contact-thanks__text {
+  margin-top: rem(40);
+}
