@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.text-box__text {
+  color: $black;
+  text-align: center;
+  font-family: $japanese-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+}
+
+.text-box__text + .text-box__text {
+  margin-top: rem(40);
+}
+
+.text-box__list-number {
+  list-style: auto;
+  padding-left: rem(16);
+}
+
+.text-box__list-interpoint {
+  list-style: initial;
+  padding-left: rem(16);
+}

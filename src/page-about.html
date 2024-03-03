@@ -32,10 +32,7 @@
     <!-- jQuery -->
     <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <!-- swiper CDN -->
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-    ></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- inview -->
     <script defer src="./assets/js/jquery.inview.min.js"></script>
     <!-- JavaScript -->
@@ -186,37 +183,50 @@
       </div>
     </div>
 
-    <div class="sub"></div>
-
-    <section class="about sub-about">
-      <div class="about__inner inner">
-        <div class="about__heading">
-        </div>
-        <div class="about__content about-content">
-          <div class="about-content__inner">
-            <figure class="about-content__img">
-              <picture>
-                <source media="(max-width: 767px)" srcset="./assets/images/common/page-about.jpeg">
-                <div class="about-content__img-small">
+    <section class="page-about sub-about sub">
+      <div class="page-about__inner inner">
+        <div class="page-about__content">
+          <div class="about-content">
+            <div class="about-content__inner">
+              <figure class="about-content__img">
+                <div class="about-content__img-small u-desktop">
                   <img src="./assets/images/common/aboutus-left.jpeg" class="about-content__img2" alt="私たちについて1"/>
                 </div>
-                <div class="about-content__img-big">
+                <div class="about-content__img-big about-content__img-big--sp">
                   <img src="./assets/images/common/aboutus-right.jpeg" class="about-content__img1" alt="私たちについて2"/>
                 </div>
-              </picture>
-            </figure>
-            <div class="about-content__body">
-              <div class="about-content__body-left">
-                <p class="about-content__title">Dive into<br />the Ocean</p>
-              </div>
-              <div class="about-content__body-right">
-                <p class="about-content__text">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                </p>
-                <div class="about-content__btn">
-                  <a href="#" class="button"><span>View more</span></a>
+              </figure>
+              <div class="about-content__body">
+                <div class="about-content__body-left about-content__body-left--sp">
+                  <p class="about-content__title about-content__title--white">Dive into<br />the Ocean</p>
+                </div>
+                <div class="about-content__body-right">
+                  <p class="about-content__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery sub-gallery">
+      <div class="gallery__inner inner">
+        <div class="gallery__heading">
+          <div class="section-heading">
+            <p class="section-heading__englishTitle">gallery</p>
+            <h2 class="section-heading__japaneseTitle">フォト</h2>
+          </div>
+        </div>
+        <div class="gallery__area gallery-area">
+          <div class="gallery-area__wrapper">
+            <div class="gallery-area__images">
+              <img class="gallery-area__img1" src="./assets/images/common/gallery1.jpg" alt="オレンジの小魚たち">
+              <img class="gallery-area__img2" src="./assets/images/common/gallery2.jpg" alt="綺麗な海">
+              <img class="gallery-area__img3" src="./assets/images/common/gallery3.jpg" alt="オレンジの小魚たち">
+              <img class="gallery-area__img4" src="./assets/images/common/gallery4.jpg" alt="オレンジの小魚たち">
+              <img class="gallery-area__img5" src="./assets/images/common/gallery5.jpg" alt="オレンジの小魚たち">
+              <img class="gallery-area__img6" src="./assets/images/common/gallery6.jpg" alt="オレンジの小魚たち">
             </div>
           </div>
         </div>
@@ -262,7 +272,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer sub-footer">
       <div class="footer__inner inner">
         <div class="footer__head">
           <div class="footer__logo">

@@ -61,8 +61,10 @@
   position: absolute;
   top: rem(12);
   left: rem(-24);
-  background: url(../images/common/nav_icon.svg) no-repeat center center /
-    contain;
+  mask-image: url(../images/common/nav_icon.svg);
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
 }
 
 .global-nav__child {
@@ -77,4 +79,14 @@
   display: inline-block;
   padding-top: rem(12);
   padding-bottom: rem(12);
+}
+
+// site-map用の指定
+.global-nav__parent--black,
+.global-nav__child--black {
+  color: $black;
+}
+
+.global-nav__parent--black::before {
+  background-color: $black;
 }

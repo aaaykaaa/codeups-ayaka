@@ -31,6 +31,17 @@
   }
 }
 
+.about-content__img-big--sp {
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+  @include mq(md) {
+    margin-top: -49%;
+    margin-left: 18.5507246%;
+    width: 81.4492754%;
+  }
+}
+
 .about-content__body {
   margin-top: rem(40);
   display: flex;
@@ -39,6 +50,7 @@
   @include mq(md) {
     margin-top: 0;
     flex-direction: row;
+    align-items: center;
     gap: rem(40);
     position: absolute;
     top: 50%;
@@ -94,4 +106,17 @@
   @include mq(md) {
     margin-top: rem(38);
   }
+}
+
+.about-content__body-left--sp {
+  position: absolute;
+  top: rem(24);
+  left: rem(24);
+  @include mq(md) {
+    position: static;
+  }
+}
+
+.about-content__title--white {
+  color: $white;
 }
