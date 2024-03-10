@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.page-contact__inner {
+  @include mq(md) {
+    max-width: rem(700);
+  }
+}
+
+.page-contact__error-message {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-contact__error-message p {
+  display: inline-block;
+  text-align: left;
+  color: #C94800;
+  font-family: $japanese-font-family;
+  font-size: rem(14);
+  font-weight: $regular;
+  line-height: calc(20 / 14);
+}

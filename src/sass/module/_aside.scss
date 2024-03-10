@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.aside {
+  width: 100%;
+  @include mq(md) {
+    max-width: rem(294);
+  }
+}
+
+.aside__inner {
+  padding-right: rem(40);
+  padding-left: rem(40);
+  @include mq(md) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.aside-heading {
+  text-align: left;
+}
+
+.aside-heading__title {
+  display: inline-block;
+  padding-top: rem(9);
+  padding-bottom: rem(6);
+  padding-left: rem(74);
+  padding-right: rem(20);
+  vertical-align: auto;
+  color: $black;
+  font-family: $japanese-font-family;
+  font-size: rem(24);
+  font-weight: $regular;
+  line-height: calc(35 / 24);
+  border-left: 8px solid $main-bg-color;
+  position: relative;
+}
+
+.aside-heading__title::before {
+  background-color: $black;
+  content: "";
+  display: inline-block;
+  mask-image: url(../images/common/information-tab-icon.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  position: absolute;
+  width: rem(50);
+  height: rem(50);
+  top: 50%;
+  left: rem(16);
+  transform: translateY(-50%);
+}

@@ -7,3 +7,12 @@
   font-weight: $regular;
   line-height: calc(20 / 14);
 }
+
+.breadcrumb--404 {
+  margin-top: rem(8);
+  padding-top: rem(80);
+  color: $white;
+  @include mq(md) {
+    padding-top: rem(90);
+  }
+}

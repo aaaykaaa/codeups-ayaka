@@ -47,6 +47,7 @@
   color: $main-bg-color;
   transition: 0.2s;
 }
+
 .button:hover::after {
   transform: scale(1, 1);
 }
@@ -67,4 +68,31 @@
 
 .button:hover span::after {
   background-color: $main-bg-color;
+}
+
+.button--wtite {
+  color: $main-bg-color;
+  background-color: $white;
+  border: 1px solid $main-bg-color;
+}
+
+.button--wtite::before {
+  border: 1px solid $white;
+  z-index: 100;
+}
+
+.button--wtite::after {
+  background: $main-bg-color;
+}
+
+.button--wtite:hover {
+  color: $white;
+}
+
+.button--wtite span::after {
+  background-color: $main-bg-color;
+}
+
+.button--wtite:hover span::after {
+  background-color: $white;
 }

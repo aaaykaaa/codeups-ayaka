@@ -1,0 +1,59 @@
+@use "global" as *;
+
+.faq-item {
+
+}
+
+.faq-item nav {
+  display: none;
+}
+
+.faq-item__title,
+.faq-item__text {
+  font-family: $japanese-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(23 / 16);
+}
+
+.faq-item__title{
+	padding: rem(16);
+	color: #fff;
+	background: $main-bg-color;
+  position: relative;
+}
+.faq-item__title::before,
+.faq-item__title::after {    // 縦
+  content: '';
+  display: inline-block;
+  width: rem(24);
+  height: rem(1);
+  background-color: #fff;
+  position: absolute;
+  right: rem(16);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity .3s;
+}
+
+.faq-item__title::after {     // 横
+  transform: translateY(-50%) rotate(90deg);
+  transition: transform .3s;
+}
+
+.faq-item__title.is-active::before{/* 開いている時 */
+  opacity: 0;
+}
+
+.faq-item__title.is-active::after{/* 開いている時 */
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faq-item__text {
+  padding: rem(24) rem(16);
+  color: $black;
+  border: 1px solid $main-bg-color;
+  @include mq(md) {
+    margin-top: rem(16);
+  }
+}

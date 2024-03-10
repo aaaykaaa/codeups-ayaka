@@ -1,16 +1,5 @@
 @use "global" as *;
 
-.information-item {
-  display: flex;
-  flex-direction: column;
-  gap: rem(24);
-  @include mq(md) {
-    flex-direction: row;
-    align-items: center;
-    gap: rem(48);
-  }
-}
-
 .information-item__img {
   text-align: center;
   aspect-ratio: 345 / 227;
@@ -48,7 +37,7 @@
   font-size: rem(20);
   font-weight: $bold;
   line-height: 1.2;
-  padding-bottom: rem(3.5);
+  padding-bottom: rem(8);
   border-bottom: 1px solid $main-bg-color;
   @include mq(md) {
     font-size: rem(24);
@@ -72,4 +61,18 @@
 .information-item__btn {
   margin-top: rem(40);
   text-align: center;
+}
+
+.information-item__body--page {
+  @include mq(md) {
+    margin-right: auto;
+    width: 48%;
+  }
+}
+
+.information-item__img--page {
+  @include mq(md) {
+    margin-left: auto;
+    max-width: rem(492);
+  }
 }

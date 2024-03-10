@@ -1,0 +1,45 @@
+@use "global" as *;
+
+.price-list {
+
+}
+
+.price-list__menu {
+  color: $black;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1.5;
+  text-align: left;
+  padding-bottom: rem(4);
+  border-bottom: 1px solid $main-bg-color;
+}
+
+.price-list__course {
+  margin-top: rem(8);
+  display: flex;
+  gap: rem(14);
+  justify-content: space-between;
+  @include mq(md) {
+    gap: rem(16);
+  }
+}
+
+.price-list__course dt,
+.price-list__course dd {
+  color: $black;
+  font-size: rem(14);
+  font-weight: $regular;
+  line-height: 1.71429;
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: 1.5;
+  }
+}
+
+.price-list__course dt {
+  text-align: left;
+}
+
+.price-list__course dd {
+  text-align: right;
+}

@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.page-information {
+
+}
+
+.page-information__items {
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: rem(24);
+  }
+}
+
+.page-information__item {
+  border: 1px solid $main-bg-color;
+  padding: rem(24);
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  @include mq(md) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.page-information__item + .page-information__item {
+  margin-top: rem(16);
+  @include mq(md) {
+    margin-top: rem(24);
+  }
+}

@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.campaign-pagination__area {
+.pagination-type2__area {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,14 +8,15 @@
   list-style-type: none;
   padding: 0;
 }
-
-.campaign-pagination__area li {
+.pagination-type2__prev,
+.pagination-type2__next {
   width: rem(38);
   height: rem(38);
   border: 1px solid $main-bg-color;
 }
 
-.campaign-pagination__area a {
+.pagination-type2__prev a,
+.pagination-type2__next a {
   width: 100%;
   display: inline-flex;
   justify-content: center;
@@ -27,15 +28,18 @@
   line-height: calc(38 / 16);
 }
 
-.campaign-pagination__area li:nth-of-type(2) {
-  margin-left: rem(28);
-}
-.campaign-pagination__area li:last-child {
-  margin-left: rem(28);
+.pagination-type2__next {
+  margin-left: rem(70);
 }
 
-.campaign-pagination__area .current a {
+.pagination-type2__area .current a {
   background-color: $main-bg-color;
-  color: #fff;
+  color: $white;
   pointer-events: none;
+}
+
+.pagination-type2__prev:hover a,
+.pagination-type2__next:hover a{
+  background-color: $main-bg-color;
+  color: $white;
 }

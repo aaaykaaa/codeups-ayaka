@@ -1,0 +1,5 @@
+@use "global" as *;
+
+.faq-items__item + .faq-items__item {
+  margin-top: rem(40);
+}

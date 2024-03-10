@@ -118,45 +118,66 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
-  // ページトップボタン
-$(function () {
-  const pageTop = $(".js-pagetop");
-  pageTop.hide();
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      pageTop.fadeIn();
-    } else {
-      pageTop.fadeOut();
-    }
+    // ページトップボタン
+  $(function () {
+    const pageTop = $(".js-pagetop");
+    pageTop.hide();
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        pageTop.fadeIn();
+      } else {
+        pageTop.fadeOut();
+      }
+    });
+    pageTop.click(function () {
+      $("body,html").animate(
+        {
+          scrollTop: 0,
+        },
+        500
+      );
+      return false;
+    });
+    // フッター手前でストップ
+    $(".js-pagetop").hide();
+    $(window).on("scroll", function () {
+      var scrollHeight = $(document).height();
+      var scrollPosition = $(window).height() + $(window).scrollTop();
+      var footHeight = $("footer").innerHeight();
+      if (scrollHeight - scrollPosition <= footHeight) {
+    // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
+        $(".js-pagetop").css({
+          position: "absolute",
+          bottom: footHeight + 18
+        });
+      } else {
+        $(".js-pagetop").css({
+          position: "fixed",
+          bottom: "35px"
+        });
+      }
+    });
   });
-  pageTop.click(function () {
-    $("body,html").animate(
-      {
-        scrollTop: 0,
-      },
-      500
-    );
-    return false;
+
+  // ブログアーカイブ
+  $(function () {
+    // タイトルをクリックすると
+    $(".js-blog-archive-accordion__title").on("click", function () {
+      // クリックしたタイトル以外のopenクラスを外す(－から＋にする)
+      $(".js-blog-archive-accordion__title").not(this).removeClass("toggle-is-open");
+      // クリックしたタイトル以外のコンテンツを閉じる
+      $(".js-blog-archive-accordion__title").not(this).next().slideUp(300);
+      // クリックしたタイトルにopenクラスを付け外しして＋と－を切り替える
+      $(this).toggleClass("toggle-is-open");
+      // クリックしたタイトルの次の要素(コンテンツ)を開閉
+      $(this).next().slideToggle(300);
+    });
   });
-  // フッター手前でストップ
-  $(".js-pagetop").hide();
-  $(window).on("scroll", function () {
-    var scrollHeight = $(document).height();
-    var scrollPosition = $(window).height() + $(window).scrollTop();
-    var footHeight = $("footer").innerHeight();
-    if (scrollHeight - scrollPosition <= footHeight) {
-  // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
-      $(".js-pagetop").css({
-        position: "absolute",
-        bottom: footHeight + 18
-      });
-    } else {
-      $(".js-pagetop").css({
-        position: "fixed",
-        bottom: "35px"
-      });
-    }
+
+  // FAQ
+  $('.js-nav-open').click(function(){
+    $(this).toggleClass('is-active');
+    $(this).next('nav').slideToggle();
   });
-});
 
 });

@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.aside-blog-ranking {
+}
+
+.aside-blog-ranking__heading {
+
+}
+
+.aside-blog-ranking__blog-cards {
+  margin-top: rem(30);
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+}

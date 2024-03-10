@@ -1,23 +1,38 @@
 @use "global" as *;
 
+.text-box__title {
+  color: $black;
+  font-family: $japanese-font-family;
+  font-size: rem(24);
+  font-weight: $normal;
+  line-height: calc(35 / 24);
+  @include mq(md) {
+    font-size: rem(32);
+    line-height: calc(46 / 32);
+  }
+}
+
+.text-box__texts {
+  margin-top: rem(40);
+}
+
 .text-box__text {
   color: $black;
-  text-align: center;
   font-family: $japanese-font-family;
   font-size: rem(16);
   font-weight: $regular;
 }
 
-.text-box__text + .text-box__text {
-  margin-top: rem(40);
+.text-box__list-number {
+  list-style: decimal;
+  padding-left: rem(16);
 }
 
-.text-box__list-number {
-  list-style: auto;
-  padding-left: rem(16);
+.text-box__list-number li {
+  padding-left: rem(9);
 }
 
 .text-box__list-interpoint {
   list-style: initial;
-  padding-left: rem(16);
+  padding-left: rem(20);
 }

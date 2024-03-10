@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.blog-archive-accordion {
+
+}
+
+.blog-archive-accordion__title {
+  color: $main-bg-color;
+  font-family: $japanese-font-family;
+  font-size: rem(24);
+  font-weight: $regular;
+  padding-left: rem(32);
+  position: relative;
+}
+.blog-archive-accordion__content {
+  display: none;
+  padding-left: rem(24);
+}
+
+// トグル
+.blog-archive-accordion__title::after {
+  background-color: $main-bg-color;
+  content: "";
+  display: inline-block;
+  mask-image: url(../images/common/toggle.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  position: absolute;
+  width: rem(20);
+  height: rem(24);
+  top: 50%;
+  left: rem(2);
+  transform: translateY(-50%);
+  transition: transform .3s ease-in-out, top .3s ease-in-out;
+}
+.blog-archive-accordion__title.toggle-is-open::after {
+  top: 25%;
+  transform: rotate(90deg);
+}

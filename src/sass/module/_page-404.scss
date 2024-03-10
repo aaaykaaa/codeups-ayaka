@@ -1,0 +1,73 @@
+@use "global" as *;
+
+.page-404 {
+  background-color: $main-bg-color;
+  padding-bottom: rem(40);
+  @include mq(md) {
+    padding-bottom: rem(149);
+  }
+}
+
+.page-404__inner {
+  position: relative;
+}
+
+.page-404__inner::before {
+  content: "";
+  background: url(../images/common/page-404-bg.svg) no-repeat;
+  background-size: contain;
+  position: absolute;
+  width: rem(345);
+  height: rem(345);
+  bottom: rem(-20);
+  left: calc(50% - min(48.4vw, 10.875rem));
+  @include mq(md) {
+    width: rem(698);
+    height: rem(698);
+    top: rem(80);
+    left: calc(50% - min(48.4vw, 33.875rem));
+  }
+}
+
+.page-404__content {
+  text-align: center;
+  margin-top: rem(52);
+  position: relative;
+  @include mq(md) {
+    margin-top: rem(119);
+  }
+}
+
+.page-404__title {
+  color: $white;
+  font-family: $english-sub-font-family;
+  font-size: rem(80);
+  font-weight: $regular;
+  letter-spacing: 0.4em;
+  text-indent: 0.4em;
+  z-index: 100;
+  @include mq(md) {
+    font-size: rem(160);
+    letter-spacing: 0.8em;
+    text-indent: 0.8em;
+  }
+}
+
+.page-404__text {
+  color: $white;
+  font-family: $english-sub-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: 1.5;
+  z-index: 100;
+  @include mq(md) {
+    margin-top: rem(24);
+  }
+}
+
+.page-404__btn {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

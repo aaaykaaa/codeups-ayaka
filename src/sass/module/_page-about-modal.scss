@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.page-about-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.page-about-modal__bigimg {
+  position: absolute;
+  width: 80%;
+  max-width: rem(800);
+  top: rem(250);
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.page-about-modal__close-btn {
+  color: #fff;
+  font-size: rem(40);
+  position: absolute;
+  top: rem(100);
+  right: rem(20);
+}
+
+.page-about-modal__close-btn a {
+  color: #fff;
+  text-decoration: none;
+}

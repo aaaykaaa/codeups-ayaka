@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.sub-terms {
+  width: 100%;
+  max-width: calc(rem(800) + $padding-pc * 2);
+  margin-right: auto;
+  margin-left: auto;
+}

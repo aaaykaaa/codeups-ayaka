@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: rem(80);
+  @include mq(md) {
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: row;
+    width: 100%;
+    max-width: calc(rem(1080) + $padding-pc * 2);
+  }
+}

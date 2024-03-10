@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.aside-campaign {
+  margin-top: rem(80);
+}
+
+.aside-campaign__heading {
+
+}
+
+.aside-campaign__campaign-cards {
+  margin-top: rem(24);
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+}
+
+.aside-campaign__btn {
+  margin-top: rem(40);
+  text-align: center;
+}
