@@ -174,10 +174,37 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
-  // FAQ
+  // FAQのドロワー
   $('.js-nav-open').click(function(){
     $(this).toggleClass('is-active');
     $(this).next('nav').slideToggle();
+  });
+
+  // aboutのモーダル
+  $(function () {
+    $(".js-about-modal-trigger img").click(function () {
+      $(".js-about-modal").html($(this).prop('outerHTML'));
+      $(".js-about-modal").fadeIn(200);
+      $('html, body').css('overflow', 'hidden');
+    });
+    $(".js-about-modal, .js-about-modal img").click(function () {
+      $(".js-about-modal").fadeOut(200);
+      $('html, body').removeAttr('style');
+    });
+  });
+
+  $("js-contact-form").validate({
+    rules: {
+      text: {
+        required: true,
+      },
+    },
+    // messages: {
+    //   text_name: {
+    //     required: "入力必須項目",
+    //   },
+    // },
+    errorClass: "contact-form__data--error",
   });
 
 });

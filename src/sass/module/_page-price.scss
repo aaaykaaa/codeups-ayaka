@@ -1,5 +1,11 @@
 @use "global" as *;
 
+.page-price__inner {
+  @include mq(md) {
+    max-width: rem(700);
+  }
+}
+
 // テーブル
 .page-price__table-item {
   border: 1px solid $main-bg-color;
@@ -14,10 +20,11 @@
 }
 
 .page-price__head {
+  width: 100%;
   background-color: $main-bg-color;
   @include mq(md) {
-    width: calc(200 / 700 * 100%);
-    flex-grow: 1;
+    max-width: calc(rem(200) / rem(700) * 100%);
+    // flex-grow: 1;
   }
 }
 
@@ -32,6 +39,12 @@
   font-weight: $bold;
   line-height: calc(24 / 16);
   @include mq(md) {
+    padding-left: 0;
+    padding-bottom: rem(72);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -52,18 +65,31 @@
   top: 50%;
   left: rem(-32);
   transform: translateY(-50%);
+  @include mq(md) {
+    width: rem(64);
+    height: rem(64);
+    top: rem(32);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.page-price__body {
+  width: 100%;
 }
 
 .page-price__body-item {
-  min-height: rem(60);
   border-top: 1px solid $main-bg-color;
   display: flex;
   align-items: center;
   width: 100%;
+  @include mq(md) {
+    border: none;
+  }
 }
 
-.page-price__body-item:first-child {
-  min-height: rem(64);
+.page-price__body-item:not(:first-child) {
+  border-top: 1px solid $main-bg-color;
 }
 
 .page-price__course,
@@ -78,18 +104,22 @@
 .page-price__course {
   width: calc(240 / 345 * 100%);
   text-align: center;
-  border-right: 1px solid $main-bg-color;
+  padding: rem(6) rem(16);
   @include mq(md) {
-    flex-grow: 1.5;
+    text-align: left;
   }
 }
 
 .page-price__price {
-  padding-right: rem(16);
+  min-height: rem(60);
+  padding: rem(18) rem(16);
   width: calc(106 / 345 * 100%);
   text-align: right;
-  @include mq(md) {
-    width: calc(162 / 700 * 100%);
-    flex-grow: 1;
-  }
+  border-left: 1px solid $main-bg-color;
+}
+
+.page-price__price:first-child {
+  min-height: rem(64);
+  padding-top: rem(19);
+  padding-bottom: rem(19);
 }

@@ -177,10 +177,10 @@ textarea {
   opacity: 0;
 }
 
-// // 未達
-// input[type=checkbox]:checked + .contact-form__checkbox-wrap label span::after {
-//   opacity: 1;
-// }
+// 未達
+input[type=checkbox]:checked + span::after {
+  opacity: 1;
+}
 
 .contact-form__select-wrap {
   position: relative;

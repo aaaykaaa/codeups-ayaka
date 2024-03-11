@@ -32,14 +32,15 @@
     <!-- jQuery -->
     <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <!-- swiper CDN -->
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-    ></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- inview -->
     <script defer src="./assets/js/jquery.inview.min.js"></script>
+    <!-- validation -->
+    <script defer src="./assets/js/jquery.validate.min.js"></script>
+    <!-- <script defer src="./assets/js/validate-config.js"></script> -->
     <!-- JavaScript -->
     <script defer src="./assets/js/script.js"></script>
+
   </head>
   <body>
     <header class="header">
@@ -190,10 +191,10 @@
 
     <section class="page-contact sub">
       <div class="page-contact__inner inner">
-        <form action="" class="page-contact__form contact-form">
+        <form action="" class="page-contact__form contact-form js-contact-form">
           <div class="contact-form__item">
             <div class="contact-form__head"><span class="must">氏名</span></div>
-            <div class="contact-form__data"><input type="text" placeholder="沖縄　太郎" required></div>
+            <div class="contact-form__data"><input type="text" name="text" placeholder="沖縄　太郎"></div>
           </div>
           <div class="contact-form__item">
             <div class="contact-form__head"><span class="must">メールアドレス</span></div>
@@ -244,7 +245,7 @@
             </div>
           </div>
           <div class="contact-form__btn">
-            <a href="#" class="button"><span>Send</span></a>
+            <a href="#" class="button" type="submit"><span>Send</span></a>
           </div>
         </form>
       </div>
