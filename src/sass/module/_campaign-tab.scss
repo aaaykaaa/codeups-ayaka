@@ -1,0 +1,6 @@
+@use "global" as *;
+
+.is-tab-open a {
+  background-color: $main-bg-color;
+  color: $white;
+}

@@ -1,19 +1,16 @@
 @use "global" as *;
 
-.page-campaign__tabs {
+.page-campaign__container {
+  margin-top: rem(40);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: rem(16) rem(21);
+  gap: rem(40);
   @include mq(md) {
-    grid-template-columns: repeat(4, 1fr);
-    gap: rem(32);
-    width: 100%;
-    max-width: rem(744);
+    gap: rem(80) rem(40);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.page-campaign__choice {
-  margin-top: rem(40);
+.page-campaign__container {
 }
 
 .page-campaign__pagination {

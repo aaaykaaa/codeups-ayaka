@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet"/>
-    <!-- swiper CDN -->
+    <!-- swiper-css CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -36,7 +36,10 @@
     <!-- inview -->
     <script defer src="./assets/js/jquery.inview.min.js"></script>
     <!-- validation -->
-    <script defer src="./assets/js/jquery.validate.min.js"></script>
+    <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script>
+    <!-- <script defer src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script> -->
+    <!-- <script defer src="./assets/js/jquery.validate.min.js"></script> -->
     <!-- <script defer src="./assets/js/validate-config.js"></script> -->
     <!-- JavaScript -->
     <script defer src="./assets/js/script.js"></script>
@@ -191,18 +194,21 @@
 
     <section class="page-contact sub">
       <div class="page-contact__inner inner">
-        <form action="" class="page-contact__form contact-form js-contact-form">
+        <div class="page-contact__error-message">
+          <p>※必須項目が入力されていません。<br class="u-mobile">入力してください。</p>
+        </div>
+        <form action="/" class="page-contact__form contact-form js-contact-form mt40" method="post">
           <div class="contact-form__item">
             <div class="contact-form__head"><span class="must">氏名</span></div>
-            <div class="contact-form__data"><input type="text" name="text" placeholder="沖縄　太郎"></div>
+            <div class="contact-form__data"><input type="text" name="text" placeholder="沖縄　太郎" required></div>
           </div>
           <div class="contact-form__item">
             <div class="contact-form__head"><span class="must">メールアドレス</span></div>
-            <div class="contact-form__data"><input type="email" placeholder="aaa000@ggmail.com" required></div>
+            <div class="contact-form__data"><input type="email" placeholder="aaa000@ggmail.com"></div>
           </div>
           <div class="contact-form__item">
             <div class="contact-form__head"><span class="must">電話番号</span></div>
-            <div class="contact-form__data"><input type="tel" placeholder="000-0000-0000" required></div>
+            <div class="contact-form__data"><input type="tel" placeholder="000-0000-0000"></div>
           </div>
           <div class="contact-form__item">
             <div class="contact-form__head"><span class="must">お問い合わせ項目</span></div>
@@ -245,7 +251,7 @@
             </div>
           </div>
           <div class="contact-form__btn">
-            <a href="#" class="button" type="submit"><span>Send</span></a>
+            <button type="submit" class="button"><span>Send</span></button>
           </div>
         </form>
       </div>
