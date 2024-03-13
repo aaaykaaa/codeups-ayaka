@@ -12,10 +12,10 @@
 
 .global-nav__items {
   display: flex;
-  justify-content: center;
   gap: rem(29);
   @include mq(md) {
     gap: rem(142);
+    padding-left: rem(22);
   }
 }
 
@@ -54,6 +54,7 @@
 }
 
 .global-nav__parent::before {
+  background-color: $white;
   content: "";
   display: block;
   width: rem(18);

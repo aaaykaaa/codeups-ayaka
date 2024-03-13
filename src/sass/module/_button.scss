@@ -7,8 +7,8 @@
   font-size: rem(14);
   font-weight: $regular;
   background-color: $main-bg-color;
-  line-height: 1;
-  padding: rem(16) rem(88) rem(16) rem(40);
+  line-height: calc(22 / 14);
+  padding: rem(15) rem(88) rem(15) rem(40);
   flex-shrink: 1;
   border: 1px solid $main-bg-color;
   position: relative;

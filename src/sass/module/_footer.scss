@@ -5,7 +5,7 @@
   padding-top: rem(48);
   padding-bottom: rem(56);
   @include mq(md) {
-    padding-top: rem(85);
+    padding-top: rem(80);
     padding-bottom: rem(80);
   }
 }
@@ -23,14 +23,15 @@
   gap: rem(10);
   @include mq(md) {
     flex-direction: row;
-    gap: rem(32);
+    gap: rem(40);
   }
 }
 
 .footer__logo {
   width: rem(120);
   @include mq(md) {
-    width: rem(208);
+    width: rem(200);
+    height: rem(75);
   }
 }
 

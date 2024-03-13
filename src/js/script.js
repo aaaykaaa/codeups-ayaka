@@ -263,27 +263,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
-//   // 以下の処理を定義した要素に実行
-// $(function() {
-//   // 「#tags」内の「span」がクリックされると以下の処理を実行
-//   $("#tags span").click(function() {
-//   // 変数「tags」を定義する
-//   var tags = $(this).attr('id');
-//   // クリックされたタブにのみ「.select」を与える
-//   $("#tags span").removeClass('select');
-//   $(this).addClass('select');
-//   // クリックされたタブに紐づいた要素を表示、それ以外を非表示にする
-//   $("#choice div").fadeOut(500);
-//   if(tags == 'tab02') {
-//   $("#choice .tab02").fadeIn(500);
-//   } else if(tags == 'tab01') {
-//   $("#choice .tab01").fadeIn(500);
-//   } else if(tags == 'tab03') {
-//   $("#choice .tab03").fadeIn(500);
-//   } else {
-//   $("#choice div").fadeIn(500);
-//   }
-//   });
-//   });
+    $('.information-tab__item').on('click', function () {
+      $('.information-item').removeClass('is-tab-open');
+      $($(this).children('a').attr('href')).addClass('is-tab-open');
+      return false;
+    });
 
 });

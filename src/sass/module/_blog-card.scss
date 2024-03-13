@@ -7,6 +7,9 @@
 
 .blog-card__inner {
   padding: rem(16) rem(16) rem(24);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-card__img {
@@ -44,6 +47,7 @@
   line-height: 1.4375;
   padding-bottom: rem(3);
   border-bottom: 1px solid $main-bg-color;
+  flex-grow: 1;
 }
 
 .blog-card__text {
