@@ -54,12 +54,12 @@
   }
 }
 
-.information-tab__button span::before {
+.information-tab__button--tab1 span::before {
   @include mq(md) {
     background-color: $main-bg-color;
     content: "";
     display: inline-block;
-    mask-image: url(../images/common/information-tab-icon.svg);
+    mask-image: url(../images/common/information-tab1.svg);
     mask-repeat: no-repeat;
     mask-size: cover;
     position: absolute;

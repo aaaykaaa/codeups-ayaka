@@ -15,7 +15,7 @@
 .voice-card__head {
   flex-grow: 1;
   display: flex;
-  gap: rem(10);
+  gap: rem(16);
 }
 
 .voice-card__description {
@@ -107,9 +107,6 @@
   font-size: rem(16);
   font-weight: $regular;
   line-height: 1.5;
-  @include mq(md) {
-    line-height: 1.49;
-  }
 }
 
 .voice-card__img--rating {

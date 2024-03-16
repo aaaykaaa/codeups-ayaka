@@ -4,24 +4,24 @@
   background: $white;
   @include mq(md) {
     box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    padding: rem(78) rem(39) rem(81) rem(50);
+    padding: rem(80) rem(31) rem(80) rem(50);
   }
 }
 
 .contact-box {
   display: flex;
   flex-direction: column;
-  gap: rem(40);
+  gap: rem(34);
   text-align: center;
   @include mq(md) {
     flex-direction: row;
-    gap: min(3vw, rem(82));
+    gap: min(5.7vw, rem(82));
   }
 }
 
 .contact-box__left {
   @include mq(md) {
-    width: rem(456);
+    width: rem(440);
   }
 }
 
@@ -50,12 +50,13 @@
 }
 
 .contact-box__access {
+  border-top: rem(1) solid $main-bg-color;
   @include mq(md) {
-    margin-top: rem(3);
+    margin-top: rem(1);
     padding-top: rem(8);
     display: flex;
     gap: rem(15);
-    border-top: rem(1) solid $main-bg-color;
+    // border-top: rem(1) solid $main-bg-color;
   }
 }
 

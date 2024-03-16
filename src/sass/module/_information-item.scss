@@ -37,7 +37,7 @@
   font-size: rem(20);
   font-weight: $bold;
   line-height: 1.2;
-  padding-bottom: rem(8);
+  padding-bottom: rem(3.5);
   border-bottom: 1px solid $main-bg-color;
   @include mq(md) {
     font-size: rem(24);
@@ -46,8 +46,19 @@
   }
 }
 
+.information-item__title--page {
+  font-size: rem(24);
+  line-height: 1;
+  padding-bottom: rem(7.5);
+  @include mq(md) {
+    font-size: rem(24);
+    line-height: 1;
+    padding-bottom: rem(7.5);
+  }
+}
+
 .information-item__text {
-  margin-top: rem(8);
+  margin-top: rem(7.5);
   color: $black;
   font-size: rem(16);
   font-style: normal;
@@ -71,8 +82,10 @@
 }
 
 .information-item__img--page {
+  aspect-ratio: 297 / 189;
   @include mq(md) {
     margin-left: auto;
     max-width: rem(492);
+    aspect-ratio: 492 / 313;
   }
 }

@@ -72,8 +72,7 @@
   line-height: 1.5;
   padding-bottom: rem(7.5);
   border-bottom: 1px solid $main-bg-color;
-  @include mq(md) {
-  }
+  flex-grow: 1;
 }
 
 .campaign-card__title--page {
@@ -95,6 +94,7 @@
     font-size: rem(16);
     line-height: 1.5;
     gap: rem(25);
+    text-indent: -1.1em;
   }
 }
 

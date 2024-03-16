@@ -50,12 +50,12 @@
   @include mq(md) {
     margin-top: 0;
     flex-direction: row;
-    align-items: center;
+    // align-items: center;
     gap: rem(40);
     position: absolute;
-    top: 50%;
+    top: 48%;
     left: 18.43%;
-    transform: translateY(-50%);
+    transform: translateY(-48%);
     z-index: 5;
   }
 }
@@ -63,7 +63,8 @@
 .about-content__body-left {
   @include mq(md) {
     text-align: left;
-    width: calc(rem(400) / rem(880) * 100%);
+    // width: calc(rem(400) / rem(880) * 100%);
+    width: 47.5%;
   }
 }
 
@@ -103,8 +104,10 @@
 .about-content__btn {
   margin-top: rem(26);
   text-align: center;
+  margin-left: rem(-13);
   @include mq(md) {
     margin-top: rem(38);
+    margin-left: 0;
   }
 }
 

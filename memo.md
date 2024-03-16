@@ -1,3 +1,24 @@
+## 下層課題最後にやること
+- jsのauto止めてるやつ再開させる
+- 
+- 
+
+## 下層課題メモ
+./page-campaign.html
+./page-about.html
+./page-information.html
+./page-blog.html
+./page-voice.html
+./page-price.html
+./page-faq.html
+./page-contact.html
+./index.html
+./page-privacypolicy.html
+./page-terms.html
+
+
+
+
 ## パーツ
 
 - ボタン

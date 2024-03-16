@@ -50,6 +50,17 @@
     ></script>
     <!-- inview -->
     <script defer src="./assets/js/jquery.inview.min.js"></script>
+    <!-- validation -->
+    <script
+      defer
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
+    ></script>
+    <script
+      defer
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"
+    ></script>
     <!-- JavaScript -->
     <script defer src="./assets/js/script.js"></script>
   </head>
@@ -57,7 +68,7 @@
     <header class="header">
       <div class="header__inner">
         <h1 class="header__logo">
-          <a href="#" class="header__logoLink">
+          <a href="./index.html" class="header__logoLink">
             <img
               src="./assets/images/common/logo-white.svg"
               alt="codeupsのロゴ"
@@ -87,7 +98,9 @@
               >
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__itemLink">Blog<span>ブログ</span></a>
+              <a href="./page-blog.html" class="pc-nav__itemLink"
+                >Blog<span>ブログ</span></a
+              >
             </li>
             <li class="pc-nav__item">
               <a href="#" class="pc-nav__itemLink"
@@ -117,7 +130,7 @@
               <div class="global-nav__item-sp">
                 <ul class="global-nav__item-pc">
                   <li class="global-nav__parent">
-                    <a href="#campaign">キャンペーン</a>
+                    <a href="./page-campaign.html">キャンペーン</a>
                     <ul>
                       <li class="global-nav__child">
                         <a href="#">ライセンス取得</a>
@@ -131,12 +144,12 @@
                     </ul>
                   </li>
                   <li class="global-nav__parent">
-                    <a href="#">私たちについて</a>
+                    <a href="./page-about.html">私たちについて</a>
                   </li>
                 </ul>
                 <ul class="global-nav__item-pc">
                   <li class="global-nav__parent">
-                    <a href="#">ダイビング情報</a>
+                    <a href="./page-information.html">ダイビング情報</a>
                     <ul>
                       <li class="global-nav__child">
                         <a href="#">ライセンス講習</a>
@@ -150,17 +163,17 @@
                     </ul>
                   </li>
                   <li class="global-nav__parent">
-                    <a href="#">ブログ</a>
+                    <a href="./page-blog.html">ブログ</a>
                   </li>
                 </ul>
               </div>
               <div class="global-nav__item-sp">
                 <ul class="global-nav__item-pc">
                   <li class="global-nav__parent">
-                    <a href="#">お客様の声</a>
+                    <a href="./page-voice.html">お客様の声</a>
                   </li>
                   <li class="global-nav__parent">
-                    <a href="#">料金一覧</a>
+                    <a href="./page-price.html">料金一覧</a>
                     <ul>
                       <li class="global-nav__child">
                         <a href="#">ライセンス講習</a>
@@ -176,16 +189,18 @@
                 </ul>
                 <ul class="global-nav__item-pc">
                   <li class="global-nav__parent">
-                    <a href="#">よくある質問</a>
+                    <a href="./page-faq.html">よくある質問</a>
                   </li>
                   <li class="global-nav__parent">
-                    <a href="#">プライバシー<br class="u-mobile" />ポリシー</a>
+                    <a href="./page-privacypolicy.html"
+                      >プライバシー<br class="u-mobile" />ポリシー</a
+                    >
                   </li>
                   <li class="global-nav__parent">
-                    <a href="#">利用規約</a>
+                    <a href="./page-terms.html">利用規約</a>
                   </li>
                   <li class="global-nav__parent">
-                    <a href="#">お問い合わせ</a>
+                    <a href="./page-contact.html">お問い合わせ</a>
                   </li>
                 </ul>
               </div>
@@ -198,7 +213,7 @@
     <div class="page-mv sub-page-mv">
       <div class="page-mv__inner">
         <div class="page-mv__text-box">
-          <p class="page-mv__title">privacy <span>p</span>olicy</p>
+          <h1 class="page-mv__title">privacy <span>p</span>olicy</h1>
         </div>
         <picture class="page-mv__img">
           <source
@@ -207,7 +222,7 @@
           />
           <img
             src="./assets/images/common/page-bg_mv-sp.jpeg"
-            alt="のmain画像"
+            alt="privacypolicypageのmain画像"
           />
         </picture>
       </div>
@@ -227,34 +242,67 @@
           <div class="text-box">
             <h1 class="text-box__title">プライバシーポリシー</h1>
             <div class="text-box__texts">
-              <p class="text-box__text">以下は、Webサイトで使用するための一般的なプライバシーポリシーの例です。</p>
+              <p class="text-box__text">
+                以下は、Webサイトで使用するための一般的なプライバシーポリシーの例です。
+              </p>
               <ol class="text-box__list-number">
-                <li class="text-box__text mt40">概要 当社は、お客様の個人情報を大切に扱い、個人情報保護に努めています。本プライバシーポリシーには、当社がどのように個人情報を収集し、使用するかについて説明しています。
+                <li class="text-box__text mt40">
+                  概要
+                  当社は、お客様の個人情報を大切に扱い、個人情報保護に努めています。本プライバシーポリシーには、当社がどのように個人情報を収集し、使用するかについて説明しています。
                 </li>
-                <li class="text-box__text">収集する情報 当社は、お客様が当社のサービスを利用する際に、お名前、住所、電話番号、メールアドレスなどの個人情報を収集する場合があります。
+                <li class="text-box__text">
+                  収集する情報
+                  当社は、お客様が当社のサービスを利用する際に、お名前、住所、電話番号、メールアドレスなどの個人情報を収集する場合があります。
                 </li>
               </ol>
-              <p class="text-box__text mt40">また、当社のサイトを閲覧する際に、IPアドレス、ブラウザの種類、言語設定、アクセス日時などの情報も収集する場合があります。</p>
+              <p class="text-box__text mt40">
+                また、当社のサイトを閲覧する際に、IPアドレス、ブラウザの種類、言語設定、アクセス日時などの情報も収集する場合があります。
+              </p>
               <ol class="text-box__list-number">
-                <li class="text-box__text">情報の使用 当社は、お客様から収集した個人情報を、以下の目的で使用することがあります。</li>
+                <li class="text-box__text">
+                  情報の使用
+                  当社は、お客様から収集した個人情報を、以下の目的で使用することがあります。
+                </li>
               </ol>
               <ul class="text-box__list-interpoint">
-                <li class="text-box__text mt40">お客様からのお問い合わせやサポートの提供・当社のサービスや製品の提供・当社のサイトの改善や新しいサービスの開発・法律や規制に基づく義務の履行
+                <li class="text-box__text mt40">
+                  お客様からのお問い合わせやサポートの提供・当社のサービスや製品の提供・当社のサイトの改善や新しいサービスの開発・法律や規制に基づく義務の履行
                 </li>
               </ul>
               <ol class="text-box__list-number">
-                <li class="text-box__text">情報の共有 当社は、お客様から収集した個人情報を、以下の場合に限り第三者に提供することがあります。</li>
+                <li class="text-box__text">
+                  情報の共有
+                  当社は、お客様から収集した個人情報を、以下の場合に限り第三者に提供することがあります。
+                </li>
               </ol>
               <ul class="text-box__list-interpoint">
-                <li class="text-box__text mt40">お客様の同意がある場合 ・法律や規制に基づく場合 ・当社が信頼できると判断した業務委託先に必要な範囲で提供する場合</li>
+                <li class="text-box__text mt40">
+                  お客様の同意がある場合 ・法律や規制に基づく場合
+                  ・当社が信頼できると判断した業務委託先に必要な範囲で提供する場合
+                </li>
               </ul>
               <ol class="text-box__list-number">
-                <li class="text-box__text">セキュリティ 当社は、お客様の個人情報を適切に保護するために、適切な安全対策を講じます。個人情報への不正アクセス、紛失、改ざん、漏洩等を防止するための措置を講じます。</li>
-                <li class="text-box__text">Cookieの使用 当社は、お客様により良いサイトの利用体験を提供するために、Cookieを使用する場合があります。Cookieは、お客様が当社のサイトを訪れた際に、お客様のブラウザに保存される小さなデータファイルです。Cookieには個人情報は含まれません。</li>
-                <li class="text-box__text">お問い合わせ先 当社のプライバシーポリシーに関するご質問やご意見は、以下の連絡先までお問い合わせください。 [会社名] [住所] [電話番号] [メールアドレス]</li>
-                <li class="text-box__text">プライバシーポリシーの変更 当社は、必要に応じて本プライバシーポリシーを変更することがあります。変更後のプライバシーポリシーは、当社のサイトに掲載された時点から効力を有するものとします。変更があった場合、当社は適切な手段でお知らせします。</li>
+                <li class="text-box__text">
+                  セキュリティ
+                  当社は、お客様の個人情報を適切に保護するために、適切な安全対策を講じます。個人情報への不正アクセス、紛失、改ざん、漏洩等を防止するための措置を講じます。
+                </li>
+                <li class="text-box__text">
+                  Cookieの使用
+                  当社は、お客様により良いサイトの利用体験を提供するために、Cookieを使用する場合があります。Cookieは、お客様が当社のサイトを訪れた際に、お客様のブラウザに保存される小さなデータファイルです。Cookieには個人情報は含まれません。
+                </li>
+                <li class="text-box__text">
+                  お問い合わせ先
+                  当社のプライバシーポリシーに関するご質問やご意見は、以下の連絡先までお問い合わせください。
+                  [会社名] [住所] [電話番号] [メールアドレス]
+                </li>
+                <li class="text-box__text">
+                  プライバシーポリシーの変更
+                  当社は、必要に応じて本プライバシーポリシーを変更することがあります。変更後のプライバシーポリシーは、当社のサイトに掲載された時点から効力を有するものとします。変更があった場合、当社は適切な手段でお知らせします。
+                </li>
               </ol>
-              <p class="text-box__text mt40">以上が、当社のプライバシーポリシーの概要です。お客様の個人情報保護のために、常に努めてまいります。</p>
+              <p class="text-box__text mt40">
+                以上が、当社のプライバシーポリシーの概要です。お客様の個人情報保護のために、常に努めてまいります。
+              </p>
             </div>
           </div>
         </div>
@@ -311,7 +359,9 @@
                 <p class="contact-box__text">ご予約・お問い合わせはコチラ</p>
               </div>
               <div class="contact-box__btn">
-                <a href="#" class="button"><span>Contact us</span></a>
+                <a href="./page-contact.html" class="button"
+                  ><span>Contact us</span></a
+                >
               </div>
             </div>
           </div>
@@ -349,7 +399,7 @@
               <div class="global-nav__item-sp">
                 <ul class="global-nav__item-pc">
                   <li class="global-nav__parent">
-                    <a href="#">キャンペーン</a>
+                    <a href="./page-campaign.html">キャンペーン</a>
                     <ul>
                       <li class="global-nav__child">
                         <a href="#">ライセンス取得</a>
@@ -363,12 +413,12 @@
                     </ul>
                   </li>
                   <li class="global-nav__parent">
-                    <a href="#">私たちについて</a>
+                    <a href="./page-about.html">私たちについて</a>
                   </li>
                 </ul>
                 <ul class="global-nav__item-pc">
                   <li class="global-nav__parent">
-                    <a href="#">ダイビング情報</a>
+                    <a href="./page-information.html">ダイビング情報</a>
                     <ul>
                       <li class="global-nav__child">
                         <a href="#">ライセンス講習</a>
@@ -382,17 +432,17 @@
                     </ul>
                   </li>
                   <li class="global-nav__parent">
-                    <a href="#">ブログ</a>
+                    <a href="./page-blog.html">ブログ</a>
                   </li>
                 </ul>
               </div>
               <div class="global-nav__item-sp">
                 <ul class="global-nav__item-pc">
                   <li class="global-nav__parent">
-                    <a href="#">お客様の声</a>
+                    <a href="./page-voice.html">お客様の声</a>
                   </li>
                   <li class="global-nav__parent">
-                    <a href="#">料金一覧</a>
+                    <a href="./page-price.html">料金一覧</a>
                     <ul>
                       <li class="global-nav__child">
                         <a href="#">ライセンス講習</a>
@@ -408,16 +458,18 @@
                 </ul>
                 <ul class="global-nav__item-pc">
                   <li class="global-nav__parent">
-                    <a href="#">よくある質問</a>
+                    <a href="./page-faq.html">よくある質問</a>
                   </li>
                   <li class="global-nav__parent">
-                    <a href="#">プライバシー<br class="u-mobile" />ポリシー</a>
+                    <a href="./page-privacypolicy.html"
+                      >プライバシー<br class="u-mobile" />ポリシー</a
+                    >
                   </li>
                   <li class="global-nav__parent">
-                    <a href="#">利用規約</a>
+                    <a href="./page-terms.html">利用規約</a>
                   </li>
                   <li class="global-nav__parent">
-                    <a href="#">お問い合わせ</a>
+                    <a href="./page-contact.html">お問い合わせ</a>
                   </li>
                 </ul>
               </div>
@@ -432,7 +484,7 @@
       </div>
     </footer>
 
-    <a href="#" class="pagetop js-pagetop"></a>
+    <a href="/" class="pagetop js-pagetop"></a>
   </body>
 </html>
 
