@@ -12,6 +12,11 @@
   padding-left: rem(32);
   position: relative;
 }
+
+.blog-archive-accordion__title + .blog-archive-accordion__title {
+  margin-top: rem(4);
+}
+
 .blog-archive-accordion__content {
   display: none;
   padding-left: rem(24);
@@ -29,7 +34,7 @@
   width: rem(20);
   height: rem(24);
   top: 50%;
-  left: rem(2);
+  left: rem(4);
   transform: translateY(-50%);
   transition: transform .3s ease-in-out, top .3s ease-in-out;
 }

@@ -53,12 +53,10 @@
     <!-- validation -->
     <script
       defer
-      type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
     ></script>
     <script
       defer
-      type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"
     ></script>
     <!-- JavaScript -->
@@ -67,14 +65,14 @@
   <body>
     <header class="header">
       <div class="header__inner">
-        <h1 class="header__logo">
+        <div class="header__logo">
           <a href="./index.html" class="header__logoLink">
             <img
               src="./assets/images/common/logo-white.svg"
               alt="codeupsのロゴ"
             />
           </a>
-        </h1>
+        </div>
         <div class="header__drawer hamburger js-hamburger">
           <span></span>
           <span></span>
@@ -93,7 +91,7 @@
               >
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__itemLink"
+              <a href="./page-information.html" class="pc-nav__itemLink"
                 >Information<span>ダイビング情報</span></a
               >
             </li>
@@ -103,22 +101,22 @@
               >
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__itemLink"
+              <a href="./page-voice.html" class="pc-nav__itemLink"
                 >Voice<span>お客様の声</span></a
               >
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__itemLink"
+              <a href="./page-price.html" class="pc-nav__itemLink"
                 >Price<span>料金一覧</span></a
               >
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__itemLink"
+              <a href="./page-faq.html" class="pc-nav__itemLink"
                 >FAQ<span>よくある質問</span></a
               >
             </li>
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__itemLink"
+              <a href="./page-contact.html" class="pc-nav__itemLink"
                 >Contact<span>お問合せ</span></a
               >
             </li>
@@ -213,7 +211,7 @@
     <div class="page-mv sub-page-mv">
       <div class="page-mv__inner">
         <div class="page-mv__text-box">
-          <h1 class="page-mv__title">blog</h1>
+          <p class="page-mv__title">blog</p>
         </div>
         <picture class="page-mv__img">
           <source
@@ -304,13 +302,13 @@
                   </figure>
                   <div class="blog-card__body">
                     <time
-                      class="blog-card__date blog-card__date__ranking"
+                      class="blog-card__date blog-card__date--ranking"
                       datetime="2023-11-27"
                       >2023/11/17</time
                     >
-                    <h1 class="blog-card__title blog-card__title--ranking">
+                    <h3 class="blog-card__title blog-card__title--ranking">
                       ライセンス取得
-                    </h1>
+                    </h3>
                   </div>
                 </div>
               </a>
@@ -324,13 +322,13 @@
                   </figure>
                   <div class="blog-card__body">
                     <time
-                      class="blog-card__date blog-card__date__ranking"
+                      class="blog-card__date blog-card__date--ranking"
                       datetime="2023-11-27"
                       >2023/11/17</time
                     >
-                    <h1 class="blog-card__title blog-card__title--ranking">
+                    <h3 class="blog-card__title blog-card__title--ranking">
                       ウミガメと泳ぐ
-                    </h1>
+                    </h3>
                   </div>
                 </div>
               </a>
@@ -344,13 +342,13 @@
                   </figure>
                   <div class="blog-card__body">
                     <time
-                      class="blog-card__date blog-card__date__ranking"
+                      class="blog-card__date blog-card__date--ranking"
                       datetime="2023-11-27"
                       >2023/11/17</time
                     >
-                    <h1 class="blog-card__title blog-card__title--ranking">
+                    <h3 class="blog-card__title blog-card__title--ranking">
                       カクレクマノミ
-                    </h1>
+                    </h3>
                   </div>
                 </div>
               </a>
@@ -375,7 +373,7 @@
               <div class="voice-card__wrapper">
                 <div class="voice-card__meta voice-card__meta--rating">
                   <p class="voice-card__age voice-card__age--rating">
-                    20代(女性)
+                    30代(カップル)
                   </p>
                 </div>
                 <h3 class="voice-card__title voice-card__title--rating">
@@ -396,42 +394,68 @@
             </div>
             <div class="aside-campaign__campaign-cards campaign-cards">
               <div class="campaign-cards__card campaign-card">
-                <figure class="campaign-card__img">
+                <figure class="campaign-card__img campaign-card__img--aside">
                   <img
                     src="./assets/images/common/campaign1.jpg"
                     alt="キャンペーン1"
                   />
                 </figure>
-                <div class="campaign-card__body">
-                  <p class="campaign-card__tag">ライセンス講習</p>
-                  <h3 class="campaign-card__title">ライセンス取得</h3>
-                  <p class="campaign-card__detail">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__prices">
-                    <p class="campaign-card__price-cost">&yen;56,000</p>
-                    <p class="campaign-card__price-low">&yen;46,000</p>
+                <div class="campaign-card__body campaign-card__body--aside">
+                  <h3 class="campaign-card__title campaign-card__title--aside">
+                    ライセンス取得
+                  </h3>
+                  <p class="campaign-card__detail campaign-card__detail--aside">
+                    全部コミコミ(お一人様)
+                  </p>
+                  <div
+                    class="campaign-card__prices campaign-card__prices--aside"
+                  >
+                    <p
+                      class="campaign-card__price-cost campaign-card__price-cost--aside"
+                    >
+                      &yen;56,000
+                    </p>
+                    <p
+                      class="campaign-card__price-low campaign-card__price-low--aside"
+                    >
+                      &yen;46,000
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="campaign-cards__card campaign-card">
-                <figure class="campaign-card__img">
+                <figure class="campaign-card__img campaign-card__img--aside">
                   <img
                     src="./assets/images/common/campaign2.jpg"
                     alt="キャンペーン2"
                   />
                 </figure>
-                <div class="campaign-card__body">
-                  <p class="campaign-card__tag">体験ダイビング</p>
-                  <h3 class="campaign-card__title">貸切体験ダイビング</h3>
-                  <p class="campaign-card__detail">全部コミコミ(お一人様)</p>
-                  <div class="campaign-card__prices">
-                    <p class="campaign-card__price-cost">&yen;24,000</p>
-                    <p class="campaign-card__price-low">&yen;18,000</p>
+                <div class="campaign-card__body campaign-card__body--aside">
+                  <h3 class="campaign-card__title campaign-card__title--aside">
+                    貸切体験ダイビング
+                  </h3>
+                  <p class="campaign-card__detail campaign-card__detail--aside">
+                    全部コミコミ(お一人様)
+                  </p>
+                  <div
+                    class="campaign-card__prices campaign-card__prices--aside"
+                  >
+                    <p
+                      class="campaign-card__price-cost campaign-card__price-cost--aside"
+                    >
+                      &yen;24,000
+                    </p>
+                    <p
+                      class="campaign-card__price-low campaign-card__price-low--aside"
+                    >
+                      &yen;18,000
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
             <div class="aside-campaign__btn">
-              <a href="#" class="button"><span>View more</span></a>
+              <a href="./page-campaign.html" class="button"><span>View more</span></a>
             </div>
           </section>
 
@@ -650,20 +674,3 @@
     <a href="/" class="pagetop js-pagetop"></a>
   </body>
 </html>
-
-<!--
-
-
-
-
-
-    <button class="tab-button">ALL</button>
-    <button class="tab-button">ライセンス講習</button>
-    <button class="tab-button">ファンダイビング</button>
-    <button class="tab-button">体験ダイビング</button>
-
-
-
-
-
--->

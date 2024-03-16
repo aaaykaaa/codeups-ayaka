@@ -70,6 +70,37 @@
   }
 }
 
+.information-tab__button--tab2 span::before {
+  @include mq(md) {
+    background-color: $main-bg-color;
+    content: "";
+    display: inline-block;
+    mask-image: url(../images/common/information-tab2.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    position: absolute;
+    width: rem(63);
+    height: rem(63);
+    top: rem(-17);
+    left: rem(-68);
+  }
+}
+.information-tab__button--tab3 span::before {
+  @include mq(md) {
+    background-color: $main-bg-color;
+    content: "";
+    display: inline-block;
+    mask-image: url(../images/common/information-tab3.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    position: absolute;
+    width: rem(64);
+    height: rem(64);
+    top: rem(-17);
+    left: rem(-68);
+  }
+}
+
 .information-tab__button:hover span::before,
 .information-tab__button:focus span::before {
   @include mq(md) {
