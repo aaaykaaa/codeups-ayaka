@@ -8,7 +8,13 @@
   display: none;
 }
 
-.faq-item__title,
+.faq-item__title {
+
+  @include mq(md) {
+    
+  }
+}
+
 .faq-item__text {
   font-family: $japanese-font-family;
   font-size: rem(16);
@@ -20,7 +26,15 @@
 	padding: rem(16);
 	color: #fff;
 	background: $main-bg-color;
+  font-family: $japanese-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(23 / 16);
   position: relative;
+  @include mq(md) {
+    padding: rem(26) rem(40) rem(25);
+    font-size: rem(20);
+  }
 }
 .faq-item__title::before,
 .faq-item__title::after {    // 縦
@@ -34,6 +48,9 @@
   top: 50%;
   transform: translateY(-50%);
   transition: opacity .3s;
+  @include mq(md) {
+    right: rem(45);
+  }
 }
 
 .faq-item__title::after {     // 横
@@ -50,10 +67,11 @@
 }
 
 .faq-item__text {
-  padding: rem(24) rem(16);
+  padding: rem(23) rem(15);
   color: $black;
   border: 1px solid $main-bg-color;
   @include mq(md) {
     margin-top: rem(16);
+    padding: rem(40);
   }
 }
