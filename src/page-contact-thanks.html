@@ -53,12 +53,10 @@
     <!-- validation -->
     <script
       defer
-      type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
     ></script>
     <script
       defer
-      type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"
     ></script>
     <!-- JavaScript -->
@@ -67,14 +65,14 @@
   <body>
     <header class="header">
       <div class="header__inner">
-        <h1 class="header__logo">
+        <div class="header__logo">
           <a href="./index.html" class="header__logoLink">
             <img
               src="./assets/images/common/logo-white.svg"
               alt="codeupsのロゴ"
             />
           </a>
-        </h1>
+        </div>
         <div class="header__drawer hamburger js-hamburger">
           <span></span>
           <span></span>
@@ -83,7 +81,7 @@
         <nav class="header__pc-nav pc-nav">
           <ul class="pc-nav__items">
             <li class="pc-nav__item">
-              <a href="#" class="pc-nav__itemLink"
+              <a href="./page-campaign.html" class="pc-nav__itemLink"
                 >Campaign<span>キャンペーン</span></a
               >
             </li>
@@ -240,8 +238,8 @@
       <div class="page-contact-thanks__inner inner">
         <div class="page-contact-thanks__text-box">
           <div class="text-box">
-            <p class="text-box__text">お問い合わせ内容を送信完了しました。</p>
-            <p class="text-box__text mt40">
+            <h2 class="text-box__thanks-title">お問い合わせ内容を送信完了しました。</h2>
+            <p class="text-box__thanks-text mt40">
               このたびは、お問い合わせ頂き<br
                 class="u-mobile"
               />誠にありがとうございます。<br />お送り頂きました内容を確認の上、<br
@@ -255,7 +253,7 @@
       </div>
     </section>
 
-    <footer class="footer sub-footer">
+    <footer class="footer sub-footer sub-footer--thanks">
       <div class="footer__inner inner">
         <div class="footer__head">
           <div class="footer__logo">
@@ -373,20 +371,3 @@
     <a href="/" class="pagetop js-pagetop"></a>
   </body>
 </html>
-
-<!--
-
-
-
-
-
-    <button class="tab-button">ALL</button>
-    <button class="tab-button">ライセンス講習</button>
-    <button class="tab-button">ファンダイビング</button>
-    <button class="tab-button">体験ダイビング</button>
-
-
-
-
-
--->

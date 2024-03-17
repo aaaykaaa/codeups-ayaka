@@ -53,12 +53,10 @@
     <!-- validation -->
     <script
       defer
-      type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
     ></script>
     <script
       defer
-      type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"
     ></script>
     <!-- JavaScript -->
@@ -67,14 +65,14 @@
   <body>
     <header class="header">
       <div class="header__inner">
-        <h1 class="header__logo">
+        <div class="header__logo">
           <a href="./index.html" class="header__logoLink">
             <img
               src="./assets/images/common/logo-white.svg"
               alt="codeupsのロゴ"
             />
           </a>
-        </h1>
+        </div>
         <div class="header__drawer hamburger js-hamburger">
           <span></span>
           <span></span>
@@ -238,7 +236,7 @@
 
     <div class="sub"></div>
 
-    <section class="page-contact sub">
+    <div class="page-contact sub">
       <div class="page-contact__inner inner">
         <div class="page-contact__error-message">
           <p>
@@ -253,7 +251,7 @@
           method="post"
         >
           <div class="contact-form__item">
-            <div class="contact-form__head"><span class="must">氏名</span></div>
+            <div class="contact-form__head"><span class="must">お名前</span></div>
             <div class="contact-form__data">
               <input
                 type="text"
@@ -281,7 +279,7 @@
           </div>
           <div class="contact-form__item">
             <div class="contact-form__head">
-              <span class="must">お問い合わせ項目</span>
+              <span class="must">お問合せ項目</span>
             </div>
             <div class="contact-form__data contact-form__checkbox-wrap">
               <label for="checkbox1">
@@ -310,7 +308,7 @@
           </div>
           <div class="contact-form__item">
             <div class="contact-form__head">
-              <span class="must">お問い合わせ内容</span>
+              <span class="must">お問合せ内容</span>
             </div>
             <div class="contact-form__data"><textarea required></textarea></div>
           </div>
@@ -324,11 +322,11 @@
             </div>
           </div>
           <div class="contact-form__btn">
-            <button type="submit" class="button"><span>Send</span></button>
+            <button type="submit" class="button button--send"><span>Send</span></button>
           </div>
         </form>
       </div>
-    </section>
+    </div>
 
     <footer class="footer sub-footer">
       <div class="footer__inner inner">
@@ -448,20 +446,3 @@
     <a href="/" class="pagetop js-pagetop"></a>
   </body>
 </html>
-
-<!--
-
-
-
-
-
-    <button class="tab-button">ALL</button>
-    <button class="tab-button">ライセンス講習</button>
-    <button class="tab-button">ファンダイビング</button>
-    <button class="tab-button">体験ダイビング</button>
-
-
-
-
-
--->

@@ -16,6 +16,26 @@
   margin-top: rem(40);
 }
 
+// thanksページのtitle
+.text-box__thanks-title {
+  color: $black;
+  text-align: center;
+  font-family: $japanese-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(18 / 16);
+}
+
+// thanksページのtext
+.text-box__thanks-text {
+  color: $black;
+  text-align: center;
+  font-family: $japanese-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: calc(23 / 16);
+}
+
 .text-box__text {
   color: $black;
   font-family: $japanese-font-family;
@@ -25,11 +45,11 @@
 
 .text-box__list-number {
   list-style: decimal;
-  padding-left: rem(16);
+  padding-left: rem(22);
 }
 
 .text-box__list-number li {
-  padding-left: rem(9);
+  padding-left: rem(2);
 }
 
 .text-box__list-interpoint {

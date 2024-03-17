@@ -6,3 +6,10 @@
     margin-top: rem(160);
   }
 }
+
+.sub-footer--thanks {
+  margin-top: rem(144);
+  @include mq(md) {
+    margin-top: rem(120);
+  }
+}

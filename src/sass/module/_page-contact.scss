@@ -2,7 +2,7 @@
 
 .page-contact__inner {
   @include mq(md) {
-    max-width: rem(700);
+    max-width: calc(rem(700) + $padding-pc * 2);
   }
 }
 
@@ -20,4 +20,6 @@
   font-size: rem(14);
   font-weight: $regular;
   line-height: calc(20 / 14);
+  text-indent: -1em;
+  margin-left: rem(16);
 }

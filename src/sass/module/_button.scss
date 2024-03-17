@@ -71,6 +71,7 @@
 }
 
 .button--wtite {
+  padding: rem(15) rem(97) rem(15) rem(41);
   color: $main-bg-color;
   background-color: $white;
   border: 1px solid $main-bg-color;
@@ -95,4 +96,23 @@
 
 .button--wtite:hover span::after {
   background-color: $white;
+}
+
+.button--send {
+  padding: rem(16) rem(112) rem(16) rem(56);
+}
+
+
+.button--send span::after {
+  background-color: $white;
+  content: "";
+  display: inline-block;
+  mask-image: url(../images/common/right.svg);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  position: absolute;
+  width: rem(40);
+  height: rem(7);
+  top: rem(18);
+  right: rem(56);
 }

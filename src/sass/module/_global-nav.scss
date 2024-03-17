@@ -19,6 +19,13 @@
   }
 }
 
+.global-nav__items--sitemap {
+  gap: rem(25);
+  @include mq(md) {
+    gap: rem(166);
+  }
+}
+
 .global-nav__items--drawer {
   gap: rem(7);
 }
@@ -32,6 +39,12 @@
     padding-left: 0;
     flex-direction: row;
     gap: rem(142);
+  }
+}
+
+.global-nav__item-sp--sitemap {
+  @include mq(md) {
+    gap: rem(166);
   }
 }
 

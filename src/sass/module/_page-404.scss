@@ -10,6 +10,9 @@
 
 .page-404__inner {
   position: relative;
+  @include mq(md) {
+    max-width: rem(1180);
+  }
 }
 
 .page-404__inner::before {
@@ -43,22 +46,22 @@
   font-family: $english-sub-font-family;
   font-size: rem(80);
   font-weight: $regular;
-  letter-spacing: 0.4em;
-  text-indent: 0.4em;
+  line-height: calc(96 / 80);
+  letter-spacing: 0.5em;
+  text-indent: 0.5em;
   z-index: 100;
   @include mq(md) {
     font-size: rem(160);
-    letter-spacing: 0.8em;
-    text-indent: 0.8em;
   }
 }
 
 .page-404__text {
+  margin-top: rem(-3);
   color: $white;
   font-family: $english-sub-font-family;
   font-size: rem(16);
   font-weight: $regular;
-  line-height: 1.5;
+  line-height: calc(24 / 16);
   z-index: 100;
   @include mq(md) {
     margin-top: rem(24);

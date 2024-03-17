@@ -53,12 +53,10 @@
     <!-- validation -->
     <script
       defer
-      type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"
     ></script>
     <script
       defer
-      type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"
     ></script>
     <!-- JavaScript -->
@@ -67,14 +65,14 @@
   <body>
     <header class="header">
       <div class="header__inner">
-        <h1 class="header__logo">
+        <div class="header__logo">
           <a href="./index.html" class="header__logoLink">
             <img
               src="./assets/images/common/logo-white.svg"
               alt="codeupsのロゴ"
             />
           </a>
-        </h1>
+        </div>
         <div class="header__drawer hamburger js-hamburger">
           <span></span>
           <span></span>
@@ -236,13 +234,13 @@
       </div>
     </div>
 
-    <section class="site-map sub">
+    <div class="site-map sub-site-map">
       <div class="site-map__inner inner">
         <div class="site-map__nav">
           <nav class="global-nav">
             <div class="global-nav__inner">
-              <div class="global-nav__items">
-                <div class="global-nav__item-sp">
+              <div class="global-nav__items global-nav__items--sitemap">
+                <div class="global-nav__item-sp global-nav__item-sp--sitemap">
                   <ul class="global-nav__item-pc">
                     <li class="global-nav__parent global-nav__parent--black">
                       <a href="./page-campaign.html">キャンペーン</a>
@@ -282,7 +280,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="global-nav__item-sp">
+                <div class="global-nav__item-sp global-nav__item-sp--sitemap">
                   <ul class="global-nav__item-pc">
                     <li class="global-nav__parent global-nav__parent--black">
                       <a href="./page-voice.html">お客様の声</a>
@@ -324,9 +322,9 @@
           </nav>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="contact sub-contact">
+    <section class="contact sub-contact sub-contact--sitemap">
       <div class="contact__inner inner">
         <div class="contact__boxes contact-boxes">
           <div class="contact-boxes__box contact-box">
@@ -505,19 +503,3 @@
   </body>
 </html>
 
-<!--
-
-
-
-
-
-    <button class="tab-button">ALL</button>
-    <button class="tab-button">ライセンス講習</button>
-    <button class="tab-button">ファンダイビング</button>
-    <button class="tab-button">体験ダイビング</button>
-
-
-
-
-
--->

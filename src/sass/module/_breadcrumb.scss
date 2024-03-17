@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .breadcrumb {
+  margin-top: rem(8);
   color: $black;
   font-family: $japanese-font-family;
   font-size: rem(14);
@@ -9,9 +10,11 @@
 }
 
 .breadcrumb--404 {
+  margin-top: 0;
   padding-top: rem(88);
   color: $white;
   @include mq(md) {
-    padding-top: rem(90);
+    padding-top: rem(98);
+    padding-left: rem(25);
   }
 }
