@@ -1,17 +1,12 @@
 @use "global" as *;
 
-.global-nav {
-}
-
-.global-nav__inner {
-}
-
 .global-nav.is-active {
   display: block;
 }
 
 .global-nav__items {
   display: flex;
+  justify-content: center;
   gap: rem(16);
   @include mq(md) {
     gap: rem(142);

@@ -47,10 +47,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       loop: true,   // 無限ループさせる
       speed: 4000,
       effect: 'fade',
-      // autoplay: {
-      //   delay: 1000,                  // 次のスライドに切り替わるまでのミリ秒
-      //   disableOnInteraction: false   // ユーザーが操作したときに自動再生を止める。falseがオススメ
-      // }
+      autoplay: {
+        delay: 1000,                  // 次のスライドに切り替わるまでのミリ秒
+        disableOnInteraction: false   // ユーザーが操作したときに自動再生を止める。falseがオススメ
+      }
     });
   });
 
@@ -83,10 +83,10 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       },
       spaceBetween: 24,
       speed: 2000,
-      // autoplay: {
-      //   delay: 1000,
-      //   disableOnInteraction: false
-      // },
+      autoplay: {
+        delay: 1000,
+        disableOnInteraction: false
+      },
       // Navigation arrows
       navigation: {
         prevEl: ".campaign-swiper__prev",
@@ -193,33 +193,37 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     });
   });
 
-  // // 以下の処理を定義した要素に実行
-  // $(function() {
-  // // 「#tags」内の「span」がクリックされると以下の処理を実行
-  //   $(".js-campaign-tab a").click(function() {
-  //     // $('.container').removeClass('js-tab-open');
-  //     // 変数「tags」を定義する
-  //     var tags = $(this).attr('id');
-  //     // クリックされたタブにのみ「.select」を与える
-  //     $(".js-campaign-tab a").parent().removeClass('select');
-  //     $(this).addClass('select');
-  //     // クリックされたタブに紐づいた要素を表示、それ以外を非表示にする
-  //     $("#choice div").fadeOut(500);
-  //     if(tags == 'tab02') {
-  //     $("#choice .tab02").fadeIn(500);
-  //     } else if(tags == 'tab01') {
-  //     $("#choice .tab01").fadeIn(500);
-  //     } else if(tags == 'tab03') {
-  //     $("#choice .tab03").fadeIn(500);
-  //     } else {
-  //     $("#choice div").fadeIn(500);
-  //     }
-  //   });
-  // });
-
   $(function () {
     // 変数を要素をセット
     var $filter = $('.js-campaign-tab [data-tab]'),
+        $item = $('.js-container [data-item]');
+    // カテゴリをクリックしたら
+    $filter.click(function (e) {
+      // デフォルトの動作をキャンセル
+      e.preventDefault();
+      var $this = $(this);
+      // クリックしたカテゴリにクラスを付与
+      $filter.removeClass('is-tab-open');
+      $this.addClass('is-tab-open');
+      // クリックした要素のdata属性を取得
+      var $filterItem = $this.attr('data-tab');
+      // データ属性が all なら全ての要素を表示
+      if ($filterItem == 'all') {
+        $item.removeClass('is-tab-open').fadeOut().promise().done(function () {
+          $item.addClass('is-tab-open').fadeIn();
+        });
+      // all 以外の場合は、クリックした要素のdata属性の値を同じ値のアイテムを表示
+      } else {
+        $item.removeClass('is-tab-open').fadeOut().promise().done(function () {
+          $item.filter('[data-item = "' + $filterItem + '"]').addClass('is-tab-open').fadeIn();
+        });
+      }
+    });
+  });
+
+  $(function () {
+    // 変数を要素をセット
+    var $filter = $('.js-voice-tab [data-tab]'),
         $item = $('.js-container [data-item]');
     // カテゴリをクリックしたら
     $filter.click(function (e) {

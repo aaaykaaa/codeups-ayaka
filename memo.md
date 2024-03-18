@@ -17,6 +17,22 @@
 ./page-terms.html
 
 
+## 下層ページURL
+http://localhost:3002/page-campaign.html
+http://localhost:3002/page-about.html
+http://localhost:3002/page-information.html
+http://localhost:3002/page-blog.html
+http://localhost:3002/page-blog-archive.html
+http://localhost:3002/page-voice.html
+http://localhost:3002/page-price.html
+http://localhost:3002/page-faq.html
+http://localhost:3002/page-contact.html
+http://localhost:3002/page-contact-thanks.html
+http://localhost:3002/page-privacypolicy.html
+http://localhost:3002/page-terms.html
+http://localhost:3002/page-404.html
+http://localhost:3002/page-sitemap.html
+
 
 
 ## パーツ

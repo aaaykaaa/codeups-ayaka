@@ -236,180 +236,173 @@
 
     <section class="page-voice sub-voice sub">
       <div class="page-voice inner">
-        <div class="page-voice__tabs tabs" id="tabs">
-          <div class="tabs__tab tab">
-            <button class="tab__button select">ALL</button>
-          </div>
-          <div class="tabs__tab tab">
-            <button class="tab__button tab01">ライセンス講習</button>
-          </div>
-          <div class="tabs__tab tab">
-            <button class="tab__button tab02">ファンダイビング</button>
-          </div>
-          <div class="tabs__tab tab">
-            <button class="tab__button tab03">体験ダイビング</button>
-          </div>
+        <div class="page-voice__tabs voice-tabs">
+          <ul class="voice-tabs__voice-tab voice-tab js-voice-tab">
+            <li data-tab="all" class="voice-tab__item is-tab-open">
+              <a href="#all" class="tab__button">ALL</a>
+            </li>
+            <li data-tab="tab01" class="voice-tab__item">
+              <a href="#tab01" class="tab__button">ライセンス講習</a>
+            </li>
+            <li data-tab="tab02" class="voice-tab__item">
+              <a href="#tab02" class="tab__button">ファンダイビング</a>
+            </li>
+            <li data-tab="tab03" class="voice-tab__item">
+              <a href="#tab03" class="tab__button">体験ダイビング</a>
+            </li>
+          </ul>
         </div>
-        <div class="page-voice__choice" id="choice">
-          <div class="page-voice__cards voice-cards">
-            <div class="tab01">
-              <div class="voice-cards__item voice-card">
-                <div class="voice-card__inner">
-                  <div class="voice-card__head">
-                    <div class="voice-card__description">
-                      <div class="voice-card__meta">
-                        <p class="voice-card__age">20代(女性)</p>
-                        <p class="voice-card__tag">ライセンス講習</p>
-                      </div>
-                      <h2 class="voice-card__title">
-                        ここにタイトルが入ります。ここにタイトル
-                      </h2>
+        <ul class="page-voice__container js-container" id="choice">
+          <li class="page-voice__tab-item" data-item="tab01">
+            <div class="page-voice__voice-card voice-card">
+              <div class="voice-card__inner">
+                <div class="voice-card__head">
+                  <div class="voice-card__description">
+                    <div class="voice-card__meta">
+                      <p class="voice-card__age">20代(女性)</p>
+                      <p class="voice-card__tag">ライセンス講習</p>
                     </div>
-                    <figure class="voice-card__img js-colorbox">
-                      <img
-                        src="./assets/images/common/voice1.jpeg"
-                        alt="お客様の声1"
-                      />
-                    </figure>
+                    <h2 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h2>
                   </div>
-                  <p class="voice-card__text">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。
-                  </p>
+                  <figure class="voice-card__img js-colorbox">
+                    <img src="./assets/images/common/voice1.jpeg" alt="お客様の声1"/>
+                  </figure>
                 </div>
+                <p class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。</p>
               </div>
             </div>
-            <div class="tab02">
-              <div class="voice-cards__item voice-card">
-                <div class="voice-card__inner">
-                  <div class="voice-card__head">
-                    <div class="voice-card__description">
-                      <div class="voice-card__meta">
-                        <p class="voice-card__age">20代(男性)</p>
-                        <p class="voice-card__tag">ファンダイビング</p>
-                      </div>
-                      <h2 class="voice-card__title">
-                        ここにタイトルが入ります。ここにタイトル
-                      </h2>
+          </li>
+          <li class="page-voice__tab-item"  data-item="tab02">
+            <div class="page-voice__voice-card voice-card">
+              <div class="voice-card__inner">
+                <div class="voice-card__head">
+                  <div class="voice-card__description">
+                    <div class="voice-card__meta">
+                      <p class="voice-card__age">20代(男性)</p>
+                      <p class="voice-card__tag">ファンダイビング</p>
                     </div>
-                    <figure class="voice-card__img js-colorbox">
-                      <img
-                        src="./assets/images/common/voice2.jpeg"
-                        alt="お客様の声2"
-                      />
-                    </figure>
+                    <h2 class="voice-card__title">
+                      ここにタイトルが入ります。ここにタイトル
+                    </h2>
                   </div>
-                  <p class="voice-card__text">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。
-                  </p>
+                  <figure class="voice-card__img js-colorbox">
+                    <img
+                      src="./assets/images/common/voice2.jpeg"
+                      alt="お客様の声2"
+                    />
+                  </figure>
                 </div>
+                <p class="voice-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。
+                </p>
               </div>
             </div>
-            <div class="tab03">
-              <div class="voice-cards__item voice-card">
-                <div class="voice-card__inner">
-                  <div class="voice-card__head">
-                    <div class="voice-card__description">
-                      <div class="voice-card__meta">
-                        <p class="voice-card__age">30代(女性)</p>
-                        <p class="voice-card__tag">体験ダイビング</p>
-                      </div>
-                      <h2 class="voice-card__title">
-                        ここにタイトルが入ります。ここにタイトル
-                      </h2>
+          </li>
+          <li class="page-voice__tab-item" data-item="tab03">
+            <div class="page-voice__voice-card voice-card">
+              <div class="voice-card__inner">
+                <div class="voice-card__head">
+                  <div class="voice-card__description">
+                    <div class="voice-card__meta">
+                      <p class="voice-card__age">30代(女性)</p>
+                      <p class="voice-card__tag">体験ダイビング</p>
                     </div>
-                    <figure class="voice-card__img js-colorbox">
-                      <img
-                        src="./assets/images/common/voice3.jpeg"
-                        alt="お客様の声3"
-                      />
-                    </figure>
+                    <h2 class="voice-card__title">
+                      ここにタイトルが入ります。ここにタイトル
+                    </h2>
                   </div>
-                  <p class="voice-card__text">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。
-                  </p>
+                  <figure class="voice-card__img js-colorbox">
+                    <img
+                      src="./assets/images/common/voice3.jpeg"
+                      alt="お客様の声3"
+                    />
+                  </figure>
                 </div>
+                <p class="voice-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。
+                </p>
               </div>
             </div>
-            <div class="tab03">
-              <div class="voice-cards__item voice-card">
-                <div class="voice-card__inner">
-                  <div class="voice-card__head">
-                    <div class="voice-card__description">
-                      <div class="voice-card__meta">
-                        <p class="voice-card__age">20代(女性)</p>
-                        <p class="voice-card__tag">体験ダイビング</p>
-                      </div>
-                      <h2 class="voice-card__title">
-                        ここにタイトルが入ります。ここにタイトル
-                      </h2>
+          </li>
+          <li class="page-voice__tab-item" data-item="tab03">
+            <div class="page-voice__voice-card voice-card">
+              <div class="voice-card__inner">
+                <div class="voice-card__head">
+                  <div class="voice-card__description">
+                    <div class="voice-card__meta">
+                      <p class="voice-card__age">20代(女性)</p>
+                      <p class="voice-card__tag">体験ダイビング</p>
                     </div>
-                    <figure class="voice-card__img js-colorbox">
-                      <img
-                        src="./assets/images/common/voice4.jpeg"
-                        alt="お客様の声4"
-                      />
-                    </figure>
+                    <h2 class="voice-card__title">
+                      ここにタイトルが入ります。ここにタイトル
+                    </h2>
                   </div>
-                  <p class="voice-card__text">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。
-                  </p>
+                  <figure class="voice-card__img js-colorbox">
+                    <img
+                      src="./assets/images/common/voice4.jpeg"
+                      alt="お客様の声4"
+                    />
+                  </figure>
                 </div>
+                <p class="voice-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。
+                </p>
               </div>
             </div>
-            <div class="tab02">
-              <div class="voice-cards__item voice-card">
-                <div class="voice-card__inner">
-                  <div class="voice-card__head">
-                    <div class="voice-card__description">
-                      <div class="voice-card__meta">
-                        <p class="voice-card__age">30代(カップル)</p>
-                        <p class="voice-card__tag">ファンダイビング</p>
-                      </div>
-                      <h2 class="voice-card__title">
-                        ここにタイトルが入ります。ここにタイトル
-                      </h2>
+          </li>
+          <li class="page-voice__tab-item"  data-item="tab02">
+            <div class="page-voice__voice-card voice-card">
+              <div class="voice-card__inner">
+                <div class="voice-card__head">
+                  <div class="voice-card__description">
+                    <div class="voice-card__meta">
+                      <p class="voice-card__age">30代(カップル)</p>
+                      <p class="voice-card__tag">ファンダイビング</p>
                     </div>
-                    <figure class="voice-card__img js-colorbox">
-                      <img
-                        src="./assets/images/common/voice5.jpeg"
-                        alt="お客様の声5"
-                      />
-                    </figure>
+                    <h2 class="voice-card__title">
+                      ここにタイトルが入ります。ここにタイトル
+                    </h2>
                   </div>
-                  <p class="voice-card__text">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。
-                  </p>
+                  <figure class="voice-card__img js-colorbox">
+                    <img
+                      src="./assets/images/common/voice5.jpeg"
+                      alt="お客様の声5"
+                    />
+                  </figure>
                 </div>
+                <p class="voice-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。
+                </p>
               </div>
             </div>
-            <div class="tab01">
-              <div class="voice-cards__item voice-card">
-                <div class="voice-card__inner">
-                  <div class="voice-card__head">
-                    <div class="voice-card__description">
-                      <div class="voice-card__meta">
-                        <p class="voice-card__age">20代(女性)</p>
-                        <p class="voice-card__tag">ライセンス講習</p>
-                      </div>
-                      <h2 class="voice-card__title">
-                        ここにタイトルが入ります。ここにタイトル
-                      </h2>
+          </li>
+          <li class="page-voice__tab-item" data-item="tab01">
+            <div class="page-voice__voice-card voice-card">
+              <div class="voice-card__inner">
+                <div class="voice-card__head">
+                  <div class="voice-card__description">
+                    <div class="voice-card__meta">
+                      <p class="voice-card__age">20代(女性)</p>
+                      <p class="voice-card__tag">ライセンス講習</p>
                     </div>
-                    <figure class="voice-card__img js-colorbox">
-                      <img
-                        src="./assets/images/common/voice6.jpeg"
-                        alt="お客様の声6"
-                      />
-                    </figure>
+                    <h2 class="voice-card__title">
+                      ここにタイトルが入ります。ここにタイトル
+                    </h2>
                   </div>
-                  <p class="voice-card__text">
-                    ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。
-                  </p>
+                  <figure class="voice-card__img js-colorbox">
+                    <img
+                      src="./assets/images/common/voice6.jpeg"
+                      alt="お客様の声6"
+                    />
+                  </figure>
                 </div>
+                <p class="voice-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。
+                </p>
               </div>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
         <div class="page-voice__pagination pagination">
           <ol class="pagination__area">
             <li class="pagination__prev">

@@ -1,18 +1,7 @@
 @use "global" as *;
 
-.faq-item {
-
-}
-
 .faq-item nav {
   display: none;
-}
-
-.faq-item__title {
-
-  @include mq(md) {
-    
-  }
 }
 
 .faq-item__text {

@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.blog-archive-accordion {
-
-}
-
 .blog-archive-accordion__title {
   color: $main-bg-color;
   font-family: $japanese-font-family;
@@ -38,6 +34,7 @@
   transform: translateY(-50%);
   transition: transform .3s ease-in-out, top .3s ease-in-out;
 }
+
 .blog-archive-accordion__title.toggle-is-open::after {
   top: 25%;
   transform: rotate(90deg);

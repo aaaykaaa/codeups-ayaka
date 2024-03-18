@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.campaign-tabs__campaign-tab {
+.voice-tabs__voice-tab {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: rem(16) rem(21);

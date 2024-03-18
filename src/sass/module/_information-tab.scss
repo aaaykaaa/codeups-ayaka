@@ -6,7 +6,6 @@
   gap: rem(5);
 }
 
-
 .information-tab__button {
   width: rem(102);
   height: rem(60);
@@ -85,6 +84,7 @@
     left: rem(-68);
   }
 }
+
 .information-tab__button--tab3 span::before {
   @include mq(md) {
     background-color: $main-bg-color;
