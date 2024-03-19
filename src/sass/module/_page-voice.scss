@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .page-voice__container {
-  // margin-top: rem(0);
+  margin-top: rem(40);
   display: grid;
   gap: rem(40);
   @include mq(md) {
@@ -9,10 +9,6 @@
     gap: rem(80) rem(40);
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-.page-voice__container {
-  margin-top: rem(40);
 }
 
 .page-voice__voice-card {
