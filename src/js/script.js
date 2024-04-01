@@ -200,45 +200,6 @@ jQuery(function ($) {
 
   $(function () {
     // 変数を要素をセット
-    var $filter = $(".js-campaign-tab [data-tab]"),
-      $item = $(".js-container [data-item]");
-    // カテゴリをクリックしたら
-    $filter.click(function (e) {
-      // デフォルトの動作をキャンセル
-      e.preventDefault();
-      var $this = $(this);
-      // クリックしたカテゴリにクラスを付与
-      $filter.removeClass("is-tab-open");
-      $this.addClass("is-tab-open");
-      // クリックした要素のdata属性を取得
-      var $filterItem = $this.attr("data-tab");
-      // データ属性が all なら全ての要素を表示
-      if ($filterItem == "all") {
-        $item
-          .removeClass("is-tab-open")
-          .fadeOut()
-          .promise()
-          .done(function () {
-            $item.addClass("is-tab-open").fadeIn();
-          });
-        // all 以外の場合は、クリックした要素のdata属性の値を同じ値のアイテムを表示
-      } else {
-        $item
-          .removeClass("is-tab-open")
-          .fadeOut()
-          .promise()
-          .done(function () {
-            $item
-              .filter('[data-item = "' + $filterItem + '"]')
-              .addClass("is-tab-open")
-              .fadeIn();
-          });
-      }
-    });
-  });
-
-  $(function () {
-    // 変数を要素をセット
     var $filter = $(".js-tab [data-tab]"),
       $item = $(".js-container [data-item]");
     // カテゴリをクリックしたら
@@ -275,6 +236,45 @@ jQuery(function ($) {
       }
     });
   });
+
+  // $(function () {
+  //   // 変数を要素をセット
+  //   var $filter = $(".js-tab [data-tab]"),
+  //     $item = $(".js-container [data-item]");
+  //   // カテゴリをクリックしたら
+  //   $filter.click(function (e) {
+  //     // デフォルトの動作をキャンセル
+  //     e.preventDefault();
+  //     var $this = $(this);
+  //     // クリックしたカテゴリにクラスを付与
+  //     $filter.removeClass("is-tab-open");
+  //     $this.addClass("is-tab-open");
+  //     // クリックした要素のdata属性を取得
+  //     var $filterItem = $this.attr("data-tab");
+  //     // データ属性が all なら全ての要素を表示
+  //     if ($filterItem == "all") {
+  //       $item
+  //         .removeClass("is-tab-open")
+  //         .fadeOut()
+  //         .promise()
+  //         .done(function () {
+  //           $item.addClass("is-tab-open").fadeIn();
+  //         });
+  //       // all 以外の場合は、クリックした要素のdata属性の値を同じ値のアイテムを表示
+  //     } else {
+  //       $item
+  //         .removeClass("is-tab-open")
+  //         .fadeOut()
+  //         .promise()
+  //         .done(function () {
+  //           $item
+  //             .filter('[data-item = "' + $filterItem + '"]')
+  //             .addClass("is-tab-open")
+  //             .fadeIn();
+  //         });
+  //     }
+  //   });
+  // });
 
   $(function () {
     $(".js-contact-form").validate({

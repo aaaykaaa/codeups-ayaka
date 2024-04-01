@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.tab.is-open {
+.tab__button.is-open {
   background-color: $main-bg-color;
   color: $white;
 }
