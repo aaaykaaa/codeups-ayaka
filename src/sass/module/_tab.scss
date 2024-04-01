@@ -1,5 +1,10 @@
 @use "global" as *;
 
+.tab.is-open {
+  background-color: $main-bg-color;
+  color: $white;
+}
+
 .tab__button {
   display: inline-block;
   text-align: center;
