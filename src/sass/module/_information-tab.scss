@@ -36,7 +36,7 @@
   }
 }
 
-
+.information-tab__button.is-open,
 .information-tab__button:hover,
 .information-tab__button:focus {
   color: $white;
@@ -101,6 +101,7 @@
   }
 }
 
+.information-tab__button.is-open span::before,
 .information-tab__button:hover span::before,
 .information-tab__button:focus span::before {
   @include mq(md) {

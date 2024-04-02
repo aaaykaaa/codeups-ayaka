@@ -1,12 +1,6 @@
 @use "global" as *;
 
-.page-blog__inner {
-  @include mq(md) {
-    padding-right: 0;
-  }
-}
-
-.page-blog__cards {
+.main-content__cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: rem(40);
@@ -16,7 +10,7 @@
   }
 }
 
-.page-blog__pagination {
+.main-content__pagination {
   margin-top: rem(40);
   @include mq(md) {
     margin-top: rem(80);

@@ -1,11 +1,11 @@
 @use "global" as *;
 
-.tab__button.is-open {
+.tab.is-open {
   background-color: $main-bg-color;
   color: $white;
 }
 
-.tab__button {
+.tab {
   display: inline-block;
   text-align: center;
   width: rem(162);
@@ -19,13 +19,13 @@
   border: 1px solid $main-bg-color;
   background-color: $white;
 }
-.tab__button:hover {
+.tab:hover {
   background-color: $main-bg-color;
   color: $white;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 
-.tab__button:focus {
+.tab:focus {
   background-color: $main-bg-color;
   color: $white;
 }

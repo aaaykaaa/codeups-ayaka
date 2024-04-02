@@ -20,11 +20,13 @@
   font-weight: $regular;
   line-height: calc(23 / 16);
   position: relative;
+  cursor: pointer;
   @include mq(md) {
     padding: rem(26) rem(40) rem(25);
     font-size: rem(20);
   }
 }
+
 .faq-item__title::before,
 .faq-item__title::after {    // 縦
   content: '';

@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.container {
+.two-columns__container {
   display: flex;
   flex-direction: column;
   gap: rem(80);

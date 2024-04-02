@@ -9,6 +9,8 @@
   max-width: 100%!important;
   height: 100%;
   background: rgba(32, 32, 32, 0.80);
+  z-index: 4000;
+  cursor: pointer;
 }
 
 .page-about-modal img {
