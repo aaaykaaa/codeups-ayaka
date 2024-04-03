@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0 rem(12);
+  gap: rem(12);
   list-style-type: none;
   padding: 0;
 }
@@ -30,6 +30,10 @@
 
 .pagination__area li:nth-of-type(2) {
   margin-left: rem(28);
+}
+
+.pagination__area--archive li:nth-of-type(2) {
+  margin-left: rem(70);
 }
 
 .pagination__next {

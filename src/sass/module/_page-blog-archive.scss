@@ -1,7 +1,0 @@
-@use "global" as *;
-
-.page-blog-archive__inner {
-  @include mq(md) {
-    padding-right: 0;
-  }
-}

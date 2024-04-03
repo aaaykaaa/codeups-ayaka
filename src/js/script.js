@@ -169,11 +169,11 @@ jQuery(function ($) {
       // クリックしたタイトル以外のopenクラスを外す(－から＋にする)
       $(".js-blog-archive-accordion__title")
         .not(this)
-        .removeClass("toggle-is-open");
+        .removeClass("is-open");
       // クリックしたタイトル以外のコンテンツを閉じる
       $(".js-blog-archive-accordion__title").not(this).next().slideUp(300);
       // クリックしたタイトルにopenクラスを付け外しして＋と－を切り替える
-      $(this).toggleClass("toggle-is-open");
+      $(this).toggleClass("is-open");
       // クリックしたタイトルの次の要素(コンテンツ)を開閉
       $(this).next().slideToggle(300);
     });

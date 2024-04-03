@@ -74,12 +74,12 @@
   padding: rem(15) rem(97) rem(15) rem(41);
   color: $main-bg-color;
   background-color: $white;
-  border: 1px solid $main-bg-color;
+  border: 1px solid $white;
 }
 
 .button--wtite::before {
   border: 1px solid $white;
-  z-index: 100;
+  z-index: -1;
 }
 
 .button--wtite::after {

@@ -15,7 +15,7 @@
 }
 
 .blog-archive-accordion__content {
-  display: none;
+  // display: none;
   padding-left: rem(24);
 }
 
@@ -40,7 +40,7 @@
   transition: transform .3s ease-in-out, top .3s ease-in-out;
 }
 
-.blog-archive-accordion__title.toggle-is-open::after {
+.blog-archive-accordion__title.is-open::after {
   top: 25%;
   transform: rotate(90deg);
 }

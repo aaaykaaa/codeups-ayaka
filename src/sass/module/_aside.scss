@@ -4,6 +4,7 @@
   width: 100%;
   @include mq(md) {
     max-width: rem(294);
+    min-width: 192px;
   }
 }
 
