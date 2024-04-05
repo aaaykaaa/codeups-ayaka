@@ -1,6 +1,41 @@
 @use "global" as *;
 
-.page-terms__text-box {
+.page-terms__text {
   line-height: 2;
   text-align: left;
+}
+
+.page-terms__text h2  {
+  color: $black;
+  font-family: $japanese-font-family;
+  font-size: rem(24);
+  font-weight: $normal;
+  line-height: calc(35 / 24);
+  @include mq(md) {
+    font-size: rem(32);
+    line-height: calc(46 / 32);
+  }
+}
+
+.page-terms__text p,
+.page-terms__text ol {
+  margin-top: rem(40);
+}
+
+.page-terms__text p,
+.page-terms__text li {
+  color: $black;
+  font-family: $japanese-font-family;
+  font-size: rem(16);
+  font-weight: $regular;
+}
+
+.page-terms__text ol {
+  list-style: decimal;
+  padding-left: rem(20);
+}
+
+.page-terms__text ul {
+  list-style: outside;
+  padding-left: rem(20);
 }

@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .faq-item nav {
-  display: none;
+  // display: none;
 }
 
 .faq-item__text {
@@ -44,17 +44,23 @@
   }
 }
 
-.faq-item__title::after {     // 横
-  transform: translateY(-50%) rotate(90deg);
-  transition: transform .3s;
-}
-
-.faq-item__title.is-active::before{/* 開いている時 */
+.faq-item__title::before{/* 開いている時 */
   opacity: 0;
 }
 
-.faq-item__title.is-active::after{/* 開いている時 */
+.faq-item__title::after{/* 開いている時 */
   transform: translateY(-50%) rotate(180deg);
+  transition: transform 0.3s;
+}
+
+.faq-item__title.is-active::before{/* 開いている時 */
+  opacity: 1;
+}
+
+
+.faq-item__title.is-active::after {     // 横
+  transform: translateY(-50%) rotate(90deg);
+  transition: transform .3s;
 }
 
 .faq-item__text {

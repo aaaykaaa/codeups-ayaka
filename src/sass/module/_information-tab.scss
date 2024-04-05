@@ -36,12 +36,12 @@
   }
 }
 
-.information-tab__button.is-open,
-.information-tab__button:hover,
-.information-tab__button:focus {
+.information-tab__item.is-open .information-tab__button,
+.information-tab__button:hover {
   color: $white;
   background-color: $main-bg-color;
 }
+
 
 .information-tab__button:hover {
   transition: all 0.3s;
@@ -101,9 +101,8 @@
   }
 }
 
-.information-tab__button.is-open span::before,
-.information-tab__button:hover span::before,
-.information-tab__button:focus span::before {
+.information-tab__item.is-open span::before,
+.information-tab__button:hover span::before {
   @include mq(md) {
     background-color: $white;
     transition: 0.3s;

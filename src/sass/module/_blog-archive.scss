@@ -1,11 +1,5 @@
 @use "global" as *;
 
-.blog-archive__inner {
-  @include mq(md) {
-    padding-right: 0;
-  }
-}
-
 .blog-archive time {
   display: block;
   font-size: rem(14);

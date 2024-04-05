@@ -198,44 +198,63 @@ jQuery(function ($) {
     });
   });
 
-  $(function () {
-    // 変数を要素をセット
-    var $filter = $(".js-tab [data-tab]"),
-      $item = $(".js-container [data-item]");
-    // カテゴリをクリックしたら
-    $filter.click(function (e) {
-      // デフォルトの動作をキャンセル
-      e.preventDefault();
-      var $this = $(this);
-      // クリックしたカテゴリにクラスを付与
-      $filter.removeClass("is-tab-open");
-      $this.addClass("is-tab-open");
-      // クリックした要素のdata属性を取得
-      var $filterItem = $this.attr("data-tab");
-      // データ属性が all なら全ての要素を表示
-      if ($filterItem == "all") {
-        $item
-          .removeClass("is-tab-open")
-          .fadeOut()
-          .promise()
-          .done(function () {
-            $item.addClass("is-tab-open").fadeIn();
-          });
-        // all 以外の場合は、クリックした要素のdata属性の値を同じ値のアイテムを表示
-      } else {
-        $item
-          .removeClass("is-tab-open")
-          .fadeOut()
-          .promise()
-          .done(function () {
-            $item
-              .filter('[data-item = "' + $filterItem + '"]')
-              .addClass("is-tab-open")
-              .fadeIn();
-          });
-      }
-    });
-  });
+  // $(function () {
+  //   // 変数を要素をセット
+  //   var $filter = $(".js-tab [data-tab]"),
+  //     $item = $(".js-container [data-item]");
+  //   // カテゴリをクリックしたら
+  //   $filter.click(function (e) {
+  //     // デフォルトの動作をキャンセル
+  //     e.preventDefault();
+  //     var $this = $(this);
+  //     // クリックしたカテゴリにクラスを付与
+  //     $filter.removeClass("is-tab-open");
+  //     $this.addClass("is-tab-open");
+  //     // クリックした要素のdata属性を取得
+  //     var $filterItem = $this.attr("data-tab");
+  //     // データ属性が all なら全ての要素を表示
+  //     if ($filterItem == "all") {
+  //       $item
+  //         .removeClass("is-tab-open")
+  //         .fadeOut()
+  //         .promise()
+  //         .done(function () {
+  //           $item.addClass("is-tab-open").fadeIn();
+  //         });
+  //       // all 以外の場合は、クリックした要素のdata属性の値を同じ値のアイテムを表示
+  //     } else {
+  //       $item
+  //         .removeClass("is-tab-open")
+  //         .fadeOut()
+  //         .promise()
+  //         .done(function () {
+  //           $item
+  //             .filter('[data-item = "' + $filterItem + '"]')
+  //             .addClass("is-tab-open")
+  //             .fadeIn();
+  //         });
+  //     }
+  //   });
+  // });
+
+  // $(function() {
+  //   $('.information-tab__button').click(function() {
+  
+  //     //現在activeが付いているクラスからactiveを外す
+  //     $('.is-open').removeClass('is-open');
+  //     //一旦showクラスを外す
+  //     $('.is-show').removeClass('is-show');
+  
+  //     //クリックされたタブメニューにactiveクラスを付与。
+  //     $(this).addClass('is-open');
+
+  //     //クリックしたタブのインデックス番号取得
+  //     const index = $(this).index();
+  //     // //タブのインデックス番号と同じコンテンツにshowクラスをつけて表示する
+  //     $('.page-information__item').eq(index).addClass('is-show');
+  //   });
+  // });
+
 
   $(function () {
     $(".js-contact-form").validate({
@@ -258,9 +277,10 @@ jQuery(function ($) {
   });
 
   $(".information-tab__item").on("click", function () {
-    $(".information-tab__button").removeClass("is-open");
-    $(".information-item").removeClass("is-open");
+    $('.is-open').removeClass('is-open');
+    $(this).addClass("is-open");
     $($(this).children("a").attr("href")).addClass("is-open");
     return false;
   });
+
 });

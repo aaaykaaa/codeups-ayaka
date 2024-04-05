@@ -107,7 +107,8 @@
 .page-price__course {
   width: calc(240 / 345 * 100%);
   text-align: center;
-  padding: rem(6) rem(16);
+  padding: rem(18) rem(16);
+  border-right: 1px solid $main-bg-color;
   @include mq(md) {
     text-align: left;
   }
@@ -119,7 +120,6 @@
   padding: rem(18) rem(16);
   width: calc(106 / 345 * 100%);
   text-align: right;
-  border-left: 1px solid $main-bg-color;
   @include mq(md) {
     max-height: rem(60);
     padding: rem(18) rem(16);

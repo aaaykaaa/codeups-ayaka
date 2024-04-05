@@ -1,8 +1,15 @@
 @use "global" as *;
 
-.voice-cards {
+.campaign-cards {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+}
+
+.campaign-cards--2col {
   display: grid;
   gap: rem(40);
+  grid-template-columns: repeat(1, 1fr);
   @include mq(md) {
     gap: rem(80) rem(40);
     grid-template-columns: repeat(2, 1fr);
