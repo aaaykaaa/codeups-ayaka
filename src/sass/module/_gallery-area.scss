@@ -6,7 +6,6 @@
   gap: rem(8);
   @include mq(md) {
     grid-template-columns: 6.15fr 1fr 6.15fr;
-    grid-template-rows: rem(369) rem(369) rem(369) rem(369);
     grid-auto-flow: dense;
   }
 }

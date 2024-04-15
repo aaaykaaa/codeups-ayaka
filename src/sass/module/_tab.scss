@@ -9,16 +9,22 @@
   display: inline-block;
   text-align: center;
   width: rem(162);
-  padding: rem(5) rem(18);
   color: $white;
   font-family: $japanese-font-family;
   font-size: rem(14);
   font-weight: $regular;
-  line-height: calc(22 / 14); /* 157.143% */
+  line-height: calc(32 / 14); /* 157.143% */
   color: $main-bg-color;
   border: 1px solid $main-bg-color;
   background-color: $white;
 }
+
+.tab a {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
 .tab:hover {
   background-color: $main-bg-color;
   color: $white;

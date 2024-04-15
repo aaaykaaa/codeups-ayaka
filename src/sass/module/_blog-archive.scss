@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.blog-archive time {
+.blog-archive__date {
   display: block;
   font-size: rem(14);
   line-height: calc(18 / 14);
@@ -9,7 +9,7 @@
   font-weight: $regular;
 }
 
-.blog-archive h1 {
+.blog-archive__title {
   margin-top: rem(8);
   font-size: rem(24);
   line-height: calc(35 / 24);
@@ -25,6 +25,7 @@
   }
 }
 
+.blog-archive__img,
 .blog-archive figure {
   width: 100%;
   margin-top: rem(24);
