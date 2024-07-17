@@ -9,7 +9,7 @@ function my_theme_enqueue_styles_scripts() {
     wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), null);
 
     // Theme CSS
-    wp_enqueue_style('theme-styles', get_theme_file_uri('/assets/css/style.css'), array(), null);
+    wp_enqueue_style('style-css', get_theme_file_uri('/assets/css/style.css'), array(), null);
 
     // jQuery
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.js', array(), null, true);
@@ -30,4 +30,19 @@ function my_theme_enqueue_styles_scripts() {
 
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles_scripts');
 
-; ?>
+function my_setup() {
+	add_theme_support( 'post-thumbnails' ); /* アイキャッチ */
+	add_theme_support( 'automatic-feed-links' ); /* RSSフィード */
+	add_theme_support( 'title-tag' ); /* タイトルタグ自動生成 */
+	add_theme_support(
+		'html5',
+		array( /* HTML5のタグで出力 */
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		)
+	);
+}
+add_action( 'after_setup_theme', 'my_setup' );

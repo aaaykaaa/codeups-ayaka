@@ -1874,6 +1874,7 @@ input[type=text].is-error::placeholder {
 
 .page-404__btn {
 	margin-top: 2.5rem;
+	text-align: center;
 }
 
 .page-about-modal {

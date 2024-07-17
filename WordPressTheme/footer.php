@@ -1,63 +1,71 @@
+<?php
+$home = esc_url( home_url( '/' ) );
+$campaign = esc_url( home_url( '/campaign/' ) );
+$about = esc_url( home_url( '/about/' ) );
+$information = esc_url( home_url( '/information/' ) );
+$blog = esc_url( home_url( '/blog/' ) );
+$voice = esc_url( home_url( '/voice/' ) );
+$price = esc_url( home_url( '/price/' ) );
+$faq = esc_url( home_url( '/faq/' ) );
+$contact = esc_url( home_url( '/contact/' ) );
+$privacypolicy = esc_url( home_url( '/privacypolicy/' ) );
+$terms = esc_url( home_url( '/terms/' ) );
+; ?>
+
+<?php if(!is_page('contact') && !is_404('contact')): ?>
 <section class="contact top-contact">
-        <div class="contact__inner inner">
-            <div class="contact__boxes contact-boxes">
-            <div class="contact-boxes__box contact-box">
-                <div class="contact-box__left">
-                <a class="contact-box__logo">
-                    <img
-                    src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-color.svg"
-                    alt="codeupsのロゴ"
-                    />
-                </a>
-                <div class="contact-box__access">
-                    <div class="contact-box__address">
-                    <address>
-                        <p>沖縄県那覇市1-1</p>
-                        <p>TEL:0120-000-0000</p>
-                    </address>
-                    <p>営業時間:8:30-19:00</p>
-                    <p>定休日:毎週火曜日</p>
-                    </div>
-                    <div class="contact-box__map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.565236370906!2d135.429738211774!3d34.6656811849773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d083d5e25d%3A0x3605fe25303252aa!2z44Om44OL44OQ44O844K144Or44O744K544K_44K444Kq44O744K444Oj44OR44Oz!5e0!3m2!1sja!2sjp!4v1709185968703!5m2!1sja!2sjp"
-                        width="600"
-                        height="450"
-                        style="border: 0"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                    </div>
+    <div class="contact__inner inner">
+        <div class="contact__boxes contact-boxes">
+        <div class="contact-boxes__box contact-box">
+            <div class="contact-box__left">
+            <a class="contact-box__logo">
+                <img
+                src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-color.svg"
+                alt="codeupsのロゴ"
+                />
+            </a>
+            <div class="contact-box__access">
+                <div class="contact-box__address">
+                <address>
+                    <p>沖縄県那覇市1-1</p>
+                    <p>TEL:0120-000-0000</p>
+                </address>
+                <p>営業時間:8:30-19:00</p>
+                <p>定休日:毎週火曜日</p>
                 </div>
+                <div class="contact-box__map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.565236370906!2d135.429738211774!3d34.6656811849773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d083d5e25d%3A0x3605fe25303252aa!2z44Om44OL44OQ44O844K144Or44O744K544K_44K444Kq44O744K444Oj44OR44Oz!5e0!3m2!1sja!2sjp!4v1709185968703!5m2!1sja!2sjp"
+                    width="600"
+                    height="450"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
                 </div>
-                <div class="contact-box__right">
-                <div class="contact-box__heading">
-                    <div class="section-heading">
-                    <p
-                        class="section-heading__englishTitle section-heading__englishTitle-big"
-                    >
-                        contact
-                    </p>
-                    <h2
-                        class="section-heading__japaneseTitle section-heading__japaneseTitle-contact"
-                    >
-                        お問い合わせ
-                    </h2>
-                    </div>
-                    <p class="contact-box__text">ご予約・お問い合わせはコチラ</p>
+            </div>
+            </div>
+            <div class="contact-box__right">
+            <div class="contact-box__heading">
+                <div class="section-heading">
+                <p class="section-heading__englishTitle section-heading__englishTitle-big">contact</p>
+                <h2 class="section-heading__japaneseTitle section-heading__japaneseTitle-contact"
+                >お問い合わせ</h2>
                 </div>
-                <div class="contact-box__btn">
-                    <a href="./page-contact.html" class="button"><span>Contact us</span></a>
-                </div>
-                </div>
+                <p class="contact-box__text">ご予約・お問い合わせはコチラ</p>
+            </div>
+            <div class="contact-box__btn">
+                <a href="<?php echo $contact; ?>" class="button"><span>Contact us</span></a>
             </div>
             </div>
         </div>
-        </section>
-    </main>
-
-        <footer class="footer top-footer">
+        </div>
+    </div>
+</section>
+<?php endif; ?>
+</main>
+        <div <?php if(is_404('404')) : ?> class="footer" <?php else :?> class="footer top-footer"<?php endif; ?>>
             <div class="footer__inner inner">
             <div class="footer__head">
                 <div class="footer__logo">
@@ -78,7 +86,7 @@
                     <div class="global-nav__item-sp">
                     <ul class="global-nav__item-pc">
                         <li class="global-nav__parent">
-                        <a href="./page-campaign.html">キャンペーン</a>
+                        <a href="<?php echo $campaign; ?>">キャンペーン</a>
                         <ul>
                             <li class="global-nav__child">
                             <a href="#">ライセンス取得</a>
@@ -92,12 +100,12 @@
                         </ul>
                         </li>
                         <li class="global-nav__parent">
-                        <a href="./page-about.html">私たちについて</a>
+                        <a href="<?php echo $about; ?>">私たちについて</a>
                         </li>
                     </ul>
                     <ul class="global-nav__item-pc">
                         <li class="global-nav__parent">
-                        <a href="./page-information.html">ダイビング情報</a>
+                        <a href="<?php echo $information; ?>">ダイビング情報</a>
                         <ul>
                             <li class="global-nav__child">
                             <a href="./page-information.html?tab=license">ライセンス講習</a>
@@ -111,17 +119,17 @@
                         </ul>
                         </li>
                         <li class="global-nav__parent">
-                        <a href="./page-blog.html">ブログ</a>
+                        <a href="<?php echo $blog; ?>">ブログ</a>
                         </li>
                     </ul>
                     </div>
                     <div class="global-nav__item-sp">
                     <ul class="global-nav__item-pc">
                         <li class="global-nav__parent">
-                        <a href="./page-voice.html">お客様の声</a>
+                        <a href="<?php echo $voice; ?>">お客様の声</a>
                         </li>
                         <li class="global-nav__parent">
-                        <a href="./page-price.html">料金一覧</a>
+                        <a href="<?php echo $price; ?>">料金一覧</a>
                         <ul>
                             <li class="global-nav__child">
                             <a href="#">ライセンス講習</a>
@@ -137,16 +145,16 @@
                     </ul>
                     <ul class="global-nav__item-pc">
                         <li class="global-nav__parent">
-                        <a href="./page-faq.html">よくある質問</a>
+                        <a href="<?php echo $faq; ?>">よくある質問</a>
                         </li>
                         <li class="global-nav__parent">
-                        <a href="./page-privacypolicy.html">プライバシー<br class="u-mobile" />ポリシー</a>
+                        <a href="<?php echo $privacypolicy; ?>">プライバシー<br class="u-mobile" />ポリシー</a>
                         </li>
                         <li class="global-nav__parent">
-                        <a href="./page-terms.html">利用規約</a>
+                        <a href="<?php echo $terms; ?>">利用規約</a>
                         </li>
                         <li class="global-nav__parent">
-                        <a href="./page-contact.html">お問い合わせ</a>
+                        <a href="<?php echo $contact; ?>">お問い合わせ</a>
                         </li>
                     </ul>
                     </div>
