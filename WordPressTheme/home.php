@@ -24,7 +24,7 @@
             <a href="<?php the_permalink(); ?>" class="blog-cards__item blog-card">
                 <div class="blog-card__inner">
                     <figure class="blog-card__img">
-                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/blog1.jpeg" alt="ブログ1"/>
+                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="ブログ1"/>
                     </figure>
                     <time class="blog-card__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/m/d'); ?></time>
                     <h2 class="blog-card__title"><?php the_title(); ?></h2>
@@ -36,7 +36,8 @@
             <?php endwhile; endif; ?>
         </div>
         <div class="main-content__pagination pagination">
-            <ol class="pagination__area">
+            <?php wp_pagenavi(); ?>
+            <!-- <ol class="pagination__area">
             <li class="pagination__prev">
                 <a href="#">＜</a>
             </li>
@@ -61,7 +62,7 @@
             <li class="pagination__next">
                 <a href="#">＞</a>
             </li>
-            </ol>
+            </ol> -->
         </div>
         </div>
         <aside class="two-columns__aside aside">
