@@ -1,6 +1,7 @@
 @use "global" as *;
 
-.pagination__area {
+.pagination__area,
+.wp-pagenavi {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,13 +10,16 @@
   padding: 0;
 }
 
-.pagination__area li {
-  width: rem(38);
-  border: 1px solid $main-bg-color;
+.pagination__area li,
+.wp-pagenavi span,
+.wp-pagenavi a {
 }
 
-.pagination__area a {
-  width: 100%;
+.pagination__area a,
+.wp-pagenavi a, .wp-pagenavi span {
+  width: rem(38);
+  border: 1px solid $main-bg-color;
+  // width: 100%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -28,12 +32,17 @@
   cursor: pointer;
 }
 
-.pagination__area li:nth-of-type(2) {
+// .pagination__area li:nth-of-type(2) {
+//   margin-left: rem(28);
+// }
+
+.pagination__next,
+.wp-pagenavi .nextpostslink {
   margin-left: rem(28);
 }
 
-.pagination__next {
-  margin-left: rem(28);
+.wp-pagenavi .previouspostslink {
+  margin-right: rem(28);
 }
 
 .pagination__area .current a {
@@ -42,7 +51,10 @@
   pointer-events: none;
 }
 
-.pagination__area li:hover a {
+.pagination__area li:hover a,
+.wp-pagenavi a:hover,
+.wp-pagenavi span.current {
+  border-color: $main-bg-color;
   background-color: $main-bg-color;
   color: $white;
 }

@@ -19,20 +19,27 @@
 
 <!-- パンくず -->
 <?php get_template_part('parts/breadcrumb'); ?>
-
-<?php if (have_posts()): while (have_posts()): the_post(); ?>
-    <section class="page-campaign sub-campaign sub">
-        <div class="page-campaign inner">
-
+<?php if ( have_posts() ) : ?>
+<section class="page-campaign sub-campaign sub">
+    <div class="page-campaign inner">
         <!-- タグの表示 -->
-            <ul class="page-campaign__tabs tabs">
-                <li class="tabs__tab tab is-open"><a href="#">ALL</a></li>
-                <li class="tabs__tab tab"><a href="#">ライセンス講習</a></li>
-                <li class="tabs__tab tab"><a href="#">ファンダイビング</a></li>
-                <li class="tabs__tab tab"><a href="#">体験ダイビング</a></li>
-            </ul>
-            <!-- cards -->
-            <ul class="page-campaign__cards campaign-cards campaign-cards--2col js-container" id="choice">
+        <ul class="page-campaign__tabs tabs">
+            <li class="tabs__tab tab is-open">
+                <a href="#">ALL</a>
+            </li>
+            <li class="tabs__tab tab">
+                <a href="#">ライセンス講習</a>
+            </li>
+            <li class="tabs__tab tab">
+                <a href="#">ファンダイビング</a>
+            </li>
+            <li class="tabs__tab tab">
+                <a href="#">体験ダイビング</a>
+            </li>
+        </ul>
+        <!-- cards -->
+        <ul class="page-campaign__cards campaign-cards campaign-cards--2col js-container" id="choice">
+                <?php while (have_posts()): the_post(); ?>
                 <!-- card -->
                 <li class="page-campaign__card campaign-card" data-item="tab01">
                     <div class="campaign-card__inner">
@@ -49,19 +56,19 @@
                             <p class="campaign-card__detail campaign-card__detail--page">全部コミコミ(お一人様)</p>
                             <?php
                                 $campaignPrices = get_field('campaign_prices');
-                            ?>
+                                ?>
                             <div class="campaign-card__prices campaign-card__prices--page">
                                 <p class="campaign-card__price-cost">&yen;<?php echo number_format($campaignPrices['price-cost']); ?></p>
                                 <p class="campaign-card__price-low">&yen;<?php echo number_format($campaignPrices['price-low']); ?></p>
                             </div>
                             <?php
                                 $campaignContent = get_field('campaign_content');
-                                $date = campaignContent['date'];
+                                $campaignDate = get_field('campaign_date');
                             ?>
                             <div class="campaign-card__wrap u-desktop">
                                 <p class="campaign-card__text"><?php echo $campaignContent['text']; ?></p>
                                 <div class="campaign-card__content">
-                                    <p class="campaign-card__date"><?php echo $date['start-date']; ?>-<?php echo $date['end-date']; ?></p>
+                                    <p class="campaign-card__date"><?php echo $campaignDate['start_date']; ?>-<?php echo $campaignDate['end_date']; ?></p>
                                     <p class="contact-box__text">
                                         ご予約・お問い合わせはコチラ
                                     </p>
@@ -76,36 +83,13 @@
                     </div>
                 </li>
                 <!-- ループ終了 -->
+                <?php endwhile; ?>
             </ul>
         </div>
         <div class="page-campaign__pagination pagination">
-            <ol class="pagination__area">
-            <li class="pagination__prev">
-                <a href="#">＜</a>
-            </li>
-            <li class="current">
-                <a href="#">1</a>
-            </li>
-            <li>
-                <a href="#">2</a>
-            </li>
-            <li>
-                <a href="#">3</a>
-            </li>
-            <li>
-                <a href="#">4</a>
-            </li>
-            <li class="u-desktop">
-                <a href="#">5</a>
-            </li>
-            <li class="u-desktop">
-                <a href="#">6</a>
-            </li>
-            <li class="pagination__next">
-                <a href="#">＞</a>
-            </li>
-        </ol>
+            <?php wp_pagenavi(); ?>
+        </div>
     </div>
 </section>
-<?php endwhile; endif; ?>
+<?php endif; ?>
 <?php get_footer(); ?>

@@ -37,32 +37,6 @@
         </div>
         <div class="main-content__pagination pagination">
             <?php wp_pagenavi(); ?>
-            <!-- <ol class="pagination__area">
-            <li class="pagination__prev">
-                <a href="#">＜</a>
-            </li>
-            <li class="current">
-                <a href="#">1</a>
-            </li>
-            <li>
-                <a href="#">2</a>
-            </li>
-            <li>
-                <a href="#">3</a>
-            </li>
-            <li>
-                <a href="#">4</a>
-            </li>
-            <li class="u-desktop">
-                <a href="#">5</a>
-            </li>
-            <li class="u-desktop">
-                <a href="#">6</a>
-            </li>
-            <li class="pagination__next">
-                <a href="#">＞</a>
-            </li>
-            </ol> -->
         </div>
         </div>
         <aside class="two-columns__aside aside">

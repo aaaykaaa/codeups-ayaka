@@ -72,3 +72,19 @@ function Change_menulabel() {
     }
 add_action( 'init', 'Change_objectlabel' );
 add_action( 'admin_menu', 'Change_menulabel' );
+
+//アーカイブの表示件数変更
+function change_posts_per_page($query) {
+    if ( is_admin() || ! $query->is_main_query() )
+        return;
+    if ( $query->is_archive(array('campaign', 'recruit')) ) { //カスタム投稿タイプを指定
+        $query->set( 'posts_per_page', '4' ); //表示件数を指定
+    }
+}
+add_action( 'pre_get_posts', 'change_posts_per_page' );
+
+// Contact Form 7で自動挿入されるPタグ、brタグを削除
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false() {
+  return false;
+}

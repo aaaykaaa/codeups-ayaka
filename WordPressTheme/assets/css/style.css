@@ -2271,7 +2271,8 @@ input[type=text].is-error::placeholder {
 	color: #fff;
 }
 
-.pagination__area {
+.pagination__area,
+.wp-pagenavi {
 	align-items: center;
 	display: flex;
 	gap: 0.75rem;
@@ -2280,13 +2281,11 @@ input[type=text].is-error::placeholder {
 	padding: 0;
 }
 
-.pagination__area li {
-	border: 1px solid #408F95;
-	width: 2.375rem;
-}
-
-.pagination__area a {
+.pagination__area a,
+.wp-pagenavi a,
+.wp-pagenavi span {
 	align-items: center;
+	border: 1px solid #408F95;
 	color: #408F95;
 	cursor: pointer;
 	display: inline-flex;
@@ -2296,15 +2295,16 @@ input[type=text].is-error::placeholder {
 	justify-content: center;
 	line-height: 2.375;
 	transition: 0.3s;
-	width: 100%;
+	width: 2.375rem;
 }
 
-.pagination__area li:nth-of-type(2) {
+.pagination__next,
+.wp-pagenavi .nextpostslink {
 	margin-left: 1.75rem;
 }
 
-.pagination__next {
-	margin-left: 1.75rem;
+.wp-pagenavi .previouspostslink {
+	margin-right: 1.75rem;
 }
 
 .pagination__area .current a {
@@ -2313,8 +2313,11 @@ input[type=text].is-error::placeholder {
 	pointer-events: none;
 }
 
-.pagination__area li:hover a {
+.pagination__area li:hover a,
+.wp-pagenavi a:hover,
+.wp-pagenavi span.current {
 	background-color: #408F95;
+	border-color: #408F95;
 	color: #fff;
 }
 
