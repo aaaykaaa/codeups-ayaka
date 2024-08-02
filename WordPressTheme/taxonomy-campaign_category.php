@@ -2,20 +2,14 @@
 <div class="page-mv sub-page-mv">
     <div class="page-mv__inner">
         <div class="page-mv__text-box">
-        <h1 class="page-mv__title">campaign</h1>
+            <h1 class="page-mv__title">campaign</h1>
         </div>
         <picture class="page-mv__img">
-        <source
-            media="(min-width: 768px)"
-            srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-campaign_mv.jpeg"
-        />
-        <img
-            src="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-campaign_mv-sp.jpeg"
-            alt="campaignpageのmain画像"
-        />
+            <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-campaign_mv.jpeg"/>
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-campaign_mv-sp.jpeg" alt="campaignpageのmain画像"/>
         </picture>
     </div>
-    </div>
+</div>
 
 <!-- パンくず -->
 <?php get_template_part('parts/breadcrumb'); ?>

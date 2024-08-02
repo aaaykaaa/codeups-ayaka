@@ -77,14 +77,65 @@ add_action( 'admin_menu', 'Change_menulabel' );
 function change_posts_per_page($query) {
     if ( is_admin() || ! $query->is_main_query() )
         return;
-    if ( $query->is_archive(array('campaign', 'recruit')) ) { //カスタム投稿タイプを指定
+
+     // カスタム投稿タイプ 'campaign' の指定
+    if ( $query->is_archive('campaign') ) { //カスタム投稿タイプを指定
         $query->set( 'posts_per_page', '4' ); //表示件数を指定
+    }
+
+    // カスタム投稿タイプ 'voice' の指定
+    if ( $query->is_post_type_archive('voice') ) { //カスタム投稿タイプを指定
+      $query->set( 'posts_per_page', '6' ); //表示件数を指定
     }
 }
 add_action( 'pre_get_posts', 'change_posts_per_page' );
+
+// //date.phpの表示件数変更
+// function change_date_archive_posts_per_page($query) {
+//     if ( is_admin() || ! $query->is_main_query() )
+//         return;
+
+//     if ( $query->is_date() ) { // 日付アーカイブページを指定
+//         $query->set( 'posts_per_page', '10' ); // 表示件数を10件に設定
+//     }
+// }
+// add_action( 'pre_get_posts', 'change_date_archive_posts_per_page' );
 
 // Contact Form 7で自動挿入されるPタグ、brタグを削除
 add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
 function wpcf7_autop_return_false() {
   return false;
 }
+
+// 管理画面のメニューの並び順をカスタマイズ
+function customize_menu_order($menu_order) {
+    if (!$menu_order) return true;
+
+    return array(
+        'index.php', // ダッシュボード
+        'edit.php', // ブログ（投稿）
+        'edit.php?post_type=campaign', // キャンペーン
+        'edit.php?post_type=voice', // お客様の声
+        'upload.php', // メディア
+        'edit.php?post_type=page', // 固定ページ
+        'wpcf7', // お問い合わせ
+        'themes.php', // 外観
+        'plugins.php', // プラグイン
+        'users.php', // ユーザー
+        'tools.php', // ツール
+        'options-general.php', // 設定
+        'ai1wm_export', // All-in-One WP Migration
+        'edit.php?post_type=scf', // Smart Custom Fields（カスタムフィールドの例）
+        'edit.php?post_type=acf', // ACF
+        'admin.php?page=seo-pack', // SEO PACK
+        'admin.php?page=cptui_main_menu', // CPT UI
+    );
+}
+add_filter('custom_menu_order', '__return_true');
+add_filter('menu_order', 'customize_menu_order');
+
+// 管理画面のメニューから非表示に
+function remove_menus() {
+    remove_menu_page( 'edit-comments.php' ); //コメント
+}
+add_action( 'admin_menu', 'remove_menus' );
