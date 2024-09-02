@@ -25,9 +25,11 @@
     <div class="page-campaign inner">
         <!-- タグの表示 -->
         <ul class="page-campaign__tabs tabs">
-            <li class="tabs__tab tab is-open"><a href="<?php echo get_post_type_archive_link('campaign'); ?>">ALL</a></li>
-            <?php $campaignTerms = get_terms('campaign_category', array('hide_empty'=>false)); ?>
-            <?php foreach($campaignTerms as $campaignTerm) : ?>
+            <li class="tabs__tab tab <?php if(is_post_type_archive('campaign')) { echo 'is-open'; } ?>"><a href="<?php echo get_post_type_archive_link('campaign'); ?>">ALL</a></li>
+            <?php
+                $campaignTerms = get_terms('campaign_category', array('hide_empty'=>false));
+                foreach($campaignTerms as $campaignTerm) :
+                ?>
             <li class="tabs__tab tab"><a href="<?php echo get_term_link($campaignTerm, '$campaign_category');?>"><?php echo $campaignTerm->name;?></a></li>
             <?php endforeach; ?>
         </ul>

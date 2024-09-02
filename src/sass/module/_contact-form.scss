@@ -11,7 +11,7 @@
   }
 }
 
-.contact-form__item:not(:nth-of-type(7)) {
+.contact-form__item:not(:nth-of-type(8)) {
   border-bottom: 1px dashed $main-bg-color;
 }
 
@@ -119,7 +119,8 @@ textarea {
 }
 
 .contact-form__checkbox-wrap,
-.contact-form__checkbox-privacy {
+.contact-form__checkbox-privacy,
+.wpcf7-form-control {
   display: flex;
   flex-direction: column;
   gap: rem(4);
@@ -244,4 +245,21 @@ input[type=text].is-error {
 
 input[type=text].is-error::placeholder {
   color: $white;
+}
+
+////////////////////////////////////////////
+// contact form 7関連の指定
+////////////////////////////////////////////
+
+.wpcf7-list-item {
+  margin: 0;
+}
+
+input[type=submit] {
+  color: $white;
+}
+
+input[type=submit]:hover {
+  color: $main-bg-color;
+  transition: 0.2s;
 }

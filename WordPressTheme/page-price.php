@@ -26,116 +26,68 @@
             <div class="page-price__content">
             <div class="page-price__table">
                 <div class="page-price__table-item">
-                <div class="page-price__head">
-                    <h2 class="page-price__title"><span>ライセンス講習</span></h2>
-                </div>
-                <div class="page-price__body">
-                    <div class="page-price__body-item">
-                    <h3 class="page-price__course">
-                        オープンウォーター<br class="u-mobile" />ダイバーコース
-                    </h3>
-                    <p class="page-price__price">&yen;50,000</p>
+                    <div class="page-price__head">
+                        <h2 class="page-price__title"><span>ライセンス講習</span></h2>
                     </div>
-                    <div class="page-price__body-item">
-                    <h3 class="page-price__course">
-                        アドバンスド<br class="u-mobile" />オープンウォーターコース
-                    </h3>
-                    <p class="page-price__price">&yen;60,000</p>
+                    <div class="page-price__body">
+                        <?php
+                            $license = SCF::get('license');
+                            foreach ($license as $fields):
+                        ?>
+                        <div class="page-price__body-item">
+                            <h3 class="page-price__course"><?php echo $fields['menu']; ?></h3>
+                            <p class="page-price__price"><?php echo $fields['price']; ?></p>
+                        </div>
+                        <?php endforeach; ?>
                     </div>
-                    <div class="page-price__body-item">
-                    <h3 class="page-price__course">レスキュー＋EFRコース</h3>
-                    <p class="page-price__price">&yen;70,000</p>
-                    </div>
-                </div>
                 </div>
                 <div class="page-price__table-item">
-                <div class="page-price__head">
-                    <h2 class="page-price__title"><span>体験ダイビング</span></h2>
-                </div>
-                <div class="page-price__body">
-                    <div class="page-price__body-item">
-                    <h3 class="page-price__course">
-                        ビーチ体験ダイビング<br class="u-mobile" />(半日)
-                    </h3>
-                    <p class="page-price__price">&yen;7,000</p>
+                    <div class="page-price__head">
+                        <h2 class="page-price__title"><span>体験ダイビング</span></h2>
                     </div>
-                    <div class="page-price__body-item">
-                    <h3 class="page-price__course">
-                        ビーチ体験ダイビング<br class="u-mobile" />(1日)
-                    </h3>
-                    <p class="page-price__price">&yen;14,000</p>
+                    <div class="page-price__body">
+                        <?php
+                            $diving = SCF::get('diving');
+                            foreach ($diving as $fields):
+                        ?>
+                        <div class="page-price__body-item">
+                            <h3 class="page-price__course"><?php echo $fields['menu']; ?></h3>
+                            <p class="page-price__price"><?php echo $fields['price']; ?></p>
+                        </div>
+                        <?php endforeach; ?>
                     </div>
-                    <div class="page-price__body-item">
-                    <h3 class="page-price__course">
-                        ボート体験ダイビング<br class="u-mobile" />(半日)
-                    </h3>
-                    <p class="page-price__price">&yen;10,000</p>
-                    </div>
-                    <div class="page-price__body-item">
-                    <h3 class="page-price__course">
-                        ボート体験ダイビング<br class="u-mobile" />(1日)
-                    </h3>
-                    <p class="page-price__price">&yen;18,000</p>
-                    </div>
-                </div>
                 </div>
                 <div class="page-price__table-item">
-                <div class="page-price__head">
-                    <h2 class="page-price__title"><span>ファンダイビング</span></h2>
-                </div>
-                <div class="page-price__body">
-                    <div class="page-price__body-item">
-                    <h3 class="page-price__course">
-                        ビーチダイビング<br class="u-mobile" />(2ダイブ)
-                    </h3>
-                    <p class="page-price__price">&yen;14,000</p>
+                    <div class="page-price__head">
+                        <h2 class="page-price__title"><span>ファンダイビング</span></h2>
                     </div>
-                    <div class="page-price__body-item">
-                    <h3 class="page-price__course">
-                        ボートダイビング<br class="u-mobile" />(2ダイブ)
-                    </h3>
-                    <p class="page-price__price">&yen;18,000</p>
+                    <div class="page-price__body">
+                        <?php
+                            $fundiving = SCF::get('fundiving');
+                            foreach ($fundiving as $fields):
+                        ?>
+                        <div class="page-price__body-item">
+                            <h3 class="page-price__course"><?php echo $fields['menu']; ?></h3>
+                            <p class="page-price__price"><?php echo $fields['price']; ?></p>
+                        </div>
+                        <?php endforeach; ?>
                     </div>
-                    <div class="page-price__body-item">
-                    <h3 class="page-price__course">
-                        スペシャルダイビング<br class="u-mobile" />(2ダイブ)
-                    </h3>
-                    <p class="page-price__price">&yen;24,000</p>
-                    </div>
-                    <div class="page-price__body-item">
-                    <h3 class="page-price__course">
-                        ナイトダイビング<br class="u-mobile" />(1ダイブ)
-                    </h3>
-                    <p class="page-price__price">&yen;10,000</p>
-                    </div>
-                </div>
                 </div>
                 <div class="page-price__table-item">
-                <div class="page-price__head">
-                    <h2 class="page-price__title">
-                    <span>スペシャルダイビング</span>
-                    </h2>
-                </div>
-                <div class="page-price__body">
-                    <div class="page-price__body-item">
-                    <h3 class="page-price__course">
-                        貸切ダイビング<br class="u-mobile" />(2ダイブ)
-                    </h3>
-                    <p class="page-price__price">&yen;24,000</p>
+                    <div class="page-price__head">
+                        <h2 class="page-price__title"><span>スペシャルダイビング</span></h2>
                     </div>
-                    <div class="page-price__body-item">
-                    <h3 class="page-price__course">
-                        1日ダイビング<br class="u-mobile" />(3ダイブ)
-                    </h3>
-                    <p class="page-price__price">&yen;32,000</p>
+                    <div class="page-price__body">
+                        <?php
+                            $specialDiving = SCF::get('specialDiving');
+                            foreach ($specialDiving as $fields):
+                        ?>
+                        <div class="page-price__body-item">
+                            <h3 class="page-price__course"><?php echo $fields['menu']; ?></h3>
+                            <p class="page-price__price"><?php echo $fields['price']; ?></p>
+                        </div>
+                        <?php endforeach; ?>
                     </div>
-                    <div class="page-price__body-item">
-                    <h3 class="page-price__course">
-                        ナイトダイビング<br class="u-mobile" />(2ダイブ)
-                    </h3>
-                    <p class="page-price__price">&yen;14,000</p>
-                    </div>
-                </div>
                 </div>
             </div>
             </div>

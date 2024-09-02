@@ -24,78 +24,21 @@
     <section class="page-faq sub-faq sub">
         <div class="page-faq__inner inner">
             <div class="page-faq__content faq-items">
-            <div class="faq-items__item faq-item">
-                <h2 class="faq-item__title js-nav-open">ここに質問が入ります</h2>
-                <nav>
-                <ul>
-                    <li class="faq-item__text">
-                    ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                    </li>
-                </ul>
-                </nav>
-            </div>
-            <div class="faq-items__item faq-item">
-                <h2 class="faq-item__title js-nav-open">ここに質問が入ります</h2>
-                <nav>
-                <ul>
-                    <li class="faq-item__text">
-                    ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                    </li>
-                </ul>
-                </nav>
-            </div>
-            <div class="faq-items__item faq-item">
-                <h2 class="faq-item__title js-nav-open">ここに質問が入ります</h2>
-                <nav>
-                <ul>
-                    <li class="faq-item__text">
-                    ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                    </li>
-                </ul>
-                </nav>
-            </div>
-            <div class="faq-items__item faq-item">
-                <h2 class="faq-item__title js-nav-open">ここに質問が入ります</h2>
-                <nav>
-                <ul>
-                    <li class="faq-item__text">
-                    ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                    </li>
-                </ul>
-                </nav>
-            </div>
-            <div class="faq-items__item faq-item">
-                <h2 class="faq-item__title js-nav-open">ここに質問が入ります</h2>
-                <nav>
-                <ul>
-                    <li class="faq-item__text">
-                    ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                    </li>
-                </ul>
-                </nav>
-            </div>
-            <div class="faq-items__item faq-item">
-                <h2 class="faq-item__title js-nav-open">ここに質問が入ります</h2>
-                <nav>
-                <ul>
-                    <li class="faq-item__text">
-                    ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                    </li>
-                </ul>
-                </nav>
-            </div>
-            <div class="faq-items__item faq-item">
-                <h2 class="faq-item__title js-nav-open">ここに質問が入ります</h2>
-                <nav>
-                <ul>
-                    <li class="faq-item__text">
-                    ここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入りますここに質問の答えが入ります
-                    </li>
-                </ul>
-                </nav>
-            </div>
+            <?php
+                $faq = SCF::get('faq');
+                foreach ($faq as $fields):
+            ?>
+                <div class="faq-items__item faq-item">
+                    <h2 class="faq-item__title js-nav-open"><?php echo $fields['question']; ?></h2>
+                    <nav>
+                        <ul>
+                            <li class="faq-item__text"><?php echo $fields['answer']; ?></li>
+                        </ul>
+                    </nav>
+                </div>
+            <?php endforeach; ?>
             </div>
         </div>
     </section>
-    
+
 <?php get_footer(); ?>

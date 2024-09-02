@@ -34,9 +34,11 @@
                     <div class="voice-card__description">
                     <?php
                         $voiceMeta = get_field('voice_meta');
+                        $voiceAge = $voiceMeta['voice_age'];
+                        $voiceGender = $voiceMeta['voice_gender'];
                     ?>
                     <div class="voice-card__meta">
-                        <p class="voice-card__age"><?php echo $voiceMeta['voice_age']; ?>()</p>
+                        <p class="voice-card__age"><?php echo $voiceAge; ?>(<?php echo $voiceGender[0]; ?>)</p>
                         <p class="voice-card__tag"><?php echo get_the_terms(get_the_ID(), 'voice_category')[0]->name; ?></p>
                     </div>
                     <h2 class="voice-card__title">

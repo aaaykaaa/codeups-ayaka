@@ -724,7 +724,8 @@ a {
 	z-index: -1;
 }
 
-.button:hover {
+.button:hover,
+.button:hover [type=submit] {
 	color: #408F95;
 	transition: 0.2s;
 }
@@ -1048,7 +1049,7 @@ address {
 	padding-bottom: 1.5rem;
 }
 
-.contact-form__item:not(:nth-of-type(7)) {
+.contact-form__item:not(:nth-of-type(8)) {
 	border-bottom: 1px dashed #408F95;
 }
 
@@ -1150,7 +1151,8 @@ textarea {
 }
 
 .contact-form__checkbox-wrap,
-.contact-form__checkbox-privacy {
+.contact-form__checkbox-privacy,
+.wpcf7-form-control {
 	display: flex;
 	flex-direction: column;
 	gap: 0.25rem;
@@ -1268,6 +1270,19 @@ input[type=text].is-error::-moz-placeholder {
 
 input[type=text].is-error::placeholder {
 	color: #fff;
+}
+
+.wpcf7-list-item {
+	margin: 0;
+}
+
+input[type=submit] {
+	color: #fff;
+}
+
+input[type=submit]:hover {
+	color: #408F95;
+	transition: 0.2s;
 }
 
 .faq-item__text {

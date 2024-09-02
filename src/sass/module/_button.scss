@@ -43,7 +43,8 @@
   z-index: -1;
 }
 
-.button:hover {
+.button:hover,
+.button:hover [type=submit] {
   color: $main-bg-color;
   transition: 0.2s;
 }
