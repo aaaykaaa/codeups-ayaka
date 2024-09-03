@@ -135,8 +135,19 @@ function customize_menu_order($menu_order) {
 add_filter('custom_menu_order', '__return_true');
 add_filter('menu_order', 'customize_menu_order');
 
-// 管理画面のメニューから非表示に
+// 固定ページのエディターを非表示にする
+function my_custom_init() {
+    remove_post_type_support('page', 'editor');
+  }
+  add_action('init', 'my_custom_init');
+
+// 管理画面のメニューから非表示にする
 function remove_menus() {
-    remove_menu_page( 'edit-comments.php' ); //コメント
+    remove_menu_page ('edit-comments.php'); // コメント
+    remove_menu_page ('users.php'); // ユーザー
+    remove_menu_page ('tools.php'); // ツール
+    // remove_menu_page ('themes.php');// 外観
+    // remove_menu_page ('plugins.php');// プラグイン
+    // remove_menu_page ('options-general.php');// 設定
 }
 add_action( 'admin_menu', 'remove_menus' );
