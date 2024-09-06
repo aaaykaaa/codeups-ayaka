@@ -195,6 +195,22 @@ jQuery(function ($) {
     });
   });
 
+  // $(function () {
+  //   // タイトルをクリックすると
+  //   $(".blog-archive-accordion__container li a").on("click", function () {
+  //     // クリックしたタイトル以外のopenクラスを外す(－から＋にする)
+  //     $(".blog-archive-accordion__container li a")
+  //       .not(this)
+  //       .removeClass("is-open");
+  //     // クリックしたタイトル以外のコンテンツを閉じる
+  //     $(".blog-archive-accordion__container li a").not(this).next().slideUp(300);
+  //     // クリックしたタイトルにopenクラスを付け外しして＋と－を切り替える
+  //     $(this).toggleClass("is-open");
+  //     // クリックしたタイトルの次の要素(コンテンツ)を開閉
+  //     $(this).next().slideToggle(300);
+  //   });
+  // });
+
   // FAQのドロワー
   $(".js-nav-open").click(function () {
     $(this).toggleClass("is-active");

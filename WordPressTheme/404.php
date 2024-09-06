@@ -14,7 +14,7 @@
                 </p>
             </div>
             <div class="page-404__btn">
-                <a href="<?php echo $home; ?>" class="button button--wtite"><span>Page TOP</span></a>
+                <a href="<?php echo esc_url(home_url()); ?>" class="button button--wtite"><span>Page TOP</span></a>
             </div>
         </div>
     </div>

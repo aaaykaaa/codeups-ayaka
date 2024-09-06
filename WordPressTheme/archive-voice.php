@@ -37,13 +37,13 @@
                         $voiceAge = $voiceMeta['voice_age'];
                         $voiceGender = $voiceMeta['voice_gender'];
                     ?>
-                    <div class="voice-card__meta">
-                        <p class="voice-card__age"><?php echo $voiceAge; ?>(<?php echo $voiceGender[0]; ?>)</p>
-                        <p class="voice-card__tag"><?php echo get_the_terms(get_the_ID(), 'voice_category')[0]->name; ?></p>
-                    </div>
-                    <h2 class="voice-card__title">
-                    <?php the_title(); ?>
-                    </h2>
+                        <div class="voice-card__meta">
+                            <p class="voice-card__age"><?php echo $voiceAge; ?>(<?php echo $voiceGender[0]; ?>)</p>
+                            <p class="voice-card__tag"><?php echo get_the_terms(get_the_ID(), 'voice_category')[0]->name; ?></p>
+                        </div>
+                        <h2 class="voice-card__title">
+                        <?php the_title(); ?>
+                        </h2>
                     </div>
                     <figure class="voice-card__img js-colorbox">
                     <?php if(get_the_post_thumbnail()): ?>

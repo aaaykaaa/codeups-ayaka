@@ -35,8 +35,8 @@
                             foreach ($license as $fields):
                         ?>
                         <div class="page-price__body-item">
-                            <h3 class="page-price__course"><?php echo $fields['menu']; ?></h3>
-                            <p class="page-price__price"><?php echo $fields['price']; ?></p>
+                            <h3 class="page-price__course"><?php echo $fields['licenseMenu']; ?></h3>
+                            <p class="page-price__price"><?php echo $fields['licensePrice']; ?></p>
                         </div>
                         <?php endforeach; ?>
                     </div>
@@ -51,8 +51,8 @@
                             foreach ($diving as $fields):
                         ?>
                         <div class="page-price__body-item">
-                            <h3 class="page-price__course"><?php echo $fields['menu']; ?></h3>
-                            <p class="page-price__price"><?php echo $fields['price']; ?></p>
+                            <h3 class="page-price__course"><?php echo $fields['divingMenu']; ?></h3>
+                            <p class="page-price__price"><?php echo $fields['divingPrice']; ?></p>
                         </div>
                         <?php endforeach; ?>
                     </div>
@@ -63,12 +63,12 @@
                     </div>
                     <div class="page-price__body">
                         <?php
-                            $fundiving = SCF::get('fundiving');
+                            $fundiving = SCF::get('fun');
                             foreach ($fundiving as $fields):
                         ?>
                         <div class="page-price__body-item">
-                            <h3 class="page-price__course"><?php echo $fields['menu']; ?></h3>
-                            <p class="page-price__price"><?php echo $fields['price']; ?></p>
+                            <h3 class="page-price__course"><?php echo $fields['funMenu']; ?></h3>
+                            <p class="page-price__price"><?php echo $fields['funPrice']; ?></p>
                         </div>
                         <?php endforeach; ?>
                     </div>
@@ -79,12 +79,12 @@
                     </div>
                     <div class="page-price__body">
                         <?php
-                            $specialDiving = SCF::get('specialDiving');
+                            $specialDiving = SCF::get('special');
                             foreach ($specialDiving as $fields):
                         ?>
                         <div class="page-price__body-item">
-                            <h3 class="page-price__course"><?php echo $fields['menu']; ?></h3>
-                            <p class="page-price__price"><?php echo $fields['price']; ?></p>
+                            <h3 class="page-price__course"><?php echo $fields['specialMenu']; ?></h3>
+                            <p class="page-price__price"><?php echo $fields['specialPrice']; ?></p>
                         </div>
                         <?php endforeach; ?>
                     </div>

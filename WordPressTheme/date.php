@@ -19,8 +19,11 @@
         <div class="two-columns__inner inner">
             <div class="two-columns__container">
                 <div class="two-columns__main main-content">
-                <?php if ( have_posts() ) : ?>
-                    <div class="main-content__cards blog-cards blog-cards--2col">
+                    <div class="main-content__blog-archive blog-archive">
+                        <h1 class="blog-archive__title"><?php echo get_the_date('Y年n月'); ?>のブログ記事</h1>
+                    </div>
+                    <?php if ( have_posts() ) : ?>
+                    <div class="main-content__cards blog-cards blog-cards--2col mt40-24">
                     <?php while(have_posts()): the_post(); ?>
                         <a href="<?php the_permalink(); ?>" class="blog-cards__item blog-card">
                             <div class="blog-card__inner">
@@ -43,4 +46,5 @@
             </div>
         </div>
     </div>
+
 <?php get_footer(); ?>

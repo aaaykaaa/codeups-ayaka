@@ -23,6 +23,10 @@
   display: block;
 }
 
+.blog-archive-accordion__content.is-closed {
+  display: none;
+}
+
 // トグル
 .blog-archive-accordion__title::after {
   background-color: $main-bg-color;
@@ -44,3 +48,4 @@
   top: 25%;
   transform: rotate(90deg);
 }
+
