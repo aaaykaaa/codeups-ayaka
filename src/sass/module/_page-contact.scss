@@ -6,13 +6,15 @@
   }
 }
 
-.page-contact__error-message {
+.page-contact__error-message,
+.wpcf7-response-output {
   display: none;
   margin: 0 auto;
   text-align: center;
 }
 
-.page-contact__error-message p {
+.page-contact__error-message p,
+.wpcf7-response-output {
   display: inline-block;
   text-align: left;
   color: #C94800;
@@ -22,4 +24,8 @@
   line-height: calc(20 / 14);
   text-indent: -1em;
   margin-left: rem(16);
+}
+
+.wpcf7 form .wpcf7-response-output {
+  border: none;
 }

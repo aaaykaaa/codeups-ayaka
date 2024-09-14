@@ -1263,16 +1263,21 @@ input[type=checkbox]:checked + span::after {
 	text-align: center;
 }
 
-input[type=text].is-error {
+input[type=text].is-error,
+input.wpcf7-not-valid,
+textarea.wpcf7-not-valid,
+span.wpcf7-not-valid {
 	background: rgba(201, 72, 0, 0.2);
-	border-color: #C94800;
+	border: 1px solid #C94800;
 }
 
-input[type=text].is-error::-moz-placeholder {
+input[type=text].is-error::-moz-placeholder,
+input.wpcf7-not-valid::-moz-placeholder {
 	color: #fff;
 }
 
-input[type=text].is-error::placeholder {
+input[type=text].is-error::placeholder,
+input.wpcf7-not-valid::placeholder {
 	color: #fff;
 }
 
@@ -1287,6 +1292,22 @@ input[type=submit] {
 input[type=submit]:hover {
 	color: #408F95;
 	transition: 0.2s;
+}
+
+span.wpcf7-spinner {
+	display: none;
+}
+
+.wpcf7-not-valid-tip {
+	display: none;
+}
+
+.wpcf7-form.sent .wpcf7-response-output {
+	display: none;
+}
+
+.wpcf7-validation-errors {
+	display: none; /* デフォルトのエラーメッセージを非表示に */
 }
 
 .faq-item__text {
@@ -1968,13 +1989,15 @@ input[type=submit]:hover {
 	text-align: center;
 }
 
-.page-contact__error-message {
+.page-contact__error-message,
+.wpcf7-response-output {
 	display: none;
 	margin: 0 auto;
 	text-align: center;
 }
 
-.page-contact__error-message p {
+.page-contact__error-message p,
+.wpcf7-response-output {
 	color: #C94800;
 	display: inline-block;
 	font-family: "Noto Sans JP", sans-serif;
@@ -1984,6 +2007,10 @@ input[type=submit]:hover {
 	margin-left: 1rem;
 	text-align: left;
 	text-indent: -1em;
+}
+
+.wpcf7 form .wpcf7-response-output {
+	border: none;
 }
 
 .page-information__items {

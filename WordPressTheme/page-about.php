@@ -45,33 +45,39 @@
 <section class="gallery sub-gallery">
     <div class="gallery__inner inner">
         <div class="gallery__heading">
-        <div class="section-heading">
-            <p class="section-heading__englishTitle">gallery</p>
-            <h2 class="section-heading__japaneseTitle">フォト</h2>
-        </div>
+            <div class="section-heading">
+                <p class="section-heading__englishTitle">gallery</p>
+                <h2 class="section-heading__japaneseTitle">フォト</h2>
+            </div>
         </div>
         <div class="gallery__area gallery-area">
-        <div class="gallery-area__img js-about-modal-trigger">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/gallery1.jpg" class="gallery-area__img1" alt="ギャラリー画像1"/>
-        </div>
-        <div class="gallery-area__img js-about-modal-trigger">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/gallery2.jpg" class="gallery-area__img2" alt="ギャラリー画像2"/>
-        </div>
-        <div class="gallery-area__img js-about-modal-trigger">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/gallery3.jpg" class="gallery-area__img3" alt="ギャラリー画像3"/>
-        </div>
-        <div class="gallery-area__img js-about-modal-trigger">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/gallery4.jpg" class="gallery-area__img4" alt="ギャラリー画像4"/>
-        </div>
-        <div class="gallery-area__img js-about-modal-trigger">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/gallery5.jpg" class="gallery-area__img5" alt="ギャラリー画像5"/>
-        </div>
-        <div class="gallery-area__img js-about-modal-trigger">
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/gallery6.jpg" class="gallery-area__img6" alt="ギャラリー画像6"/>
-        </div>
+            <?php
+            // カスタムフィールドのグループ「group」を取得
+            $gallery_images = SCF::get('gallery');
+
+            // 画像データが存在する場合にサブループを実行
+            if (!empty($gallery_images)) {
+                foreach ($gallery_images as $image) {
+                    // グループ内の「name」フィールドにある画像IDを取得
+                    $image_id = isset($image['gallery_pic']) ? $image['gallery_pic'] : '';
+
+                    // 画像IDが存在する場合、画像URLを取得して表示
+                    if ($image_id) {
+                        $image_url = wp_get_attachment_image_url($image_id, 'full'); // 画像のURLを取得、画像を解像度を上げるためにfullに変更
+                        if ($image_url) {
+                            ?>
+                            <div class="gallery-area__img js-about-modal-trigger">
+                                <img src="<?php echo esc_url($image_url); ?>" class="gallery-area__img1" alt="ギャラリー画像"/>
+                            </div>
+                            <?php
+                        }
+                    }
+                }
+            }
+            ?>
         </div>
     </div>
-    </section>
-    <div class="page-about-modal js-about-modal"></div>
+</section>
+<div class="page-about-modal js-about-modal"></div>
 
 <?php get_footer(); ?>

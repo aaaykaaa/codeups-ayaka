@@ -238,12 +238,17 @@ input[type=checkbox]:checked + span::after {
   }
 }
 
-input[type=text].is-error {
-  border-color: #C94800;
+input[type=text].is-error,
+input.wpcf7-not-valid,
+textarea.wpcf7-not-valid,
+span.wpcf7-not-valid {
+  // border-color: ;
+  border: 1px solid #C94800;
   background: rgba(201, 72, 0, 0.20);
 }
 
-input[type=text].is-error::placeholder {
+input[type=text].is-error::placeholder,
+input.wpcf7-not-valid::placeholder, {
   color: $white;
 }
 
@@ -263,3 +268,34 @@ input[type=submit]:hover {
   color: $main-bg-color;
   transition: 0.2s;
 }
+
+span.wpcf7-spinner {
+  display: none;
+}
+
+.wpcf7-not-valid-tip {
+  display: none;
+}
+
+// .wpcf7-form.invalid .wpcf7-response-output {
+//   display: block;
+// }
+
+// 送信完了後のサンスクメッセージを非表示にする
+.wpcf7-form.sent .wpcf7-response-output {
+  display: none;
+}
+
+.wpcf7-validation-errors {
+  display: none; /* デフォルトのエラーメッセージを非表示に */
+}
+
+// .wpcf7-response-output {
+//   position: relative; /* 位置の基準を親要素に対して設定 */
+//   top: -50px; /* 必要に応じて上下に移動 */
+//   margin-bottom: 20px; /* フォームとのスペース調整 */
+//   background-color: #f8d7da; /* エラーメッセージの背景色 */
+//   color: #721c24; /* エラーメッセージのテキスト色 */
+//   padding: 10px;
+//   border: 1px solid #f5c6cb;
+// }
