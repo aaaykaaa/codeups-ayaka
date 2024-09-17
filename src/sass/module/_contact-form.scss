@@ -299,3 +299,15 @@ span.wpcf7-spinner {
 //   padding: 10px;
 //   border: 1px solid #f5c6cb;
 // }
+
+
+form {
+  display: grid;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  order: -1;
+  padding-bottom: 40px;
+  margin: 0;
+  text-align: center;
+}

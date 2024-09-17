@@ -1,39 +1,40 @@
 <?php
+
+//////////////////////////////////////////////////
+// header.php
+//////////////////////////////////////////////////
 function my_theme_enqueue_styles_scripts() {
     // Google Fonts
     wp_enqueue_style('google-font-gotu', 'https://fonts.googleapis.com/css2?family=Gotu&display=swap', array(), null);
     wp_enqueue_style('google-font-lato', 'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap', array(), null);
     wp_enqueue_style('google-font-noto-sans-jp', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap', array(), null);
-
     // Swiper CSS
     wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), null);
-
     // Theme CSS
     wp_enqueue_style('style-css', get_theme_file_uri('/assets/css/style.css'), array(), null);
-
     // jQuery
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.js', array(), null, true);
-
     // Swiper JS
     wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array(), null, true);
-
     // Inview
     wp_enqueue_script('inview', get_theme_file_uri('/assets/js/jquery.inview.min.js'), array(), null, true);
-
     // jQuery Validate
     wp_enqueue_script('jquery-validate', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js', array(), null, true);
     wp_enqueue_script('jquery-validate-additional-methods', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js', array(), null, true);
-
     // Custom JS
     wp_enqueue_script('custom-script', get_theme_file_uri('/assets/js/script.js'), array(), null, true);
 }
-
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles_scripts');
 
+//////////////////////////////////////////////////
+// ALL
+//////////////////////////////////////////////////
+
+// アイキャッチ画像の指定
 function my_setup() {
-    add_theme_support( 'post-thumbnails' ); /* アイキャッチ */
-    add_theme_support( 'automatic-feed-links' ); /* RSSフィード */
-    add_theme_support( 'title-tag' ); /* タイトルタグ自動生成 */
+    add_theme_support( 'post-thumbnails' );       // アイキャッチ
+    add_theme_support( 'automatic-feed-links' );  // RSSフィード
+    add_theme_support( 'title-tag' );             // タイトルタグ自動生成
     add_theme_support(
         'html5',
         array( /* HTML5のタグで出力 */
@@ -47,6 +48,11 @@ function my_setup() {
 }
 add_action( 'after_setup_theme', 'my_setup' );
 
+//////////////////////////////////////////////////
+// home.php、single.php、date.php
+//////////////////////////////////////////////////
+
+// 投稿の名前を「ブログ」に変更する
 function Change_menulabel() {
     global $menu;
     global $submenu;
@@ -55,7 +61,8 @@ function Change_menulabel() {
     $submenu['edit.php'][5][0] = $name.'一覧';
     $submenu['edit.php'][10][0] = '新規'.$name.'追加';
     }
-    function Change_objectlabel() {
+
+function Change_objectlabel() {
     global $wp_post_types;
     $name = 'ブログ';
     $labels = &$wp_post_types['post']->labels;
@@ -73,74 +80,50 @@ function Change_menulabel() {
 add_action( 'init', 'Change_objectlabel' );
 add_action( 'admin_menu', 'Change_menulabel' );
 
+// ブログの「カテゴリー」と「タグ」の非表示
+function my_unregister_taxonomies() {
+    global $wp_taxonomies;
+    // 「カテゴリー」の非表示
+    if (!empty($wp_taxonomies['category']->object_type)) {
+        foreach ($wp_taxonomies['category']->object_type as $i => $object_type) {
+            if ($object_type == 'post') {
+                unset($wp_taxonomies['category']->object_type[$i]);
+            }
+        }
+    }
+    // 「タグ」の非表示
+    if (!empty($wp_taxonomies['post_tag']->object_type)) {
+        foreach ($wp_taxonomies['post_tag']->object_type as $i => $object_type) {
+            if ($object_type == 'post') {
+                unset($wp_taxonomies['post_tag']->object_type[$i]);
+            }
+        }
+    }
+    return true;
+}
+add_action('init', 'my_unregister_taxonomies');
+
 //アーカイブの表示件数変更
 function change_posts_per_page($query) {
     if ( is_admin() || ! $query->is_main_query() )
         return;
-
-     // カスタム投稿タイプ 'campaign' の指定
-    if ( $query->is_archive('campaign') ) { //カスタム投稿タイプを指定
-        $query->set( 'posts_per_page', '4' ); //表示件数を指定
+    // カスタム投稿タイプ 'campaign' の指定
+    if ( $query->is_archive('campaign') ) {       //カスタム投稿タイプを指定
+        $query->set( 'posts_per_page', '4' );     //表示件数を指定
     }
-
     // カスタム投稿タイプ 'voice' の指定
-    if ( $query->is_post_type_archive('voice') ) { //カスタム投稿タイプを指定
-      $query->set( 'posts_per_page', '6' ); //表示件数を指定
+    if ( $query->is_post_type_archive('voice') ) {//カスタム投稿タイプを指定
+      $query->set( 'posts_per_page', '6' );       //表示件数を指定
     }
-
 }
 add_action( 'pre_get_posts', 'change_posts_per_page' );
 
-// //date.phpの表示件数変更
-// function change_date_archive_posts_per_page($query) {
-//     if ( is_admin() || ! $query->is_main_query() )
-//         return;
+//////////////////////////////////////////////////
+// sidebar.php
+//////////////////////////////////////////////////
 
-//     if ( $query->is_date() ) { // 日付アーカイブページを指定
-//         $query->set( 'posts_per_page', '10' ); // 表示件数を10件に設定
-//     }
-// }
-// add_action( 'pre_get_posts', 'change_date_archive_posts_per_page' );
-
-// Contact Form 7で自動挿入されるPタグ、brタグを削除
-add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
-function wpcf7_autop_return_false() {
-  return false;
-}
-
-// 管理画面のメニューの並び順をカスタマイズ
-function customize_menu_order($menu_order) {
-    if (!$menu_order) return true;
-
-    return array(
-        'index.php', // ダッシュボード
-        'edit.php', // ブログ（投稿）
-        'edit.php?post_type=campaign', // キャンペーン
-        'edit.php?post_type=voice', // お客様の声
-        'upload.php', // メディア
-        'edit.php?post_type=page', // 固定ページ
-        'wpcf7', // お問い合わせ
-        'themes.php', // 外観
-        'plugins.php', // プラグイン
-        'users.php', // ユーザー
-        'tools.php', // ツール
-        'options-general.php', // 設定
-        'ai1wm_export', // All-in-One WP Migration
-        'edit.php?post_type=scf', // Smart Custom Fields（カスタムフィールドの例）
-        'edit.php?post_type=acf', // ACF
-        'admin.php?page=seo-pack', // SEO PACK
-        'admin.php?page=cptui_main_menu', // CPT UI
-    );
-}
-add_filter('custom_menu_order', '__return_true');
-add_filter('menu_order', 'customize_menu_order');
-
-///////////////////////////////////////////////////////////
-// sidebarで人気記事を表示させるための記述
-///////////////////////////////////////////////////////////
-
-//クローラーのアクセス判別
-function is_bot() {
+// 人気記事を表示させるための記述
+function is_bot() {                               //クローラーのアクセス判別
     $ua = $_SERVER['HTTP_USER_AGENT'];
     $bot = array(
         "googlebot",
@@ -154,9 +137,8 @@ function is_bot() {
     }
     return false;
 }
-//アクセス数を保存
-function set_post_views() {
 
+function set_post_views() {                       //アクセス数を保存
     if(!is_user_logged_in() && !is_bot()) {
         if(is_single()) {
         $post_id = get_the_ID();
@@ -174,25 +156,21 @@ function set_post_views() {
 }
 add_action('wp_head', 'set_post_views');
 
-/*管理画面のカラムを追加*/
+// 管理画面のカラムを追加(view数)
 function manage_posts_columns($columns) {
     $columns['post_views_count'] = 'view数';
     $columns['thumbnail'] = 'サムネイル';
     return $columns;
 }
 add_filter('manage_posts_columns', 'manage_posts_columns');
-    /*アクセス数を出力*/
-    function add_column($column_name, $post_id) {
-    /*View数呼び出し*/
-    if ($column_name === 'post_views_count') {
+    function add_column($column_name, $post_id) { // アクセス数を出力
+    if ($column_name === 'post_views_count') {    // View数呼び出し
         $pv = get_post_meta($post_id, 'post_views_count', true);
     }
-    /*サムネイル呼び出し*/
-    if ($column_name === 'thumbnail') {
+    if ($column_name === 'thumbnail') {           // サムネイル呼び出し
         $thumb = get_the_post_thumbnail($post_id, array(100, 100), 'thumbnail');
     }
-    /*ない場合は「なし」を表示する*/
-    if (isset($pv) && $pv) {
+    if (isset($pv) && $pv) {                      // ない場合は「なし」を表示する
         echo attribute_escape($pv);
     } elseif (isset($thumb) && $thumb) {
         echo $thumb;
@@ -202,9 +180,70 @@ add_filter('manage_posts_columns', 'manage_posts_columns');
 }
 add_action('manage_posts_custom_column', 'add_column', 10, 2);
 
-///////////////////////////////////////////////////////////
-// 管理画面の設定
-///////////////////////////////////////////////////////////
+//////////////////////////////////////////////////
+// page-contact.php
+//////////////////////////////////////////////////
+
+// Contact Form 7で自動挿入されるPタグ、brタグを削除
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false() {
+  return false;
+}
+
+//Contact Form 7 セレクトボックスの選択肢をカスタム投稿のタイトルから自動生成
+//関数の作成
+function job_selectlist($tag, $unused){
+    //セレクトボックスの名前が'select-job'かどうか
+    if ($tag['name'] != 'campaign-1') {
+        return $tag;
+    }
+
+    //get_posts()でセレクトボックスの中身を作成する
+    $args = array(                                //クエリの作成
+        'post_type' => 'campaign',                //カスタム投稿タイプを指定
+        'posts_per_page' => -1,                   // すべての投稿を取得
+        'orderby' => 'title',
+        'order' => 'ASC',                         //並び順⇒セレクトボックス内の表示順
+        'post_status' => 'publish'                //公開済みのページのみ取得
+    );
+    $job_posts = get_posts($args);                //クエリをget_posts()に入れる
+    if (!$job_posts) {                            //クエリがなければ戻す
+        return $tag;
+    }
+    foreach ($job_posts as $job_post) {           //セレクトボックスにforeachで入れる
+        $tag['raw_values'][] = $job_post->post_title;
+        $tag['values'][] = $job_post->post_title;
+        $tag['labels'][] = $job_post->post_title;
+    }
+
+    return $tag;
+}
+add_filter('wpcf7_form_tag', 'job_selectlist', 10, 2);
+
+
+//////////////////////////////////////////////////
+// page-thanks.php
+//////////////////////////////////////////////////
+
+// Contact Form 7の送信ボタンをクリックした後のサンクスページへの遷移先設定
+add_action( 'wp_footer', 'add_origin_thanks_page' );
+function add_origin_thanks_page() {
+    $thanks = home_url('/thanks/');
+    echo <<< EOC
+        <script>
+        var thanksPage = {
+            163: '{$thanks}',
+        };
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+            location = thanksPage[event.detail.contactFormId];
+        }, false );
+        </script>
+    EOC;
+}
+
+//////////////////////////////////////////////////
+// 管理画面
+//////////////////////////////////////////////////
 
 // 固定ページのエディターを非表示にする
 function my_custom_init() {
@@ -212,13 +251,38 @@ function my_custom_init() {
   }
   add_action('init', 'my_custom_init');
 
+  // 管理画面のメニューの並び順をカスタマイズ
+function customize_menu_order($menu_order) {
+    if (!$menu_order) return true;
+    return array(
+        'index.php',                              // ダッシュボード
+        'edit.php?post_type=campaign',            // キャンペーン
+        'edit.php',                               // ブログ（投稿）
+        'edit.php?post_type=voice',               // お客様の声
+        'edit.php?post_type=page',                // 固定ページ
+        'wpcf7',                                  // お問い合わせ
+        'upload.php',                             // メディア
+        'themes.php',                             // 外観
+        'plugins.php',                            // プラグイン
+        'users.php',                              // ユーザー
+        'tools.php',                              // ツール
+        'options-general.php',                    // 設定
+        'ai1wm_export',                           // All-in-One WP Migration
+        'edit.php?post_type=scf',                 // Smart Custom Fields（カスタムフィールドの例）
+        'edit.php?post_type=acf',                 // ACF
+        'admin.php?page=seo-pack',                // SEO PACK
+        'admin.php?page=cptui_main_menu',         // CPT UI
+    );
+}
+add_filter('custom_menu_order', '__return_true');
+add_filter('menu_order', 'customize_menu_order');
+
 // 管理画面のメニューから非表示にする
 function remove_menus() {
     remove_menu_page ('edit-comments.php'); // コメント
     remove_menu_page ('users.php'); // ユーザー
     remove_menu_page ('tools.php'); // ツール
-    // remove_menu_page ('themes.php');// 外観
-    // remove_menu_page ('plugins.php');// プラグイン
-    // remove_menu_page ('options-general.php');// 設定
 }
 add_action( 'admin_menu', 'remove_menus' );
+
+?>

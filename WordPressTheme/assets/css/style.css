@@ -1310,6 +1310,17 @@ span.wpcf7-spinner {
 	display: none; /* デフォルトのエラーメッセージを非表示に */
 }
 
+form {
+	display: grid;
+}
+
+.wpcf7 form .wpcf7-response-output {
+	margin: 0;
+	order: -1;
+	padding-bottom: 40px;
+	text-align: center;
+}
+
 .faq-item__text {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
