@@ -227,10 +227,7 @@ $terms = esc_url( home_url( '/terms/' ) );
                 </h3>
                 </div>
                 <figure class="voice-card__img js-colorbox">
-                <img
-                    src="<?php echo get_theme_file_uri(); ?>/assets/images/common/voice1.jpeg"
-                    alt="お客様の声1"
-                />
+                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/voice1.jpeg" alt="お客様の声1"/>
                 </figure>
             </div>
             <p class="voice-card__text">
@@ -279,10 +276,7 @@ $terms = esc_url( home_url( '/terms/' ) );
         </div>
         <div class="price__content">
         <picture class="price__img js-colorbox">
-            <source
-            media="(min-width: 768px)"
-            srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/price.jpeg"
-            />
+            <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/price.jpeg"/>
             <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/price-sp.jpeg" alt="料金一覧" />
         </picture>
         <div class="price__lists price-lists">

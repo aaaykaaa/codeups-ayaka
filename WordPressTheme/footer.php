@@ -67,103 +67,103 @@ $terms = esc_url( home_url( '/terms/' ) );
 </main>
         <div <?php if(is_404('404')) : ?> class="footer" <?php else :?> class="footer top-footer"<?php endif; ?>>
             <div class="footer__inner inner">
-            <div class="footer__head">
-                <div class="footer__logo">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-white.svg" alt="codeupsのロゴ"/>
-                </div>
-                <div class="footer__sns">
-                <a href="#" class="footer__sns-icon">
-                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sns-facebook_icon.svg" alt="フェイスブック"/>
-                </a>
-                <a href="#" class="footer__sns-icon">
-                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sns-instagram_icon.svg" alt="インスタグラム"/>
-                </a>
-                </div>
-            </div>
-            <nav class="footer__nav global-nav">
-                <div class="global-nav__inner">
-                <div class="global-nav__items">
-                    <div class="global-nav__item-sp">
-                    <ul class="global-nav__item-pc">
-                        <li class="global-nav__parent">
-                        <a href="<?php echo $campaign; ?>">キャンペーン</a>
-                        <ul>
-                            <li class="global-nav__child">
-                            <a href="#">ライセンス取得</a>
-                            </li>
-                            <li class="global-nav__child">
-                            <a href="#">貸切体験ダイビング</a>
-                            </li>
-                            <li class="global-nav__child">
-                            <a href="#">ナイトダイビング</a>
-                            </li>
-                        </ul>
-                        </li>
-                        <li class="global-nav__parent">
-                        <a href="<?php echo $about; ?>">私たちについて</a>
-                        </li>
-                    </ul>
-                    <ul class="global-nav__item-pc">
-                        <li class="global-nav__parent">
-                        <a href="<?php echo $information; ?>">ダイビング情報</a>
-                        <ul>
-                            <li class="global-nav__child">
-                            <a href="./page-information.html?tab=license">ライセンス講習</a>
-                            </li>
-                            <li class="global-nav__child">
-                            <a href="./page-information.html?tab=experienceDiving">体験ダイビング</a>
-                            </li>
-                            <li class="global-nav__child">
-                            <a href="./page-information.html?tab=fanDiving">ファンダイビング</a>
-                            </li>
-                        </ul>
-                        </li>
-                        <li class="global-nav__parent">
-                        <a href="<?php echo $blog; ?>">ブログ</a>
-                        </li>
-                    </ul>
+                <div class="footer__head">
+                    <div class="footer__logo">
+                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-white.svg" alt="codeupsのロゴ"/>
                     </div>
-                    <div class="global-nav__item-sp">
-                    <ul class="global-nav__item-pc">
-                        <li class="global-nav__parent">
-                        <a href="<?php echo $voice; ?>">お客様の声</a>
-                        </li>
-                        <li class="global-nav__parent">
-                        <a href="<?php echo $price; ?>">料金一覧</a>
-                        <ul>
-                            <li class="global-nav__child">
-                            <a href="#">ライセンス講習</a>
-                            </li>
-                            <li class="global-nav__child">
-                            <a href="#">体験ダイビング</a>
-                            </li>
-                            <li class="global-nav__child">
-                            <a href="#">ファンダイビング</a>
-                            </li>
-                        </ul>
-                        </li>
-                    </ul>
-                    <ul class="global-nav__item-pc">
-                        <li class="global-nav__parent">
-                        <a href="<?php echo $faq; ?>">よくある質問</a>
-                        </li>
-                        <li class="global-nav__parent">
-                        <a href="<?php echo $privacypolicy; ?>">プライバシー<br class="u-mobile" />ポリシー</a>
-                        </li>
-                        <li class="global-nav__parent">
-                        <a href="<?php echo $terms; ?>">利用規約</a>
-                        </li>
-                        <li class="global-nav__parent">
-                        <a href="<?php echo $contact; ?>">お問い合わせ</a>
-                        </li>
-                    </ul>
+                    <div class="footer__sns">
+                    <a href="#" class="footer__sns-icon">
+                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sns-facebook_icon.svg" alt="フェイスブック"/>
+                    </a>
+                    <a href="#" class="footer__sns-icon">
+                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sns-instagram_icon.svg" alt="インスタグラム"/>
+                    </a>
                     </div>
                 </div>
-                </div>
-            </nav>
+                <nav class="footer__nav global-nav">
+                    <div class="global-nav__inner">
+                    <div class="global-nav__items">
+                        <div class="global-nav__item-sp">
+                        <ul class="global-nav__item-pc">
+                            <li class="global-nav__parent">
+                            <a href="<?php echo $campaign; ?>">キャンペーン</a>
+                            <ul>
+                                <li class="global-nav__child">
+                                <a href="#">ライセンス取得</a>
+                                </li>
+                                <li class="global-nav__child">
+                                <a href="#">貸切体験ダイビング</a>
+                                </li>
+                                <li class="global-nav__child">
+                                <a href="#">ナイトダイビング</a>
+                                </li>
+                            </ul>
+                            </li>
+                            <li class="global-nav__parent">
+                            <a href="<?php echo $about; ?>">私たちについて</a>
+                            </li>
+                        </ul>
+                        <ul class="global-nav__item-pc">
+                            <li class="global-nav__parent">
+                            <a href="<?php echo $information; ?>">ダイビング情報</a>
+                            <ul>
+                                <li class="global-nav__child">
+                                <a href="./page-information.html?tab=license">ライセンス講習</a>
+                                </li>
+                                <li class="global-nav__child">
+                                <a href="./page-information.html?tab=experienceDiving">体験ダイビング</a>
+                                </li>
+                                <li class="global-nav__child">
+                                <a href="./page-information.html?tab=fanDiving">ファンダイビング</a>
+                                </li>
+                            </ul>
+                            </li>
+                            <li class="global-nav__parent">
+                            <a href="<?php echo $blog; ?>">ブログ</a>
+                            </li>
+                        </ul>
+                        </div>
+                        <div class="global-nav__item-sp">
+                        <ul class="global-nav__item-pc">
+                            <li class="global-nav__parent">
+                            <a href="<?php echo $voice; ?>">お客様の声</a>
+                            </li>
+                            <li class="global-nav__parent">
+                            <a href="<?php echo $price; ?>">料金一覧</a>
+                            <ul>
+                                <li class="global-nav__child">
+                                <a href="#">ライセンス講習</a>
+                                </li>
+                                <li class="global-nav__child">
+                                <a href="#">体験ダイビング</a>
+                                </li>
+                                <li class="global-nav__child">
+                                <a href="#">ファンダイビング</a>
+                                </li>
+                            </ul>
+                            </li>
+                        </ul>
+                        <ul class="global-nav__item-pc">
+                            <li class="global-nav__parent">
+                            <a href="<?php echo $faq; ?>">よくある質問</a>
+                            </li>
+                            <li class="global-nav__parent">
+                            <a href="<?php echo $privacypolicy; ?>">プライバシー<br class="u-mobile" />ポリシー</a>
+                            </li>
+                            <li class="global-nav__parent">
+                            <a href="<?php echo $terms; ?>">利用規約</a>
+                            </li>
+                            <li class="global-nav__parent">
+                            <a href="<?php echo $contact; ?>">お問い合わせ</a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                    </div>
+                </nav>
             </div>
             <div class="footer__copyright">
-            <small >Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
+                <small >Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
             </div>
         </footer>
         <a href="/" class="pagetop js-pagetop"></a>
