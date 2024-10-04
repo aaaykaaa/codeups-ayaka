@@ -22,7 +22,7 @@
                 while($the_query->have_posts()): $the_query->the_post();
                 $loopcounter++;
             ?>
-                <a href="#" class="blog-cards__item blog-card">
+                <a href="<?php the_permalink(); ?>" class="blog-cards__item blog-card">
                     <div class="blog-card__wrapper">
                         <figure class="blog-card__img blog-card__img--ranking">
                         <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像"/>
@@ -33,9 +33,7 @@
                         </div>
                     </div>
                 </a>
-            <?php endwhile; ?>
-            <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
+            <?php endwhile; endif; wp_reset_postdata(); ?>
             </div>
         </section>
 

@@ -30,32 +30,30 @@
             <?php while (have_posts()): the_post(); ?>
             <li class="page-voice__card voice-card">
                 <div class="voice-card__inner">
-                <div class="voice-card__head">
-                    <div class="voice-card__description">
-                    <?php
-                        $voiceMeta = get_field('voice_meta');
-                        $voiceAge = $voiceMeta['voice_age'];
-                        $voiceGender = $voiceMeta['voice_gender'];
-                    ?>
-                        <div class="voice-card__meta">
-                            <p class="voice-card__age"><?php echo $voiceAge; ?>(<?php echo $voiceGender[0]; ?>)</p>
-                            <p class="voice-card__tag"><?php echo get_the_terms(get_the_ID(), 'voice_category')[0]->name; ?></p>
+                    <div class="voice-card__head">
+                        <div class="voice-card__description">
+                        <?php
+                            $voiceMeta = get_field('voice_meta');
+                            $voiceAge = $voiceMeta['voice_age'];
+                            $voiceGender = $voiceMeta['voice_gender'];
+                        ?>
+                            <div class="voice-card__meta">
+                                <p class="voice-card__age"><?php echo $voiceAge; ?>(<?php echo $voiceGender[0]; ?>)</p>
+                                <p class="voice-card__tag"><?php echo get_the_terms(get_the_ID(), 'voice_category')[0]->name; ?></p>
+                            </div>
+                            <h2 class="voice-card__title">
+                            <?php the_title(); ?>
+                            </h2>
                         </div>
-                        <h2 class="voice-card__title">
-                        <?php the_title(); ?>
-                        </h2>
+                        <figure class="voice-card__img js-colorbox">
+                        <?php if(get_the_post_thumbnail()): ?>
+                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>の画像"/>
+                        <?php else: ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="画像がありません">
+                        <?php endif; ?>
+                        </figure>
                     </div>
-                    <figure class="voice-card__img js-colorbox">
-                    <?php if(get_the_post_thumbnail()): ?>
-                    <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>の画像"/>
-                    <?php else: ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="画像がありません">
-                    <?php endif; ?>
-                    </figure>
-                </div>
-                <p class="voice-card__text">
-                <?php the_field('voice_text'); ?>
-                </p>
+                    <p class="voice-card__text"><?php the_field('voice_text'); ?></p>
                 </div>
             </li>
             <!-- ループ終了 -->
