@@ -18,7 +18,7 @@ $terms = esc_url( home_url( '/terms/' ) );
         <div class="contact__boxes contact-boxes">
         <div class="contact-boxes__box contact-box">
             <div class="contact-box__left">
-            <a class="contact-box__logo">
+            <a href="/" class="contact-box__logo">
                 <img
                 src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-color.svg"
                 alt="codeupsのロゴ"
@@ -72,10 +72,10 @@ $terms = esc_url( home_url( '/terms/' ) );
                     <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-white.svg" alt="codeupsのロゴ"/>
                     </div>
                     <div class="footer__sns">
-                    <a href="#" class="footer__sns-icon">
+                    <a href="https://www.facebook.com" class="footer__sns-icon">
                         <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sns-facebook_icon.svg" alt="フェイスブック"/>
                     </a>
-                    <a href="#" class="footer__sns-icon">
+                    <a href="https://www.instagram.com" class="footer__sns-icon">
                         <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/sns-instagram_icon.svg" alt="インスタグラム"/>
                     </a>
                     </div>
@@ -108,13 +108,13 @@ $terms = esc_url( home_url( '/terms/' ) );
                             <a href="<?php echo $information; ?>">ダイビング情報</a>
                             <ul>
                                 <li class="global-nav__child">
-                                <a href="./page-information.html?tab=license">ライセンス講習</a>
+                                <a href="<?php echo esc_url(home_url('information#tab1')); ?>">ライセンス講習</a>
                                 </li>
                                 <li class="global-nav__child">
-                                <a href="./page-information.html?tab=experienceDiving">体験ダイビング</a>
+                                <a href="<?php echo esc_url(home_url('information#tab3')); ?>">体験ダイビング</a>
                                 </li>
                                 <li class="global-nav__child">
-                                <a href="./page-information.html?tab=fanDiving">ファンダイビング</a>
+                                <a href="<?php echo esc_url(home_url('information#tab2')); ?>">ファンダイビング</a>
                                 </li>
                             </ul>
                             </li>
