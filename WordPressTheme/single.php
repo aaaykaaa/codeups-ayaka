@@ -20,42 +20,42 @@
         <div class="two-columns__container">
             <div class="two-columns__main main-content">
                 <?php if (have_posts()): while (have_posts()): the_post(); ?>
-                <div class="main-content__blog-archive blog-archive">
-                    <time class="blog-archive__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/m/d'); ?></time>
-                    <h1 class="blog-archive__title"><?php  the_title(); ?></h1>
-                    <?php if(get_the_post_thumbnail()): ?>
-                    <figure class="blog-archive__img">
-                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像"/>
-                    </figure>
-                    <?php endif; ?>
-                    <div class="blog-archive__entry">
-                        <?php the_content(); ?>
+                    <div class="main-content__blog-archive blog-archive">
+                        <time class="blog-archive__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/m/d'); ?></time>
+                        <h1 class="blog-archive__title"><?php  the_title(); ?></h1>
+                        <?php if(get_the_post_thumbnail()): ?>
+                        <figure class="blog-archive__img">
+                            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像"/>
+                        </figure>
+                        <?php endif; ?>
+                        <div class="blog-archive__entry">
+                            <?php the_content(); ?>
+                        </div>
                     </div>
-                </div>
-                <div class="main-content__pagination-short pagination">
-                    <ol class="pagination__area">
-                    <?php
-                        $prev = get_previous_post();
-                        if ( ! empty( $prev ) ) {
-                            $prev_url = esc_url( get_permalink( $prev->ID ) );
-                        }
-                        $next = get_next_post();
-                        if ( ! empty( $next ) ) {
-                            $next_url = esc_url( get_permalink( $next->ID ) );
-                        }
-                    ?>
-                        <?php if ( ! empty( $prev ) ) : ?>
-                        <li class="pagination__prev">
-                            <a href="<?php echo $prev_url; ?>">＜</a>
-                        </li>
-                        <?php endif; ?>
-                        <?php if ( ! empty( $next ) ) : ?>
-                        <li class="pagination__next">
-                            <a href="<?php echo $next_url; ?>">＞</a>
-                        </li>
-                        <?php endif; ?>
-                    </ol>
-                </div>
+                    <div class="main-content__pagination-short pagination">
+                        <ol class="pagination__area">
+                        <?php
+                            $prev = get_previous_post();
+                            if ( ! empty( $prev ) ) {
+                                $prev_url = esc_url( get_permalink( $prev->ID ) );
+                            }
+                            $next = get_next_post();
+                            if ( ! empty( $next ) ) {
+                                $next_url = esc_url( get_permalink( $next->ID ) );
+                            }
+                        ?>
+                            <?php if ( ! empty( $prev ) ) : ?>
+                            <li class="pagination__prev">
+                                <a href="<?php echo $prev_url; ?>">＜</a>
+                            </li>
+                            <?php endif; ?>
+                            <?php if ( ! empty( $next ) ) : ?>
+                            <li class="pagination__next">
+                                <a href="<?php echo $next_url; ?>">＞</a>
+                            </li>
+                            <?php endif; ?>
+                        </ol>
+                    </div>
                 <?php endwhile; endif; ?>
             </div>
 

@@ -1,17 +1,4 @@
 <?php get_header(); ?>
-<?php
-$home = esc_url( home_url( '/' ) );
-$campaign = esc_url( home_url( '/campaign/' ) );
-$about = esc_url( home_url( '/about/' ) );
-$information = esc_url( home_url( '/information/' ) );
-$blog = esc_url( home_url( '/blog/' ) );
-$voice = esc_url( home_url( '/voice/' ) );
-$price = esc_url( home_url( '/price/' ) );
-$faq = esc_url( home_url( '/faq/' ) );
-$contact = esc_url( home_url( '/contact/' ) );
-$privacypolicy = esc_url( home_url( '/privacypolicy/' ) );
-$terms = esc_url( home_url( '/terms/' ) );
-; ?>
 <main>
     <div class="mv">
         <div class="mv__inner">
@@ -94,7 +81,7 @@ $terms = esc_url( home_url( '/terms/' ) );
         <div class="swiper-button-prev campaign-swiper__prev"></div>
         <div class="swiper-button-next campaign-swiper__next"></div>
         <div class="campaign__btn">
-            <a href="<?php echo $campaign; ?>" class="button"><span>View more</span></a>
+            <a href="<?php echo esc_url(home_url('/campaign/')); ?>" class="button"><span>View more</span></a>
         </div>
     </div>
 </section>
@@ -126,7 +113,7 @@ $terms = esc_url( home_url( '/terms/' ) );
                         ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                         </p>
                         <div class="about-content__btn">
-                        <a href="<?php echo $about; ?>" class="button"><span>View more</span></a>
+                        <a href="<?php echo esc_url(home_url('/about/')); ?>" class="button"><span>View more</span></a>
                         </div>
                     </div>
                 </div>
@@ -151,7 +138,7 @@ $terms = esc_url( home_url( '/terms/' ) );
                 <h3 class="information-item__title">ライセンス講習</h3>
                 <p class="information-item__text">当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br />正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。</p>
                 <div class="information-item__btn">
-                    <a href="<?php echo $information; ?>" class="button"><span>View more</span></a>
+                    <a href="<?php echo esc_url(home_url('/information/')); ?>" class="button"><span>View more</span></a>
                 </div>
             </div>
         </div>
@@ -188,7 +175,7 @@ $terms = esc_url( home_url( '/terms/' ) );
             <?php endwhile; endif; wp_reset_postdata(); ?>
         </div>
         <div class="blog__btn">
-            <a href="<?php echo $blog; ?>" class="button"><span>View more</span></a>
+            <a href="<?php echo esc_url(home_url('/blog/')); ?>" class="button"><span>View more</span></a>
         </div>
     </div>
 </section>
@@ -235,13 +222,22 @@ $terms = esc_url( home_url( '/terms/' ) );
                             <?php endif; ?>
                         </figure>
                     </div>
-                <p class="voice-card__text"><?php the_field('voice_text'); ?></p>
+                <p class="voice-card__text">
+                <?php
+                    $voice_text = get_field("voice_text");
+                    if (mb_strlen($voice_text) > 173) {
+                        echo mb_substr($voice_text, 0, 173, 'UTF-8') . '...';
+                    } else {
+                        echo $voice_text;
+                    }
+                ?>
+                </p>
                 </div>
             </div>
         <?php endwhile; endif; wp_reset_postdata(); ?>
         </div>
         <div class="voice__btn">
-        <a href="<?php echo $voice; ?>" class="button"><span>View more</span></a>
+        <a href="<?php echo esc_url(home_url('/voice/')); ?>" class="button"><span>View more</span></a>
         </div>
     </div>
     </section>
@@ -319,7 +315,7 @@ $terms = esc_url( home_url( '/terms/' ) );
                 </div>
             </div>
             <div class="price__btn">
-                <a href="<?php echo $price; ?>" class="button"><span>View more</span></a>
+                <a href="<?php echo esc_url(home_url('/price/')); ?>" class="button"><span>View more</span></a>
             </div>
         </div>
     </section>

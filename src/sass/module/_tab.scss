@@ -1,37 +1,37 @@
 @use "global" as *;
 
 .tab.is-open {
-  background-color: $main-bg-color;
-  color: $white;
+    background-color: $main-bg-color;
+    color: $white;
 }
 
 .tab {
-  display: inline-block;
-  text-align: center;
-  width: rem(162);
-  color: $white;
-  font-family: $japanese-font-family;
-  font-size: rem(14);
-  font-weight: $regular;
-  line-height: calc(32 / 14); /* 157.143% */
-  color: $main-bg-color;
-  border: 1px solid $main-bg-color;
-  background-color: $white;
+    display: inline-block;
+    text-align: center;
+    width: rem(162);
+    color: $white;
+    font-family: $japanese-font-family;
+    font-size: rem(14);
+    font-weight: $regular;
+    line-height: calc(32 / 14); /* 157.143% */
+    color: $main-bg-color;
+    border: 1px solid $main-bg-color;
+    background-color: $white;
 }
 
 .tab a {
-  display: inline-block;
-  width: 100%;
-  height: auto;
+    display: inline-block;
+    width: 100%;
+    height: auto;
 }
 
 .tab:hover {
-  background-color: $main-bg-color;
-  color: $white;
-  transition: 0.3s;
+    background-color: $main-bg-color;
+    color: $white;
+    transition: 0.3s;
 }
 
 .tab:focus {
-  background-color: $main-bg-color;
-  color: $white;
+    background-color: $main-bg-color;
+    color: $white;
 }

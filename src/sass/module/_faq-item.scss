@@ -5,26 +5,26 @@
 }
 
 .faq-item__text {
-  font-family: $japanese-font-family;
-  font-size: rem(16);
-  font-weight: $regular;
-  line-height: calc(23 / 16);
+    font-family: $japanese-font-family;
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: calc(23 / 16);
 }
 
 .faq-item__title{
-	padding: rem(16);
+	padding: rem(16) rem(43) rem(16) rem(16);
 	color: #fff;
 	background: $main-bg-color;
-  font-family: $japanese-font-family;
-  font-size: rem(16);
-  font-weight: $regular;
-  line-height: calc(23 / 16);
-  position: relative;
-  cursor: pointer;
-  @include mq(md) {
-    padding: rem(26) rem(40) rem(25);
+    font-family: $japanese-font-family;
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: calc(23 / 16);
+    position: relative;
+    cursor: pointer;
+    @include mq(md) {
+    padding: rem(26) rem(82) rem(25) rem(40);
     font-size: rem(20);
-  }
+    }
 }
 
 .faq-item__title::before,
