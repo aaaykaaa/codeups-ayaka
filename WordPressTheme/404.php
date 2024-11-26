@@ -2,11 +2,10 @@
 <main>
     <div class="page-404 sub-404">
         <div class="page-404__inner inner">
-            <div class="breadcrumb breadcrumb--404">
-                <div class="breadcrumb__inner">
-                    <div>TOP > 404</div>
-                </div>
-            </div>
+
+        <!-- パンくず -->
+        <?php get_template_part('parts/breadcrumb'); ?>
+
             <div class="page-404__content">
                 <h1 class="page-404__title">404</h1>
                 <p class="page-404__text">

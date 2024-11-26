@@ -48,7 +48,7 @@
 </section>
 <?php endif; ?>
 </main>
-        <div <?php if(is_404('404')) : ?> class="footer" <?php else :?> class="footer top-footer"<?php endif; ?>>
+    <div class="<?php echo is_404('404') ? 'footer' : 'footer top-footer'; ?>">
             <div class="footer__inner inner">
                 <div class="footer__head">
                     <div class="footer__logo">

@@ -42,42 +42,58 @@
     </div>
 </div>
 
-<section class="gallery sub-gallery">
-    <div class="gallery__inner inner">
-        <div class="gallery__heading">
-            <div class="section-heading">
-                <p class="section-heading__englishTitle">gallery</p>
-                <h2 class="section-heading__japaneseTitle">フォト</h2>
+<?php
+    // カスタムフィールドのグループ「gallery」を取得
+    $gallery_images = SCF::get('gallery');
+    // 画像データが存在し、かつ有効な画像IDが1つ以上存在するかを確認
+    $has_valid_image = false;
+
+    if (!empty($gallery_images)) :
+        foreach ($gallery_images as $image) :
+            if (isset($image['gallery_pic']) && !empty($image['gallery_pic'])) :
+                $has_valid_image = true;
+                break; // 有効な画像が見つかったらループを抜ける
+            endif;
+        endforeach;
+    endif;
+
+    // 有効な画像がある場合にのみセクションを表示
+    if ($has_valid_image) :
+?>
+    <section class="gallery sub-gallery">
+        <div class="gallery__inner inner">
+            <div class="gallery__heading">
+                <div class="section-heading">
+                    <p class="section-heading__englishTitle">gallery</p>
+                    <h2 class="section-heading__japaneseTitle">フォト</h2>
+                </div>
+            </div>
+            <div class="gallery__area gallery-area">
+                <?php
+                    // 画像データをループで表示
+                    foreach ($gallery_images as $image) :
+                        // グループ内の「gallery_pic」フィールドにある画像IDを取得
+                        $image_id = isset($image['gallery_pic']) ? $image['gallery_pic'] : '';
+
+                        // 画像IDが存在する場合のみ画像を表示
+                        if ($image_id) :
+                            $image_url = wp_get_attachment_image_url($image_id, 'full'); // フル解像度の画像URLを取得
+                            if ($image_url) :
+                                ?>
+                                <div class="gallery-area__img js-about-modal-trigger">
+                                    <img src="<?php echo esc_url($image_url); ?>" class="gallery-area__img1" alt="ギャラリー画像"/>
+                                </div>
+                            <?php
+                            endif;
+                        endif;
+                    endforeach;
+                ?>
             </div>
         </div>
-        <div class="gallery__area gallery-area">
-            <?php
-            // カスタムフィールドのグループ「group」を取得
-            $gallery_images = SCF::get('gallery');
+    </section>
+<?php endif; ?>
 
-            // 画像データが存在する場合にサブループを実行
-            if (!empty($gallery_images)) {
-                foreach ($gallery_images as $image) {
-                    // グループ内の「name」フィールドにある画像IDを取得
-                    $image_id = isset($image['gallery_pic']) ? $image['gallery_pic'] : '';
 
-                    // 画像IDが存在する場合、画像URLを取得して表示
-                    if ($image_id) {
-                        $image_url = wp_get_attachment_image_url($image_id, 'full'); // 画像のURLを取得、画像を解像度を上げるためにfullに変更
-                        if ($image_url) {
-                            ?>
-                            <div class="gallery-area__img js-about-modal-trigger">
-                                <img src="<?php echo esc_url($image_url); ?>" class="gallery-area__img1" alt="ギャラリー画像"/>
-                            </div>
-                            <?php
-                        }
-                    }
-                }
-            }
-            ?>
-        </div>
-    </div>
-</section>
 <div class="page-about-modal js-about-modal"></div>
 
 <?php get_footer(); ?>

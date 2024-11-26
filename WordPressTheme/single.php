@@ -60,8 +60,10 @@
             </div>
 
             <!-- sidebar -->
-            <?php get_sidebar(); ?>
+            <div class="two-columns__aside">
+                <?php get_sidebar(); ?>
             </div>
         </div>
     </div>
+</div>
 <?php get_footer(); ?>

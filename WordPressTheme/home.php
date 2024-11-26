@@ -39,7 +39,9 @@
                         <?php wp_pagenavi(); ?>
                     </div>
                 </div>
-                <?php get_sidebar(); ?>
+                <div class="two-columns__aside">
+                    <?php get_sidebar(); ?>
+                </div>
             </div>
         </div>
     </div>

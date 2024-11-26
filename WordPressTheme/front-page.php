@@ -66,8 +66,8 @@
                                         $campaignPrices = get_field('campaign_prices');
                                     ?>
                                     <div class="campaign-card__prices">
-                                        <p class="campaign-card__price-cost">&yen;<?php echo number_format($campaignPrices['price-cost']); ?></p>
-                                        <p class="campaign-card__price-low">&yen;<?php echo number_format($campaignPrices['price-low']); ?></p>
+                                        <p class="campaign-card__price-cost"><?php echo $campaignPrices['price-cost']; ?></p>
+                                        <p class="campaign-card__price-low"><?php echo $campaignPrices['price-low']; ?></p>
                                     </div>
                                 </div>
                             </div>
@@ -207,9 +207,9 @@
                         $voiceMeta = get_field('voice_meta');
                         $voiceAge = $voiceMeta['voice_age'];
                         $voiceGender = $voiceMeta['voice_gender'];
-                    ?>
+                        ?>
                             <div class="voice-card__meta">
-                                <p class="voice-card__age"><?php echo $voiceAge; ?>(<?php echo $voiceGender[0]; ?>)</p>
+                                <p class="voice-card__age"><?php echo $voiceAge; ?><?php echo $voiceGender[0]; ?></p>
                                 <p class="voice-card__tag"><?php echo get_the_terms(get_the_ID(), 'voice_category')[0]->name; ?></p>
                             </div>
                         <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>

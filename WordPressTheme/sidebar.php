@@ -1,4 +1,4 @@
-<aside class="two-columns__aside aside">
+<aside class="aside">
     <div class="aside__inner">
         <!-- 人気記事 -->
         <section class="aside-blog-ranking">
@@ -70,7 +70,7 @@
                         $voiceGender = $voiceMeta['voice_gender'];
                     ?>
                     <div class="voice-card__meta voice-card__meta--rating">
-                        <p class="voice-card__age voice-card__age--rating"><?php echo $voiceAge; ?>(<?php echo $voiceGender[0]; ?>)</p>
+                        <p class="voice-card__age voice-card__age--rating"><?php echo $voiceAge; ?><?php echo $voiceGender[0]; ?></p>
                     </div>
                 <h3 class="voice-card__title voice-card__title--rating"><?php the_title(); ?></h3>
                 </div>
@@ -117,8 +117,8 @@
                             $campaignPrices = get_field('campaign_prices');
                         ?>
                         <div class="campaign-card__prices campaign-card__prices--aside">
-                            <p class="campaign-card__price-cost campaign-card__price-cost--aside">&yen;<?php echo number_format($campaignPrices['price-cost']); ?></p>
-                            <p class="campaign-card__price-low campaign-card__price-low--aside">&yen;<?php echo number_format($campaignPrices['price-low']); ?></p>
+                            <p class="campaign-card__price-cost campaign-card__price-cost--aside"><?php echo $campaignPrices['price-cost']; ?></p>
+                            <p class="campaign-card__price-low campaign-card__price-low--aside"><?php echo $campaignPrices['price-low']; ?></p>
                         </div>
                     </div>
                 </div>

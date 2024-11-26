@@ -18,13 +18,32 @@
 <section class="page-campaign sub-campaign sub">
     <div class="page-campaign inner">
         <!-- タグの表示 -->
+        <?php
+            // 現在のクエリ情報を取得
+            $queried_object = get_queried_object();
+            $current_term_id = is_a($queried_object, 'WP_Term') ? $queried_object->term_id : null;
+        ?>
+
         <ul class="page-campaign__tabs tabs">
-            <li class="tabs__tab tab is-open"><a href="<?php echo get_post_type_archive_link('campaign'); ?>">ALL</a></li>
-            <?php $campaignTerms = get_terms('campaign_category', array('hide_empty'=>false)); ?>
-            <?php foreach($campaignTerms as $campaignTerm) : ?>
-            <li class="tabs__tab tab"><a href="<?php echo get_term_link($campaignTerm, '$campaign_category');?>"><?php echo $campaignTerm->name;?></a></li>
+            <!-- "ALL" タブのリンク。アーカイブページで、特定のタクソノミーが選択されていない場合に is-open クラスを付与 -->
+            <li class="tabs__tab tab <?php echo (is_post_type_archive('campaign') && !$current_term_id) ? 'is-open' : ''; ?>">
+                <a href="<?php echo get_post_type_archive_link('campaign'); ?>">ALL</a>
+            </li>
+            <?php
+                // キャンペーンのタームを取得
+                $campaignTerms = get_terms('campaign_category', array('hide_empty' => false));
+                // 各タームのリンクを表示し、選択されているタームに is-open クラスを追加
+                foreach ($campaignTerms as $campaignTerm) :
+            ?>
+                <li class="tabs__tab tab <?php echo ($campaignTerm->term_id == $current_term_id) ? 'is-open' : ''; ?>">
+                    <a href="<?php echo get_term_link($campaignTerm, 'campaign_category'); ?>">
+                        <?php echo esc_html($campaignTerm->name); ?>
+                    </a>
+                </li>
             <?php endforeach; ?>
         </ul>
+
+
         <!-- cards -->
         <ul class="page-campaign__cards campaign-cards campaign-cards--2col js-container" id="choice">
                 <?php while (have_posts()): the_post(); ?>
@@ -46,8 +65,8 @@
                                 $campaignPrices = get_field('campaign_prices');
                             ?>
                             <div class="campaign-card__prices campaign-card__prices--page">
-                                <p class="campaign-card__price-cost">&yen;<?php echo number_format($campaignPrices['price-cost']); ?></p>
-                                <p class="campaign-card__price-low">&yen;<?php echo number_format($campaignPrices['price-low']); ?></p>
+                                <p class="campaign-card__price-cost">&yen;<?php echo $campaignPrices['price-cost']; ?></p>
+                                <p class="campaign-card__price-low">&yen;<?php echo $campaignPrices['price-low']; ?></p>
                             </div>
                             <?php
                                 $campaignContent = get_field('campaign_content');

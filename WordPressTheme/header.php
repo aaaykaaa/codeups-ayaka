@@ -11,17 +11,13 @@
         <?php wp_body_open(); ?>
         <header class="header">
             <div class="header__inner">
-                <?php if(is_front_page()): ?>
-                <h1 class="header__logo">
-                <?php else: ?>
-                <div class="header__logo">
-                    <?php endif; ?>
-                    <a href="<?php echo esc_url(home_url()); ?>" class="header__logoLink"><img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-white.svg" alt="codeupsのロゴ"/></a>
-                    <?php if(is_front_page()): ?>
-                </h1>
-                    <?php else: ?>
-                </div>
-                <?php endif; ?>
+            <?php $tag = is_front_page() ? 'h1' : 'div'; ?>
+            <<?php echo $tag; ?> class="header__logo">
+                <a href="<?php echo esc_url(home_url()); ?>" class="header__logoLink">
+                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-white.svg" alt="codeupsのロゴ"/>
+                </a>
+            </<?php echo $tag; ?>>
+
                 <div class="header__drawer hamburger js-hamburger">
                     <span></span>
                     <span></span>

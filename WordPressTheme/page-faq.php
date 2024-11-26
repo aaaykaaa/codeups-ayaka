@@ -27,16 +27,19 @@
             <?php
                 $faq = SCF::get('faq');
                 foreach ($faq as $fields):
+                    // 三項演算子を使った場合の例
+                    echo (empty($fields['question']) || empty($fields['answer'])) ? '' : '
+                        <div class="faq-items__item faq-item">
+                            <h2 class="faq-item__title js-nav-open">' . $fields['question'] . '</h2>
+                            <nav>
+                                <ul>
+                                    <li class="faq-item__text">' . $fields['answer'] . '</li>
+                                </ul>
+                            </nav>
+                        </div>
+                    ';
+                endforeach;
             ?>
-                <div class="faq-items__item faq-item">
-                    <h2 class="faq-item__title js-nav-open"><?php echo $fields['question']; ?></h2>
-                    <nav>
-                        <ul>
-                            <li class="faq-item__text"><?php echo $fields['answer']; ?></li>
-                        </ul>
-                    </nav>
-                </div>
-            <?php endforeach; ?>
             </div>
         </div>
     </section>

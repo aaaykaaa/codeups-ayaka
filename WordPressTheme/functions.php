@@ -190,73 +190,40 @@ function wpcf7_autop_return_false() {
   return false;
 }
 
-//Contact Form 7 セレクトボックスの選択肢をカスタム投稿のタイトルから自動生成
-// //関数の作成
-// function job_selectlist($tag, $unused){
-//     //セレクトボックスの名前が'select-job'かどうか
-//     if ($tag['name'] != 'campaign-1') {
-//         return $tag;
-//     }
+// ========== セレクトボックスの選択肢をcampaignのタイトルから抽出して動的に ==========================
 
-//     //get_posts()でセレクトボックスの中身を作成する
-//     $args = array(                                //クエリの作成
-//         'post_type' => 'campaign',                //カスタム投稿タイプを指定
-//         'posts_per_page' => -1,                   // すべての投稿を取得
-//         'orderby' => 'title',
-//         'order' => 'ASC',                         //並び順⇒セレクトボックス内の表示順
-//         'post_status' => 'publish'                //公開済みのページのみ取得
-//     );
-//     $job_posts = get_posts($args);                //クエリをget_posts()に入れる
-//     if (!$job_posts) {                            //クエリがなければ戻す
-//         return $tag;
-//     }
-//     foreach ($job_posts as $job_post) {           //セレクトボックスにforeachで入れる
-//         $tag['raw_values'][] = $job_post->post_title;
-//         $tag['values'][] = $job_post->post_title;
-//         $tag['labels'][] = $job_post->post_title;
-//     }
-
-//     return $tag;
-// }
-// add_filter('wpcf7_form_tag', 'job_selectlist', 10, 2);
-
-// Contact Form 7用のショートコードを作成 - セレクトボックス形式
 function filter_wpcf7_form_tag($scanned_tag, $replace)
 {
-
     if (!empty($scanned_tag)) {
-
         // nameで判別
         if ($scanned_tag['name'] == 'campaign-1') {
-
-        // `campaign` カスタム投稿タイプの取得
-        global $post;
-        $args = array(
-            'post_type' => 'campaign',
-            'posts_per_page' => -1,
-            'order' => 'DESC',
-        );
-        $custom_posts = get_posts($args);
-        if (!empty($custom_posts)) {
-            foreach ($custom_posts as $post) {
-            setup_postdata($post);
-
-            $title = get_the_title();
-            $value = sanitize_title($title);
-            // $scanned_tagに情報を追加
-            $scanned_tag['values'][] = $title;
-            $scanned_tag['labels'][] = $title;
+            // `campaign` カスタム投稿タイプの取得
+            global $post;
+            $args = array(
+                'post_type' => 'campaign',
+                'posts_per_page' => -1,
+                'post_status' => 'publish', // 公開されている投稿のみ
+                'order' => 'DESC'
+            );
+            $custom_posts = get_posts($args);
+            if (!empty($custom_posts)) {
+                foreach ($custom_posts as $post) {
+                    setup_postdata($post);
+                    $title = get_the_title();
+                    // サニタイズした値を使用する場合は、こちらの変数を利用
+                    $value = sanitize_title($title);
+                    // $scanned_tagに情報を追加
+                    $scanned_tag['values'][] = $title;  // タイトルを値として追加
+                    $scanned_tag['labels'][] = $title;  // タイトルをラベルとして追加
+                }
+                wp_reset_postdata();
             }
-            wp_reset_postdata();
-        }
         }
     }
-
     return $scanned_tag;
 }
 
 add_filter('wpcf7_form_tag', 'filter_wpcf7_form_tag', 11, 2);
-
 
 //////////////////////////////////////////////////
 // page-thanks.php
@@ -313,13 +280,5 @@ function customize_menu_order($menu_order) {
 }
 add_filter('custom_menu_order', '__return_true');
 add_filter('menu_order', 'customize_menu_order');
-
-// 管理画面のメニューから非表示にする
-function remove_menus() {
-    remove_menu_page ('edit-comments.php'); // コメント
-    remove_menu_page ('users.php'); // ユーザー
-    remove_menu_page ('tools.php'); // ツール
-}
-add_action( 'admin_menu', 'remove_menus' );
 
 ?>

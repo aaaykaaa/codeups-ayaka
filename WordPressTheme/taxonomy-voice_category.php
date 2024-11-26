@@ -18,13 +18,31 @@
 <section class="page-voice sub-voice sub">
     <div class="page-voice inner">
         <!-- タブ切り替え -->
+        <?php
+            // 現在のクエリ情報を取得
+            $queried_object = get_queried_object();
+            $current_term_id = is_a($queried_object, 'WP_Term') ? $queried_object->term_id : null;
+        ?>
+
         <ul class="page-voice__tabs tabs">
-            <li class="tabs__tab tab is-open"><a href="<?php echo get_post_type_archive_link('voice'); ?>">ALL</a></li>
-            <?php $voiceTerms = get_terms('voice_category', array('hide_empty'=>false)); ?>
-            <?php foreach($voiceTerms as $voiceTerm) : ?>
-                <li class="tabs__tab tab"><a href="<?php echo get_term_link($voiceTerm, '$voice_category');?>"><?php echo $voiceTerm->name;?></a></li>
+            <!-- "ALL" タブのリンク。アーカイブページで、特定のタクソノミーが選択されていない場合に is-open クラスを付与 -->
+            <li class="tabs__tab tab <?php echo (is_post_type_archive('voice') && !$current_term_id) ? 'is-open' : ''; ?>">
+                <a href="<?php echo get_post_type_archive_link('voice'); ?>">ALL</a>
+            </li>
+            <?php
+                // ボイスのタームを取得
+                $voiceTerms = get_terms('voice_category', array('hide_empty' => false));
+                // 各タームのリンクを表示し、選択されているタームに is-open クラスを追加
+                foreach ($voiceTerms as $voiceTerm) :
+            ?>
+                <li class="tabs__tab tab <?php echo ($voiceTerm->term_id == $current_term_id) ? 'is-open' : ''; ?>">
+                    <a href="<?php echo get_term_link($voiceTerm, 'voice_category'); ?>">
+                        <?php echo esc_html($voiceTerm->name); ?>
+                    </a>
+                </li>
             <?php endforeach; ?>
         </ul>
+
 
         <ul class="page-voice__cards voice-cards js-container" id="choice">
             <!-- ループ開始 -->
@@ -39,7 +57,7 @@
                             $voiceGender = $voiceMeta['voice_gender'];
                         ?>
                             <div class="voice-card__meta">
-                                <p class="voice-card__age"><?php echo $voiceAge; ?>(<?php echo $voiceGender[0]; ?>)</p>
+                                <p class="voice-card__age"><?php echo $voiceAge; ?><?php echo $voiceGender[0]; ?></p>
                                 <p class="voice-card__tag"><?php echo get_the_terms(get_the_ID(), 'voice_category')[0]->name; ?></p>
                             </div>
                             <h2 class="voice-card__title">

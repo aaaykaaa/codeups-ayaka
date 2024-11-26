@@ -54,8 +54,8 @@
                                 $campaignPrices = get_field('campaign_prices');
                             ?>
                             <div class="campaign-card__prices campaign-card__prices--page">
-                                <p class="campaign-card__price-cost">&yen;<?php echo number_format($campaignPrices['price-cost']); ?></p>
-                                <p class="campaign-card__price-low">&yen;<?php echo number_format($campaignPrices['price-low']); ?></p>
+                                <p class="campaign-card__price-cost"><?php echo $campaignPrices['price-cost']; ?></p>
+                                <p class="campaign-card__price-low"><?php echo $campaignPrices['price-low']; ?></p>
                             </div>
                             <?php
                                 $campaignContent = get_field('campaign_content');
