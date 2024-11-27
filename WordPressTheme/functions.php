@@ -1,8 +1,7 @@
 <?php
 
-//////////////////////////////////////////////////
+//==========  ==============================================================
 // header.php
-//////////////////////////////////////////////////
 function my_theme_enqueue_styles_scripts() {
     // Google Fonts
     wp_enqueue_style('google-font-gotu', 'https://fonts.googleapis.com/css2?family=Gotu&display=swap', array(), null);

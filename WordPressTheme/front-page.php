@@ -65,9 +65,13 @@
                                     <?php
                                         $campaignPrices = get_field('campaign_prices');
                                     ?>
-                                    <div class="campaign-card__prices">
-                                        <p class="campaign-card__price-cost"><?php echo $campaignPrices['price-cost']; ?></p>
-                                        <p class="campaign-card__price-low"><?php echo $campaignPrices['price-low']; ?></p>
+                                    <div class="campaign-card__prices campaign-card__prices--page">
+                                        <p class="campaign-card__price-cost">
+                                            <?php echo isset($campaignPrices['price-cost']) && is_numeric($campaignPrices['price-cost']) ? "&yen;" . number_format((float)$campaignPrices['price-cost']) : ''; ?>
+                                        </p>
+                                        <p class="campaign-card__price-low">
+                                            <?php echo isset($campaignPrices['price-low']) && is_numeric($campaignPrices['price-low']) ? "&yen;" . number_format((float)$campaignPrices['price-low']) : ''; ?>
+                                        </p>
                                     </div>
                                 </div>
                             </div>

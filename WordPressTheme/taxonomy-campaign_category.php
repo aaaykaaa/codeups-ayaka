@@ -65,8 +65,12 @@
                                 $campaignPrices = get_field('campaign_prices');
                             ?>
                             <div class="campaign-card__prices campaign-card__prices--page">
-                                <p class="campaign-card__price-cost">&yen;<?php echo $campaignPrices['price-cost']; ?></p>
-                                <p class="campaign-card__price-low">&yen;<?php echo $campaignPrices['price-low']; ?></p>
+                                <p class="campaign-card__price-cost">
+                                    <?php echo isset($campaignPrices['price-cost']) && is_numeric($campaignPrices['price-cost']) ? "&yen;" . number_format((float)$campaignPrices['price-cost']) : ''; ?>
+                                </p>
+                                <p class="campaign-card__price-low">
+                                    <?php echo isset($campaignPrices['price-low']) && is_numeric($campaignPrices['price-low']) ? "&yen;" . number_format((float)$campaignPrices['price-low']) : ''; ?>
+                                </p>
                             </div>
                             <?php
                                 $campaignContent = get_field('campaign_content');
@@ -75,7 +79,7 @@
                             <div class="campaign-card__wrap u-desktop">
                                 <p class="campaign-card__text"><?php echo $campaignContent['text']; ?></p>
                                 <div class="campaign-card__content">
-                                    <p class="campaign-card__date"><?php echo $campaignDate['start_date']; ?>-<?php echo $campaignDate['end_date']; ?></p>
+                                    <p class="campaign-card__date"><?php echo $campaignDate['start_date']; ?><?php echo $campaignDate['end_date']; ?></p>
                                     <p class="contact-box__text">
                                         ご予約・お問い合わせはコチラ
                                     </p>
