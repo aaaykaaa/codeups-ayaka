@@ -1791,6 +1791,94 @@ form {
 	width: 100%;
 }
 
+.loading {
+	background-color: #fff;
+	height: 100vh;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10;
+}
+
+.loading__title {
+	left: 50%;
+	opacity: 0; /* 初期は透明 */
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity 1s ease;
+	z-index: 1000; /* タイトルを一番前に表示 */
+}
+
+.loading__images {
+	align-items: flex-end; /* 画像を下に揃える */
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.loading__imageLeft,
+.loading__imageRight {
+	bottom: -100%; /* 初期位置を画面外に */
+	height: auto;
+	position: absolute;
+	transition: transform 2s ease; /* スライドインアニメーション */
+	width: 50%;
+	z-index: 1000;
+}
+
+.loading__imageLeft img,
+.loading__imageRight img {
+	display: block;
+	height: auto;
+	width: 100%;
+}
+
+.loading__imageLeft {
+	left: 0;
+}
+
+.loading__imageRight {
+	right: 0;
+}
+
+/* アニメーションの実行 */
+
+.loading.js-loading .loading__title {
+	animation: fadeIn 1s forwards; /* タイトルをフェードイン */
+}
+
+.loading.js-loading .loading__imageLeft {
+	animation: slideIn 2s ease 2s forwards; /* 2秒遅延でスライドイン */
+}
+
+.loading.js-loading .loading__imageRight {
+	animation: slideIn 2s ease 2.08s forwards; /* 80ms遅延でスライドイン */
+}
+
+/* 画像結合状態をシミュレーション */
+
+.loading.js-loading.complete .loading__imageLeft,
+.loading.js-loading.complete .loading__imageRight {
+	transform: translateY(0) scaleX(1); /* 左右画像を結合 */
+	transition: transform 0.5s ease;
+}
+
+/* クラス変更後のタイトル調整 */
+
+.loading.js-loading.complete .mv-title__mainTitle,
+.loading.js-loading.complete .mv-title__subTitle {
+	animation: none; /* 追加のアニメーションなし */
+	color: #fff; /* クラス変更後の視覚的変化 */
+}
+
+/* キーフレームアニメーション */
+
 .main-content__pagination {
 	margin-top: 5rem;
 }
@@ -1847,6 +1935,20 @@ form {
 }
 
 .mv-title--color {
+	color: #408F95;
+}
+
+.mv-title--green {
+	animation: fadeIn 3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+	left: 50%;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.mv-title__mainTitle--green,
+.mv-title__subTitle--green {
 	color: #408F95;
 }
 
@@ -3931,6 +4033,42 @@ html {
 
 html {
 	font-size: 4.2666666667vw;
+}
+
+}
+
+@keyframes fadeIn {
+
+from {
+	opacity: 0;
+}
+
+to {
+	opacity: 1;
+}
+
+}
+
+@keyframes slideIn {
+
+from {
+	transform: translateY(100%);
+}
+
+to {
+	transform: translateY(0);
+}
+
+}
+
+@keyframes fadeIn {
+
+0% {
+	opacity: 0;
+}
+
+100% {
+	opacity: 1;
 }
 
 }

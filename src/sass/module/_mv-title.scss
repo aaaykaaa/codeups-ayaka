@@ -2,29 +2,54 @@
 
 .mv-title__mainTitle,
 .mv-title__subTitle {
-  text-align: center;
-  color: $white;
-  font-weight: $regular;
+    text-align: center;
+    color: $white;
+    font-weight: $regular;
 }
 
 .mv-title__mainTitle {
-  font-family: $english-sub-font-family;
-  font-size: rem(40);
-  letter-spacing: 0.54em;
-  text-indent: 0.54em;
-  line-height: 1;
-  @include mq(md) {
-    font-size: rem(80);
-  }
+    font-family: $english-sub-font-family;
+    font-size: rem(40);
+    letter-spacing: 0.54em;
+    text-indent: 0.54em;
+    line-height: 1;
+    @include mq(md) {
+        font-size: rem(80);
+    }
 }
 
 .mv-title__subTitle {
-  margin-top: rem(10);
-  font-family: $english-main-font-family;
-  font-size: rem(20);
-  line-height: 1;
+    margin-top: rem(10);
+    font-family: $english-main-font-family;
+    font-size: rem(20);
+    line-height: 1;
 }
 
 .mv-title--color {
-  color: $main-bg-color;
+    color: $main-bg-color;
+}
+
+// =====ローディングアニメーションの指定 =====
+
+.mv-title--green {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.mv-title__mainTitle--green,
+.mv-title__subTitle--green {
+    color: $main-bg-color;
 }

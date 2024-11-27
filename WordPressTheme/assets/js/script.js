@@ -3,6 +3,33 @@
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
+  // ========== ローディング画面を初回1回目のみ表示 ===================================
+  // document.addEventListener('DOMContentLoaded', () => {
+  //     const loading = document.querySelector('.js-loading');
+  //     const images = document.querySelector('.loading__images');
+  //     const title = document.querySelector('.js-loadingTitle');
+  //     const mainTitle = document.querySelector('.mv-title__mainTitle');
+  //     const subTitle = document.querySelector('.mv-title__subTitle');
+
+  //     // フェードイン開始
+  //     title.classList.add('active');
+
+  //     setTimeout(() => {
+  //         images.classList.add('active');
+  //     }, 2000); // 2秒後に画像スライドイン
+
+  //     setTimeout(() => {
+  //         loading.classList.add('complete');
+  //         mainTitle.classList.remove('mv-title__mainTitle--green');
+  //         subTitle.classList.remove('mv-title__subTitle--green');
+  //     }, 4000); // 画像合体後にクラス削除
+
+  //     setTimeout("stoploading()", 5000);
+  //     function stoploading() {
+  //         loading.fadeOut(600);
+  //     }
+  // });
+
   //ドロワーメニュー
   $(".js-hamburger").click(function () {
     if ($(".js-hamburger").hasClass("is-active")) {

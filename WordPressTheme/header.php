@@ -18,6 +18,24 @@
                 </a>
             </<?php echo $tag; ?>>
 
+            <!-- ローディングアニメーション※トップページのみ -->
+            <!-- <?php if ( is_front_page() ): ?>
+                <div class="loading js-loading">
+                    <div class="loading__title mv-title mv-title--green js-loadingTitle">
+                        <p class="mv-title__mainTitle mv-title__mainTitle--green">DIVING</p>
+                        <p class="mv-title__subTitle mv-title__subTitle--green">into the ocean</p>
+                    </div>
+                    <div class="loading__images">
+                        <div class="loading__imageLeft js-imageLeft">
+                            <img src="<?php echo get_theme_file_uri(''); ?>/assets/images/common/loading-left.jpeg" alt="カメが水面を見上げる画像の左半分">
+                        </div>
+                        <div class="loading__imageRight js-imageRight">
+                            <img src="<?php echo get_theme_file_uri(''); ?>/assets/images/common/loading-right.jpeg" alt="カメが水面を見上げる画像の左半分">
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?> -->
+
                 <div class="header__drawer hamburger js-hamburger">
                     <span></span>
                     <span></span>
