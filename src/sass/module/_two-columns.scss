@@ -10,3 +10,9 @@
     flex-direction: row;
   }
 }
+
+.two-columns__aside {
+    @include mq(md) {
+        flex-shrink: 0;
+    }
+}

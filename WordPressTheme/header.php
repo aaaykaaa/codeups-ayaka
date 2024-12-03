@@ -19,22 +19,28 @@
             </<?php echo $tag; ?>>
 
             <!-- ローディングアニメーション※トップページのみ -->
-            <!-- <?php if ( is_front_page() ): ?>
-                <div class="loading js-loading">
-                    <div class="loading__title mv-title mv-title--green js-loadingTitle">
-                        <p class="mv-title__mainTitle mv-title__mainTitle--green">DIVING</p>
-                        <p class="mv-title__subTitle mv-title__subTitle--green">into the ocean</p>
+            <?php if ( is_front_page() ): ?>
+            <div class="loader js-loader">
+                <div class="loader__title mv-title mv-title--green js-loader-title">
+                    <p class="mv-title__mainTitle mv-title__mainTitle--green">DIVING</p>
+                    <p class="mv-title__subTitle mv-title__subTitle--green">into the ocean</p>
+                </div>
+                <div class="loader__images">
+                    <div class="loader__left-img js-loader-left">
+                        <picture>
+                            <source srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/loading-left.jpeg" media="(min-width: 768px)">
+                            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/loading-left.jpeg" alt="ローディング画面用の泳いでいるウミガメ" width="187" height="667" decoding="async">
+                        </picture>
                     </div>
-                    <div class="loading__images">
-                        <div class="loading__imageLeft js-imageLeft">
-                            <img src="<?php echo get_theme_file_uri(''); ?>/assets/images/common/loading-left.jpeg" alt="カメが水面を見上げる画像の左半分">
-                        </div>
-                        <div class="loading__imageRight js-imageRight">
-                            <img src="<?php echo get_theme_file_uri(''); ?>/assets/images/common/loading-right.jpeg" alt="カメが水面を見上げる画像の左半分">
-                        </div>
+                    <div class="loader__right-img js-loader-right">
+                        <picture>
+                            <source srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/loading-right.jpeg" media="(min-width: 768px)">
+                            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/loading-right.jpeg" alt="ローディング画面用の泳いでいるウミガメ" width="187" height="667" decoding="async">
+                        </picture>
                     </div>
                 </div>
-            <?php endif; ?> -->
+            </div>
+            <?php endif; ?>
 
                 <div class="header__drawer hamburger js-hamburger">
                     <span></span>

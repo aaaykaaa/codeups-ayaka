@@ -4,31 +4,28 @@ jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
 
   // ========== ローディング画面を初回1回目のみ表示 ===================================
-  // document.addEventListener('DOMContentLoaded', () => {
-  //     const loading = document.querySelector('.js-loading');
-  //     const images = document.querySelector('.loading__images');
-  //     const title = document.querySelector('.js-loadingTitle');
-  //     const mainTitle = document.querySelector('.mv-title__mainTitle');
-  //     const subTitle = document.querySelector('.mv-title__subTitle');
+  $(function () {
+    // if (sessionStorage.getItem('visit')) {
+    //   $(".js-loader").css("display", "none");
+    // } else {
+    sessionStorage.setItem('visit', 'true');
+    $(window).on('load', function () {
+      //ページを開いて1秒後にテキストを0.6秒かけて非表示
+      $('.js-loader-title').delay(1000).fadeOut(1000);
 
-  //     // フェードイン開始
-  //     title.classList.add('active');
+      //2つに分かれた画像がスライドアップ(右の画像が80px遅れ)最終的に1枚の画像になる
+      $('.js-loader-left').delay(1800).addClass("slideUp");
+      $('.js-loader-right').delay(1900).addClass("slideUp");
 
-  //     setTimeout(() => {
-  //         images.classList.add('active');
-  //     }, 2000); // 2秒後に画像スライドイン
+      //ページを開いて5秒後にローダー画面をゆっくり非表示
+      $('.js-loader').delay(3000).fadeOut('slow');
+    });
 
-  //     setTimeout(() => {
-  //         loading.classList.add('complete');
-  //         mainTitle.classList.remove('mv-title__mainTitle--green');
-  //         subTitle.classList.remove('mv-title__subTitle--green');
-  //     }, 4000); // 画像合体後にクラス削除
-
-  //     setTimeout("stoploading()", 5000);
-  //     function stoploading() {
-  //         loading.fadeOut(600);
-  //     }
-  // });
+    //ページ読み込みが終わってなくても5秒後にはローディング画面を非表示(ユーザー離脱防止)
+    setTimeout(function () {
+      $('.js-loader').fadeOut('slow');
+    }, 3000);
+  });
 
   //ドロワーメニュー
   $(".js-hamburger").click(function () {

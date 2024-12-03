@@ -151,19 +151,6 @@ a {
 	position: relative;
 }
 
-.sub-breadcrumb::before {
-	background: url(../images/common/fish-color.png) no-repeat;
-	background-size: contain;
-	content: "";
-	height: 3.4375rem;
-	left: calc(50% - max(37.4vw, 10.875rem));
-	position: absolute;
-	top: 3rem;
-	transform: scale(-1, 1);
-	width: 7.5rem;
-	z-index: -1;
-}
-
 .sub-contact {
 	margin-top: 6.625rem;
 	position: relative;
@@ -618,6 +605,7 @@ a {
 
 .blog-card__img--ranking {
 	aspect-ratio: 121/90;
+	flex-shrink: 0;
 	width: 46%;
 }
 
@@ -823,6 +811,8 @@ a {
 
 .campaign-card__img {
 	aspect-ratio: 280/188;
+	height: -moz-fit-content;
+	height: fit-content;
 }
 
 .campaign-card__img--aside {
@@ -1791,93 +1781,78 @@ form {
 	width: 100%;
 }
 
-.loading {
+/* ----- ローディングアニメーション ----- */
+
+.loader {
 	background-color: #fff;
 	height: 100vh;
 	left: 0;
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: 10;
+	z-index: 8888;
 }
 
-.loading__title {
-	left: 50%;
-	opacity: 0; /* 初期は透明 */
-	position: absolute;
-	text-align: center;
-	top: 50%;
-	transform: translate(-50%, -50%);
-	transition: opacity 1s ease;
-	z-index: 1000; /* タイトルを一番前に表示 */
+.loader__title {
+	z-index: 9999;
 }
 
-.loading__images {
-	align-items: flex-end; /* 画像を下に揃える */
+.loader__images {
 	display: flex;
-	height: 100%;
-	justify-content: center;
-	overflow: hidden;
+	flex-wrap: nowrap;
+	height: 100vh;
 	position: relative;
 	width: 100%;
 }
 
-.loading__imageLeft,
-.loading__imageRight {
-	bottom: -100%; /* 初期位置を画面外に */
-	height: auto;
+.loader__left-img,
+.loader__right-img {
+	content: "";
+	height: 100vh;
 	position: absolute;
-	transition: transform 2s ease; /* スライドインアニメーション */
+	top: 0;
+	transform: translate(0, 100%);
+	transition: transform cubic-bezier(0.21, 0.61, 0.35, 1) 0.6s;
 	width: 50%;
-	z-index: 1000;
+	z-index: 9000;
 }
 
-.loading__imageLeft img,
-.loading__imageRight img {
-	display: block;
-	height: auto;
-	width: 100%;
-}
-
-.loading__imageLeft {
+.loader__left-img {
 	left: 0;
 }
 
-.loading__imageRight {
+.loader__right-img {
 	right: 0;
 }
 
-/* アニメーションの実行 */
-
-.loading.js-loading .loading__title {
-	animation: fadeIn 1s forwards; /* タイトルをフェードイン */
+.loader__left-img.slideUp {
+	transform: translate(0, 0);
+	transition-delay: 1.8s;
 }
 
-.loading.js-loading .loading__imageLeft {
-	animation: slideIn 2s ease 2s forwards; /* 2秒遅延でスライドイン */
+.loader__right-img.slideUp {
+	transform: translate(0, 0);
+	transition-delay: 1.9s;
 }
 
-.loading.js-loading .loading__imageRight {
-	animation: slideIn 2s ease 2.08s forwards; /* 80ms遅延でスライドイン */
+.loader__left-img img,
+.loader__right-img img {
+	-o-object-fit: cover;
+	aspect-ratio: 187.5/667;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
 }
 
-/* 画像結合状態をシミュレーション */
-
-.loading.js-loading.complete .loading__imageLeft,
-.loading.js-loading.complete .loading__imageRight {
-	transform: translateY(0) scaleX(1); /* 左右画像を結合 */
-	transition: transform 0.5s ease;
+.loader__left-img img {
+	-o-object-position: top right;
+	object-position: top right;
 }
 
-/* クラス変更後のタイトル調整 */
-
-.loading.js-loading.complete .mv-title__mainTitle,
-.loading.js-loading.complete .mv-title__subTitle {
-	animation: none; /* 追加のアニメーションなし */
-	color: #fff; /* クラス変更後の視覚的変化 */
+.loader__right-img img {
+	-o-object-position: top left;
+	object-position: top left;
 }
-
-/* キーフレームアニメーション */
 
 .main-content__pagination {
 	margin-top: 5rem;
@@ -2846,10 +2821,16 @@ html {
 }
 
 .sub-breadcrumb::before {
-	height: 8.625rem;
-	left: calc(50% - min(48.4vw, 38.875rem));
-	top: 6rem;
-	width: 18.8125rem;
+	background: url(../images/common/illust1.png) no-repeat;
+	background-size: contain;
+	content: "";
+	height: 14.625rem;
+	left: calc(50% - min(48.4vw, 32.875rem));
+	position: absolute;
+	top: 3rem;
+	transform: scale(-1, 1);
+	width: 12.8125rem;
+	z-index: -1;
 }
 
 .sub-contact {
@@ -3734,6 +3715,11 @@ html {
 	padding-right: 25px;
 }
 
+.loader__left-img img,
+.loader__right-img img {
+	aspect-ratio: 720/768;
+}
+
 .main-content__pagination-short {
 	margin-top: 5rem;
 }
@@ -3956,6 +3942,10 @@ html {
 	margin-right: auto;
 }
 
+.two-columns__aside {
+	flex-shrink: 0;
+}
+
 .voice-card__inner {
 	gap: 2.5rem;
 	padding: 1.5rem;
@@ -4033,30 +4023,6 @@ html {
 
 html {
 	font-size: 4.2666666667vw;
-}
-
-}
-
-@keyframes fadeIn {
-
-from {
-	opacity: 0;
-}
-
-to {
-	opacity: 1;
-}
-
-}
-
-@keyframes slideIn {
-
-from {
-	transform: translateY(100%);
-}
-
-to {
-	transform: translateY(0);
 }
 
 }
