@@ -22,15 +22,15 @@
                 <div class="about-content__inner">
                     <figure class="about-content__img">
                     <div class="about-content__img-small u-desktop">
-                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus-left.jpeg" class="about-content__img2" alt="私たちについて1"/>
+                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus-left.jpg" class="about-content__img2" alt="私たちについて1"/>
                     </div>
                     <div class="about-content__img-big about-content__img-big--sp">
-                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus-right.jpeg" class="about-content__img1" alt="私たちについて2"/>
+                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus-right.jpg" class="about-content__img1" alt="私たちについて2"/>
                     </div>
                     </figure>
                     <div class="about-content__body">
                         <div class="about-content__body-left about-content__body-left--sp">
-                            <p class="about-content__title about-content__title--white">Dive into<br />the Ocean</p>
+                            <p class="about-content__title about-content__title--white">Sips & Flavors<br />Marriage</p>
                         </div>
                         <div class="about-content__body-right">
                             <p class="about-content__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>

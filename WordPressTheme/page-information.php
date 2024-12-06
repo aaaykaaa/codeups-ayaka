@@ -31,7 +31,7 @@
             <div class="page-information__items">
                 <div class="page-information__item information-item information-item--flex-rev js-tab-content is-open" id="tab1" data-tab="license">
                     <figure class="information-item__img information-item__img--page js-colorbox">
-                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-information1.jpeg" alt="ライセンス講習の画像"/>
+                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information1.jpg" alt="ライセンス講習の画像"/>
                     </figure>
                     <div class="information-item__body information-item__body--page">
                         <h2 class="information-item__title information-item__title--page">ライセンス講習</h2>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="page-information__item information-item information-item--flex-rev js-tab-content" id="tab2" data-tab="fanDiving">
                     <figure class="information-item__img information-item__img--page js-colorbox">
-                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-information2.jpeg" alt="ファンダイビングの画像"/>
+                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information2.jpg" alt="ファンダイビングの画像"/>
                     </figure>
                     <div class="information-item__body information-item__body--page">
                         <h2 class="information-item__title">ファンダイビング</h2>
@@ -53,7 +53,7 @@
                 </div>
                 <div class="page-information__item information-item information-item--flex-rev js-tab-content" id="tab3" data-tab="experienceDiving">
                     <figure class="information-item__img information-item__img--page js-colorbox">
-                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-information3.jpeg" alt="体験ダイビングの画像"/>
+                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information3.jpg" alt="体験ダイビングの画像"/>
                     </figure>
                     <div class="information-item__body information-item__body--page">
                         <h2 class="information-item__title">体験ダイビング</h2>

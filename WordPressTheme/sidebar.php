@@ -117,8 +117,12 @@
                             $campaignPrices = get_field('campaign_prices');
                         ?>
                         <div class="campaign-card__prices campaign-card__prices--aside">
-                            <p class="campaign-card__price-cost campaign-card__price-cost--aside"><?php echo $campaignPrices['price-cost']; ?></p>
-                            <p class="campaign-card__price-low campaign-card__price-low--aside"><?php echo $campaignPrices['price-low']; ?></p>
+                        <p class="campaign-card__price-cost campaign-card__price-cost--aside">
+                                    <?php echo isset($campaignPrices['price-cost']) && is_numeric($campaignPrices['price-cost']) ? "&yen;" . number_format((float)$campaignPrices['price-cost']) : ''; ?>
+                                </p>
+                                <p class="campaign-card__price-low campaign-card__price-low--aside">
+                                    <?php echo isset($campaignPrices['price-low']) && is_numeric($campaignPrices['price-low']) ? "&yen;" . number_format((float)$campaignPrices['price-low']) : ''; ?>
+                                </p>
                         </div>
                     </div>
                 </div>

@@ -14,7 +14,7 @@
             <?php $tag = is_front_page() ? 'h1' : 'div'; ?>
             <<?php echo $tag; ?> class="header__logo">
                 <a href="<?php echo esc_url(home_url()); ?>" class="header__logoLink">
-                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-white.svg" alt="codeupsのロゴ"/>
+                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo.svg" alt="codeupsのロゴ"/>
                 </a>
             </<?php echo $tag; ?>>
 
@@ -28,14 +28,14 @@
                 <div class="loader__images">
                     <div class="loader__left-img js-loader-left">
                         <picture>
-                            <source srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/loading-left.jpeg" media="(min-width: 768px)">
-                            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/loading-left.jpeg" alt="ローディング画面用の泳いでいるウミガメ" width="187" height="667" decoding="async">
+                            <source srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/loading-left.jpg" media="(min-width: 768px)">
+                            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/loading-left.jpg" alt="ローディング画面用の泳いでいるウミガメ" width="187" height="667" decoding="async">
                         </picture>
                     </div>
                     <div class="loader__right-img js-loader-right">
                         <picture>
-                            <source srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/loading-right.jpeg" media="(min-width: 768px)">
-                            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/loading-right.jpeg" alt="ローディング画面用の泳いでいるウミガメ" width="187" height="667" decoding="async">
+                            <source srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/loading-right.jpg" media="(min-width: 768px)">
+                            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/loading-right.jpg" alt="ローディング画面用の泳いでいるウミガメ" width="187" height="667" decoding="async">
                         </picture>
                     </div>
                 </div>

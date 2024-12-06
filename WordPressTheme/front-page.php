@@ -3,8 +3,8 @@
     <div class="mv">
         <div class="mv__inner">
             <div class="mv__title mv-title">
-                <p class="mv-title__mainTitle">DIVING</p>
-                <p class="mv-title__subTitle">into the ocean</p>
+                <p class="mv-title__mainTitle">afeemour</p>
+                <p class="mv-title__subTitle">Sips & Flavors</p>
             </div>
             <div class="mv__swiper mv-swiper swiper js-mv-swiper">
                 <div class="swiper-wrapper mv-swiper__wrapper">
@@ -94,28 +94,26 @@
     <div class="about__inner inner">
         <div class="about__heading">
             <div class="section-heading">
-                <p class="section-heading__englishTitle">about us</p>
-                <h2 class="section-heading__japaneseTitle">私たちについて</h2>
+                <p class="section-heading__englishTitle">concept</p>
+                <h2 class="section-heading__japaneseTitle">お酒と味わいのマリアージュ</h2>
             </div>
         </div>
         <div class="about__content about-content">
             <div class="about-content__inner">
                 <figure class="about-content__img">
                     <div class="about-content__img-small">
-                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus-left.jpeg" class="about-content__img2" alt="私たちについて1"/>
+                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus-left.jpg" class="about-content__img2" alt="私たちについて1"/>
                     </div>
                     <div class="about-content__img-big">
-                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus-right.jpeg" class="about-content__img1" alt="私たちについて2"/>
+                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus-right.jpg" class="about-content__img1" alt="私たちについて2"/>
                     </div>
                 </figure>
                 <div class="about-content__body">
                     <div class="about-content__body-left">
-                        <p class="about-content__title">Dive into<br />the Ocean</p>
+                        <p class="about-content__title">Sips & Flavors<br />Marriage</p>
                     </div>
                     <div class="about-content__body-right">
-                        <p class="about-content__text">
-                        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                        </p>
+                        <p class="about-content__text">お酒と料理がお互いを引き立て合う組み合わせで、より贅沢かつ豊かなひとときを楽しまれてはいかがでしょうか。<br />ルールや形式にとらわれず、ご自宅でも気軽に楽しめるペアリングを通して、ご自分の好きな組み合わせを見つけてみてください。<br>洗練された組み合わせが、普段とは違う特別な食事になるよう、当サイトがお手伝いいたします。</p>
                         <div class="about-content__btn">
                         <a href="<?php echo esc_url(home_url('/about/')); ?>" class="button"><span>View more</span></a>
                         </div>
@@ -130,13 +128,13 @@
     <div class="information__inner inner">
         <div class="information__heading">
             <div class="section-heading">
-                <p class="section-heading__englishTitle">information</p>
-                <h2 class="section-heading__japaneseTitle">ダイビング情報</h2>
+                <p class="section-heading__englishTitle">favourites</p>
+                <h2 class="section-heading__japaneseTitle">わたしのお気に入り</h2>
             </div>
         </div>
         <div class="information__item information-item">
             <figure class="information-item__img js-colorbox">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information1.jpeg" alt="ダイビング情報"/>
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information1.jpg" alt="ダイビング情報"/>
             </figure>
             <div class="information-item__body">
                 <h3 class="information-item__title">ライセンス講習</h3>
@@ -256,8 +254,8 @@
             </div>
             <div class="price__content">
                 <picture class="price__img js-colorbox">
-                    <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/price.jpeg"/>
-                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/price-sp.jpeg" alt="料金一覧" />
+                    <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/price.jpg"/>
+                    <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/price-sp.jpg" alt="料金一覧" />
                 </picture>
                 <div class="price__lists price-lists">
                     <div class="price-lists__price-list price-list">

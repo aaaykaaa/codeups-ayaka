@@ -5,27 +5,27 @@ jQuery(function ($) {
 
   // ========== ローディング画面を初回1回目のみ表示 ===================================
   $(function () {
-    // if (sessionStorage.getItem('visit')) {
-    //   $(".js-loader").css("display", "none");
-    // } else {
+    if (sessionStorage.getItem('visit')) {
+      $(".js-loader").css("display", "none");
+    } else {
     sessionStorage.setItem('visit', 'true');
     $(window).on('load', function () {
-      //ページを開いて1秒後にテキストを0.6秒かけて非表示
-      $('.js-loader-title').delay(1000).fadeOut(1000);
+      //ページを開いて1秒後にテキストを3秒かけて非表示
+      $('.js-loader-title').delay(1000).fadeOut(3000);
 
       //2つに分かれた画像がスライドアップ(右の画像が80px遅れ)最終的に1枚の画像になる
       $('.js-loader-left').delay(1800).addClass("slideUp");
       $('.js-loader-right').delay(1900).addClass("slideUp");
 
       //ページを開いて5秒後にローダー画面をゆっくり非表示
-      $('.js-loader').delay(3000).fadeOut('slow');
+      $('.js-loader').delay(3500).fadeOut('slow');
     });
 
     //ページ読み込みが終わってなくても5秒後にはローディング画面を非表示(ユーザー離脱防止)
     setTimeout(function () {
       $('.js-loader').fadeOut('slow');
-    }, 3000);
-  });
+    }, 3500);
+  }});
 
   //ドロワーメニュー
   $(".js-hamburger").click(function () {

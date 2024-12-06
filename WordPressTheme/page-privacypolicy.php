@@ -5,8 +5,8 @@
             <h1 class="page-mv__title">privacy<span>p</span>olicy</h1>
         </div>
         <picture class="page-mv__img">
-            <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-bg_mv.jpeg"/>
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-bg_mv-sp.jpeg" alt="privacypolicypageのmain画像"/>
+            <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv1.jpg"/>
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp1.jpg" alt="privacypolicypageのmain画像"/>
         </picture>
     </div>
 </div>

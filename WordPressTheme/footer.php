@@ -53,7 +53,7 @@
                 <div class="footer__head">
                     <div class="footer__logo">
                         <a href="<?php echo esc_url(home_url()); ?>">
-                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo-white.svg" alt="codeupsのロゴ"/>
+                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/logo.svg" alt="codeupsのロゴ"/>
                         </a>
                     </div>
                     <div class="footer__sns">
