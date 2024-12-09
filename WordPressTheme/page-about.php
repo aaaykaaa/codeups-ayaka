@@ -6,8 +6,8 @@
             <h1 class="page-mv__title">about us</h1>
         </div>
         <picture class="page-mv__img">
-            <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-about_mv.jpeg"/>
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-about_mv-sp.jpeg" alt="aboutpageのmain画像"/>
+            <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv2.jpg"/>
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp2.jpg" alt="aboutpageのmain画像"/>
         </picture>
     </div>
 </div>
@@ -33,7 +33,8 @@
                             <p class="about-content__title about-content__title--white">Sips & Flavors<br />Marriage</p>
                         </div>
                         <div class="about-content__body-right">
-                            <p class="about-content__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                        <p class="about-content__text">お酒と料理がお互いを引き立て合う組み合わせで、より贅沢かつ豊かなひとときを楽しまれてはいかがでしょうか。</p>
+                        <p class="about-content__text">ルールや形式にとらわれず、ご自宅でも気軽に楽しめるペアリングを通して、ご自分の好きな組み合わせを見つけてみてください。<br>洗練された組み合わせが、普段とは違う特別な食事になるよう、当サイトがお手伝いいたします。</p>
                         </div>
                     </div>
                 </div>

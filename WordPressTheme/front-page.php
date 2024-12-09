@@ -113,7 +113,8 @@
                         <p class="about-content__title">Sips & Flavors<br />Marriage</p>
                     </div>
                     <div class="about-content__body-right">
-                        <p class="about-content__text">お酒と料理がお互いを引き立て合う組み合わせで、より贅沢かつ豊かなひとときを楽しまれてはいかがでしょうか。<br />ルールや形式にとらわれず、ご自宅でも気軽に楽しめるペアリングを通して、ご自分の好きな組み合わせを見つけてみてください。<br>洗練された組み合わせが、普段とは違う特別な食事になるよう、当サイトがお手伝いいたします。</p>
+                        <p class="about-content__text">お酒と料理がお互いを引き立て合う組み合わせで、より贅沢かつ豊かなひとときを楽しまれてはいかがでしょうか。</p>
+                        <p class="about-content__text">ルールや形式にとらわれず、ご自宅でも気軽に楽しめるペアリングを通して、ご自分の好きな組み合わせを見つけてみてください。<br>洗練された組み合わせが、普段とは違う特別な食事になるよう、当サイトがお手伝いいたします。</p>
                         <div class="about-content__btn">
                         <a href="<?php echo esc_url(home_url('/about/')); ?>" class="button"><span>View more</span></a>
                         </div>
@@ -137,8 +138,10 @@
                 <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information1.jpg" alt="ダイビング情報"/>
             </figure>
             <div class="information-item__body">
-                <h3 class="information-item__title">ライセンス講習</h3>
-                <p class="information-item__text">当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br />正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。</p>
+                <h3 class="information-item__title">白ワイン×焼肉</h3>
+                <p class="information-item__text">
+                日常のお酒と料理も、少しの工夫で驚きの味わい体験に変わります。<br>たとえば、濃厚なチーズに日本酒、焼肉に白ワイン、甘口ワインにスパイシーな料理を合わせると、味の奥行きがグッと広がり、新しい魅力が顔を覗かせます。<br>異なる味同士が引き立て合うことで、思わぬ相性や旨味が発見でき、味覚だけでなく心も躍る特別なひとときを楽しめるのが、ちょっと変わったペアリングの面白さです。
+                </p>
                 <div class="information-item__btn">
                     <a href="<?php echo esc_url(home_url('/information/')); ?>" class="button"><span>View more</span></a>
                 </div>
@@ -169,7 +172,7 @@
                     <figure class="blog-card__img">
                         <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像"/>
                     </figure>
-                    <time class="blog-card__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/m/d'); ?></time>
+                    <time class="blog-card__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
                     <h3 class="blog-card__title"><?php the_title(); ?></h3>
                     <p class="blog-card__text"><?php echo wp_trim_words( get_the_content(), 86, '' ); ?></p>
                 </div>
@@ -214,7 +217,7 @@
                                 <p class="voice-card__age"><?php echo $voiceAge; ?><?php echo $voiceGender[0]; ?></p>
                                 <p class="voice-card__tag"><?php echo get_the_terms(get_the_ID(), 'voice_category')[0]->name; ?></p>
                             </div>
-                        <h3 class="voice-card__title">ここにタイトルが入ります。ここにタイトル</h3>
+                        <h3 class="voice-card__title"><?php the_title(); ?></h3>
                         </div>
                         <figure class="voice-card__img js-colorbox">
                             <?php if(get_the_post_thumbnail()): ?>
@@ -259,49 +262,49 @@
                 </picture>
                 <div class="price__lists price-lists">
                     <div class="price-lists__price-list price-list">
-                        <h3 class="price-list__menu">ライセンス講習</h3>
+                        <h3 class="price-list__menu">季節限定ギフト※冬季</h3>
                         <dl class="price-list__menu-detail">
                             <?php
-                                $license = SCF::get('license', 213);
-                                foreach ($license as $fields):
+                                $limit = SCF::get('limit', 213);
+                                foreach ($limit as $fields):
                             ?>
                             <div class="price-list__course">
-                                <dt><?php echo $fields['licenseMenu']; ?></dt>
-                                <dd><?php echo $fields['licensePrice']; ?></dd>
+                                <dt><?php echo $fields['limitMenu']; ?></dt>
+                                <dd><?php echo $fields['limitPrice']; ?></dd>
                             </div>
                             <?php endforeach; ?>
                         </dl>
                     </div>
                     <div class="price-lists__price-list price-list">
-                        <h3 class="price-list__menu">体験ダイビング</h3>
+                        <h3 class="price-list__menu">定番ギフト</h3>
                         <dl class="price-list__menu-detail">
                             <?php
-                                $diving = SCF::get('diving', 213);
-                                foreach ($diving as $fields):
+                                $standard = SCF::get('standard', 213);
+                                foreach ($standard as $fields):
                             ?>
                             <div class="price-list__course">
-                                <dt><?php echo $fields['divingMenu']; ?></dt>
-                                <dd><?php echo $fields['divingPrice']; ?></dd>
+                                <dt><?php echo $fields['standardMenu']; ?></dt>
+                                <dd><?php echo $fields['standardPrice']; ?></dd>
                             </div>
                             <?php endforeach; ?>
                         </dl>
                     </div>
                     <div class="price-lists__price-list price-list">
-                        <h3 class="price-list__menu">ファンダイビング</h3>
+                        <h3 class="price-list__menu">家のみバルギフト</h3>
                         <dl class="price-list__menu-detail">
                             <?php
-                                $fundiving = SCF::get('fun', 213);
-                                foreach ($fundiving as $fields):
+                                $homeBal = SCF::get('homeBal', 213);
+                                foreach ($homeBal as $fields):
                             ?>
                             <div class="price-list__course">
-                                <dt><?php echo $fields['funMenu']; ?></dt>
-                                <dd><?php echo $fields['funPrice']; ?></dd>
+                                <dt><?php echo $fields['homeBalMenu']; ?></dt>
+                                <dd><?php echo $fields['homeBalPrice']; ?></dd>
                             </div>
                             <?php endforeach; ?>
                         </dl>
                     </div>
                     <div class="price-lists__price-list price-list">
-                        <h3 class="price-list__menu">スペシャルダイビング</h3>
+                        <h3 class="price-list__menu">スペシャルギフト</h3>
                         <dl class="price-list__menu-detail">
                             <?php
                                 $specialDiving = SCF::get('special',213);

@@ -56,25 +56,25 @@
 }
 
 .page-price__title span::before {
-  background-color: $white;
-  content: "";
-  display: inline-block;
-  mask-image: url(../images/common/information-tab1.svg);
-  mask-repeat: no-repeat;
-  mask-size: cover;
-  position: absolute;
-  width: rem(24);
-  height: rem(24);
-  top: 50%;
-  left: rem(-32);
-  transform: translateY(-50%);
-  @include mq(md) {
-    width: rem(64);
-    height: rem(64);
-    top: rem(32);
-    left: 50%;
-    transform: translateX(-50%);
-  }
+    background-color: $white;
+    content: "";
+    display: inline-block;
+    mask-image: url(../images/common/beer.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    position: absolute;
+    width: rem(24);
+    height: rem(24);
+    top: 50%;
+    left: rem(-32);
+    transform: translateY(-50%);
+    @include mq(md) {
+        width: rem(64);
+        height: rem(64);
+        top: rem(32);
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .page-price__body {

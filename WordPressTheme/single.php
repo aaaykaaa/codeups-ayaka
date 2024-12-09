@@ -21,7 +21,7 @@
             <div class="two-columns__main main-content">
                 <?php if (have_posts()): while (have_posts()): the_post(); ?>
                     <div class="main-content__blog-archive blog-archive">
-                        <time class="blog-archive__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/m/d'); ?></time>
+                        <time class="blog-archive__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
                         <h1 class="blog-archive__title"><?php  the_title(); ?></h1>
                         <?php if(get_the_post_thumbnail()): ?>
                         <figure class="blog-archive__img">

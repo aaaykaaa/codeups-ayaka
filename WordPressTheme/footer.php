@@ -10,22 +10,14 @@
             <div class="contact-box__access">
                 <div class="contact-box__address">
                 <address>
-                    <p>沖縄県那覇市1-1</p>
+                    <p>神奈川県湘南市1−1</p>
                     <p>TEL:0120-000-0000</p>
                 </address>
-                <p>営業時間:8:30-19:00</p>
+                <p>営業時間:9:00-18:00</p>
                 <p>定休日:毎週火曜日</p>
                 </div>
                 <div class="contact-box__map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.565236370906!2d135.429738211774!3d34.6656811849773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e0d083d5e25d%3A0x3605fe25303252aa!2z44Om44OL44OQ44O844K144Or44O744K544K_44K444Kq44O744K444Oj44OR44Oz!5e0!3m2!1sja!2sjp!4v1709185968703!5m2!1sja!2sjp"
-                    width="600"
-                    height="450"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3255.838073284555!2d139.4768477118252!3d35.31000477259551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60184ef97613a5af%3A0x679611b7d80b7d4f!2z5paw5rGf44OO5bO25rC05peP6aSo!5e0!3m2!1sja!2sjp!4v1733544611567!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
             </div>

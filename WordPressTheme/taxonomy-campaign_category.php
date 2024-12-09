@@ -5,8 +5,8 @@
             <h1 class="page-mv__title">campaign</h1>
         </div>
         <picture class="page-mv__img">
-            <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-campaign_mv.jpeg"/>
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-campaign_mv-sp.jpeg" alt="campaignpageのmain画像"/>
+            <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv4.jpg"/>
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp4.jpg" alt="campaignpageのmain画像"/>
         </picture>
     </div>
 </div>

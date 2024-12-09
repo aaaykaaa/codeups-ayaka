@@ -6,8 +6,8 @@
                 <h1 class="page-mv__title">information</h1>
             </div>
             <picture class="page-mv__img">
-                <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-information_mv.jpeg"/>
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-information_mv-sp.jpeg" alt="informationpageのmain画像"/>
+                <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv4.jpg"/>
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp4.jpg" alt="informationpageのmain画像"/>
             </picture>
     </div>
     </div>
@@ -19,13 +19,13 @@
         <div class="page-information__inner inner">
             <ul class="page-information__tab information-tab">
                 <li class="information-tab__item tab1 js-tab-menu is-open" data-tab="license">
-                    <a href="#tab1" class="information-tab__button information-tab__button--tab1"><span>ライセンス<br class="u-mobile" />講習</span></a>
+                    <a href="#tab1" class="information-tab__button information-tab__button--tab1"><span>白ワイン<br class="u-mobile" />×焼肉</span></a>
                 </li>
                 <li class="information-tab__item tab2 js-tab-menu"  data-tab="fanDiving">
-                    <a href="#tab2" class="information-tab__button information-tab__button--p18 information-tab__button--tab2"><span>ファン<br class="u-mobile" />ダイビング</span></a>
+                    <a href="#tab2" class="information-tab__button information-tab__button--p18 information-tab__button--tab2"><span>白ワイン<br class="u-mobile" />×チーズ</span></a>
                 </li>
                 <li class="information-tab__item tab3 js-tab-menu" data-tab="experienceDiving">
-                    <a href="#tab3" class="information-tab__button information-tab__button--tab3"><span>体験<br class="u-mobile" />ダイビング</span></a>
+                    <a href="#tab3" class="information-tab__button information-tab__button--tab3"><span>白ワイン<br class="u-mobile" />×海鮮</span></a>
                 </li>
             </ul>
             <div class="page-information__items">
@@ -34,9 +34,9 @@
                         <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information1.jpg" alt="ライセンス講習の画像"/>
                     </figure>
                     <div class="information-item__body information-item__body--page">
-                        <h2 class="information-item__title information-item__title--page">ライセンス講習</h2>
+                        <!-- <h2 class="information-item__title information-item__title--page">白ワイン×焼肉</h2> -->
                         <p class="information-item__text">
-                            泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします！スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう！
+                        焼肉と言えば赤ワインのイメージですが、実は白ワインも絶品のペアリングです。<br>特に柑橘系の酸味が効いた白ワインは、脂っこさをさっぱりとリセットし、肉本来の旨味を引き立てます。<br>脂身の多いカルビや、甘辛いタレとの相性も抜群。意外性のあるこの組み合わせで、焼肉がさらに奥深い味わいに変わります。
                         </p>
                     </div>
                 </div>
@@ -45,9 +45,9 @@
                         <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information2.jpg" alt="ファンダイビングの画像"/>
                     </figure>
                     <div class="information-item__body information-item__body--page">
-                        <h2 class="information-item__title">ファンダイビング</h2>
+                        <!-- <h2 class="information-item__title">白ワイン×チーズ</h2> -->
                         <p class="information-item__text">
-                            ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                        赤ワインが定番と思われがちなチーズですが、実は白ワインとの組み合わせも絶品です。<br>特にクリーミーなブリーチーズや、ハチミツをかけたカマンベールには、フルーティーな白ワインが相性抜群。<br>爽やかな酸味が、濃厚なチーズを軽やかに引き立てます。<br>一口ごとに広がる新しい味わいをぜひお試しください。
                         </p>
                     </div>
                 </div>
@@ -56,9 +56,9 @@
                         <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information3.jpg" alt="体験ダイビングの画像"/>
                     </figure>
                     <div class="information-item__body information-item__body--page">
-                        <h2 class="information-item__title">体験ダイビング</h2>
+                        <!-- <h2 class="information-item__title"></h2> -->
                         <p class="information-item__text">
-                            ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                        海鮮と白ワインのペアリングは、まるで地中海の風を感じるような爽やかさ！<br>白身魚やエビ、ホタテなど、繊細な味わいの海鮮料理と、フルーティーな白ワインの酸味が見事に調和します。<br>特にスパークリングワインなら、炭酸が旨味を引き立ててくれるのでおすすめです。
                         </p>
                     </div>
                 </div>

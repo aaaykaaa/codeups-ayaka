@@ -28,7 +28,7 @@
                         <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像"/>
                         </figure>
                         <div class="blog-card__body">
-                            <time class="blog-card__date blog-card__date--ranking" datetime="<?php the_time('c'); ?>"><?php the_time('Y/m/d'); ?></time>
+                            <time class="blog-card__date blog-card__date--ranking" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
                             <h3 class="blog-card__title blog-card__title--ranking"><?php the_title(); ?></h3>
                         </div>
                     </div>

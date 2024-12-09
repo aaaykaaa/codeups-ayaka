@@ -8,10 +8,10 @@
             <picture class="page-mv__img">
             <source
                 media="(min-width: 768px)"
-                srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-faq_mv.jpeg"
+                srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv2.jpg"
             />
             <img
-                src="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-faq_mv-sp.jpeg"
+                src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp2.jpg"
                 alt="FAQpageのmain画像"
             />
             </picture>

@@ -30,7 +30,7 @@
                                 <figure class="blog-card__img">
                                     <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像"/>
                                 </figure>
-                                <time class="blog-card__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/m/d'); ?></time>
+                                <time class="blog-card__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
                                 <h2 class="blog-card__title"><?php the_title(); ?></h2>
                                 <p class="blog-card__text"><?php echo wp_trim_words( get_the_content(), 86, '' ); ?></p>
                             </div>

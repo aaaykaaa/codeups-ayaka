@@ -7,3 +7,18 @@
 .aside-blog-archive__blog-archive-accordion {
   margin-top: rem(24);
 }
+
+.aside-blog-archive .aside-heading__title::before {
+    background-color: $accent-color;
+    content: "";
+    display: inline-block;
+    mask-image: url(../images/common/calendar.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    position: absolute;
+    width: rem(43);
+    height: rem(44);
+    top: 50%;
+    left: rem(20);
+    transform: translateY(-50%);
+}

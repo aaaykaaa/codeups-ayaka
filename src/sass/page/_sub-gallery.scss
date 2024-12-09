@@ -11,12 +11,15 @@
 .sub-gallery::after {
   @include mq(md) {
     content: "";
-    background: url(../images/common/fish-color.png) no-repeat;
-    background-size: contain;
+    background-color: $accent-color;
+    mask-image: url(../images/common/illust2.svg);
+    mask-repeat: no-repeat;
+    mask-size: contain;
     position: absolute;
-    width: rem(301);
-    height: rem(138);
-    top: rem(-78);
-    right: calc(50% - min(46.4vw, 39.875rem));
+    width: rem(300);
+    height: rem(300);
+    top: rem(-110);
+    right: calc(50% - min(49.4vw, 36.875rem));
+    z-index: -1;
   }
 }

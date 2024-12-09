@@ -12,3 +12,18 @@
   margin-top: rem(44);
   text-align: center;
 }
+
+.aside-review-rating .aside-heading__title::before {
+    background-color: $accent-color;
+    content: "";
+    display: inline-block;
+    mask-image: url(../images/common/people.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    position: absolute;
+    width: rem(46);
+    height: rem(46);
+    top: 50%;
+    left: rem(20);
+    transform: translateY(-50%);
+}

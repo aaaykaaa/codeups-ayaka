@@ -13,9 +13,9 @@ $padding-sp: 15px;
 // フォント設定
 ////////////////////
 
-$english-main-font-family: 'Gotu', sans-serif;
-$english-sub-font-family: 'Lato', sans-serif;
-$japanese-font-family: 'Noto Sans JP', sans-serif;
+$english-main-font-family: "Courgette", cursive;
+$english-sub-font-family: "Allura", serif;
+$japanese-font-family: "Shippori Mincho", serif;
 // ※検証ツールでしっかり反映されているか確認する
 
 // フォントウェイト
@@ -46,12 +46,12 @@ body {
 // $main-bg-color: #6C5F5B;
 // $sub-bg-color: #DAC3B3;
 
-$black: #323030;
+$black: #3e1200;
 $white: #fff8f7;
-// $accent-color: #ec5a55;
-$accent-color: #CF7F72;
+$accent-color: #ec5a55;
+// $accent-color: #dae7c8;
 $main-bg-color: #a53f3f;
-$sub-bg-color: #EFDDD5;
+$sub-bg-color: #ffdad9;
 
 
 // #0D2936

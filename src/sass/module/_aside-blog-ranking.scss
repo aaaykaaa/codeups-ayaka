@@ -10,3 +10,18 @@
 .aside-blog-ranking__blog-cards {
   margin-top: rem(24);
 }
+
+.aside-blog-ranking .aside-heading__title::before {
+    background-color: $accent-color;
+    content: "";
+    display: inline-block;
+    mask-image: url(../images/common/ranking.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    position: absolute;
+    width: rem(43);
+    height: rem(45);
+    top: 50%;
+    left: rem(20);
+    transform: translateY(-50%);
+}

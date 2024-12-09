@@ -99,6 +99,10 @@
     }
 }
 
+.about-content__text + .about-content__text {
+    margin-top: rem(16);
+}
+
 .about-content__btn {
     margin-top: rem(26);
     text-align: center;

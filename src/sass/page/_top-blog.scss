@@ -23,16 +23,3 @@
     z-index: -1;
   }
 }
-
-.top-blog::after {
-  @include mq(md) {
-    content: "";
-    background: url(../images/common/fish.png) no-repeat;
-    background-size: contain;
-    position: absolute;
-    width: rem(437);
-    height: rem(201);
-    top: rem(20);
-    left: calc(50% - min(48.4vw, 38.875rem));
-  }
-}

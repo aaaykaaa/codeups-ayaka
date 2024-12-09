@@ -6,8 +6,8 @@
             <h1 class="page-mv__title">blog</h1>
         </div>
         <picture class="page-mv__img">
-            <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-blog_mv.jpeg"/>
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-blog_mv-sp.jpeg" alt="blogpageのmain画像"/>
+            <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv3.jpg"/>
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp3.jpg" alt="blogpageのmain画像"/>
         </picture>
         </div>
     </div>
@@ -27,7 +27,7 @@
                                 <figure class="blog-card__img">
                                     <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>のアイキャッチ画像"/>
                                 </figure>
-                                <time class="blog-card__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y/m/d'); ?></time>
+                                <time class="blog-card__date" datetime="<?php the_time('c'); ?>"><?php the_time('Y.m.d'); ?></time>
                                 <h2 class="blog-card__title"><?php the_title(); ?></h2>
                                 <p class="blog-card__text"><?php echo wp_trim_words( get_the_content(), 86, '' ); ?></p>
                             </div>

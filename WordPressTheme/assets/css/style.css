@@ -1,5 +1,5 @@
 body {
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Shippori Mincho", serif;
 	font-weight: 400;
 	position: relative;
 }
@@ -228,30 +228,19 @@ a {
 	position: relative;
 }
 
-.top-contact::after {
-	background: url(../images/common/fish-color.png) no-repeat;
-	background-size: contain;
-	content: "";
-	height: 3.125rem;
-	position: absolute;
-	right: calc(50% - max(24.4vw, 9.875rem));
-	top: -1.5625rem;
-	width: 6.8125rem;
-}
-
 .top-footer {
 	margin-top: 6.25rem;
 }
 
 .top-information {
-	background-color: #EFDDD5;
+	background-color: #ffdad9;
 	margin-top: 4.375rem;
 	padding-bottom: 5rem;
 	padding-top: 5rem;
 }
 
 .top-price {
-	background-color: #EFDDD5;
+	background-color: #ffdad9;
 	margin-top: 5rem;
 	padding-bottom: 5rem;
 	padding-top: 5rem;
@@ -297,7 +286,7 @@ a {
 
 .about-content__title {
 	color: #a53f3f;
-	font-family: "Gotu", sans-serif;
+	font-family: "Courgette", cursive;
 	font-size: 2.5rem;
 	font-weight: 400;
 	line-height: 1;
@@ -305,9 +294,13 @@ a {
 }
 
 .about-content__text {
-	color: #323030;
+	color: #3e1200;
 	font-weight: 400;
 	line-height: 1.5;
+}
+
+.about-content__text + .about-content__text {
+	margin-top: 1rem;
 }
 
 .about-content__btn {
@@ -339,8 +332,44 @@ a {
 	margin-top: 1.5rem;
 }
 
+.aside-blog-archive .aside-heading__title::before {
+	-webkit-mask-image: url(../images/common/calendar.svg);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: cover;
+	background-color: #ec5a55;
+	content: "";
+	display: inline-block;
+	height: 2.75rem;
+	left: 1.25rem;
+	mask-image: url(../images/common/calendar.svg);
+	mask-repeat: no-repeat;
+	mask-size: cover;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 2.6875rem;
+}
+
 .aside-blog-ranking__blog-cards {
 	margin-top: 1.5rem;
+}
+
+.aside-blog-ranking .aside-heading__title::before {
+	-webkit-mask-image: url(../images/common/ranking.svg);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: cover;
+	background-color: #ec5a55;
+	content: "";
+	display: inline-block;
+	height: 2.8125rem;
+	left: 1.25rem;
+	mask-image: url(../images/common/ranking.svg);
+	mask-repeat: no-repeat;
+	mask-size: cover;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 2.6875rem;
 }
 
 .aside-campaign {
@@ -356,15 +385,33 @@ a {
 	text-align: center;
 }
 
+.aside-campaign .aside-heading__title::before {
+	-webkit-mask-image: url(../images/common/flag.svg);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: cover;
+	background-color: #ec5a55;
+	content: "";
+	display: inline-block;
+	height: 2.75rem;
+	left: 1.25rem;
+	mask-image: url(../images/common/flag.svg);
+	mask-repeat: no-repeat;
+	mask-size: cover;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 2.375rem;
+}
+
 .aside-heading {
 	text-align: left;
 }
 
 .aside-heading__title {
 	border-left: 8px solid #a53f3f;
-	color: #323030;
+	color: #3e1200;
 	display: inline-block;
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 1.4583333333;
@@ -374,24 +421,6 @@ a {
 	padding-top: 0.5625rem;
 	position: relative;
 	vertical-align: auto;
-}
-
-.aside-heading__title::before {
-	-webkit-mask-image: url(../images/common/information-tab1.svg);
-	-webkit-mask-repeat: no-repeat;
-	-webkit-mask-size: cover;
-	background-color: #323030;
-	content: "";
-	display: inline-block;
-	height: 2.6875rem;
-	left: 1.25rem;
-	mask-image: url(../images/common/information-tab1.svg);
-	mask-repeat: no-repeat;
-	mask-size: cover;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 2.6875rem;
 }
 
 .aside-review-rating {
@@ -407,6 +436,24 @@ a {
 	text-align: center;
 }
 
+.aside-review-rating .aside-heading__title::before {
+	-webkit-mask-image: url(../images/common/people.svg);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: cover;
+	background-color: #ec5a55;
+	content: "";
+	display: inline-block;
+	height: 2.875rem;
+	left: 1.25rem;
+	mask-image: url(../images/common/people.svg);
+	mask-repeat: no-repeat;
+	mask-size: cover;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 2.875rem;
+}
+
 .aside {
 	width: 100%;
 }
@@ -419,7 +466,7 @@ a {
 .blog-archive-accordion__title {
 	color: #a53f3f;
 	cursor: pointer;
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1.5rem;
 	font-weight: 400;
 	padding-left: 2rem;
@@ -467,9 +514,9 @@ a {
 }
 
 .blog-archive__date {
-	color: #323030;
+	color: #3e1200;
 	display: block;
-	font-family: "Gotu", sans-serif;
+	font-family: "Courgette", cursive;
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.2857142857;
@@ -477,7 +524,7 @@ a {
 
 .blog-archive__title {
 	border-bottom: 1px solid #a53f3f;
-	color: #323030;
+	color: #3e1200;
 	flex-grow: 1;
 	font-size: 1.5rem;
 	font-weight: 500;
@@ -502,7 +549,7 @@ a {
 }
 
 .blog-archive p {
-	color: #323030;
+	color: #3e1200;
 	font-size: 1rem;
 	line-height: 1.5;
 	margin-top: 1.5rem;
@@ -570,9 +617,9 @@ a {
 }
 
 .blog-card__date {
-	color: #323030;
+	color: #3e1200;
 	display: inline-block;
-	font-family: "Gotu", sans-serif;
+	font-family: "Courgette", cursive;
 	font-size: 0.75rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -581,7 +628,7 @@ a {
 
 .blog-card__title {
 	border-bottom: 1px solid #a53f3f;
-	color: #323030;
+	color: #3e1200;
 	flex-grow: 1;
 	font-size: 1rem;
 	font-weight: 500;
@@ -590,7 +637,7 @@ a {
 }
 
 .blog-card__text {
-	color: #323030;
+	color: #3e1200;
 	font-size: 1rem;
 	line-height: 1.5;
 	margin-top: 1rem;
@@ -660,8 +707,8 @@ a {
 }
 
 .breadcrumb {
-	color: #323030;
-	font-family: "Noto Sans JP", sans-serif;
+	color: #3e1200;
+	font-family: "Shippori Mincho", serif;
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.4285714286;
@@ -680,7 +727,7 @@ a {
 	color: #fff8f7;
 	display: inline-block;
 	flex-shrink: 1;
-	font-family: "Gotu", sans-serif;
+	font-family: "Courgette", cursive;
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.5714285714;
@@ -841,7 +888,7 @@ a {
 .campaign-card__title,
 .campaign-card__detail,
 .campaign-card__price-cost {
-	color: #323030;
+	color: #3e1200;
 }
 
 .campaign-card__tag {
@@ -890,7 +937,7 @@ a {
 
 .campaign-card__price-cost,
 .campaign-card__price-low {
-	font-family: "Lato", sans-serif;
+	font-family: "Allura", serif;
 	font-weight: 700;
 	line-height: 1;
 }
@@ -1003,7 +1050,7 @@ address {
 
 .contact-box__address address,
 .contact-box__address p {
-	color: #323030;
+	color: #3e1200;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.7;
@@ -1058,8 +1105,8 @@ address {
 }
 
 .contact-form__head {
-	color: #323030;
-	font-family: "Noto Sans JP", sans-serif;
+	color: #3e1200;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1rem;
 	font-weight: 700;
 	width: 100%;
@@ -1097,7 +1144,7 @@ select,
 textarea {
 	background-color: #fff8f7;
 	border: 1px solid #a53f3f;
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1rem;
 	font-weight: 400;
 	height: auto;
@@ -1123,8 +1170,8 @@ textarea:focus {
 input[type=text]::-moz-placeholder,
 input[type=email]::-moz-placeholder,
 input[type=tel]::-moz-placeholder {
-	color: #EFDDD5;
-	font-family: "Noto Sans JP", sans-serif;
+	color: #ffdad9;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.4375;
@@ -1133,8 +1180,8 @@ input[type=tel]::-moz-placeholder {
 input[type=text]::placeholder,
 input[type=email]::placeholder,
 input[type=tel]::placeholder {
-	color: #EFDDD5;
-	font-family: "Noto Sans JP", sans-serif;
+	color: #ffdad9;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.4375;
@@ -1153,9 +1200,9 @@ textarea {
 }
 
 .contact-form__checkbox-wrap label span {
-	color: #323030;
+	color: #3e1200;
 	display: inline-block;
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1rem;
 	font-weight: 400;
 	padding-left: 1.375rem;
@@ -1165,7 +1212,7 @@ textarea {
 .contact-form__checkbox-privacy label span {
 	color: #000;
 	display: inline-block;
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Shippori Mincho", serif;
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.5714285714;
@@ -1312,7 +1359,7 @@ form {
 }
 
 .faq-item__text {
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.4375;
@@ -1322,7 +1369,7 @@ form {
 	background: #a53f3f;
 	color: #fff;
 	cursor: pointer;
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.4375;
@@ -1364,7 +1411,7 @@ form {
 
 .faq-item__text {
 	border: 1px solid #a53f3f;
-	color: #323030;
+	color: #3e1200;
 	padding: 1.4375rem 0.9375rem;
 }
 
@@ -1417,7 +1464,7 @@ form {
 
 .footer__copyright small {
 	color: #fff8f7;
-	font-family: "Gotu", sans-serif;
+	font-family: "Courgette", cursive;
 	font-size: 0.75rem;
 	line-height: 1.5;
 }
@@ -1516,7 +1563,7 @@ form {
 }
 
 .global-nav__parent::before {
-	-webkit-mask-image: url(../images/common/nav_icon.svg);
+	-webkit-mask-image: url(../images/common/cutlery.svg);
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-size: contain;
 	-webkit-mask-position: center;
@@ -1525,7 +1572,7 @@ form {
 	display: block;
 	height: 1.125rem;
 	left: -1.5rem;
-	mask-image: url(../images/common/nav_icon.svg);
+	mask-image: url(../images/common/cutlery.svg);
 	mask-position: center;
 	mask-repeat: no-repeat;
 	mask-size: contain;
@@ -1550,11 +1597,11 @@ form {
 
 .global-nav__parent--black,
 .global-nav__child--black {
-	color: #323030;
+	color: #3e1200;
 }
 
 .global-nav__parent--black::before {
-	background-color: #323030;
+	background-color: #3e1200;
 }
 
 .hamburger {
@@ -1609,7 +1656,7 @@ form {
 }
 
 .header {
-	background: rgba(50, 48, 48, 0.68);
+	background: rgba(62, 18, 0, 0.68);
 	height: 5rem;
 	position: fixed;
 	top: 0;
@@ -1702,7 +1749,7 @@ form {
 
 .information-item__title {
 	border-bottom: 1px solid #a53f3f;
-	color: #323030;
+	color: #3e1200;
 	font-size: 1.25rem;
 	font-weight: 700;
 	line-height: 1.2;
@@ -1716,7 +1763,7 @@ form {
 }
 
 .information-item__text {
-	color: #323030;
+	color: #3e1200;
 	font-size: 1rem;
 	font-style: normal;
 	font-weight: 400;
@@ -1740,11 +1787,11 @@ form {
 }
 
 .information-tab__button {
-	background-color: #EFDDD5;
+	background-color: #ffdad9;
 	box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
 	color: #a53f3f;
 	display: inline-block;
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Shippori Mincho", serif;
 	font-size: 0.875rem;
 	font-weight: 400;
 	height: 3.75rem;
@@ -1895,16 +1942,16 @@ form {
 }
 
 .mv-title__mainTitle {
-	font-family: "Lato", sans-serif;
+	font-family: "Allura", serif;
 	font-size: 2.5rem;
-	letter-spacing: 0.4em;
+	letter-spacing: 0.25em;
 	line-height: 1;
 	text-indent: 0.54em;
 	text-transform: uppercase;
 }
 
 .mv-title__subTitle {
-	font-family: "Gotu", sans-serif;
+	font-family: "Courgette", cursive;
 	font-size: 1.25rem;
 	line-height: 1;
 	margin-top: 0.625rem;
@@ -1986,7 +2033,7 @@ form {
 
 .page-404__title {
 	color: #fff8f7;
-	font-family: "Lato", sans-serif;
+	font-family: "Allura", serif;
 	font-size: 5rem;
 	font-weight: 400;
 	letter-spacing: 0.5em;
@@ -1997,7 +2044,7 @@ form {
 
 .page-404__text {
 	color: #fff8f7;
-	font-family: "Lato", sans-serif;
+	font-family: "Allura", serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -2060,8 +2107,8 @@ form {
 }
 
 .page-contact-thanks__title {
-	color: #323030;
-	font-family: "Noto Sans JP", sans-serif;
+	color: #3e1200;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.125;
@@ -2069,8 +2116,8 @@ form {
 }
 
 .page-contact-thanks__text {
-	color: #323030;
-	font-family: "Noto Sans JP", sans-serif;
+	color: #3e1200;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.4375;
@@ -2089,7 +2136,7 @@ form {
 .wpcf7-response-output {
 	color: #C94800;
 	display: inline-block;
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Shippori Mincho", serif;
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.4285714286;
@@ -2137,7 +2184,7 @@ form {
 
 .page-mv__title {
 	color: #fff8f7;
-	font-family: "Lato", sans-serif;
+	font-family: "Allura", serif;
 	font-size: 2.5rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -2176,7 +2223,7 @@ form {
 
 .page-price__title {
 	color: #fff8f7;
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.5;
@@ -2191,7 +2238,7 @@ form {
 }
 
 .page-price__title span::before {
-	-webkit-mask-image: url(../images/common/information-tab1.svg);
+	-webkit-mask-image: url(../images/common/beer.svg);
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-size: cover;
 	background-color: #fff8f7;
@@ -2199,7 +2246,7 @@ form {
 	display: inline-block;
 	height: 1.5rem;
 	left: -2rem;
-	mask-image: url(../images/common/information-tab1.svg);
+	mask-image: url(../images/common/beer.svg);
 	mask-repeat: no-repeat;
 	mask-size: cover;
 	position: absolute;
@@ -2225,8 +2272,8 @@ form {
 
 .page-price__course,
 .page-price__price {
-	color: #323030;
-	font-family: "Noto Sans JP", sans-serif;
+	color: #3e1200;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -2259,8 +2306,8 @@ form {
 }
 
 .page-privacy-policy__text h2 {
-	color: #323030;
-	font-family: "Noto Sans JP", sans-serif;
+	color: #3e1200;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1.5rem;
 	font-weight: 500;
 	line-height: 1.4583333333;
@@ -2274,8 +2321,8 @@ form {
 
 .page-privacy-policy__text p,
 .page-privacy-policy__text li {
-	color: #323030;
-	font-family: "Noto Sans JP", sans-serif;
+	color: #3e1200;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1rem;
 	font-weight: 400;
 }
@@ -2296,8 +2343,8 @@ form {
 }
 
 .page-terms__text h2 {
-	color: #323030;
-	font-family: "Noto Sans JP", sans-serif;
+	color: #3e1200;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1.5rem;
 	font-weight: 500;
 	line-height: 1.4583333333;
@@ -2310,8 +2357,8 @@ form {
 
 .page-terms__text p,
 .page-terms__text li {
-	color: #323030;
-	font-family: "Noto Sans JP", sans-serif;
+	color: #3e1200;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1rem;
 	font-weight: 400;
 }
@@ -2386,7 +2433,7 @@ form {
 	align-items: center;
 	color: #a53f3f;
 	display: inline-flex;
-	font-family: "Lato", sans-serif;
+	font-family: "Allura", serif;
 	font-size: 1rem;
 	font-weight: 700;
 	justify-content: center;
@@ -2428,7 +2475,7 @@ form {
 	color: #a53f3f;
 	cursor: pointer;
 	display: inline-flex;
-	font-family: "Lato", sans-serif;
+	font-family: "Allura", serif;
 	font-size: 1rem;
 	font-weight: 700;
 	justify-content: center;
@@ -2486,7 +2533,7 @@ form {
 	color: #fff8f7;
 	display: flex;
 	flex-direction: column;
-	font-family: "Gotu", sans-serif;
+	font-family: "Courgette", cursive;
 	font-size: 1.125rem;
 	justify-content: center;
 	line-height: 1;
@@ -2499,7 +2546,7 @@ form {
 }
 
 .pc-nav__itemLink span {
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Shippori Mincho", serif;
 	font-size: 0.625rem;
 	margin-top: 0.3125rem;
 }
@@ -2523,7 +2570,7 @@ form {
 
 .price-list__menu {
 	border-bottom: 1px solid #a53f3f;
-	color: #323030;
+	color: #3e1200;
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.5;
@@ -2540,7 +2587,7 @@ form {
 
 .price-list__course dt,
 .price-list__course dd {
-	color: #323030;
+	color: #3e1200;
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 1.71429;
@@ -2606,8 +2653,8 @@ form {
 }
 
 .section-heading__englishTitle {
-	color: #323030;
-	font-family: "Gotu", sans-serif;
+	color: #3e1200;
+	font-family: "Courgette", cursive;
 	font-size: 2rem;
 	font-weight: 400;
 	line-height: 1.25;
@@ -2647,7 +2694,7 @@ form {
 	color: #fff8f7;
 	color: #a53f3f;
 	display: inline-block;
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Shippori Mincho", serif;
 	font-size: 0.875rem;
 	font-weight: 400;
 	line-height: 2.2857142857; /* 157.143% */
@@ -2690,14 +2737,10 @@ form {
 	box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-.voice-card--aside {
-	box-shadow: none;
-}
-
 .voice-card__inner {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
+	gap: 0.75rem;
 	height: 100%;
 	padding: 0.9375rem 1rem 1.5rem;
 }
@@ -2714,7 +2757,7 @@ form {
 }
 
 .voice-card__age {
-	color: #323030;
+	color: #3e1200;
 	font-size: 0.75rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -2732,7 +2775,7 @@ form {
 
 .voice-card__title {
 	border-bottom: 1px solid #a53f3f;
-	color: #323030;
+	color: #3e1200;
 	font-size: 1rem;
 	font-weight: 500;
 	line-height: 1.45;
@@ -2767,7 +2810,7 @@ form {
 }
 
 .voice-card__text {
-	color: #323030;
+	color: #3e1200;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5;
@@ -2822,11 +2865,16 @@ html {
 }
 
 .sub-breadcrumb::before {
-	background: url(../images/common/illust1.png) no-repeat;
-	background-size: contain;
+	-webkit-mask-image: url(../images/common/illust1.svg);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: contain;
+	background-color: #ec5a55;
 	content: "";
 	height: 14.625rem;
 	left: calc(50% - min(48.4vw, 32.875rem));
+	mask-image: url(../images/common/illust1.svg);
+	mask-repeat: no-repeat;
+	mask-size: contain;
 	position: absolute;
 	top: 3rem;
 	transform: scale(-1, 1);
@@ -2863,14 +2911,20 @@ html {
 }
 
 .sub-gallery::after {
-	background: url(../images/common/fish-color.png) no-repeat;
-	background-size: contain;
+	-webkit-mask-image: url(../images/common/illust2.svg);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: contain;
+	background-color: #ec5a55;
 	content: "";
-	height: 8.625rem;
+	height: 18.75rem;
+	mask-image: url(../images/common/illust2.svg);
+	mask-repeat: no-repeat;
+	mask-size: contain;
 	position: absolute;
-	right: calc(50% - min(46.4vw, 39.875rem));
-	top: -4.875rem;
-	width: 18.8125rem;
+	right: calc(50% - min(49.4vw, 36.875rem));
+	top: -6.875rem;
+	width: 18.75rem;
+	z-index: -1;
 }
 
 .sub-page-mv {
@@ -2888,17 +2942,6 @@ html {
 .top-about {
 	margin-top: 8.75rem;
 	position: relative;
-}
-
-.top-about::after {
-	background: url(../images/common/sango.png) no-repeat;
-	background-size: contain;
-	bottom: -5.6875rem;
-	content: "";
-	height: 11.3125rem;
-	position: absolute;
-	right: calc(50% - min(48.4vw, 39.875rem));
-	width: 12.125rem;
 }
 
 .top-blog {
@@ -2920,30 +2963,12 @@ html {
 	z-index: -1;
 }
 
-.top-blog::after {
-	background: url(../images/common/fish.png) no-repeat;
-	background-size: contain;
-	content: "";
-	height: 12.5625rem;
-	left: calc(50% - min(48.4vw, 38.875rem));
-	position: absolute;
-	top: 1.25rem;
-	width: 27.3125rem;
-}
-
 .top-campaign {
 	margin-top: 7.5rem;
 }
 
 .top-contact {
 	margin-top: 8.75rem;
-}
-
-.top-contact::after {
-	height: 8.625rem;
-	right: calc(50% - min(49.4vw, 41.875rem));
-	top: -2.6875rem;
-	width: 18.8125rem;
 }
 
 .top-footer {
@@ -2963,43 +2988,42 @@ html {
 	position: relative;
 }
 
-.top-price::after {
-	background: url(../images/common/fish-color.png) no-repeat;
-	background-size: contain;
-	bottom: 3.75rem;
-	content: "";
-	height: 12.5625rem;
-	left: calc(50% - min(48.4vw, 38.875rem));
-	position: absolute;
-	width: 27.3125rem;
-}
-
 .top-voice {
 	margin-top: 8.75rem;
 	position: relative;
 }
 
 .top-voice::before {
-	background: url(../images/common/fish-color.png) no-repeat;
-	background-size: contain;
+	-webkit-mask-image: url(../images/common/beer.svg);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: contain;
+	background-color: #ec5a55;
 	content: "";
-	height: 8.625rem;
-	left: calc(50% - min(48.4vw, 38.875rem));
+	height: 9.375rem;
+	left: calc(50% - min(45.4vw, 32.875rem));
+	mask-image: url(../images/common/beer.svg);
+	mask-repeat: no-repeat;
+	mask-size: contain;
 	position: absolute;
 	top: -7.546875rem;
 	transform: scale(-1, 1);
-	width: 18.8125rem;
+	width: 9.375rem;
 }
 
 .top-voice::after {
-	background: url(../images/common/tatsu.png) no-repeat;
-	background-size: contain;
+	-webkit-mask-image: url(../images/common/wine.svg);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-size: contain;
+	background-color: #ec5a55;
 	bottom: -4.0625rem;
 	content: "";
-	height: 10.125rem;
+	height: 9.375rem;
+	mask-image: url(../images/common/wine.svg);
+	mask-repeat: no-repeat;
+	mask-size: contain;
 	position: absolute;
-	right: calc(50% - min(48.4vw, 33.8rem));
-	width: 4.4375rem;
+	right: calc(50% - min(46.4vw, 32.8rem));
+	width: 9.375rem;
 }
 
 .about-content {
@@ -3239,9 +3263,9 @@ html {
 }
 
 .campaign-card__text {
-	color: #323030;
+	color: #3e1200;
 	flex-grow: 1;
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Shippori Mincho", serif;
 	font-size: 1rem;
 	font-weight: 400;
 	line-height: 1.5; /* 150% */
@@ -3252,7 +3276,7 @@ html {
 
 .campaign-card__date {
 	color: #a53f3f;
-	font-family: "Lato", sans-serif;
+	font-family: "Allura", serif;
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1.125;
@@ -3643,8 +3667,8 @@ html {
 	position: relative;
 }
 
-.information-tab__button--tab1 span::before {
-	-webkit-mask-image: url(../images/common/information-tab1.svg);
+.information-tab__button span::before {
+	-webkit-mask-image: url(../images/common/wine.svg);
 	-webkit-mask-repeat: no-repeat;
 	-webkit-mask-size: cover;
 	background-color: #a53f3f;
@@ -3652,41 +3676,7 @@ html {
 	display: inline-block;
 	height: 4rem;
 	left: -4.25rem;
-	mask-image: url(../images/common/information-tab1.svg);
-	mask-repeat: no-repeat;
-	mask-size: cover;
-	position: absolute;
-	top: -1.0625rem;
-	width: 4rem;
-}
-
-.information-tab__button--tab2 span::before {
-	-webkit-mask-image: url(../images/common/information-tab2.svg);
-	-webkit-mask-repeat: no-repeat;
-	-webkit-mask-size: cover;
-	background-color: #a53f3f;
-	content: "";
-	display: inline-block;
-	height: 3.9375rem;
-	left: -4.25rem;
-	mask-image: url(../images/common/information-tab2.svg);
-	mask-repeat: no-repeat;
-	mask-size: cover;
-	position: absolute;
-	top: -1.0625rem;
-	width: 3.9375rem;
-}
-
-.information-tab__button--tab3 span::before {
-	-webkit-mask-image: url(../images/common/information-tab3.svg);
-	-webkit-mask-repeat: no-repeat;
-	-webkit-mask-size: cover;
-	background-color: #a53f3f;
-	content: "";
-	display: inline-block;
-	height: 4rem;
-	left: -4.25rem;
-	mask-image: url(../images/common/information-tab3.svg);
+	mask-image: url(../images/common/wine.svg);
 	mask-repeat: no-repeat;
 	mask-size: cover;
 	position: absolute;
@@ -3946,7 +3936,6 @@ html {
 }
 
 .voice-card__inner {
-	gap: 2.5rem;
 	padding: 1.5rem;
 }
 

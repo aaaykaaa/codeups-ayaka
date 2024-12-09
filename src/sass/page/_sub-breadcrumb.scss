@@ -7,8 +7,10 @@
 .sub-breadcrumb::before {
     @include mq(md) {
         content: "";
-        background: url(../images/common/illust1.png) no-repeat;
-        background-size: contain;
+        background-color: $accent-color;
+        mask-image: url(../images/common/illust1.svg);
+        mask-repeat: no-repeat;
+        mask-size: contain;
         transform: scale(-1, 1);
         position: absolute;
         z-index: -1;

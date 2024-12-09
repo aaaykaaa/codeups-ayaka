@@ -8,10 +8,10 @@
             <picture class="page-mv__img">
             <source
                 media="(min-width: 768px)"
-                srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-price_mv.jpeg"
+                srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv2.jpg"
             />
             <img
-                src="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-price_mv-sp.jpeg"
+                src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp2.jpg"
                 alt="pricepageのmain画像"
             />
             </picture>
@@ -26,26 +26,26 @@
             <div class="page-price__content">
                 <div class="page-price__table">
                 <?php
-                    $license = SCF::get('license');
+                    $limit = SCF::get('limit');
 
                     // フィールドの中身が空でない要素を抽出
-                    $filteredLicense = array_filter($license, function($fields) {
-                        // licenseMenuとlicensePriceが空でないかチェック
-                        return !empty($fields['licenseMenu']) && !empty($fields['licensePrice']);
+                    $filteredLimit = array_filter($limit, function($fields) {
+                        // limitMenuとlimitPriceが空でないかチェック
+                        return !empty($fields['limitMenu']) && !empty($fields['limitPrice']);
                     });
 
                     // フィルタリングされた結果に要素がある場合のみ表示
-                    if (is_array($filteredLicense) && count($filteredLicense) > 0):
+                    if (is_array($filteredLimit) && count($filteredLimit) > 0):
                     ?>
                         <div class="page-price__table-item">
                             <div class="page-price__head">
-                                <h2 class="page-price__title"><span>ライセンス講習</span></h2>
+                                <h2 class="page-price__title"><span>季節限定ギフト※冬季</span></h2>
                             </div>
                             <div class="page-price__body">
-                                <?php foreach ($filteredLicense as $fields): ?>
+                                <?php foreach ($filteredLimit as $fields): ?>
                                     <div class="page-price__body-item">
-                                        <h3 class="page-price__course"><?php echo $fields['licenseMenu']; ?></h3>
-                                        <p class="page-price__price"><?php echo $fields['licensePrice']; ?></p>
+                                        <h3 class="page-price__course"><?php echo $fields['limitMenu']; ?></h3>
+                                        <p class="page-price__price"><?php echo $fields['limitPrice']; ?></p>
                                     </div>
                                 <?php endforeach; ?>
                             </div>
@@ -54,26 +54,26 @@
 
                 <?php
                     // 体験ダイビングのデータを取得
-                    $diving = SCF::get('diving');
+                    $standard = SCF::get('standard');
 
                     // フィールドの中身が空でない要素を抽出
-                    $filteredDiving = array_filter($diving, function($fields) {
-                        // divingMenuとdivingPriceが空でないかチェック
-                        return !empty($fields['divingMenu']) && !empty($fields['divingPrice']);
+                    $filteredStandard = array_filter($standard, function($fields) {
+                        // standardMenuとstandardPriceが空でないかチェック
+                        return !empty($fields['standardMenu']) && !empty($fields['standardPrice']);
                     });
 
                     // フィルタリングされた結果に要素がある場合のみ表示
-                    if (is_array($filteredDiving) && count($filteredDiving) > 0):
+                    if (is_array($filteredStandard) && count($filteredStandard) > 0):
                 ?>
                     <div class="page-price__table-item">
                         <div class="page-price__head">
-                            <h2 class="page-price__title"><span>体験ダイビング</span></h2>
+                            <h2 class="page-price__title"><span>定番ギフト</span></h2>
                         </div>
                         <div class="page-price__body">
-                            <?php foreach ($filteredDiving as $fields): ?>
+                            <?php foreach ($filteredStandard as $fields): ?>
                                 <div class="page-price__body-item">
-                                    <h3 class="page-price__course"><?php echo $fields['divingMenu']; ?></h3>
-                                    <p class="page-price__price"><?php echo $fields['divingPrice']; ?></p>
+                                    <h3 class="page-price__course"><?php echo $fields['standardMenu']; ?></h3>
+                                    <p class="page-price__price"><?php echo $fields['standardPrice']; ?></p>
                                 </div>
                             <?php endforeach; ?>
                         </div>
@@ -82,26 +82,26 @@
 
                 <?php
                     // ファンダイビングのデータを取得
-                    $fundiving = SCF::get('fun');
+                    $homeBal = SCF::get('homeBal');
 
                     // フィールドの中身が空でない要素を抽出
-                    $filteredFundiving = array_filter($fundiving, function($fields) {
+                    $filteredHomeBal = array_filter($homeBal, function($fields) {
                         // funMenuとfunPriceが空でないかチェック
-                        return !empty($fields['funMenu']) && !empty($fields['funPrice']);
+                        return !empty($fields['homeBalMenu']) && !empty($fields['homeBalPrice']);
                     });
 
                     // フィルタリングされた結果に要素がある場合のみ表示
-                    if (is_array($filteredFundiving) && count($filteredFundiving) > 0):
+                    if (is_array($filteredHomeBal) && count($filteredHomeBal) > 0):
                 ?>
                     <div class="page-price__table-item">
                         <div class="page-price__head">
-                            <h2 class="page-price__title"><span>ファンダイビング</span></h2>
+                            <h2 class="page-price__title"><span>家のみバルギフト</span></h2>
                         </div>
                         <div class="page-price__body">
-                            <?php foreach ($filteredFundiving as $fields): ?>
+                            <?php foreach ($filteredHomeBal as $fields): ?>
                                 <div class="page-price__body-item">
-                                    <h3 class="page-price__course"><?php echo $fields['funMenu']; ?></h3>
-                                    <p class="page-price__price"><?php echo $fields['funPrice']; ?></p>
+                                    <h3 class="page-price__course"><?php echo $fields['homeBalMenu']; ?></h3>
+                                    <p class="page-price__price"><?php echo $fields['homeBalPrice']; ?></p>
                                 </div>
                             <?php endforeach; ?>
                         </div>
@@ -123,7 +123,7 @@
                 ?>
                     <div class="page-price__table-item">
                         <div class="page-price__head">
-                            <h2 class="page-price__title"><span>スペシャルダイビング</span></h2>
+                            <h2 class="page-price__title"><span>スペシャルギフト</span></h2>
                         </div>
                         <div class="page-price__body">
                             <?php foreach ($filteredSpecialDiving as $fields): ?>

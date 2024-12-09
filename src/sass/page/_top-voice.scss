@@ -11,26 +11,30 @@
 .top-voice::before {
   @include mq(md) {
     content: "";
-    background: url(../images/common/fish-color.png) no-repeat;
-    background-size: contain;
+    background-color: $accent-color;
+    mask-image: url(../images/common/beer.svg);
+    mask-repeat: no-repeat;
+    mask-size: contain;
     transform: scale(-1, 1);
     position: absolute;
-    width: rem(301);
-    height: rem(138);
+    width: rem(150);
+    height: rem(150);
     top: rem(-120.75);
-    left: calc(50% - min(48.4vw, 38.875rem));
+    left: calc(50% - min(45.4vw, 32.875rem));
   }
 }
 
 .top-voice::after {
   @include mq(md) {
     content: "";
-    background: url(../images/common/tatsu.png) no-repeat;
-    background-size: contain;
+    background-color: $accent-color;
+    mask-image: url(../images/common/wine.svg);
+    mask-repeat: no-repeat;
+    mask-size: contain;
     position: absolute;
-    width: rem(71);
-    height: rem(162);
+    width: rem(150);
+    height: rem(150);
     bottom: rem(-65);
-    right: calc(50% - min(48.4vw, 33.8rem));
+    right: calc(50% - min(46.4vw, 32.8rem));
   }
 }
