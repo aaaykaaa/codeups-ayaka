@@ -6,8 +6,8 @@
                 <p class="page-mv__title">blog</p>
             </div>
             <picture class="page-mv__img">
-            <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-blog_mv.jpeg"/>
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/page-blog_mv-sp.jpeg" alt="blogarchivepageのmain画像"/>
+            <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv3.jpg"/>
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp3.jpg" alt="ブログ詳細ページのメイン画像"/>
             </picture>
         </div>
     </div>

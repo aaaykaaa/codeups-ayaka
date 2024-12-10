@@ -132,9 +132,9 @@
 }
 
 .voice-card__age--rating {
-    margin-top: rem(16);
+    margin-top: 0;
     @include mq(md) {
-        margin-top: rem(16);
+        margin-top: 0;
     }
 }
 

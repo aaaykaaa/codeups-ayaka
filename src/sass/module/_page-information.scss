@@ -1,23 +1,23 @@
 @use "global" as *;
 
-.page-information__items {
-  margin-top: rem(16);
-  @include mq(md) {
-    margin-top: rem(24);
-  }
+.page-favourites__items {
+    margin-top: rem(16);
+    @include mq(md) {
+        margin-top: rem(24);
+    }
 }
 
-.page-information__item {
-  border: 1px solid $main-bg-color;
+.page-favourites__item {
+    border: 1px solid $main-bg-color;
 }
 
-.page-information__item.is-open {
-  display: flex;
+.page-favourites__item.is-open {
+    display: flex;
 }
 
-.page-information__item + .page-information__item {
-  margin-top: rem(16);
-  @include mq(md) {
-    margin-top: rem(24);
-  }
+.page-favourites__item + .page-favourites__item {
+    margin-top: rem(16);
+    @include mq(md) {
+        margin-top: rem(24);
+    }
 }

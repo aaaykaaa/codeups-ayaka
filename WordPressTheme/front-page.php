@@ -19,7 +19,7 @@
                     <div class="swiper-slide mv-swiper__slide">
                         <picture class="mv-swiper__img">
                             <source media="(min-width: 768px)" srcset="<?php echo esc_url($mvImagePC); ?>"/>
-                            <img src="<?php echo esc_url($mvImageSP); ?>" alt="DIVING into the oceanのメイン画像"/>
+                            <img src="<?php echo esc_url($mvImageSP); ?>" alt="お酒と味わいのマリアージュサイトのメイン画像"/>
                         </picture>
                     </div>
                     <?php endif; endforeach; endif; ?>
@@ -30,9 +30,8 @@
 
     <?php
         $args = array(
-            'post_type' => 'campaign',          //どこのページから抽出するか
+            'post_type' => 'campaign',
             'posts_per_page' => -1,
-            // 'no_found_rows' => true        //ページャーを使う時はfalseに。
         );
         $the_query = new WP_Query($args); if ($the_query->have_posts()) :
     ?>
@@ -90,33 +89,34 @@
     </div>
 </section>
 
-<section class="about top-about">
-    <div class="about__inner inner">
-        <div class="about__heading">
+<section class="concept top-concept">
+    <div class="concept__inner inner">
+        <div class="concept__heading">
             <div class="section-heading">
                 <p class="section-heading__englishTitle">concept</p>
-                <h2 class="section-heading__japaneseTitle">お酒と味わいのマリアージュ</h2>
+                <h2 class="section-heading__japaneseTitle">コンセプト</h2>
             </div>
         </div>
-        <div class="about__content about-content">
-            <div class="about-content__inner">
-                <figure class="about-content__img">
-                    <div class="about-content__img-small">
-                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus-left.jpg" class="about-content__img2" alt="私たちについて1"/>
+        <div class="concept__content concept-content">
+            <div class="concept-content__inner">
+                <figure class="concept-content__img">
+                    <div class="concept-content__img-small">
+                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/concept-left.jpg" class="concept-content__img2" alt="コンセプトの画像1"/>
                     </div>
-                    <div class="about-content__img-big">
-                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/aboutus-right.jpg" class="about-content__img1" alt="私たちについて2"/>
+                    <div class="concept-content__img-big">
+                        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/concept-right.jpg" class="concept-content__img1" alt="コンセプトの画像2"/>
                     </div>
                 </figure>
-                <div class="about-content__body">
-                    <div class="about-content__body-left">
-                        <p class="about-content__title">Sips & Flavors<br />Marriage</p>
+                <div class="concept-content__body">
+                    <div class="concept-content__body-left">
+                        <p class="concept-content__title">Sips & Flavors<br />Marriage</p>
                     </div>
-                    <div class="about-content__body-right">
-                        <p class="about-content__text">お酒と料理がお互いを引き立て合う組み合わせで、より贅沢かつ豊かなひとときを楽しまれてはいかがでしょうか。</p>
-                        <p class="about-content__text">ルールや形式にとらわれず、ご自宅でも気軽に楽しめるペアリングを通して、ご自分の好きな組み合わせを見つけてみてください。<br>洗練された組み合わせが、普段とは違う特別な食事になるよう、当サイトがお手伝いいたします。</p>
-                        <div class="about-content__btn">
-                        <a href="<?php echo esc_url(home_url('/about/')); ?>" class="button"><span>View more</span></a>
+                    <div class="concept-content__body-right">
+                        <p class="concept-content__text">お酒と味わいのマリアージュ</p>
+                        <p class="concept-content__text">お酒と料理がお互いを引き立て合う組み合わせで、より贅沢かつ豊かなひとときを楽しまれてはいかがでしょうか。</p>
+                        <p class="concept-content__text">ルールや形式にとらわれず、ご自宅でも気軽に楽しめるペアリングを通して、ご自分の好きな組み合わせを見つけてみてください。<br>洗練された組み合わせが、普段とは違う特別な食事になるよう、当サイトがお手伝いいたします。</p>
+                        <div class="concept-content__btn">
+                        <a href="<?php echo esc_url(home_url('/concept/')); ?>" class="button"><span>View more</span></a>
                         </div>
                     </div>
                 </div>
@@ -125,25 +125,25 @@
     </div>
 </section>
 
-<section class="information top-information">
-    <div class="information__inner inner">
-        <div class="information__heading">
+<section class="favourites top-favourites">
+    <div class="favourites__inner inner">
+        <div class="favourites__heading">
             <div class="section-heading">
                 <p class="section-heading__englishTitle">favourites</p>
-                <h2 class="section-heading__japaneseTitle">わたしのお気に入り</h2>
+                <h2 class="section-heading__japaneseTitle">私のお気に入り</h2>
             </div>
         </div>
-        <div class="information__item information-item">
-            <figure class="information-item__img js-colorbox">
-                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/information1.jpg" alt="ダイビング情報"/>
+        <div class="favourites__item favourites-item">
+            <figure class="favourites-item__img js-colorbox">
+                <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/favourites1.jpg" alt="白ワイン×焼肉の画像"/>
             </figure>
-            <div class="information-item__body">
-                <h3 class="information-item__title">白ワイン×焼肉</h3>
-                <p class="information-item__text">
+            <div class="favourites-item__body">
+                <h3 class="favourites-item__title">白ワイン×焼肉</h3>
+                <p class="favourites-item__text">
                 日常のお酒と料理も、少しの工夫で驚きの味わい体験に変わります。<br>たとえば、濃厚なチーズに日本酒、焼肉に白ワイン、甘口ワインにスパイシーな料理を合わせると、味の奥行きがグッと広がり、新しい魅力が顔を覗かせます。<br>異なる味同士が引き立て合うことで、思わぬ相性や旨味が発見でき、味覚だけでなく心も躍る特別なひとときを楽しめるのが、ちょっと変わったペアリングの面白さです。
                 </p>
-                <div class="information-item__btn">
-                    <a href="<?php echo esc_url(home_url('/information/')); ?>" class="button"><span>View more</span></a>
+                <div class="favourites-item__btn">
+                    <a href="<?php echo esc_url(home_url('/favourites/')); ?>" class="button"><span>View more</span></a>
                 </div>
             </div>
         </div>
@@ -190,7 +190,7 @@
     $args = array(
         'post_type' => 'voice',
         'posts_per_page' => 2,
-        'no_found_rows' => true,  //ページャーを使う時はfalseに。
+        'no_found_rows' => true,
     );
     $the_query = new WP_Query($args); if ($the_query->have_posts()):
 ?>

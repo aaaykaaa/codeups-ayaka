@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.favourites__inner {
+    width: 100%;
+    @include mq(md) {
+        max-width: calc(rem(1080) + $padding-pc * 2);
+    }
+}
+
+.favourites__item {
+    margin-top: rem(28);
+    @include mq(md) {
+        margin-top: rem(40);
+    }
+}

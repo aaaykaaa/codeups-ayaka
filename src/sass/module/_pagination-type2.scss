@@ -1,46 +1,46 @@
 @use "global" as *;
 
 .pagination-type2__area {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0 rem(12);
-  list-style-type: none;
-  padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 rem(12);
+    list-style-type: none;
+    padding: 0;
 }
 
 .pagination-type2__prev,
 .pagination-type2__next {
-  width: rem(38);
-  height: rem(38);
-  border: 1px solid $main-bg-color;
+    width: rem(38);
+    height: rem(38);
+    border: 1px solid $main-bg-color;
 }
 
 .pagination-type2__prev a,
 .pagination-type2__next a {
-  width: 100%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  color: $main-bg-color;
-  font-family: $english-sub-font-family;
-  font-size: rem(16);
-  font-weight: $bold;
-  line-height: calc(38 / 16);
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $main-bg-color;
+    font-family: $english-sub-font-family;
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(38 / 16);
 }
 
 .pagination-type2__next {
-  margin-left: rem(70);
+    margin-left: rem(70);
 }
 
 .pagination-type2__area .current a {
-  background-color: $main-bg-color;
-  color: $white;
-  pointer-events: none;
+    background-color: $main-bg-color;
+    color: $white;
+    pointer-events: none;
 }
 
 .pagination-type2__prev:hover a,
 .pagination-type2__next:hover a{
-  background-color: $main-bg-color;
-  color: $white;
+    background-color: $main-bg-color;
+    color: $white;
 }

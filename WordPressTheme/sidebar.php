@@ -45,37 +45,38 @@
                 </div>
             </div>
             <?php
-                //$argsのプロパティを変えていく
                 $args = array(
                     'post_type' => 'voice',
                     'posts_per_page' => 1,
-                    'no_found_rows' => true,  //ページャーを使う時はfalseに。
+                    'no_found_rows' => true,
                 );
                 $the_query = new WP_Query($args);
                 if ($the_query->have_posts()) :
                 while ($the_query->have_posts()) : $the_query->the_post();
             ?>
             <div class="aside-review-rating__voice-card voice-card voice-card--aside">
-                <figure class="voice-card__img voice-card__img--rating js-colorbox">
-                <?php if(get_the_post_thumbnail()): ?>
-                    <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>の画像"/>
-                    <?php else: ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="画像がありません">
-                    <?php endif; ?>
-                </figure>
-                <div class="voice-card__wrapper">
-                    <?php
-                        $voiceMeta = get_field('voice_meta');
-                        $voiceAge = $voiceMeta['voice_age'];
-                        $voiceGender = $voiceMeta['voice_gender'];
-                    ?>
-                    <div class="voice-card__meta voice-card__meta--rating">
-                        <p class="voice-card__age voice-card__age--rating"><?php echo $voiceAge; ?><?php echo $voiceGender[0]; ?></p>
+                <div class="voice-card__inner">
+                    <figure class="voice-card__img voice-card__img--rating js-colorbox">
+                    <?php if(get_the_post_thumbnail()): ?>
+                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>の画像"/>
+                        <?php else: ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="画像がありません">
+                        <?php endif; ?>
+                    </figure>
+                    <div class="voice-card__wrapper">
+                        <?php
+                            $voiceMeta = get_field('voice_meta');
+                            $voiceAge = $voiceMeta['voice_age'];
+                            $voiceGender = $voiceMeta['voice_gender'];
+                        ?>
+                        <div class="voice-card__meta voice-card__meta--rating">
+                            <p class="voice-card__age voice-card__age--rating"><?php echo $voiceAge; ?><?php echo $voiceGender[0]; ?></p>
+                        </div>
+                    <h3 class="voice-card__title voice-card__title--rating"><?php the_title(); ?></h3>
                     </div>
-                <h3 class="voice-card__title voice-card__title--rating"><?php the_title(); ?></h3>
-                </div>
-                <div class="aside-review-rating__btn">
-                    <a href="<?php echo get_post_type_archive_link('voice'); ?>" class="button"><span>View more</span></a>
+                    <div class="aside-review-rating__btn">
+                        <a href="<?php echo get_post_type_archive_link('voice'); ?>" class="button"><span>View more</span></a>
+                    </div>
                 </div>
             </div>
             <?php endwhile; ?>
@@ -92,16 +93,14 @@
             </div>
             <div class="aside-campaign__cards campaign-cards">
             <?php
-                //$argsのプロパティを変えていく
                 $args = array(
                     'post_type' => 'campaign',
                     'posts_per_page' => 2,
-                    'no_found_rows' => true,  //ページャーを使う時はfalseに。
+                    'no_found_rows' => true,
                 );
                 $the_query = new WP_Query($args);
                 if ($the_query->have_posts()) :
                 while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                <!-- ループ開始 -->
                 <div class="campaign-cards__card campaign-card">
                     <figure class="campaign-card__img campaign-card__img--aside">
                     <?php if(get_the_post_thumbnail()): ?>
@@ -126,7 +125,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- ループ終了 -->
                 <?php endwhile; ?>
                 <?php endif; ?>
                 <?php wp_reset_postdata(); ?>
@@ -149,13 +147,10 @@
                         <div class="blog-archive-accordion">
                             <?php
                             global $wpdb;
-                            // 年ごとのデータを取得
                             $years = $wpdb->get_col("SELECT DISTINCT YEAR(post_date) FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY post_date DESC");
-                            // 最初の年だけ "is-open" クラスを追加するためのフラグ
                             $first_year = true;
                             if ($years) {
                                 foreach ($years as $year) {
-                                    // 各年に対応する月を取得
                                     $months = $wpdb->get_col(
                                         $wpdb->prepare(
                                             "SELECT DISTINCT MONTH(post_date)
@@ -169,14 +164,13 @@
                                     );
                             ?>
                             <div class="blog-archive-accordion__item">
-                                <!-- 年のタイトル。最初の年にだけ "is-open" クラスを付与 -->
                                 <h3 class="blog-archive-accordion__title js-blog-archive-accordion__title<?php echo $first_year ? ' is-open' : ''; ?>"><?php echo $year; ?></h3>
                                 <?php if (!empty($months)) : ?>
                                     <ul class="blog-archive-accordion__content<?php echo $first_year ? '' : ' is-closed'; ?>">
                                         <?php foreach ($months as $month) : ?>
                                             <li>
                                                 <a href="<?php echo get_month_link($year, $month); ?>" class="blog-archive-accordion__title">
-                                                    <?php echo date_i18n('F', mktime(0, 0, 0, $month, 1, $year)); // 月の名前を表示 ?>
+                                                    <?php echo date_i18n('F', mktime(0, 0, 0, $month, 1, $year)); ?>
                                                 </a>
                                             </li>
                                         <?php endforeach; ?>
@@ -187,7 +181,6 @@
                                 <?php endif; ?>
                             </div>
                             <?php
-                                    // 一度ループが終わったら $first_year を false にして、次の年には "is-open" を付与しない
                                     $first_year = false;
                                 }
                             } else {

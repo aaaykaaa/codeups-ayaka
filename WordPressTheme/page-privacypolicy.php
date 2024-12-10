@@ -6,7 +6,7 @@
         </div>
         <picture class="page-mv__img">
             <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv1.jpg"/>
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp1.jpg" alt="privacypolicypageのmain画像"/>
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp1.jpg" alt="プライバシーポリシーページのメイン画像"/>
         </picture>
     </div>
 </div>

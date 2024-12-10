@@ -1,40 +1,40 @@
 @use "global" as *;
 
 .top-voice {
-  margin-top: rem(80);
-  @include mq(md) {
-    margin-top: rem(140);
-    position: relative;
-  }
+    margin-top: rem(80);
+    @include mq(md) {
+        margin-top: rem(140);
+        position: relative;
+    }
 }
 
 .top-voice::before {
-  @include mq(md) {
-    content: "";
-    background-color: $accent-color;
-    mask-image: url(../images/common/beer.svg);
-    mask-repeat: no-repeat;
-    mask-size: contain;
-    transform: scale(-1, 1);
-    position: absolute;
-    width: rem(150);
-    height: rem(150);
-    top: rem(-120.75);
-    left: calc(50% - min(45.4vw, 32.875rem));
-  }
+    @include mq(md) {
+        content: "";
+        background-color: $accent-color;
+        mask-image: url(../images/common/beer.svg);
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        transform: scale(-1, 1);
+        position: absolute;
+        width: rem(150);
+        height: rem(150);
+        top: rem(-120.75);
+        left: calc(50% - min(45.4vw, 32.875rem));
+    }
 }
 
 .top-voice::after {
-  @include mq(md) {
-    content: "";
-    background-color: $accent-color;
-    mask-image: url(../images/common/wine.svg);
-    mask-repeat: no-repeat;
-    mask-size: contain;
-    position: absolute;
-    width: rem(150);
-    height: rem(150);
-    bottom: rem(-65);
-    right: calc(50% - min(46.4vw, 32.8rem));
-  }
+    @include mq(md) {
+        content: "";
+        background-color: $accent-color;
+        mask-image: url(../images/common/wine.svg);
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        position: absolute;
+        width: rem(150);
+        height: rem(150);
+        bottom: rem(-65);
+        right: calc(50% - min(46.4vw, 32.8rem));
+    }
 }

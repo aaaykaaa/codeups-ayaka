@@ -24,10 +24,10 @@ jQuery(function ($) {
                 $('.js-loader').fadeOut('slow');
             }, 3000);
             }
-        );
+    });
     
 
-  //ドロワーメニュー
+    //ドロワーメニュー
     $(".js-hamburger").click(function () {
         if ($(".js-hamburger").hasClass("is-active")) {
         $(".js-hamburger").removeClass("is-active");
@@ -50,19 +50,19 @@ jQuery(function ($) {
         $(".js-hamburger").removeClass("is-active");
         $(".header").removeClass("is-active");
         $(".js-global-nav").fadeOut();
-        });
+    });
 
-        // ページ読み込み時にPC幅を検出し、幅が768pxを超えたときはメニューを閉じる
-        $(window).resize(function () {
+    // ページ読み込み時にPC幅を検出し、幅が768pxを超えたときはメニューを閉じる
+    $(window).resize(function () {
         if ($(window).width() > 768) {
             $(".js-hamburger").removeClass("is-active");
             $(".header").removeClass("is-active");
             $(".js-global-nav").fadeOut();
         }
-        });
+    });
 
-        // ページ読み込み時にもPC幅を超えたらメニューを閉じる
-        if ($(window).width() > 768) {
+    // ページ読み込み時にもPC幅を超えたらメニューを閉じる
+    if ($(window).width() > 768) {
         $(".js-hamburger").removeClass("is-active");
         $(".header").removeClass("is-active");
         $(".js-global-nav").fadeOut();
@@ -212,15 +212,15 @@ jQuery(function ($) {
         $(this).next("nav").slideToggle();
     });
 
-    // aboutのモーダル
+    // conceptのモーダル
     $(function () {
-        $(".js-about-modal-trigger img").click(function () {
-        $(".js-about-modal").html($(this).prop("outerHTML"));
-        $(".js-about-modal").fadeIn(200);
+        $(".js-concept-modal-trigger img").click(function () {
+        $(".js-concept-modal").html($(this).prop("outerHTML"));
+        $(".js-concept-modal").fadeIn(200);
         $("html, body").css("overflow", "hidden");
         });
-        $(".js-about-modal, .js-about-modal img").click(function () {
-        $(".js-about-modal").fadeOut(200);
+        $(".js-concept-modal, .js-concept-modal img").click(function () {
+        $(".js-concept-modal").fadeOut(200);
         $("html, body").removeAttr("style");
         });
     });
@@ -245,7 +245,7 @@ jQuery(function ($) {
         });
     });
 
-    $(".information-tab__item").on("click", function () {
+    $(".favourites-tab__item").on("click", function () {
         $('.is-open').removeClass('is-open');
         $(this).addClass("is-open");
         $($(this).children("a").attr("href")).addClass("is-open");
@@ -278,6 +278,5 @@ jQuery(function ($) {
         $('[data-tab="' + dataPram + '"]').addClass('is-open');
         });
     });
-    
 });
 

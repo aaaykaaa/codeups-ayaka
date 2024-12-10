@@ -1,64 +1,64 @@
 @use "global" as *;
 
 .section-heading {
-  text-align: center;
+    text-align: center;
 }
 
 .section-heading__englishTitle {
-  color: $black;
-  font-family: $english-main-font-family;
-  font-size: rem(32);
-  line-height: 1.25;
-  font-weight: $regular;
-  @include mq(md) {
-    font-size: rem(40);
-    line-height: 1;
-  }
+    color: $black;
+    font-family: $english-main-font-family;
+    font-size: rem(32);
+    line-height: 1.25;
+    font-weight: $regular;
+    @include mq(md) {
+        font-size: rem(40);
+        line-height: 1;
+    }
 }
 
 .section-heading__englishTitle::first-letter {
-  color: $main-bg-color;
-  text-transform: uppercase;
+    color: $main-bg-color;
+    text-transform: uppercase;
 }
 
 .section-heading__japaneseTitle {
-  margin-top: rem(4);
-  color: $main-bg-color;
-  font-size: rem(12);
-  line-height: 1.5;
-  font-weight: $regular;
-  @include mq(md) {
-    margin-top: rem(8);
-  }
+    margin-top: rem(4);
+    color: $main-bg-color;
+    font-size: rem(12);
+    line-height: 1.5;
+    font-weight: $regular;
+    @include mq(md) {
+        margin-top: rem(8);
+    }
 }
 
 .section-heading__englishTitle--white,
 .section-heading__englishTitle--white::first-letter {
-  @include mq(md) {
-    color: $white;
-  }
+    @include mq(md) {
+        color: $white;
+    }
 }
 
 .section-heading__japaneseTitle--white {
-  @include mq(md) {
-    color: $white;
-  }
+    @include mq(md) {
+        color: $white;
+    }
 }
 
 .section-heading__englishTitle-big {
-  font-size: rem(80);
-  line-height: 1;
-  @include mq(md) {
     font-size: rem(80);
     line-height: 1;
-    vertical-align: sub;
-  }
+    @include mq(md) {
+        font-size: rem(80);
+        line-height: 1;
+        vertical-align: sub;
+    }
 }
 
 .section-heading__japaneseTitle-contact {
-  margin-top: rem(-6);
-  font-weight: $regular;
-  @include mq(md) {
-    margin-top: 0;
-  }
+    margin-top: rem(-6);
+    font-weight: $regular;
+    @include mq(md) {
+        margin-top: 0;
+    }
 }

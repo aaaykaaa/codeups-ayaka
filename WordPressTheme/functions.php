@@ -4,12 +4,6 @@
 // header.php
 function my_theme_enqueue_styles_scripts() {
     // Google Fonts
-    // wp_enqueue_style('google-font-gotu', 'https://fonts.googleapis.com/css2?family=Gotu&display=swap', array(), null);
-    // wp_enqueue_style('google-font-courgette', 'https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Courgette&family=Kosugi&family=Noto+Sans+JP:wght@100..900&display=swap', array(), null);
-    // // wp_enqueue_style('google-font-cursive', 'https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Kosugi&family=Noto+Sans+JP:wght@100..900&display=swap', array(), null);
-    // wp_enqueue_style('google-font-lato', 'https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap', array(), null);
-    // wp_enqueue_style('google-font-Allura', 'https://fonts.googleapis.com/css2?family=Allura&family=Cedarville+Cursive&family=Courgette&family=Kosugi&family=Noto+Sans+JP:wght@100..900&display=swap', array(), null);
-    // wp_enqueue_style('google-font-noto-sans-jp', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap', array(), null);
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Allura&family=Courgette&family=Shippori+Mincho&display=swap', array(), null);
     // Swiper CSS
     wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), null);

@@ -1,48 +1,48 @@
 @use "global" as *;
 
 .page-mv {
-  position: relative;
+    position: relative;
 }
 .page-mv__inner {
-  height: inherit;
+    height: inherit;
 }
 
 .page-mv__text-box {
-  text-align: center;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  @include mq(md) {
-    margin-top: rem(50);
-  }
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include mq(md) {
+        margin-top: rem(50);
+    }
 }
 
 .page-mv__title {
-  color: $white;
-  font-family: $english-sub-font-family;
-  font-size: rem(40);
-  font-weight: $regular;
-  line-height: 1.5;
-  @include mq(md) {
-    font-size: rem(80);
-    line-height: 1.25;
-  }
+    color: $black;
+    font-family: $english-sub-font-family;
+    font-size: rem(40);
+    font-weight: $regular;
+    line-height: 1.5;
+    @include mq(md) {
+        font-size: rem(80);
+        line-height: 1.25;
+    }
 }
 
 .page-mv__title::first-letter,
 .page-mv__title span {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .page-mv__img {
-  width: 100%;
-  height: inherit;
+    width: 100%;
+    height: inherit;
 }
 .page-mv__img img {
-  height: inherit;
-  min-height: inherit;
-  object-fit: cover;
-  width: 100%;
+    height: inherit;
+    min-height: inherit;
+    object-fit: cover;
+    width: 100%;
 }

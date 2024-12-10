@@ -1,58 +1,56 @@
 @use "global" as *;
 
 .page-price__inner {
-  @include mq(md) {
-    max-width: calc(rem(700) + $padding-pc * 2);
-  }
+    @include mq(md) {
+        max-width: calc(rem(700) + $padding-pc * 2);
+    }
 }
 
-// テーブル
 .page-price__table-item {
-  border: 1px solid $main-bg-color;
-  @include mq(md) {
-    display: flex;
-    width: 100%;
-  }
+    border: 1px solid $main-bg-color;
+    @include mq(md) {
+        display: flex;
+        width: 100%;
+    }
 }
 
 .page-price__table-item + .page-price__table-item {
-  margin-top: rem(40);
-  @include mq(md) {
-    margin-top: rem(80);
-  }
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(80);
+    }
 }
 
 .page-price__head {
-  width: 100%;
-  background-color: $main-bg-color;
-  @include mq(md) {
-    max-width: calc(rem(200) / rem(700) * 100%);
-    // flex-grow: 1;
-  }
+    width: 100%;
+    background-color: $main-bg-color;
+    @include mq(md) {
+        max-width: calc(rem(200) / rem(700) * 100%);
+    }
 }
 
 .page-price__title {
-  text-align: center;
-  padding-top: rem(8);
-  padding-bottom: rem(8);
-  padding-left: rem(32);
-  color: $white;
-  font-family: $japanese-font-family;
-  font-size: rem(16);
-  font-weight: $bold;
-  line-height: calc(24 / 16);
-  @include mq(md) {
-    padding-left: 0;
-    padding-bottom: rem(72);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    text-align: center;
+    padding-top: rem(8);
+    padding-bottom: rem(8);
+    padding-left: rem(32);
+    color: $white;
+    font-family: $japanese-font-family;
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(24 / 16);
+    @include mq(md) {
+        padding-left: 0;
+        padding-bottom: rem(72);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 .page-price__title span {
-  position: relative;
+    position: relative;
 }
 
 .page-price__title span::before {
@@ -78,60 +76,60 @@
 }
 
 .page-price__body {
-  width: 100%;
+    width: 100%;
 }
 
 .page-price__body-item {
-  border-top: 1px solid $main-bg-color;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  @include mq(md) {
-    border: none;
-  }
+    border-top: 1px solid $main-bg-color;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    @include mq(md) {
+        border: none;
+    }
 }
 
 .page-price__body-item:not(:first-child) {
-  border-top: 1px solid $main-bg-color;
+    border-top: 1px solid $main-bg-color;
 }
 
 .page-price__course,
 .page-price__price {
-  color: $black;
-  font-family: $japanese-font-family;
-  font-size: rem(16);
-  font-weight: $regular;
-  line-height: calc(24 / 16);
+    color: $black;
+    font-family: $japanese-font-family;
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: calc(24 / 16);
 }
 
 .page-price__course {
-  width: calc(240 / 345 * 100%);
-  text-align: center;
-  padding: rem(18) rem(16);
-  border-right: 1px solid $main-bg-color;
-  @include mq(md) {
-    text-align: left;
-  }
+    width: calc(240 / 345 * 100%);
+    text-align: center;
+    padding: rem(18) rem(16);
+    border-right: 1px solid $main-bg-color;
+    @include mq(md) {
+        text-align: left;
+    }
 }
 
 .page-price__price {
-  height: 100%;
-  min-height: rem(60);
-  padding: rem(18) rem(16);
-  width: calc(106 / 345 * 100%);
-  text-align: right;
-  @include mq(md) {
-    max-height: rem(60);
+    height: 100%;
+    min-height: rem(60);
     padding: rem(18) rem(16);
-  }
+    width: calc(106 / 345 * 100%);
+    text-align: right;
+    @include mq(md) {
+        max-height: rem(60);
+        padding: rem(18) rem(16);
+    }
 }
 
 .page-price__price:first-child {
-  min-height: rem(64);
-  padding-top: rem(19);
-  padding-bottom: rem(19);
-  @include mq(md) {
-    max-height: rem(60);
-    padding: rem(18) rem(16);
-  }
+    min-height: rem(64);
+    padding-top: rem(19);
+    padding-bottom: rem(19);
+    @include mq(md) {
+        max-height: rem(60);
+        padding: rem(18) rem(16);
+    }
 }

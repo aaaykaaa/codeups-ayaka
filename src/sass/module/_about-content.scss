@@ -1,13 +1,13 @@
 @use "global" as *;
 
-.about-content {
+.concept-content {
     width: 100%;
     @include mq(md) {
         max-width: calc(rem(1080) + $padding-sp * 2);
     }
 }
 
-.about-content__inner {
+.concept-content__inner {
     width: 100%;
     @include mq(md) {
         position: relative;
@@ -15,13 +15,13 @@
 }
 
 
-.about-content__img-small {
+.concept-content__img-small {
     position: relative;
     z-index: 2;
     width: 37.1014493%;
 }
 
-.about-content__img-big {
+.concept-content__img-big {
     margin-top: -48.5%;
     margin-left: 18.5507246%;
     width: 81.4492754%;
@@ -31,7 +31,7 @@
     }
 }
 
-.about-content__img-big--sp {
+.concept-content__img-big--sp {
     margin-top: 0;
     margin-left: 0;
     width: 100%;
@@ -42,7 +42,7 @@
     }
 }
 
-.about-content__body {
+.concept-content__body {
     margin-top: rem(40);
     display: flex;
     flex-direction: column;
@@ -63,16 +63,16 @@
     }
 }
 
-.about-content__body-left {
+.concept-content__body-left {
     @include mq(md) {
         text-align: left;
     }
 }
 
-.about-content__body-right {
+.concept-content__body-right {
 }
 
-.about-content__title {
+.concept-content__title {
     white-space: nowrap;
     color: $main-bg-color;
     font-family: $english-main-font-family;
@@ -87,7 +87,7 @@
     }
 }
 
-.about-content__text {
+.concept-content__text {
     color: $black;
     font-weight: $regular;
     line-height: 1.5;
@@ -99,11 +99,11 @@
     }
 }
 
-.about-content__text + .about-content__text {
+.concept-content__text + .concept-content__text {
     margin-top: rem(16);
 }
 
-.about-content__btn {
+.concept-content__btn {
     margin-top: rem(26);
     text-align: center;
     margin-left: rem(-13);
@@ -113,7 +113,7 @@
     }
 }
 
-.about-content__body-left--sp {
+.concept-content__body-left--sp {
     position: absolute;
     top: rem(24);
     left: rem(24);
@@ -122,7 +122,7 @@
     }
 }
 
-.about-content__title--white {
+.concept-content__title--white {
     color: $white;
     font-size: 10.67vw;
 }

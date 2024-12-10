@@ -12,7 +12,7 @@
             />
             <img
                 src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp2.jpg"
-                alt="FAQpageのmain画像"
+                alt="よくある質問ページのメイン画像"
             />
             </picture>
         </div>
@@ -27,7 +27,6 @@
             <?php
                 $faq = SCF::get('faq');
                 foreach ($faq as $fields):
-                    // 三項演算子を使った場合の例
                     echo (empty($fields['question']) || empty($fields['answer'])) ? '' : '
                         <div class="faq-items__item faq-item">
                             <h2 class="faq-item__title js-nav-open">' . $fields['question'] . '</h2>

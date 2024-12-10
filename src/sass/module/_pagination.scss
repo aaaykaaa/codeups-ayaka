@@ -2,12 +2,12 @@
 
 .pagination__area,
 .wp-pagenavi {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: rem(12);
-  list-style-type: none;
-  padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(12);
+    list-style-type: none;
+    padding: 0;
 }
 
 .pagination__area li,
@@ -17,44 +17,40 @@
 
 .pagination__area a,
 .wp-pagenavi a, .wp-pagenavi span {
-  width: rem(38);
-  border: 1px solid $main-bg-color;
-  // width: 100%;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  color: $main-bg-color;
-  font-family: $english-sub-font-family;
-  font-size: rem(16);
-  font-weight: $bold;
-  line-height: calc(38 / 16);
-  transition: 0.3s;
-  cursor: pointer;
+    width: rem(38);
+    border: 1px solid $main-bg-color;
+    // width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $main-bg-color;
+    font-family: $english-sub-font-family;
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(38 / 16);
+    transition: 0.3s;
+    cursor: pointer;
 }
-
-// .pagination__area li:nth-of-type(2) {
-//   margin-left: rem(28);
-// }
 
 .pagination__next,
 .wp-pagenavi .nextpostslink {
-  margin-left: rem(28);
+    margin-left: rem(28);
 }
 
 .wp-pagenavi .previouspostslink {
-  margin-right: rem(28);
+    margin-right: rem(28);
 }
 
 .pagination__area .current a {
-  background-color: $main-bg-color;
-  color: #fff;
-  pointer-events: none;
+    background-color: $main-bg-color;
+    color: $white;
+    pointer-events: none;
 }
 
 .pagination__area li:hover a,
 .wp-pagenavi a:hover,
 .wp-pagenavi span.current {
-  border-color: $main-bg-color;
-  background-color: $main-bg-color;
-  color: $white;
+    border-color: $main-bg-color;
+    background-color: $main-bg-color;
+    color: $white;
 }

@@ -23,38 +23,20 @@ $regular: 400;
 $normal: 500;
 $bold: 700;
 
-body {
-    font-family: $japanese-font-family;
-    font-weight: $regular;
-    position: relative;
-}
-
 ////////////////////
 // 色の指定
 ////////////////////
 
 //色指定（共通性のあるものは出来る限り指定すると良い）
-// $black: #323030;
-// $white: #fff;
-// $accent-color: #C29545;
-// $main-bg-color: #882426;
-// $sub-bg-color: #CDBEA7;
-
-// $black: #4F4A45;
-// $white: #fff;
-// $accent-color: #CDAB81;
-// $main-bg-color: #6C5F5B;
-// $sub-bg-color: #DAC3B3;
-
 $black: #3e1200;
 $white: #fff8f7;
 $accent-color: #ec5a55;
-// $accent-color: #dae7c8;
 $main-bg-color: #a53f3f;
 $sub-bg-color: #ffdad9;
 
-
-// #0D2936
-// #F2F2F2
-// #408F95
-// #DDF0F1
+body {
+    font-family: $japanese-font-family;
+    font-weight: $regular;
+    position: relative;
+    background-color: $white;
+}

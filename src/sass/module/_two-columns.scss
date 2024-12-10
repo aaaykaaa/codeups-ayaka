@@ -1,14 +1,14 @@
 @use "global" as *;
 
 .two-columns__container {
-  display: flex;
-  flex-direction: column;
-  gap: rem(80);
-  @include mq(md) {
-    margin-right: auto;
-    margin-left: auto;
-    flex-direction: row;
-  }
+    display: flex;
+    flex-direction: column;
+    gap: rem(80);
+    @include mq(md) {
+        margin-right: auto;
+        margin-left: auto;
+        flex-direction: row;
+    }
 }
 
 .two-columns__aside {

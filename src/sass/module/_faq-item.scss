@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .faq-item nav {
-  // display: none;
 }
 
 .faq-item__text {
@@ -13,7 +12,7 @@
 
 .faq-item__title{
 	padding: rem(16) rem(43) rem(16) rem(16);
-	color: #fff;
+	color: $white;
 	background: $main-bg-color;
     font-family: $japanese-font-family;
     font-size: rem(16);
@@ -29,46 +28,46 @@
 
 .faq-item__title::before,
 .faq-item__title::after {    // 縦
-  content: '';
-  display: inline-block;
-  width: rem(24);
-  height: rem(1);
-  background-color: #fff;
-  position: absolute;
-  right: rem(16);
-  top: 50%;
-  transform: translateY(-50%);
-  transition: opacity .3s;
-  @include mq(md) {
-    right: rem(45);
-  }
+    content: '';
+    display: inline-block;
+    width: rem(24);
+    height: rem(1);
+    background-color: $white;
+    position: absolute;
+    right: rem(16);
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .3s;
+    @include mq(md) {
+        right: rem(45);
+    }
 }
 
 .faq-item__title::before{/* 開いている時 */
-  opacity: 0;
+    opacity: 0;
 }
 
 .faq-item__title::after{/* 開いている時 */
-  transform: translateY(-50%) rotate(180deg);
-  transition: transform 0.3s;
+    transform: translateY(-50%) rotate(180deg);
+    transition: transform 0.3s;
 }
 
 .faq-item__title.is-active::before{/* 開いている時 */
-  opacity: 1;
+    opacity: 1;
 }
 
 
 .faq-item__title.is-active::after {     // 横
-  transform: translateY(-50%) rotate(90deg);
-  transition: transform .3s;
+    transform: translateY(-50%) rotate(90deg);
+    transition: transform .3s;
 }
 
 .faq-item__text {
-  padding: rem(23) rem(15);
-  color: $black;
-  border: 1px solid $main-bg-color;
-  @include mq(md) {
-    margin-top: rem(16);
-    padding: rem(40);
-  }
+    padding: rem(23) rem(15);
+    color: $black;
+    border: 1px solid $main-bg-color;
+    @include mq(md) {
+        margin-top: rem(16);
+        padding: rem(40);
+    }
 }

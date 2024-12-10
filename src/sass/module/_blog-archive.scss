@@ -1,89 +1,102 @@
 @use "global" as *;
 
 .blog-archive__date {
-  display: block;
-  font-size: rem(14);
-  line-height: calc(18 / 14);
-  color: $black;
-  font-family: $english-main-font-family;
-  font-weight: $regular;
+    display: block;
+    font-size: rem(14);
+    line-height: calc(18 / 14);
+    color: $black;
+    font-family: $english-main-font-family;
+    font-weight: $regular;
 }
 
 .blog-archive__title {
-  margin-top: rem(8);
-  font-size: rem(24);
-  line-height: calc(35 / 24);
-  color: $black;
-  font-weight: $normal;
-  padding-bottom: rem(3.5);
-  border-bottom: 1px solid $main-bg-color;
-  flex-grow: 1;
-  @include mq(md) {
-    font-size: rem(32);
-    line-height: calc(46 / 32);
-    padding-bottom: 0;
-  }
+    margin-top: rem(8);
+    font-size: rem(24);
+    line-height: calc(35 / 24);
+    color: $black;
+    font-weight: $normal;
+    padding-bottom: rem(3.5);
+    border-bottom: 1px solid $main-bg-color;
+    flex-grow: 1;
+    @include mq(md) {
+        font-size: rem(32);
+        line-height: calc(46 / 32);
+        padding-bottom: 0;
+    }
 }
 
 .blog-archive__img,
 .blog-archive figure {
-  width: 100%;
-  margin-top: rem(24);
-  aspect-ratio: 345 / 231;
-  overflow: hidden;
-  @include mq(md) {
-    margin-top: rem(40);
-    max-width: rem(700);
-    aspect-ratio: 700 / 468;
-  }
+    width: 100%;
+    margin-top: rem(24);
+    aspect-ratio: 345 / 231;
+    overflow: hidden;
+    @include mq(md) {
+        margin-top: rem(40);
+        max-width: rem(700);
+        aspect-ratio: 700 / 468;
+    }
 }
 
 .blog-archive img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
 .blog-archive p {
-  margin-top: rem(24);
-  color: $black;
-  font-size: rem(16);
-  line-height: 1.5;
-  @include mq(md) {
-    margin-top: rem(40);
-    letter-spacing: rem(0.1);
-  }
+    margin-top: rem(24);
+    color: $black;
+    font-size: rem(16);
+    line-height: 1.5;
+    @include mq(md) {
+        margin-top: rem(40);
+        letter-spacing: rem(0.1);
+    }
 }
 
 .blog-archive ul {
-  margin-top: rem(24);
-  @include mq(md) {
-    margin-top: rem(40);
-  }
+    margin-top: rem(24);
+    @include mq(md) {
+        margin-top: rem(40);
+    }
 }
 
 .blog-archive li {
-  padding-left: rem(27);
-  position: relative;
+    padding-left: rem(27);
+    position: relative;
 }
 
 .blog-archive li:not(:first-child) {
-  margin-top: rem(4);
+    margin-top: rem(4);
 }
 
 .blog-archive li::before {
-  position: absolute;
-  content: "";
-  display: block;
-  width: rem(18);
-  height: rem(18);
-  top: rem(3);
-  left: rem(2);
-  mask-image: url(../images/common/nav_icon.svg);
-  mask-repeat: no-repeat;
-  mask-size: contain;
-  mask-position: center;
-  background-color: $main-bg-color;
+    position: absolute;
+    content: "";
+    display: block;
+    width: rem(18);
+    height: rem(18);
+    top: rem(3);
+    left: rem(2);
+    mask-image: url(../images/common/cutlery.svg);
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    background-color: $main-bg-color;
+}
+
+.blog-archive li {
+    color: $black;
+}
+
+
+// WPの指定
+.wp-block-list li a {
+    font-size: rem(12);
+    @include mq(sm) {
+        font-size: rem(16);
+    }
 }
 

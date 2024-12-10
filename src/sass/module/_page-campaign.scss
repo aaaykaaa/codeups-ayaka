@@ -1,15 +1,15 @@
 @use "global" as *;
 
 .page-campaign__cards {
-  margin-top: rem(40);
-  padding-right: rem(32);
-  padding-left: rem(32);
-  @include mq(md) {
-    padding-right: 0;
-    padding-left: 0;
-  }
+    margin-top: rem(40);
+    padding-right: rem(32);
+    padding-left: rem(32);
+    @include mq(md) {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 
 .page-campaign__pagination {
-  margin-top: rem(80);
+    margin-top: rem(80);
 }

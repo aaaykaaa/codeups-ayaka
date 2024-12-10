@@ -8,24 +8,25 @@ jQuery(function ($) {
     if (sessionStorage.getItem('visit')) {
       $(".js-loader").css("display", "none");
     } else {
-    sessionStorage.setItem('visit', 'true');
-    $(window).on('load', function () {
-      //ページを開いて1秒後にテキストを3秒かけて非表示
-      $('.js-loader-title').delay(1000).fadeOut(3000);
+      sessionStorage.setItem('visit', 'true');
+      $(window).on('load', function () {
+        //ページを開いて1秒後にテキストを0.6秒かけて非表示
+        $('.js-loader-title').delay(1000).fadeOut(1000);
 
-      //2つに分かれた画像がスライドアップ(右の画像が80px遅れ)最終的に1枚の画像になる
-      $('.js-loader-left').delay(1800).addClass("slideUp");
-      $('.js-loader-right').delay(1900).addClass("slideUp");
+        //2つに分かれた画像がスライドアップ(右の画像が80px遅れ)最終的に1枚の画像になる
+        $('.js-loader-left').delay(1800).addClass("slideUp");
+        $('.js-loader-right').delay(1900).addClass("slideUp");
 
-      //ページを開いて5秒後にローダー画面をゆっくり非表示
-      $('.js-loader').delay(3500).fadeOut('slow');
-    });
+        //ページを開いて5秒後にローダー画面をゆっくり非表示
+        $('.js-loader').delay(3000).fadeOut('slow');
+      });
 
-    //ページ読み込みが終わってなくても5秒後にはローディング画面を非表示(ユーザー離脱防止)
-    setTimeout(function () {
-      $('.js-loader').fadeOut('slow');
-    }, 3500);
-  }});
+      //ページ読み込みが終わってなくても5秒後にはローディング画面を非表示(ユーザー離脱防止)
+      setTimeout(function () {
+        $('.js-loader').fadeOut('slow');
+      }, 3000);
+    }
+  });
 
   //ドロワーメニュー
   $(".js-hamburger").click(function () {
@@ -225,15 +226,15 @@ jQuery(function ($) {
     $(this).next("nav").slideToggle();
   });
 
-  // aboutのモーダル
+  // conceptのモーダル
   $(function () {
-    $(".js-about-modal-trigger img").click(function () {
-      $(".js-about-modal").html($(this).prop("outerHTML"));
-      $(".js-about-modal").fadeIn(200);
+    $(".js-concept-modal-trigger img").click(function () {
+      $(".js-concept-modal").html($(this).prop("outerHTML"));
+      $(".js-concept-modal").fadeIn(200);
       $("html, body").css("overflow", "hidden");
     });
-    $(".js-about-modal, .js-about-modal img").click(function () {
-      $(".js-about-modal").fadeOut(200);
+    $(".js-concept-modal, .js-concept-modal img").click(function () {
+      $(".js-concept-modal").fadeOut(200);
       $("html, body").removeAttr("style");
     });
   });
@@ -254,7 +255,7 @@ jQuery(function ($) {
       }
     });
   });
-  $(".information-tab__item").on("click", function () {
+  $(".favourites-tab__item").on("click", function () {
     $('.is-open').removeClass('is-open');
     $(this).addClass("is-open");
     $($(this).children("a").attr("href")).addClass("is-open");

@@ -6,7 +6,7 @@
         </div>
         <picture class="page-mv__img">
         <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv4.jpg"/>
-        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp4.jpg" alt="voicepageのmain画像"/>
+        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp4.jpg" alt="口コミページのメイン画像"/>
         </picture>
     </div>
 </div>
@@ -22,7 +22,7 @@
             <li class="tabs__tab tab is-open"><a href="<?php echo get_post_type_archive_link('voice'); ?>">ALL</a></li>
             <?php $voiceTerms = get_terms('voice_category', array('hide_empty'=>false)); ?>
             <?php foreach($voiceTerms as $voiceTerm) : ?>
-                <li class="tabs__tab tab"><a href="<?php echo get_term_link($voiceTerm, '$voice_category');?>"><?php echo $voiceTerm->name;?></a></li>
+            <li class="tabs__tab tab"><a href="<?php echo get_term_link($voiceTerm, '$voice_category');?>"><?php echo $voiceTerm->name;?></a></li>
             <?php endforeach; ?>
         </ul>
         <ul class="page-voice__cards voice-cards js-container" id="choice">
@@ -46,11 +46,11 @@
                             </h2>
                         </div>
                         <figure class="voice-card__img js-colorbox">
-                        <?php if(get_the_post_thumbnail()): ?>
-                        <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>の画像"/>
-                        <?php else: ?>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="画像がありません">
-                        <?php endif; ?>
+                            <?php if(get_the_post_thumbnail()): ?>
+                            <img src="<?php the_post_thumbnail_url('full'); ?>" alt="<?php the_title(); ?>の画像"/>
+                            <?php else: ?>
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.png" alt="画像がありません">
+                            <?php endif; ?>
                         </figure>
                     </div>
                     <p class="voice-card__text"><?php the_field('voice_text'); ?></p>

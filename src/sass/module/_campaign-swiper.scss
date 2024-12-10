@@ -1,90 +1,90 @@
 @use "global" as *;
 
 .campaign-swiper {
-  @include mq(md) {
-    margin-right: calc(50% - 50vw);
-    overflow: hidden;
-  }
+    @include mq(md) {
+        margin-right: calc(50% - 50vw);
+        overflow: hidden;
+    }
 }
 
 .campaign-swiper__container {
-  @include mq(md) {
-    padding-bottom: rem(10);
-  }
+    @include mq(md) {
+        padding-bottom: rem(10);
+    }
 }
 
 .campaign-swiper__card {
-  height: auto;
+    height: auto;
 }
 
 .campaign-swiper__pagination {
-  display: none;
+    display: none;
 }
 
 .campaign-swiper__prev,
 .campaign-swiper__next {
-  display: none;
-  @include mq(md) {
-    display: block;
-    width: rem(80);
-    height: rem(80);
-    border-radius: 50%;
-    border: 1px solid $main-bg-color;
-  }
+    display: none;
+    @include mq(md) {
+        display: block;
+        width: rem(80);
+        height: rem(80);
+        border-radius: 50%;
+        border: 1px solid $main-bg-color;
+    }
 }
 
 .campaign-swiper__prev {
-  @include mq(md) {
-    position: absolute;
-    top: 4.5%;
-    left: 75.833%;
-  }
+    @include mq(md) {
+        position: absolute;
+        top: 4.5%;
+        left: 75.833%;
+    }
 }
 
 .campaign-swiper__next {
-  @include mq(md) {
-    position: absolute;
-    top: 4.5%;
-    right: 3.5%;
-  }
+    @include mq(md) {
+        position: absolute;
+        top: 4.5%;
+        right: 3.5%;
+    }
 }
 
 .campaign-swiper__prev:hover,
 .campaign-swiper__next:hover {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 .campaign-swiper__prev::after,
 .campaign-swiper__next::after {
-  @include mq(md) {
-    content: "";
-    position: absolute;
-    width: rem(40);
-    height: rem(7);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+    @include mq(md) {
+        content: "";
+        position: absolute;
+        width: rem(40);
+        height: rem(7);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 .campaign-swiper__prev::after {
-  @include mq(md) {
-    background-color: $main-bg-color;
-    content: "";
-    display: inline-block;
-    mask-image: url(../images/common/left.svg);
-    mask-repeat: no-repeat;
-    mask-size: cover;
-  }
+    @include mq(md) {
+        background-color: $main-bg-color;
+        content: "";
+        display: inline-block;
+        mask-image: url(../images/common/left.svg);
+        mask-repeat: no-repeat;
+        mask-size: cover;
+    }
 }
 
 .campaign-swiper__next::after {
-  @include mq(md) {
-    background-color: $main-bg-color;
-    content: "";
-    display: inline-block;
-    mask-image: url(../images/common/right.svg);
-    mask-repeat: no-repeat;
-    mask-size: cover;
-  }
+    @include mq(md) {
+        background-color: $main-bg-color;
+        content: "";
+        display: inline-block;
+        mask-image: url(../images/common/right.svg);
+        mask-repeat: no-repeat;
+        mask-size: cover;
+    }
 }

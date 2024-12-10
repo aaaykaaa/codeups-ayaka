@@ -1,25 +1,25 @@
 @use "global" as *;
 
 .sub-gallery {
-  margin-top: rem(40);
-  @include mq(md) {
-    margin-top: rem(120);
-    position: relative;
-  }
+    margin-top: rem(40);
+    @include mq(md) {
+        margin-top: rem(120);
+        position: relative;
+    }
 }
 
 .sub-gallery::after {
-  @include mq(md) {
-    content: "";
-    background-color: $accent-color;
-    mask-image: url(../images/common/illust2.svg);
-    mask-repeat: no-repeat;
-    mask-size: contain;
-    position: absolute;
-    width: rem(300);
-    height: rem(300);
-    top: rem(-110);
-    right: calc(50% - min(49.4vw, 36.875rem));
-    z-index: -1;
-  }
+    @include mq(md) {
+        content: "";
+        background-color: $accent-color;
+        mask-image: url(../images/common/illust2.svg);
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        position: absolute;
+        width: rem(300);
+        height: rem(300);
+        top: rem(-110);
+        right: calc(50% - min(49.4vw, 36.875rem));
+        z-index: -1;
+    }
 }

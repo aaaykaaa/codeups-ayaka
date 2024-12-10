@@ -16,7 +16,7 @@ get_header(); ?>
             />
             <img
                 src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp1.jpg"
-                alt="contactpageのmain画像"
+                alt="お問い合わせ完了ページのメイン画像"
             />
             </picture>
         </div>

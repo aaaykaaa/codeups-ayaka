@@ -1,8 +1,8 @@
 @use "global" as *;
 
 .page-faq__inner {
-  @include mq(md) {
-    width: 100%;
-    max-width: calc(rem(700) + $padding-pc * 2);
-  }
+    @include mq(md) {
+        width: 100%;
+        max-width: calc(rem(700) + $padding-pc * 2);
+    }
 }

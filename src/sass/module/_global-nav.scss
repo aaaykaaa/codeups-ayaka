@@ -6,9 +6,10 @@
 
 .global-nav__items {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: rem(16);
     @include mq(md) {
+        justify-content: center;
         gap: rem(142);
         padding-left: rem(22);
     }
@@ -28,18 +29,17 @@
 .global-nav__item-sp {
     display: flex;
     flex-direction: column;
-    gap: rem(16);
     padding-left: rem(24);
     @include mq(md) {
         padding-left: 0;
         flex-direction: row;
-        gap: rem(142);
+        gap: rem(120);
     }
 }
 
 .global-nav__item-sp--sitemap {
     @include mq(md) {
-        gap: rem(166);
+        gap: rem(120);
     }
 }
 
@@ -50,7 +50,15 @@
 .global-nav__item-pc {
     display: flex;
     flex-direction: column;
-    gap: rem(16);
+    @include mq(md) {
+        gap: rem(16);
+    }
+}
+
+.global-nav__item-sp:nth-of-type(2) .global-nav__item-pc:nth-of-type(2) {
+    @include mq(md) {
+        gap: rem(4);
+    }
 }
 
 .global-nav__parent,

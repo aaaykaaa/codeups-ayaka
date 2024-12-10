@@ -1,119 +1,119 @@
 @use "global" as *;
 
 .button {
-  display: inline-block;
-  color: $white;
-  font-family: $english-main-font-family;
-  font-size: rem(14);
-  font-weight: $regular;
-  background-color: $main-bg-color;
-  line-height: calc(22 / 14);
-  padding: rem(15) rem(88) rem(15) rem(40);
-  flex-shrink: 1;
-  border: 1px solid $main-bg-color;
-  position: relative;
-  z-index: 1;
-  margin-right: rem(4);
-  margin-bottom: rem(4);
+    display: inline-block;
+    color: $white;
+    font-family: $english-main-font-family;
+    font-size: rem(14);
+    font-weight: $regular;
+    background-color: $main-bg-color;
+    line-height: calc(22 / 14);
+    padding: rem(15) rem(88) rem(15) rem(40);
+    flex-shrink: 1;
+    border: 1px solid $main-bg-color;
+    position: relative;
+    z-index: 1;
+    margin-right: rem(4);
+    margin-bottom: rem(4);
 }
 
 // はみ出る枠線
 .button::before {
-  content: "";
-  position: absolute;
-  top: rem(4);
-  left: rem(4);
-  width: 100%;
-  height: 100%;
-  border: 1px solid $main-bg-color;
-  z-index: -100;
+    content: "";
+    position: absolute;
+    top: rem(4);
+    left: rem(4);
+    width: 100%;
+    height: 100%;
+    border: 1px solid $main-bg-color;
+    z-index: -100;
 }
 
 .button::after {
-  background: $white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-  transform: scale(0, 1);
-  transform-origin: left top;
-  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
-  z-index: -1;
+    background: $white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);
+    z-index: -1;
 }
 
 .button:hover,
 .button:hover [type=submit] {
-  color: $main-bg-color;
-  transition: 0.2s;
+    color: $main-bg-color;
+    transition: 0.2s;
 }
 
 .button:hover::after {
-  transform: scale(1, 1);
+    transform: scale(1, 1);
 }
 
 .button span::after {
-  background-color: $white;
-  content: "";
-  display: inline-block;
-  mask-image: url(../images/common/right.svg);
-  mask-repeat: no-repeat;
-  mask-size: cover;
-  position: absolute;
-  width: rem(40);
-  height: rem(7);
-  top: rem(18);
-  right: rem(40);
+    background-color: $white;
+    content: "";
+    display: inline-block;
+    mask-image: url(../images/common/right.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    position: absolute;
+    width: rem(40);
+    height: rem(7);
+    top: rem(18);
+    right: rem(40);
 }
 
 .button:hover span::after {
-  background-color: $main-bg-color;
+    background-color: $main-bg-color;
 }
 
 .button--wtite {
-  padding: rem(15) rem(97) rem(15) rem(41);
-  color: $main-bg-color;
-  background-color: $white;
-  border: 1px solid $white;
+    padding: rem(15) rem(97) rem(15) rem(41);
+    color: $main-bg-color;
+    background-color: $white;
+    border: 1px solid $white;
 }
 
 .button--wtite::before {
-  border: 1px solid $white;
-  z-index: -1;
+    border: 1px solid $white;
+    z-index: -1;
 }
 
 .button--wtite::after {
-  background: $main-bg-color;
+    background: $main-bg-color;
 }
 
 .button--wtite:hover {
-  color: $white;
+    color: $white;
 }
 
 .button--wtite span::after {
-  background-color: $main-bg-color;
+    background-color: $main-bg-color;
 }
 
 .button--wtite:hover span::after {
-  background-color: $white;
+    background-color: $white;
 }
 
 .button--send {
-  padding: rem(16) rem(112) rem(16) rem(56);
+    padding: rem(16) rem(112) rem(16) rem(56);
 }
 
 
 .button--send span::after {
-  background-color: $white;
-  content: "";
-  display: inline-block;
-  mask-image: url(../images/common/right.svg);
-  mask-repeat: no-repeat;
-  mask-size: cover;
-  position: absolute;
-  width: rem(40);
-  height: rem(7);
-  top: rem(18);
-  right: rem(56);
+    background-color: $white;
+    content: "";
+    display: inline-block;
+    mask-image: url(../images/common/right.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    position: absolute;
+    width: rem(40);
+    height: rem(7);
+    top: rem(18);
+    right: rem(56);
 }

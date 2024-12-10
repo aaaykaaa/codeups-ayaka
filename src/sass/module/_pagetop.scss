@@ -1,34 +1,33 @@
 @use "global" as *;
 
 .pagetop {
-  width: 12.8%;
-  aspect-ratio: 48 / 48;
-  max-width: rem(80);
-  border: 1px solid $main-bg-color;
-  background-color: $white;
-  border-radius: 50%;
-  position: fixed;
-  right: rem(15);
-  bottom: rem(15);
-  z-index: 3000;
-  @include mq(md) {
-    width: 100%;
-    right: rem(20);
-  }
+    width: 12.8%;
+    aspect-ratio: 48 / 48;
+    max-width: rem(80);
+    border: 1px solid $main-bg-color;
+    background-color: $white;
+    border-radius: 50%;
+    position: fixed;
+    right: rem(15);
+    bottom: rem(15);
+    z-index: 3000;
+    @include mq(md) {
+        width: 100%;
+        right: rem(20);
+    }
 }
 
-
 .pagetop::after {
-  background-color: $main-bg-color;
-  content: "";
-  display: inline-block;
-  mask-image: url(../images/common/top.svg);
-  mask-repeat: no-repeat;
-  mask-size: cover;
-  position: absolute;
-  width: 14.5%;
-  height: 58.3333%;
-  top: 50%;
-  left: 46%;
-  transform: translate(-50%, -46%);
+    background-color: $main-bg-color;
+    content: "";
+    display: inline-block;
+    mask-image: url(../images/common/top.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    position: absolute;
+    width: 14.5%;
+    height: 58.3333%;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -46%);
 }

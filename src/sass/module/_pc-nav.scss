@@ -1,66 +1,63 @@
 @use "global" as *;
 
 .pc-nav {
-  height: inherit;
+    height: inherit;
 }
 .pc-nav__items {
-  height: inherit;
-  display: flex;
-  align-items: center;
-  margin-top: rem(-2);
+    height: inherit;
+    display: flex;
+    align-items: center;
+    margin-top: rem(-2);
 }
 
 
 .pc-nav__item {
-  height: inherit;
-  padding-left: rem(20);
-  padding-right: rem(20);
+    height: inherit;
+    padding-left: rem(20);
+    padding-right: rem(20);
 }
 
 .pc-nav__item:first-child {
-  padding-left: 0;
+    padding-left: 0;
 }
 
 .pc-nav__itemLink {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: $white;
-  font-family: $english-main-font-family;
-  font-size: rem(18);
-  line-height: 1;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    font-family: $english-main-font-family;
+    font-size: rem(18);
+    line-height: 1;
+    position: relative;
 }
 
 .pc-nav__itemLink,
 .pc-nav__itemLink a {
-  height: inherit;
+    height: inherit;
 }
 
 .pc-nav__itemLink span {
-  margin-top: rem(5);
-  font-size: rem(10);
-  font-family: $japanese-font-family;
+    margin-top: rem(5);
+    font-size: rem(10);
+    font-family: $japanese-font-family;
 }
 
 // hover時の下線アニメーション
 .pc-nav__itemLink::after {
-  content: "";
-  /*絶対配置で線の位置を決める*/
-  position: absolute;
-  bottom: rem(18);
-  left: 10%;
-  /*線の形状*/
-  width: 80%;
-  height: 1px;
-  background: $white;
-  /*アニメーションの指定*/
-  transition: all .3s;
-  transform: scale(0, 1);/*X方向0、Y方向1*/
-  transform-origin: center top;/*上部中央基点*/
+    content: "";
+    position: absolute;
+    bottom: rem(18);
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: $white;
+    transition: all .3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
 }
 
 .pc-nav__itemLink:hover::after {
-    transform: scale(1, 1);/*X方向にスケール拡大*/
+    transform: scale(1, 1);
 }

@@ -12,7 +12,7 @@
             />
             <img
                 src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp2.jpg"
-                alt="pricepageのmain画像"
+                alt="料金一覧ページのメイン画像"
             />
             </picture>
         </div>

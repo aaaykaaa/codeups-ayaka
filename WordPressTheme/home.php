@@ -7,7 +7,7 @@
         </div>
         <picture class="page-mv__img">
             <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv3.jpg"/>
-            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp3.jpg" alt="blogpageのmain画像"/>
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp3.jpg" alt="ブログページのメイン画像"/>
         </picture>
         </div>
     </div>

@@ -1,77 +1,77 @@
 @use "global" as *;
 
 .contact-form__item {
-  display: flex;
-  flex-direction: column;
-  gap: rem(16);
-  padding-bottom: rem(24);
-  @include mq(md) {
-    flex-direction: row;
-    padding-bottom: rem(40);
-  }
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    padding-bottom: rem(24);
+    @include mq(md) {
+        flex-direction: row;
+        padding-bottom: rem(40);
+    }
 }
 
 .contact-form__item:not(:nth-of-type(8)) {
-  border-bottom: 1px dashed $main-bg-color;
+    border-bottom: 1px dashed $main-bg-color;
 }
 
 .contact-form__item:last-child {
 }
 
 .contact-form__item--privacy {
-  padding-right: rem(32);
-  padding-left: rem(31);
-  padding-bottom: 0;
-  @include mq(md) {
-    text-align: center;
-    padding: 0;
-  }
+    padding-right: rem(32);
+    padding-left: rem(31);
+    padding-bottom: 0;
+    @include mq(md) {
+        text-align: center;
+        padding: 0;
+    }
 }
 
 .contact-form__item + .contact-form__item {
-  margin-top: rem(24);
-  @include mq(md) {
-    margin-top: rem(40);
-  }
+    margin-top: rem(24);
+    @include mq(md) {
+        margin-top: rem(40);
+    }
 }
 
 .contact-form__head {
-  width: 100%;
-  color: $black;
-  font-family: $japanese-font-family;
-  font-size: rem(16);
-  font-weight: $bold;
-  @include mq(md) {
-    width: 29.428571%;
-  }
+    width: 100%;
+    color: $black;
+    font-family: $japanese-font-family;
+    font-size: rem(16);
+    font-weight: $bold;
+    @include mq(md) {
+        width: 29.428571%;
+    }
 }
 
 .contact-form__head span {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .contact-form__head span.must::after {
-  content: "必須";
-  white-space: nowrap;    // 何があっても改行させない
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: calc(100% + rem(8));    // 要素100%から外にいくつ。の指定方法
-  font-size: rem(12);
-  font-weight: $regular;
-  letter-spacing: 0.48em;
-  text-indent: 0.48em;
-  padding: rem(2) rem(10);
-  background-color: #C94800;
-  color: $white;
+    content: "必須";
+    white-space: nowrap;    // 何があっても改行させない
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + rem(8));    // 要素100%から外にいくつ。の指定方法
+    font-size: rem(12);
+    font-weight: $regular;
+    letter-spacing: 0.48em;
+    text-indent: 0.48em;
+    padding: rem(2) rem(10);
+    background-color: #C94800;
+    color: $white;
 }
 
 .contact-form__data {
-  width: 100%;
-  @include mq(md) {
-    width: 69.571429%;
-  }
+    width: 100%;
+    @include mq(md) {
+        width: 69.571429%;
+    }
 }
 
 input[type=text],
@@ -79,21 +79,21 @@ input[type=email],
 input[type=tel],
 select,
 textarea {
-  width: 100%;
-  height: auto;
-  padding: rem(7) rem(15) rem(8);
-  font-family: $japanese-font-family;
-  font-size: rem(16);
-  font-weight: $regular;
-  line-height: calc(23 / 16);
-  border: 1px solid $main-bg-color;
-  background-color: $white;
+    width: 100%;
+    height: auto;
+    padding: rem(7) rem(15) rem(8);
+    font-family: $japanese-font-family;
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: calc(23 / 16);
+    border: 1px solid $main-bg-color;
+    background-color: $white;
 }
 
 select {
-  color: #000;
-  font-size: rem(12);
-  padding: rem(6) rem(7) rem(5);
+    color: $black;
+    font-size: rem(12);
+    padding: rem(6) rem(7) rem(5);
 }
 
 input[type=text]:focus,
@@ -101,155 +101,153 @@ input[type=email]:focus,
 input[type=tel]:focus,
 select:focus,
 textarea:focus {
-  border: 2px solid $main-bg-color;
+    border: 2px solid $main-bg-color;
 }
 
 input[type=text]::placeholder,
 input[type=email]::placeholder,
 input[type=tel]::placeholder {
-  color: $sub-bg-color;
-  font-family: $japanese-font-family;
-  font-size: rem(16);
-  font-weight: $regular;
-  line-height: calc(23 / 16);
+    color: $sub-bg-color;
+    font-family: $japanese-font-family;
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: calc(23 / 16);
 }
 
 textarea {
-  height: rem(200);
+    height: rem(200);
 }
 
 .contact-form__checkbox-wrap,
 .contact-form__checkbox-privacy,
 .wpcf7-form-control {
-  display: flex;
-  flex-direction: column;
-  gap: rem(4);
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
 }
 
 .contact-form__checkbox-wrap label span {
-  display: inline-block;
-  padding-left: rem(22);
-  color: $black;
-  font-family: $japanese-font-family;
-  font-size: rem(16);
-  font-weight: $regular;
-  position: relative;
+    display: inline-block;
+    padding-left: rem(22);
+    color: $black;
+    font-family: $japanese-font-family;
+    font-size: rem(16);
+    font-weight: $regular;
+    position: relative;
 }
 
 .contact-form__checkbox-privacy label span  {
-  display: inline-block;
-  padding-left: rem(30);
-  color: #000;
-  font-family: $japanese-font-family;
-  font-size: rem(14);
-  font-weight: $regular;
-  line-height: calc(22 / 14);
-  position: relative;
-  @include mq(md) {
-    padding-left: rem(40);
-  }
+    display: inline-block;
+    padding-left: rem(30);
+    color: $black;
+    font-family: $japanese-font-family;
+    font-size: rem(14);
+    font-weight: $regular;
+    line-height: calc(22 / 14);
+    position: relative;
+    @include mq(md) {
+        padding-left: rem(40);
+    }
 }
 
 .contact-form__checkbox-wrap label span::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  width: rem(14);
-  height: rem(14);
-  border: 1px solid $main-bg-color;
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: rem(14);
+    height: rem(14);
+    border: 1px solid $main-bg-color;
 }
 
 .contact-form__checkbox-privacy label span::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: rem(22);
-  height: rem(22);
-  border: 1px solid $main-bg-color;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(22);
+    height: rem(22);
+    border: 1px solid $main-bg-color;
 }
 
 .contact-form__checkbox-wrap label span::after {
-  content: "";
-  position: absolute;
-  top: calc(50% - rem(1));
-  transform: translateY(-50%) rotate(45deg);
-  left: rem(5);
-  width: rem(6);
-  height: rem(12);
-  border-right: 2px solid #C94800;
-  border-bottom: 2px solid #C94800;
-  opacity: 0;
-  
+    content: "";
+    position: absolute;
+    top: calc(50% - rem(1));
+    transform: translateY(-50%) rotate(45deg);
+    left: rem(5);
+    width: rem(6);
+    height: rem(12);
+    border-right: 2px solid #C94800;
+    border-bottom: 2px solid #C94800;
+    opacity: 0;
 }
 
 .contact-form__checkbox-privacy label span::after {
-  content: "";
-  position: absolute;
-  top: rem(3);
-  transform: rotate(45deg);
-  left: rem(8);
-  width: rem(6);
-  height: rem(12);
-  border-right: 2px solid #C94800;
-  border-bottom: 2px solid #C94800;
-  opacity: 0;
+    content: "";
+    position: absolute;
+    top: rem(3);
+    transform: rotate(45deg);
+    left: rem(8);
+    width: rem(6);
+    height: rem(12);
+    border-right: 2px solid #C94800;
+    border-bottom: 2px solid #C94800;
+    opacity: 0;
 }
 
 // 未達
 input[type=checkbox]:checked + span::after {
-  opacity: 1;
+    opacity: 1;
 }
 
 .contact-form__select-wrap {
-  position: relative;
+    position: relative;
 }
 
 .contact-form__select-wrap::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  right: rem(10);
-  border-style: solid;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  border-top: 8px solid #408f95;
-  border-bottom: 0;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: rem(10);
+    border-style: solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top: 8px solid $main-bg-color;
+    border-bottom: 0;
 }
 
 .contact-form__checkbox-privacy {
-  margin-left: auto;
-  margin-right: auto;
-  @include mq(md) {
-    margin-top: rem(40);
-  }
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(md) {
+        margin-top: rem(40);
+    }
 }
 
 .contact-form__btn {
-  margin-top: rem(24);
-  text-align: center;
-  @include mq(md) {
-    margin-top: rem(40);
-  }
+    margin-top: rem(24);
+    text-align: center;
+    @include mq(md) {
+        margin-top: rem(40);
+    }
 }
 
 input[type=text].is-error,
 input.wpcf7-not-valid,
 textarea.wpcf7-not-valid,
 span.wpcf7-not-valid {
-  // border-color: ;
-  border: 1px solid #C94800;
-  background: rgba(201, 72, 0, 0.20);
+    border: 1px solid #C94800;
+    background: rgba(201, 72, 0, 0.20);
 }
 
 input[type=text].is-error::placeholder,
 input.wpcf7-not-valid::placeholder, {
-  color: $white;
+    color: $white;
 }
 
 ////////////////////////////////////////////
@@ -257,57 +255,43 @@ input.wpcf7-not-valid::placeholder, {
 ////////////////////////////////////////////
 
 .wpcf7-list-item {
-  margin: 0;
+    margin: 0;
 }
 
 input[type=submit] {
-  color: $white;
+    color: $white;
 }
 
 input[type=submit]:hover {
-  color: $main-bg-color;
-  transition: 0.2s;
+    color: $main-bg-color;
+    transition: 0.2s;
 }
 
 span.wpcf7-spinner {
-  display: none;
+    display: none;
 }
 
 .wpcf7-not-valid-tip {
-  display: none;
+    display: none;
 }
 
-// .wpcf7-form.invalid .wpcf7-response-output {
-//   display: block;
-// }
 
 // 送信完了後のサンスクメッセージを非表示にする
 .wpcf7-form.sent .wpcf7-response-output {
-  display: none;
+    display: none;
 }
 
 .wpcf7-validation-errors {
-  display: none; /* デフォルトのエラーメッセージを非表示に */
+    display: none; /* デフォルトのエラーメッセージを非表示に */
 }
 
-// .wpcf7-response-output {
-//   position: relative; /* 位置の基準を親要素に対して設定 */
-//   top: -50px; /* 必要に応じて上下に移動 */
-//   margin-bottom: 20px; /* フォームとのスペース調整 */
-//   background-color: #f8d7da; /* エラーメッセージの背景色 */
-//   color: #721c24; /* エラーメッセージのテキスト色 */
-//   padding: 10px;
-//   border: 1px solid #f5c6cb;
-// }
-
-
 form {
-  display: grid;
+    display: grid;
 }
 
 .wpcf7 form .wpcf7-response-output {
-  order: -1;
-  padding-bottom: 40px;
-  margin: 0;
-  text-align: center;
+    order: -1;
+    padding-bottom: 40px;
+    margin: 0;
+    text-align: center;
 }

@@ -6,7 +6,7 @@
         </div>
         <picture class="page-mv__img">
         <source media="(min-width: 768px)" srcset="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv4.jpg"/>
-        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp4.jpg" alt="voicepageのmain画像"/>
+        <img src="<?php echo get_theme_file_uri(); ?>/assets/images/common/pageMv-sp4.jpg" alt="口コミカテゴリーページのメイン画像"/>
         </picture>
     </div>
 </div>

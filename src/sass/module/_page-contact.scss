@@ -1,31 +1,31 @@
 @use "global" as *;
 
 .page-contact__inner {
-  @include mq(md) {
-    max-width: calc(rem(700) + $padding-pc * 2);
-  }
+    @include mq(md) {
+        max-width: calc(rem(700) + $padding-pc * 2);
+    }
 }
 
 .page-contact__error-message,
 .wpcf7-response-output {
-  display: none;
-  margin: 0 auto;
-  text-align: center;
+    display: none;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .page-contact__error-message p,
 .wpcf7-response-output {
-  display: inline-block;
-  text-align: left;
-  color: #C94800;
-  font-family: $japanese-font-family;
-  font-size: rem(14);
-  font-weight: $regular;
-  line-height: calc(20 / 14);
-  text-indent: -1em;
-  margin-left: rem(16);
+    display: inline-block;
+    text-align: left;
+    color: #C94800;
+    font-family: $japanese-font-family;
+    font-size: rem(14);
+    font-weight: $regular;
+    line-height: calc(20 / 14);
+    text-indent: -1em;
+    margin-left: rem(16);
 }
 
 .wpcf7 form .wpcf7-response-output {
-  border: none;
+    border: none;
 }
